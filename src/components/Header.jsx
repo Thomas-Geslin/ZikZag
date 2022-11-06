@@ -134,7 +134,7 @@ export default function Header() {
                 </nav>
 
                 <div className='flex items-center justify-end w-2/12'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='w-7' />
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
                     <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>
             </div>
