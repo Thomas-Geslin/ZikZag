@@ -61,9 +61,9 @@ export default function Offer() {
           <div className='flex justify-between w-[60%] m-auto mb-12'>
             {OfferSliderData.map((el) => {
               return (
-                <div key={el.index} className='border border-[#E6E6E6] border-solid rounded w-[170px]'>
+                <div key={el.index} className='border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300'>
                   <Image src={el.pictureColor} alt={el.alt} className='m-auto py-5 w-12' />
-                  <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3'>{el.line}</p>
+                  <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300'>{el.line}</p>
                 </div>
               )
             })}
@@ -79,8 +79,8 @@ export default function Offer() {
 
             <div className='relative'>
               <Reveal keyframes={revealRight} triggerOnce duration={750} delay={250}><Image src={offerMan} alt='homme tenant un ordinateur' className='relative top-0 -left-9 my-8 pr-8' /></Reveal>
-              <Reveal keyframes={reveal} triggerOnce duration={750} delay={1000}><Image src={offerIcon} alt='dessin de horloge' className='absolute bottom-7 right-12' /></Reveal>
-              <Reveal keyframes={revealRight} triggerOnce duration={750} delay={1450}><Image src={offerWoman} alt="dessin d'une personne avec un bras levé" className='absolute bottom-6 -left-12 z-10' /></Reveal>
+              <Reveal keyframes={reveal} triggerOnce duration={750} delay={600}><Image src={offerIcon} alt='dessin de horloge' className='absolute bottom-7 right-12' /></Reveal>
+              <Reveal keyframes={revealRight} triggerOnce duration={750} delay={1200}><Image src={offerWoman} alt="dessin d'une personne avec un bras levé" className='absolute bottom-6 -left-12 z-10' /></Reveal>
             </div>
           </div>
         </section>

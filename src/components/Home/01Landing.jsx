@@ -82,7 +82,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <Reveal keyframes={revealBottom} triggerOnce duration={1050} delay={1600}><div className='flex absolute bottom-4 left-36 -rotate-90'><span className='relative top-3 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-semibold'>SCROLL</p></div></Reveal>
+          <Reveal keyframes={revealBottom} triggerOnce duration={1050} delay={1600}><div onClick={() => window.scrollTo({ top: 1050, behavior: 'smooth' })} className='flex absolute bottom-4 left-36 -rotate-90 hover:cursor-pointer'><span className='relative top-3 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-semibold'>SCROLL</p></div></Reveal>
 
           <div>
             <Reveal keyframes={reveal} triggerOnce duration={1050} delay={3100}><Image className='absolute top-44 right-24' src={mouseoverLine01} alt='ligne de décoration' /></Reveal>
@@ -93,7 +93,7 @@ export default function Landing() {
             <Reveal keyframes={reveal} triggerOnce duration={1050} delay={5400}><Image className='absolute bottom-7 right-[880px]' src={mouseoverLine06} alt='ligne de décoration' /></Reveal>
             <Reveal keyframes={revealBottom} triggerOnce duration={1050} delay={1800}><Image className='absolute bottom-[200px] right-72' src={mouseoverRocket} alt='fusée de décoration' /></Reveal>
             <Reveal keyframes={revealLeft} triggerOnce duration={1050} delay={3000}><Image className='absolute bottom-0 -left-[680px]' src={mouseoverSquareLeft} alt='carré de décoration' /></Reveal>
-
+            <Reveal keyframes={revealRight} triggerOnce duration={1050} delay={2100}><Image className='absolute bottom-[500px] right-0' src={mouseoverSquareRight} alt='carré de décoration' /></Reveal>
             <Reveal keyframes={revealRight} triggerOnce duration={750} delay={2400}><Image className='absolute -bottom-14 right-[610px]' src={mouseoverStanding} alt="dessin d'un homme ayant les bras levés" /></Reveal>
             <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={1200}><Image className='absolute -bottom-12 right-56' src={mouseoverSit} alt="dessin d'un homme assis" /></Reveal>
           </div>

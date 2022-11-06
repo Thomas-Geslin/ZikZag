@@ -13,7 +13,7 @@ import { GoalSwiperData } from '../../datas/Home02/GoalSwiperData';
 
 export default function SwiperGoal() {
     return(
-        <section className='bg-greyBackground bg-squareBackground bg-cover bg-[center_bottom_-28rem] pt-20 pb-40'>
+        <section className='bg-greyBackground bg-squareBackground bg-cover bg-[center_bottom_-28rem] pt-20 pb-60'>
           <Swiper
             modules={[Pagination, Autoplay]}
             slidesPerView={2}

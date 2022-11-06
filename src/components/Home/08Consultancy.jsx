@@ -22,7 +22,7 @@ import honey from '../../public/assets/Home/logo_honey_color.png'
 
 export default function Consultancy() {
     return(
-        <section className='pb-20'>
+        <section className='-mb-20 relative -top-32'>
           <div className='bg-darkBlueBackground w-10/12 m-auto rounded-xl relative text-center'>
             <div className='absolute -right-20 -top-7'>
               <Image src={orangeSquare} alt='carré orange' className='w-80' />
@@ -46,7 +46,10 @@ export default function Consultancy() {
             slidesPerView={5}
             loop
             freeMode
-            speed={3000}
+            autoplay={{
+              delay: 1
+            }}
+            speed={2500}
           >
             <SwiperSlide className="bg-dynamicBk bg-no-repeat bg-center rounded-lg py-16 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
               <Image src={dynamic} alt="logo de l'entreprise dynamix" className='m-auto opacity-0 group-hover:opacity-100 ease-in duration-300' />

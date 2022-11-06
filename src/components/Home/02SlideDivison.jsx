@@ -17,7 +17,7 @@ export default function Division() {
                 <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>{el.title}</p>
                 <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
               </div>
-              <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-greyBackground group-hover:text-orange' />
+              <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
             </div>
           )}
         </section>

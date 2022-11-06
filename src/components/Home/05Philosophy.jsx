@@ -18,7 +18,7 @@ export default function Philosophy() {
 
           <div className='bg-[#14212B] w-1/2 relative rounded-bl-lg top-10 pl-20'>
             <Image src={philosophyLine} alt='dessin de ligne de décoration' className='absolute right-1 top-1' />
-            <h2 className='text-orange font-bold mb-4 relative mt-32'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+            <h2 className='text-orange font-semibold mb-4 relative mt-32'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-white text-5xl w-8/12 leading-[55px] mb-4'>Our Core Values and Principes</h3>
             <p className='text-[#dddfe1] text-lg w-[72%] leading-8 mb-10'>We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best of who we are to your business. Our culture drives our – and more importantly – your success.</p>
 

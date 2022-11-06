@@ -28,8 +28,8 @@ export const OfferSliderData = [
     {
         index: 2,
         categorie: 'analytic',
-        pictureColor: moneyColor,
-        pictureWhite: moneyWhite,
+        pictureColor: statColor,
+        pictureWhite: statWhite,
         alt: 'icon de contrat',
         line: 'ADVANCED ANALYTIC'
     },
@@ -52,8 +52,8 @@ export const OfferSliderData = [
     {
         index: 5,
         categorie: 'innovation',
-        pictureColor: moneyColor,
-        pictureWhite: moneyWhite,
+        pictureColor: balanceColor,
+        pictureWhite: balanceWhite,
         alt: 'icon de contrat',
         line: 'BUSINESS INNOVATION'
     },

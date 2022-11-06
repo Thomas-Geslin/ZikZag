@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -35,18 +36,18 @@ export default function Header() {
 
                 <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-10'>
                 <div className='relative group hover:cursor-pointer'>
-                        <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
-                        <div className='bg-darkBlueBackground hidden absolute -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
+                        <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
+                        <div className='bg-darkBlueBackground absolute hidden -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
                             <div className='flex'>
                                 <div className='w-[280px] flex flex-col items-center mb-8'>
                                     <Image src={home01} alt='miniature de la page Home01' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div>
 
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home02} alt='miniature de la page Home02' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 2</p>
-                                </div>
+                                </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home03} alt='miniature de la page Home03' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
@@ -84,9 +85,9 @@ export default function Header() {
                     </div>
 
                     <div className='relative group hover:cursor-pointer'>
-                        <div className='flex items-start py-10'><p><span className='hover-nav-animation group-hover:after:scale-x-100'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
+                        <div className='flex items-start py-10'><p className='hover-nav'><span className='hover-nav-animation group-hover:after:scale-x-100 ease-linear duration-300'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground hidden absolute -left-10 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <p className='mb-4 hover-underline-animation'>About</p>
+                            <Link href='/About'><p className='mb-4 hover-underline-animation'>About</p></Link>
                             <p className='mb-4 w-24 hover-underline-animation'>Our Services</p>
                             <p className='mb-4 hover-underline-animation'>Our Team</p>
                             <p className='mb-4 hover-underline-animation'>Single Team</p>
@@ -100,7 +101,7 @@ export default function Header() {
                     </div>
 
                     <div className='relative group hover:cursor-pointer'>
-                        <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1 group-hover:after:scale-x-100'></span>BLOG</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
+                        <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1 group-hover:after:scale-x-100'></span>BLOG</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground hidden absolute right-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block'>
                             <p className='mb-4 hover-underline-animation'>Blog Listing</p>
                             <p className='mb-4 hover-underline-animation'>Blog Grid</p>
@@ -111,7 +112,7 @@ export default function Header() {
                     </div>
 
                     <div className='relative group hover:cursor-pointer'>
-                        <div className='flex items-start py-10'><p><span className='hover-nav-animation left-4 group-hover:after:scale-x-100'></span>PORTFOLIO</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
+                        <div className='flex items-start py-10'><p><span className='hover-nav-animation left-4 group-hover:after:scale-x-100'></span>PORTFOLIO</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground hidden absolute right-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block'>
                             <p className='mb-4 hover-underline-animation'>Portfolio Grid</p>
                             <p className='mb-4 w-36 hover-underline-animation'>Portfolio Masonry</p>
@@ -121,7 +122,7 @@ export default function Header() {
                     </div>
 
                     <div className='relative group hover:cursor-pointer'>
-                        <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1 group-hover:after:scale-x-100'></span>SHOP</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
+                        <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1 group-hover:after:scale-x-100'></span>SHOP</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground hidden absolute right-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block'>
                             <p className='mb-4 hover-underline-animation'>Shop</p>
                             <p className='mb-4 hover-underline-animation'>Cart</p>
@@ -132,8 +133,8 @@ export default function Header() {
                     <p className='group'><span className='hover-nav-animation group-hover:after:scale-x-100'></span>CONTACTS</p>
                 </nav>
 
-                <div className='flex justify-end w-2/12'>
-                    <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
+                <div className='flex items-center justify-end w-2/12'>
+                    <FontAwesomeIcon icon={faMagnifyingGlass} className='w-7' />
                     <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faAngleDown } from '@fortawesome/free-solid-svg-icons'
@@ -28,10 +29,10 @@ export default function HeaderAbout() {
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div>
 
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home02} alt='miniature de la page Home02' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 2</p>
-                                </div>
+                                </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home03} alt='miniature de la page Home03' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
@@ -71,7 +72,7 @@ export default function HeaderAbout() {
                     <div className='relative group hover:cursor-pointer'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-active--page'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
                         <div className='bg-darkBlueBackground hidden absolute -left-10 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <p className='mb-4 hover-underline-animation'>About</p>
+                            <Link href='/About'><p className='mb-4 border-b-solid border-b border-b-orange w-12'>About</p></Link>
                             <p className='mb-4 w-24 hover-underline-animation'>Our Services</p>
                             <p className='mb-4 hover-underline-animation'>Our Team</p>
                             <p className='mb-4 hover-underline-animation'>Single Team</p>

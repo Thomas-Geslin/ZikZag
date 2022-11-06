@@ -92,7 +92,6 @@
   bottom: 25px;
   right: 20px;
   transform-origin: bottom right;
-  transition: transform 0.25s ease-out;
 }
 
 .hover-nav-active:after {

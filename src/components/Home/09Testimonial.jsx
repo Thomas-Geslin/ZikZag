@@ -6,14 +6,15 @@ import 'swiper/css/navigation';
 
 export default function Testimonial() {
     return(
-        <section className='bg-testimonialBackground bg-no-repeat text-center pb-28'>
-          <h2 className='text-orange text-lg font-bold mb-4 pt-36 relative w-36 m-auto'><span className='absolute bottom-1 left-0.5 bg-orange h-0.5 w-2'></span>TESTIMONIAL<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
-          <h3 className='font-Amiri text-6xl mb-12'>What People Say</h3>
+        <section className='bg-testimonialBackground bg-no-repeat text-center pb-40'>
+          <h2 className='text-orange text-base font-semibold mb-4 pt-32 relative w-36 m-auto'><span className='absolute bottom-1 left-0.5 bg-orange h-0.5 w-2'></span>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+          <h3 className='font-Amiri text-6xl mb-6'>What People Say</h3>
 
           <Swiper
             modules={[Navigation]}
             navigation
             loop
+            speed={500}
           >
             <SwiperSlide>
               <div className='bg-white rounded-lg w-[54%] m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)]'>
