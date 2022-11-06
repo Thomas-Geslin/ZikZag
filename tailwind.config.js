@@ -33,8 +33,8 @@ module.exports = {
       },
       backgroundImage: {
         // Home
-        'squareBackground': "url('../public/assets/home/offer_background.png')",
-        'businessBackground': "url('../public/assets/home/business_background.png')",
+        'squareBackground': "url('../public/assets/Home/offer_background.png')",
+        'businessBackground': "url('../public/assets/Home/business_background.png')",
         'dynamicBk': "url('../public/assets/Home/logo_dynamic_grey.png')",
         'oktaBk': "url('../public/assets/Home/logo_okta_grey.png')",
         'maxBk': "url('../public/assets/Home/logo_max_grey.png')",
