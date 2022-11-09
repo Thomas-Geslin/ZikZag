@@ -11,7 +11,7 @@ import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/
 
 export default function Footer() {
     return(
-        <footer className='bg-[#0d1820] text-white -mt-14 max-xl:px-16 430:relative'>
+        <footer className='bg-[#0d1820] text-white -mt-14 max-xl:px-10 relative'>
             <div className='flex justify-between py-10 px-[19%] relative max-xl:px-0 850:flex-col'>
                 <Image src={line} alt='ligne de décoration' className='absolute left-[40%] top-8' />
                 <p className='font-Amiri text-[36px] z-10'>Start Your Journey to Better Business</p> 
@@ -63,10 +63,10 @@ export default function Footer() {
                     <p className='text-navFooter mb-4 hover:cursor-pointer hover-underline-animation w-16'>Products</p>
                 </div>
 
-                <iframe className='grayscale rounded-xl max-xl:mb-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112401.9924965113!2d-0.1960556790397087!3d51.49933399404513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sfr!2sfr!4v1667603026914!5m2!1sfr!2sfr" width="600" height="220" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className='grayscale rounded-xl mb-44 430:w-full 430:mb-60' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112401.9924965113!2d-0.1960556790397087!3d51.49933399404513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sfr!2sfr!4v1667603026914!5m2!1sfr!2sfr" width="600" height="220" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div className='bg-[#081219] px-[19%] py-6 flex justify-between items-center max-xl:-mx-16 max-xl:px-16 850:flex-col'>
+            <div className='bg-[#081219] px-[19%] py-6 flex justify-between items-center absolute bottom-0 left-0 right-0 max-xl:px-16 850:flex-col'>
                 <Image src={logo} alt="logo de l'entreprise" />
                 <p className='text-[#8a9298] text-sm 850:mt-10'>Copyright © 2020 ZikZag by <span className='text-white underline'>WebGeniusLab</span>. All Rights Reserved.</p>
             </div>

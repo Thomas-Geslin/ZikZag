@@ -158,12 +158,12 @@ export default function Strategy() {
                     </div>
                 </div>
 
-                <div className="relative -ml-12  max-xl:pl-20">
-                    <Reveal keyframes={revealBottom} triggerOnce duration={750} delay={300}><Image src={people} alt='dessin de personne ayant une conversation' className="w-[682px]" /></Reveal>
+                <div className="relative -ml-12 max-xl:pl-20">
+                    <Reveal keyframes={revealBottom} triggerOnce duration={750} delay={300}><Image src={people} alt='dessin de personne ayant une conversation' className="w-[300px]" /></Reveal>
                     <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={800}><Image src={graphic} alt='dessin de graphique' className="absolute bottom-0" /></Reveal>
-                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={1300}><Image src={line01} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
+                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={1300}><Image src={line01} alt='ligne de décoration' className="absolute bottom-0 right-0" /></Reveal>
                     <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={1800}><Image src={line02} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
-                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={2300}><Image src={line03} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
+                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={2300}><Image src={line03} alt='ligne de décoration' className="absolute bottom-0 right-0" /></Reveal>
                     <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={2800}><Image src={line04} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
                 </div>
             </div>

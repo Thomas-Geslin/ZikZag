@@ -52,15 +52,15 @@ export default function Offer() {
           <div className='flex font-Amiri text-white justify-center h-36 relative -top-[72px] w-10/12 m-auto max-xl:flex-col max-xl:top-0 650:w-full'>
             <div className='relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg'>
               <span className='text-8xl text-[#2a3843] absolute left-16 bottom-4 tracking-tighter'>01</span>
-              <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6'>Consulting for Private Equity</p>
-              <div className='px-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+              <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
+              <div className='px-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
               <span className='absolute right-44 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
             </div>
 
             <div className='relative flex items-center bg-orange rounded-r-lg group max-xl:rounded-lg'>
               <span className='absolute left-16 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>02</span>
-              <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6'>Consulting for Corporates</p>
-              <div className='px-24 relative -right-12 850:right-0'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+              <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+              <div className='px-24 relative -right-12 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
               <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
             </div>
           </div>
