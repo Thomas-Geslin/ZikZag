@@ -11,16 +11,16 @@ import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/
 
 export default function Footer() {
     return(
-        <footer className='bg-[#0d1820] text-white -mt-14'>
-            <div className='flex justify-between py-10 px-[19%] relative'>
-                <Image src={line} alt='ligne de décoration' className='absolute left-[800px] top-8' />
+        <footer className='bg-[#0d1820] text-white -mt-14 max-xl:px-16 430:relative'>
+            <div className='flex justify-between py-10 px-[19%] relative max-xl:px-0 850:flex-col'>
+                <Image src={line} alt='ligne de décoration' className='absolute left-[40%] top-8' />
                 <p className='font-Amiri text-[36px] z-10'>Start Your Journey to Better Business</p> 
-                <button className='bg-orange py-4 px-7 rounded font-semibold text-[14px] hover:cursor-pointer hover:text-black hover:bg-white ease-in duration-300'>GET IN TOUCH</button>
+                <button className='bg-orange py-4 px-7 rounded font-semibold text-[14px] hover:cursor-pointer hover:text-black hover:bg-white ease-in duration-300 850:w-[180px]'>GET IN TOUCH</button>
             </div>
 
-            <span className='absolute h-px w-[1190px] left-[50%] translate-x-[-50%] bg-[#212b32]'></span>
+            <span className='absolute h-px w-[60%] left-[50%] translate-x-[-50%] bg-[#212b32] max-xl:w-[90%]'></span>
 
-            <div className='flex justify-between text-white mt-14 px-[19%]'>
+            <div className='flex justify-between text-white mt-14 px-[19%]  max-xl:px-0 max-xl:flex-wrap'>
                 <div>
                     <div className='flex items-start mb-4 leading-7'>
                         <Image src={placeholder} alt='icone de telephone' className='w-7 mr-3 top-1.5 relative' />
@@ -63,12 +63,12 @@ export default function Footer() {
                     <p className='text-navFooter mb-4 hover:cursor-pointer hover-underline-animation w-16'>Products</p>
                 </div>
 
-                <iframe className='grayscale rounded-xl' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112401.9924965113!2d-0.1960556790397087!3d51.49933399404513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sfr!2sfr!4v1667603026914!5m2!1sfr!2sfr" width="600" height="220" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <iframe className='grayscale rounded-xl max-xl:mb-10' src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d112401.9924965113!2d-0.1960556790397087!3d51.49933399404513!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4291f3172409ea92!2slastminute.com%20London%20Eye!5e0!3m2!1sfr!2sfr!4v1667603026914!5m2!1sfr!2sfr" width="600" height="220" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div className='bg-[#081219] px-[19%] py-6 flex justify-between items-center'>
+            <div className='bg-[#081219] px-[19%] py-6 flex justify-between items-center max-xl:-mx-16 max-xl:px-16 850:flex-col'>
                 <Image src={logo} alt="logo de l'entreprise" />
-                <p className='text-[#8a9298] text-sm'>Copyright © 2020 ZikZag by <span className='text-white underline'>WebGeniusLab</span>. All Rights Reserved.</p>
+                <p className='text-[#8a9298] text-sm 850:mt-10'>Copyright © 2020 ZikZag by <span className='text-white underline'>WebGeniusLab</span>. All Rights Reserved.</p>
             </div>
         </footer>
     )

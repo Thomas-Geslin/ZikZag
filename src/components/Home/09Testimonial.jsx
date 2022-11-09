@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 
 export default function Testimonial() {
     return(
-        <section className='bg-testimonialBackground bg-no-repeat text-center pb-40'>
+        <section className='bg-testimonialBackground bg-no-repeat text-center pb-40 430:pb-24 850:pb-10'>
           <h2 className='text-orange text-base font-semibold mb-4 pt-32 relative w-36 m-auto'><span className='absolute bottom-1 left-0.5 bg-orange h-0.5 w-2'></span>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
           <h3 className='font-Amiri text-6xl mb-6'>What People Say</h3>
 
@@ -14,10 +14,10 @@ export default function Testimonial() {
             modules={[Navigation]}
             navigation
             loop
-            speed={500}
+            speed={300}
           >
             <SwiperSlide>
-              <div className='bg-white rounded-lg w-[54%] m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)]'>
+              <div className='bg-white rounded-lg w-[60%] m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                   <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                   c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -39,7 +39,7 @@ export default function Testimonial() {
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className='bg-white rounded-lg w-[54%] my-5 m-auto shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)]'>
+              <div className='bg-white rounded-lg w-[60%] my-5 m-auto shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                   <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                   c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2

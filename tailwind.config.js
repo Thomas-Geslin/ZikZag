@@ -32,9 +32,17 @@ module.exports = {
         'headerShadow': '5px 6px 30px 0 rgba(0, 0, 0, 0.12)'
       },
       backgroundImage: {
-        // Home
+        /* Home02 */
         'squareBackground': "url('../public/assets/Home/offer_background.png')",
         'businessBackground': "url('../public/assets/Home/business_background.png')",
+        // Offer Icon
+        'reportIcon': "url('../public/assets/Home/offer_icon_report_color.png')",
+        'moneyIcon': "url('../public/assets/Home/offer_icon_money_color.png')",
+        'statIcon': "url('../public/assets/Home/offer_icon_stat_color.png')",
+        'rocketIcon': "url('../public/assets/Home/offer_icon_rocket_color.png')",
+        'paymentIcon': "url('../public/assets/Home/offer_icon_payment_color.png')",
+        'balanceIcon': "url('../public/assets/Home/offer_icon_balance_color.png')",
+        // Brand Slider
         'dynamicBk': "url('../public/assets/Home/logo_dynamic_grey.png')",
         'oktaBk': "url('../public/assets/Home/logo_okta_grey.png')",
         'maxBk': "url('../public/assets/Home/logo_max_grey.png')",
@@ -42,11 +50,35 @@ module.exports = {
         'detersBk': "url('../public/assets/Home/logo_deters_grey.png')",
         'honeyBk': "url('../public/assets/Home/logo_honey_grey.png')",
         'testimonialBackground': "url('../public/assets/Home/testimonial_background.jpg')",
-        // About
+        /* About */
         'noticeBackground': "url('../public/assets/About/background_landing.jpg')",
         'card01Background': "url('../public/assets/About/card_01.jpg')",
         'card02Background': "url('../public/assets/About/card_02.jpg')",
         'card03Background': "url('../public/assets/About/card_03.jpg')",
+      },
+      screens: {
+        'sm': '640px',
+        // => @media (min-width: 640px) { ... }
+  
+        'md': '768px',
+        // => @media (min-width: 768px) { ... }
+  
+        'lg': '1024px',
+        // => @media (min-width: 1024px) { ... }
+  
+        'max-xl': {'max': '1280px'},
+
+        'min-xl': '1280px',
+
+        'max-2xl': {'max': '1650px'},
+
+        '1060': {'max': '1060px'},
+
+        '850': {'max': '850px'},
+
+        '650': {'max': '650px'},
+
+        '430': {'max': '430px'},
       }
     },
   },
