@@ -309,7 +309,7 @@
   }
 }
 .offerSlide-active {
-  animation: offerSlide .5s ease-in-out forwards;
+  animation: offerSlide .4s ease-in-out forwards;
 }
 @keyframes offerSlideRemove {
   0% {
@@ -320,7 +320,30 @@
   }
 }
 .offerSlide-remove {
-  animation: offerSlideRemove .5s ease-in-out forwards;
+  animation: offerSlideRemove .4s ease-in-out forwards;
+}
+
+@keyframes offerBounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+.offerSlide-bounce {
+  animation: offerBounce .35s ease-in-out forwards;
+}
+@keyframes offerRebounce {
+  0% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+.offerSlide-rebounce {
+  animation: offerRebounce .35s ease-in-out forwards;
 }
 /**/
 

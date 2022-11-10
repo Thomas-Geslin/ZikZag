@@ -62,6 +62,8 @@ module.exports = {
         /* Home03 */
         // Division 
         'Home03DivisionBackground': "url('../public/assets/Home03/division_background.png')",
+        // Contact
+        'Home03Contact': "url('../public/assets/Home03/contact_background.png')",
         /* About */
         'noticeBackground': "url('../public/assets/About/background_landing.jpg')",
         'card01Background': "url('../public/assets/About/card_01.jpg')",

@@ -57,6 +57,45 @@ export default function Offer() {
       target.classList.add('home02-offer-active');
     }
 
+    function manageBounce(categorieSlide, slideNumber) {
+      if(slideNumber > currentSlideNumber) {
+        let slides = document.getElementsByClassName('offerSlide');
+        let slidesArray = Array.from(slides);
+        slidesArray.forEach(slide => {
+          let index = slidesArray.indexOf(slide);
+          if(index === currentSlideNumber) {
+            slide.classList.remove('offerSlide-rebounce');
+            slide.classList.add('offerSlide-bounce');
+          }
+        })
+      } else if(slideNumber < currentSlideNumber) {
+        let target = document.getElementById(categorieSlide);
+        let slides = document.getElementsByClassName('offerSlide');
+        let slidesArray = Array.from(slides);
+        if(target.classList.contains('offerSlide-bounce')) {
+          slidesArray.forEach(slide => {
+            if(slide.classList.contains('offerSlide-bounce')) {
+              setTimeout(() => {
+                slide.classList.add('offerSlide-rebounce');
+                setTimeout(() => {
+                  slide.classList.remove('offerSlide-bounce');
+                  slide.classList.add('offerSlide-rebounce');
+                }, 50)
+              }, 350)
+            }
+          })
+        } else {
+          target.classList.add('offerSlide-bounce');
+          setTimeout(() => {
+            target.classList.add('offerSlide-rebounce');
+            setTimeout(() => {
+              target.classList.remove('offerSlide-bounce');
+            }, 50)
+          }, 350)
+        }
+      }
+    }
+
     function slideAnimation(categorieSlide, slideNumber) {
       if(slideNumber > currentSlideNumber) {
           let target = document.getElementById(categorieSlide);
@@ -77,17 +116,18 @@ export default function Offer() {
                   slide.classList.add('offerSlide-remove');
                   setTimeout(() => {
                     slide.classList.remove('offerSlide-active');
-                  }, 200);        
+                  }, 50);        
                 }
               }
             })
-          }, 400)
+          }, 300);
         setCurrentSlideNumber(slideNumber);
       }
     }
 
     function addActiveOffer(categorie, categorieSlide, slideNumber) {
       triangleAnimation(categorie);
+      manageBounce(categorieSlide, slideNumber);
       slideAnimation(categorieSlide, slideNumber);
     }
 
@@ -216,7 +256,7 @@ export default function Offer() {
               <div className='relative'>
                 <Image src={offerFifthBackground} alt='homme tenant un ordinateur' className='relative top-0 -left-9 my-8 pr-8 1060:left-0' />
                 <Image src={offerIcon} alt='dessin de horloge' className='absolute bottom-7 right-12 1060:left-0 1060:pl-2' />
-                <Image src={offerWoman} alt="dessin d'une personne avec un bras levé" className='absolute z-10 bottom-6-left-12 1060:left-2' />
+                <Image src={offerWoman} alt="dessin d'une personne avec un bras levé" className='absolute z-10 bottom-6 -left-12 1060:left-2' />
               </div>
             </div>
 

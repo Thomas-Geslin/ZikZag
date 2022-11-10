@@ -3,8 +3,8 @@ import { faArrowRightLong, faCheck } from '@fortawesome/free-solid-svg-icons'
 
 export default function PricingHome03() {
     return(
-        <section className='text-center mb-40'>
-            <h2 className='text-orange font-semibold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-3 bg-orange h-0.5 w-2'></span>PRICING PACKAGES<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+        <section className='text-center'>
+            <h2 className='text-orange font-semibold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 -left-1 bg-orange h-0.5 w-2'></span>PRICING PACKAGES<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-slightGrey text-6xl mb-5'>Choose Your Best Plan</h3>
             <p className='text-greyText text-lg leading-9 w-5/12 m-auto mb-12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
        
@@ -53,7 +53,7 @@ export default function PricingHome03() {
                         <div className='pb-4 flex'><FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 text-[#868686] mr-2' /><p className='text-[#868686]'>Information Technology</p></div>
                     </div>
 
-                    <button className="bg-orange rounded text-white text-sm font-semibold py-4 px-7 mt-6 mb-14 hover:bg-darkBlueBackground ease-in-out duration-500">CHOOSE PLAN</button>
+                    <button className="bg-orange rounded text-white text-sm font-semibold py-4 px-7 mt-6 mb-14 hover:bg-white hover:text-black ease-in-out duration-500">CHOOSE PLAN</button>
                 </div>
 
 
