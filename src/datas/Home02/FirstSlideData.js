@@ -1,7 +1,7 @@
-import mission from "../../public/assets/Home/benefits_icon_mission.png"
-import target from "../../public/assets/Home/benefits_icon_target.png"
-import work from "../../public/assets/Home/benefits_icon_work.png"
-import light from "../../public/assets/Home/benefits_icon_light.png"
+import mission from "../../public/assets/Home02/benefits_icon_mission.png"
+import target from "../../public/assets/Home02/benefits_icon_target.png"
+import work from "../../public/assets/Home02/benefits_icon_work.png"
+import light from "../../public/assets/Home02/benefits_icon_light.png"
 
 export const FirstSlideData = [
     {

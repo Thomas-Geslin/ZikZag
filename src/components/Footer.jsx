@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import logo from '../public/assets/Home/logo_consultancy.png'
+import logo from '../public/assets/Home02/logo_consultancy.png'
 import line from '../public/assets/footer/footer_line.png'
 import phone from '../public/assets/footer/icon_phone.png'
 import placeholder from '../public/assets/footer/icon_placeholder.png'

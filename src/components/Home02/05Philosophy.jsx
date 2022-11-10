@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons'
 
 // Assets Philosophy
-import philosophyBackground from '../../public/assets/Home/philosophy_background.jpg'
-import philosophyLine from '../../public/assets/Home/philosophy_background_line.png'
+import philosophyBackground from '../../public/assets/Home02/philosophy_background.jpg'
+import philosophyLine from '../../public/assets/Home02/philosophy_background_line.png'
 
 // Philosophy Data
 import { PhilosophyGridData } from '../../datas/Home02/PhilisophyGridData'

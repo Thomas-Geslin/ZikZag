@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
@@ -10,15 +11,14 @@ import 'swiper/css';
 import 'swiper/css/autoplay';
 
 // Consultancy Assets
-import logo from "../../public/assets/Home/logo_consultancy.png"
-import orangeSquare from '../../public/assets/Home/consultancy_widget_background.png'
-import dynamic from '../../public/assets/Home/logo_dynamic_color.png'
-import okta from '../../public/assets/Home/logo_okta_color.png'
-import max from '../../public/assets/Home/logo_max_color.png'
-import solana from '../../public/assets/Home/logo_solana_color.png'
-import deters from '../../public/assets/Home/logo_deters_color.png'
-import honey from '../../public/assets/Home/logo_honey_color.png'
-import { useEffect, useState } from 'react';
+import logo from "../../public/assets/Home02/logo_consultancy.png"
+import orangeSquare from '../../public/assets/Home02/consultancy_widget_background.png'
+import dynamic from '../../public/assets/Home02/logo_dynamic_color.png'
+import okta from '../../public/assets/Home02/logo_okta_color.png'
+import max from '../../public/assets/Home02/logo_max_color.png'
+import solana from '../../public/assets/Home02/logo_solana_color.png'
+import deters from '../../public/assets/Home02/logo_deters_color.png'
+import honey from '../../public/assets/Home02/logo_honey_color.png'
 
 
 export default function Consultancy() {

@@ -5,9 +5,9 @@ import { useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass, faAngleDown, faAngleRight, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import logo from "../public/assets/Home/logo_consultancy.png"
-import logoFixed from "../public/assets/Home/logo.png"
-import logoQueries from '../public/assets/Home/logo_consultancy.png'
+import logo from "../public/assets/Home02/logo_consultancy.png"
+import logoFixed from "../public/assets/Home02/logo.png"
+import logoQueries from '../public/assets/Home02/logo_consultancy.png'
 
 import home01 from '../public/assets/Header/home_01.jpg'
 import home02 from '../public/assets/Header/home_02.jpg'
@@ -51,10 +51,10 @@ export default function HeaderAbout() {
 
 
     return(
-        <header className='z-100 flex bg-transparent justify-between font-NunitoSans text-white text-sm font-bold items-center px-14 absolute top-0 left-0 right-0'>
-            <Image src={logo} alt="logo de l'entreprise" className='w-36 my-7' />
+        <header className='z-50 flex bg-transparent justify-between font-NunitoSans text-white text-sm font-bold items-center px-14 absolute top-0 left-0 right-0'>
+            <Image src={logo} alt="logo de l'entreprise" className='w-36 my-7 z-50' />
 
-            <nav id='stickyHeader' className='flex justify-between items-center w-[36%] ml-36 text-white z-100 max-xl:hidden'>
+            <nav id='stickyHeader' className='flex justify-between items-center w-[36%] ml-36 text-white z-50 max-xl:hidden'>
                 <div className='relative group hover:cursor-pointer'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation group-hover:after:scale-x-100'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
                         <div className='bg-darkBlueBackground hidden absolute -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
@@ -107,7 +107,7 @@ export default function HeaderAbout() {
                     <div className='relative group hover:cursor-pointer'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-active--page'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
                         <div className='bg-darkBlueBackground hidden absolute -left-10 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <Link href='/About'><p className='mb-4 border-b-solid border-b border-b-orange w-12'>About</p></Link>
+                            <Link href='/About'><p className='mb-4 hover-underline-animation w-12'>About</p></Link>
                             <p className='mb-4 w-24 hover-underline-animation'>Our Services</p>
                             <p className='mb-4 hover-underline-animation'>Our Team</p>
                             <p className='mb-4 hover-underline-animation'>Single Team</p>
@@ -163,7 +163,7 @@ export default function HeaderAbout() {
             <div id='fixedHeader' className='flex justify-between invisible fixed left-0 right-0 font-NunitoSans text-sm font-bold items-center px-14 bg-white ease-linear duration-300 max-xl:hidden'>
                 <Image src={logoFixed} alt="logo de l'entreprise" className='w-36 my-7' />
 
-                <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-100'>
+                <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
@@ -330,7 +330,7 @@ export default function HeaderAbout() {
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='w-6' />
 
                 <div id='asideHeader' className='hidden fixed left-0 top-0 bottom-0 bg-darkBlueBackground p-9 -translate-x-40 ease-in-out duration-500'>
-                    <div className='absolute top-0 left-96 z-100 px-4 py-3 850:left-60' onClick={asideHeaderClose}><FontAwesomeIcon icon={faXmark} className='w-4 text-white' /></div>
+                    <div className='absolute top-0 left-96 z-50 px-4 py-3 850:left-60' onClick={asideHeaderClose}><FontAwesomeIcon icon={faXmark} className='w-4 text-white' /></div>
                     <Image src={logoQueries} alt='logo de entreprise' className='ml-4 mb-6' />
 
                     <div>

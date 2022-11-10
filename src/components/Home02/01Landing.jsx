@@ -9,18 +9,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
 // Assets Landing
-import mouseoverLine01 from '../../public/assets/Home/mouseover_line_01.png'
-import mouseoverLine02 from '../../public/assets/Home/mouseover_line_02.png'
-import mouseoverLine03 from '../../public/assets/Home/mouseover_line_03.png'
-import mouseoverLine04 from '../../public/assets/Home/mouseover_line_04.png'
-import mouseoverLine05 from '../../public/assets/Home/mouseover_line_05.png'
-import mouseoverLine06 from '../../public/assets/Home/mouseover_line_06.png'
-import mouseoverRocket from '../../public/assets/Home/mouseover_rocket.png'
-import mouseoverSquareLeft from "../../public/assets/Home/mouseover_square_grey.png"
-import mouseoverSquareRight from "../../public/assets/Home/mouseover_square_orange.png"
-import mouseoverStanding from "../../public/assets/Home/mouseover_standing.png"
-import mouseoverSit from "../../public/assets/Home/mouseover_sit.png"
-import { useEffect } from 'react';
+import mouseoverLine01 from '../../public/assets/Home02/mouseover_line_01.png'
+import mouseoverLine02 from '../../public/assets/Home02/mouseover_line_02.png'
+import mouseoverLine03 from '../../public/assets/Home02/mouseover_line_03.png'
+import mouseoverLine04 from '../../public/assets/Home02/mouseover_line_04.png'
+import mouseoverLine05 from '../../public/assets/Home02/mouseover_line_05.png'
+import mouseoverLine06 from '../../public/assets/Home02/mouseover_line_06.png'
+import mouseoverRocket from '../../public/assets/Home02/mouseover_rocket.png'
+import mouseoverSquareLeft from "../../public/assets/Home02/mouseover_square_grey.png"
+import mouseoverSquareRight from "../../public/assets/Home02/mouseover_square_orange.png"
+import mouseoverStanding from "../../public/assets/Home02/mouseover_standing.png"
+import mouseoverSit from "../../public/assets/Home02/mouseover_sit.png"
 
 // Keyframe for smooth reveal
 const reveal = keyframes`

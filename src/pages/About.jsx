@@ -1,13 +1,13 @@
 import Head from 'next/head'
 
-import HeaderAbout from '../components/HeaderAbout'
+import HeaderSecond from '../components/HeaderSecond'
 import Footer from '../components/Footer'
 
 import AboutNotice from '../components/About/01AboutNotice'
 import AboutLanding from '../components/About/02AboutLanding'
 import Strategy from '../components/About/03Strategy'
 import SwiperAbout from '../components/About/04SwiperAbout'
-import Testimonial from '../components/Home/09Testimonial'
+import Testimonial from '../components/Home02/09Testimonial'
 
 
 export default function About() {
@@ -19,7 +19,7 @@ export default function About() {
                 <link rel="icon" href="../"/>
             </Head>
 
-            <HeaderAbout />
+            <HeaderSecond />
 
             <main>
                 <AboutNotice />

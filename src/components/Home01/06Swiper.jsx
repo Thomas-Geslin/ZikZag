@@ -1,6 +1,9 @@
 import Image from "next/image"
 import { useEffect, useState } from "react";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper';
@@ -10,7 +13,7 @@ import 'swiper/css/pagination';
 import { AboutSwiperData } from "../../datas/About/AboutSwiperData";
 
 
-export default function SwiperAbout() {
+export default function SwiperHome01() {
     let [slideNumber, setSlideNumber] = useState(4);
     
     /* useEffect(() => {
@@ -27,7 +30,7 @@ export default function SwiperAbout() {
     }, [slideNumber]) */
 
     return (
-        <section className="mt-7 mb-12">
+        <section>
             <Swiper
                 modules={[Pagination]}
                 slidesPerView={slideNumber}
@@ -40,6 +43,13 @@ export default function SwiperAbout() {
                     return(
                         <SwiperSlide key={el.index} className='relative group hover:cursor-pointer'>
                             <Image src={el.background} alt="photo d'employé" className="w-[440px] m-auto rounded-lg max-xl:w-[90%]" />
+
+                            <div className='absolute top-10 right-12'>
+                                <div className='bg-white p-3 rounded-full mb-3 translate-x-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 ease-in-out duration-500'><FontAwesomeIcon icon={faTwitter} className='w-3.5 text-[#1DA1F2]' /></div>
+                                <div className='bg-white pl-3.5 py-3 rounded-full mb-3 translate-x-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 ease-in-out duration-500 delay-[0.1s]'><FontAwesomeIcon icon={faFacebookF} className='w-2.5 text-[#3B5998]' /></div>
+                                <div className='bg-white pl-3.5 py-3 rounded-full mb-3 translate-x-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 ease-in-out duration-500 delay-[0.2s]'><FontAwesomeIcon icon={faPinterestP} className='w-3 text-[#E40000]' /></div>
+                                <div className='bg-white p-3 rounded-full mb-3 translate-x-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 ease-in-out duration-500 delay-[0.3s]'><FontAwesomeIcon icon={faInstagram} className='w-3.5 text-[#C32AA3]' /></div>
+                            </div>
 
                             <div className="bg-white flex justify-between items-center px-8 h-28 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] rounded-md w-10/12 m-auto relative -top-20 z-10 group-hover:-translate-y-16 ease-in-out duration-500">
                                 <div className="pl-4">

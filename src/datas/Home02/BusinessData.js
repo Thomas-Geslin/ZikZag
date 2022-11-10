@@ -1,6 +1,6 @@
-import businessLight from '../../public/assets/Home/business_light.png'
-import businessGraphic from '../../public/assets/Home/business_graphic.png'
-import businessHorse from '../../public/assets/Home/business_horse.png'
+import businessLight from '../../public/assets/Home02/business_light.png'
+import businessGraphic from '../../public/assets/Home02/business_graphic.png'
+import businessHorse from '../../public/assets/Home02/business_horse.png'
 
 export const BusinessData = [
     {

@@ -1,7 +1,7 @@
-import slide01 from '../../public/assets/Home/slide_01.jpg'
-import slide02 from '../../public/assets/Home/slide_02.jpg'
-import slide03 from '../../public/assets/Home/slide_03.jpg'
-import slide04 from '../../public/assets/Home/slide_04.jpg'
+import slide01 from '../../public/assets/Home02/slide_01.jpg'
+import slide02 from '../../public/assets/Home02/slide_02.jpg'
+import slide03 from '../../public/assets/Home02/slide_03.jpg'
+import slide04 from '../../public/assets/Home02/slide_04.jpg'
 
 export const GoalSwiperData = [
     {

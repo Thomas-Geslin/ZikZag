@@ -32,24 +32,36 @@ module.exports = {
         'headerShadow': '5px 6px 30px 0 rgba(0, 0, 0, 0.12)'
       },
       backgroundImage: {
+        /* Home01 */
+        'Home1FirstSlide': "url('../public/assets/Home01/landing_slide_1.jpg')",
+        // Offer Slide
+        'Home1OfferFirst': "url('../public/assets/Home01/offer_slide_1.jpg')",
+        'Home1OfferSecond': "url('../public/assets/Home01/offer_slide_2.jpg')",
+        'Home1OfferThird': "url('../public/assets/Home01/offer_slide_3.jpg')",
+        'Home1OfferFourth': "url('../public/assets/Home01/offer_slide_4.jpg')",
+        'Home1OfferFifth': "url('../public/assets/Home01/offer_slide_5.jpg')",
+        'Home1OfferSixth': "url('../public/assets/Home01/offer_slide_6.jpg')",
         /* Home02 */
-        'squareBackground': "url('../public/assets/Home/offer_background.png')",
-        'businessBackground': "url('../public/assets/Home/business_background.png')",
+        'squareBackground': "url('../public/assets/Home02/offer_background.png')",
+        'businessBackground': "url('../public/assets/Home02/business_background.png')",
         // Offer Icon
-        'reportIcon': "url('../public/assets/Home/offer_icon_report_color.png')",
-        'moneyIcon': "url('../public/assets/Home/offer_icon_money_color.png')",
-        'statIcon': "url('../public/assets/Home/offer_icon_stat_color.png')",
-        'rocketIcon': "url('../public/assets/Home/offer_icon_rocket_color.png')",
-        'paymentIcon': "url('../public/assets/Home/offer_icon_payment_color.png')",
-        'balanceIcon': "url('../public/assets/Home/offer_icon_balance_color.png')",
+        'reportIcon': "url('../public/assets/Home02/offer_icon_report_color.png')",
+        'moneyIcon': "url('../public/assets/Home02/offer_icon_money_color.png')",
+        'statIcon': "url('../public/assets/Home02/offer_icon_stat_color.png')",
+        'rocketIcon': "url('../public/assets/Home02/offer_icon_rocket_color.png')",
+        'paymentIcon': "url('../public/assets/Home02/offer_icon_payment_color.png')",
+        'balanceIcon': "url('../public/assets/Home02/offer_icon_balance_color.png')",
         // Brand Slider
-        'dynamicBk': "url('../public/assets/Home/logo_dynamic_grey.png')",
-        'oktaBk': "url('../public/assets/Home/logo_okta_grey.png')",
-        'maxBk': "url('../public/assets/Home/logo_max_grey.png')",
-        'solanaBk': "url('../public/assets/Home/logo_solana_grey.png')",
-        'detersBk': "url('../public/assets/Home/logo_deters_grey.png')",
-        'honeyBk': "url('../public/assets/Home/logo_honey_grey.png')",
-        'testimonialBackground': "url('../public/assets/Home/testimonial_background.jpg')",
+        'dynamicBk': "url('../public/assets/Home02/logo_dynamic_grey.png')",
+        'oktaBk': "url('../public/assets/Home02/logo_okta_grey.png')",
+        'maxBk': "url('../public/assets/Home02/logo_max_grey.png')",
+        'solanaBk': "url('../public/assets/Home02/logo_solana_grey.png')",
+        'detersBk': "url('../public/assets/Home02/logo_deters_grey.png')",
+        'honeyBk': "url('../public/assets/Home02/logo_honey_grey.png')",
+        'testimonialBackground': "url('../public/assets/Home02/testimonial_background.jpg')",
+        /* Home03 */
+        // Division 
+        'Home03DivisionBackground': "url('../public/assets/Home03/division_background.png')",
         /* About */
         'noticeBackground': "url('../public/assets/About/background_landing.jpg')",
         'card01Background': "url('../public/assets/About/card_01.jpg')",

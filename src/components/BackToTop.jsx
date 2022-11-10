@@ -13,7 +13,6 @@ export default function BackToTop() {
     
         const observer = new IntersectionObserver(function (entries) {
           entries.forEach((entry) => {
-              if(!entry.isIntersecting) target.classList.remove('fixed-goTop');
               if(entry.isIntersecting) target.classList.add('fixed-goTop');
           })
         }, options);
