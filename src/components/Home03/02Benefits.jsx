@@ -73,7 +73,7 @@ export default function BenefitsHome03() {
                 </div>
             </div>
 
-            <div className='bg-greyBackground'>
+            <div id='goTopViewport' className='bg-greyBackground'>
                 <div className='flex pt-16 relative'>
                     <Image src={background01} alt='deux personnes travaillant ensemble' />
 

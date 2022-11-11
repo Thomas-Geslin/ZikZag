@@ -20,12 +20,15 @@ import line4 from '../../public/assets/Home03/landing_line_4.png'
 
 export default function LandingHome03() {
     return(
-        <section className='bg-orange pt-64 relative'>
+        <section className='bg-orange pt-64 relative overflow-hidden'>
             <div>
-                <Image src={para1} alt='carré de décoration' className='absolute -left-64 -top-72' />
+                <Image src={para1} alt='carré de décoration' className='landingBackgroundAnimation absolute' />
+                <Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation absolute bottom-56 -left-80' />
+                <Image src={para3} alt='carré de décoration' className='landingBackgroundAnimation-delay absolute bottom-10' />
+                <Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation-delay absolute top-20 left-[1200px]' />
             </div>
-            
-            <div className='text-white ml-[19%]'>
+
+            <div className='text-white ml-[19%] relative'>
                 <div className='flex items-center'>
                     <div className='shadow-[3px_3px_20px_3px_rgb(0,0,0,0.12)] group bg-white px-7 py-6 rounded-full hover:bg-darkBlueBackground hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-black group-hover:text-white' /></div>
                     <p className='font-bold text-sm ml-5'>HOW IT WORKS</p>

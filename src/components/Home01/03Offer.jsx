@@ -6,7 +6,7 @@ import arrow  from '../../public/assets/Home02/offer_arrow.png'
 
 export default function OfferHome01() {
     return(
-        <section id='goTopViewport' className='bg-greyBackground bg-squareBackground bg-no-repeat bg-[top_right_5rem] text-center'>
+        <section id='goTopViewport' className='bg-greyBackground relative -top-60 -mb-60 bg-squareBackground bg-no-repeat bg-[top_right_5rem] text-center'>
             <h2 className='text-orange font-semibold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Business Shaped Solutions</h3>
             <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>

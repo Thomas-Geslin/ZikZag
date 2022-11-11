@@ -5,23 +5,23 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faMagnifyingGlass, faBars, faAngleDown, faAngleRight, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-import logo from "../public/assets/Home02/logo.png"
-import logoQueries from '../public/assets/Home02/logo_consultancy.png'
+import logo from "../../public/assets/Home02/logo.png"
+import logoQueries from '../../public/assets/Home02/logo_consultancy.png'
 
-import home01 from '../public/assets/Header/home_01.jpg'
-import home02 from '../public/assets/Header/home_02.jpg'
-import home03 from '../public/assets/Header/home_03.jpg'
-import home04 from '../public/assets/Header/home_04.jpg'
-import home05 from '../public/assets/Header/home_05.jpg'
-import home06 from '../public/assets/Header/home_06.jpg'
-import coming from '../public/assets/Header/coming_soon.jpg'
-import { useEffect, useState } from 'react'
+import home01 from '../../public/assets/Header/home_01.jpg'
+import home02 from '../../public/assets/Header/home_02.jpg'
+import home03 from '../../public/assets/Header/home_03.jpg'
+import home04 from '../../public/assets/Header/home_04.jpg'
+import home05 from '../../public/assets/Header/home_05.jpg'
+import home06 from '../../public/assets/Header/home_06.jpg'
+import coming from '../../public/assets/Header/coming_soon.jpg'
+import { useEffect } from 'react'
 
-export default function Header() {
+export default function HeaderHome04() {
     useEffect(() => {
         // Intersection Obeserver for fixed Header
         const target = document.getElementById('fixedHeader');
-        const sticky = document.getElementById('stickyHeader');
+        const viewport = document.getElementById('headerViewport');
 
         const options = {
             root: null
@@ -35,7 +35,7 @@ export default function Header() {
                 if(entry.isIntersecting) target.classList.remove('fixed-header');
             })
         }, options);
-        observer.observe(sticky);
+        observer.observe(viewport);
     }, [])
 
 
@@ -51,20 +51,7 @@ export default function Header() {
 
 
     return(
-        <header className='shadow-[5px_6px_30px_0_rgba(0,0,0,0.12)] z-50 absolute top-0 right-0 left-0'>
-            <div id='stickyHeader' className="flex font-Amiri bg-darkBlueBackground text-white py-2 px-14 max-xl:hidden">
-                <p>Call Us: <span className="text-orangeBright">+1 800 123 456 789</span></p>
-                <p className="ml-10 mr-auto">Mail Us: <span className="text-orangeBright">zikzag@mail.com</span></p>
-
-                <p>Bespoke Solutions Tailored to Your Business. <span className="text-orangeBright">Free Counsultancy</span></p>
-                <div className='flex justify-between w-36 ml-12'>
-                    <FontAwesomeIcon icon={faTwitter} className='w-3 hover:text-[#1d9bf0] hover:cursor-pointer ease-linear duration-300' />
-                    <FontAwesomeIcon icon={faFacebookF} className='w-2 hover:text-[#587abf] hover:cursor-pointer ease-linear duration-300' />
-                    <FontAwesomeIcon icon={faPinterestP} className='w-2.5 hover:text-[#c42d2f] hover:cursor-pointer ease-linear duration-300' />
-                    <FontAwesomeIcon icon={faInstagram} className='w-3 hover:text-[#af50a0] hover:cursor-pointer ease-linear duration-300' />
-                </div>
-            </div>
-
+        <header className='shadow-[5px_6px_30px_0_rgba(0,0,0,0.12)] z-50 relative top-0 right-0 left-0'>
             <div id='fixedHeader' className='flex justify-between font-NunitoSans text-sm font-bold items-center px-14 bg-white max-xl:hidden'>
                 <Image src={logo} alt="logo de l'entreprise" className='w-36 my-7' />
 
@@ -102,17 +89,17 @@ export default function Header() {
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home06} alt='miniature de la page Home06' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 6</p>
+                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
+                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
+                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div>
                             </div>
                         </div>
@@ -222,12 +209,12 @@ export default function Header() {
 
                 <div className='flex items-center justify-end w-2/12'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
-                    <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
+                    <button className='inline-block p-9 py-5 ml-9 rounded hover:cursor-pointer bg-orange hover:bg-darkBlueBackground text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>
             </div>
 
 
-            <div className='bg-darkBlueBackground flex justify-between items-center absolute top-0 left-0 right-0 h-28 text-white px-20 z-100 min-xl:hidden 650:px-6'>
+            <div className='bg-darkBlueBackground flex justify-between items-center relative top-0 left-0 right-0 h-28 text-white px-20 z-100 min-xl:hidden 650:px-6'>
                 <FontAwesomeIcon icon={faBars} onClick={asideHeaderOpen} className='w-5' />
                 <Image src={logoQueries} alt='logo de entreprise' />
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='w-6' />

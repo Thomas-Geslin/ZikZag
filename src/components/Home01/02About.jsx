@@ -10,7 +10,7 @@ import pinterest from '../../public/assets/Home01/about_icon_pinterest.png'
 
 export default function AboutHome01() {
     return(
-        <section className='relative -top-32 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto'>
+        <section className='relative -top-32 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 -top-48'>
             <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col max-xl:top-0 650:w-full'>
                 <div className='relative flex items-center bg-darkBlueBackground rounded-tl-lg group max-xl:rounded-lg'>
                     <span className='text-8xl text-[#2a3843] absolute left-16 bottom-4 tracking-tighter'>01</span>
@@ -27,7 +27,7 @@ export default function AboutHome01() {
                 </div>
             </div>
             
-            <div className='flex'>
+            <div className='flex bg-white rounded-b-xl'>
                 <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-10/12 max-xl:mx-10 max-xl:mt-10">
                     <h2 className='text-orange font-bold mb-3 relative'>ABOUT ZIKZAG<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full">We Shape the Perfect Solution for Company</h3>
