@@ -1,11 +1,8 @@
 import Image from 'next/image'
+import { useEffect } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
-
-// Reveal
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
 
 //Assets Benefits
 import benefitsLine from '../../public/assets/Home02/benefits_line.png'
@@ -14,52 +11,45 @@ import benefitsMan02 from '../../public/assets/Home02/benefits_man_02.png'
 import benefitsStonks from '../../public/assets/Home02/benefits_stonks.png'
 import benefitsTarget from '../../public/assets/Home02/benefits_target.png'
 
-const revealRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(400px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-400px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealBottom= keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 
 export default function Benefits() {
+  useEffect(() => {
+    // Intersection Obeserver for fixed GoToTop
+    const target = document.getElementById('benefitsReveal1');
+    const target2 = document.getElementById('benefitsReveal2');
+    const target3 = document.getElementById('benefitsReveal3');
+    const target4 = document.getElementById('benefitsReveal4');
+    const target5 = document.getElementById('benefitsReveal5');
+
+    const viewport = document.getElementById('benefitsViewport');
+
+    const options = {
+      root: null,
+      treshold: 0.5
+    }
+
+    const observer = new IntersectionObserver(function (entries) {
+      entries.forEach((entry) => {
+          if(entry.isIntersecting) { 
+            target.classList.add('revealBenefitsHome02-1');
+            target2.classList.add('revealBenefitsHome02-2');
+            target3.classList.add('revealBenefitsHome02-3');
+            target4.classList.add('revealBenefitsHome02-4');
+            target5.classList.add('revealBenefitsHome02-5');
+          }
+      })
+    }, options);
+    observer.observe(viewport);
+  },[])
+
   return(
-    <section className='flex relative mx-[13%] mb-10 max-xl:flex-col'>
+    <section id='benefitsViewport' className='flex relative mx-[13%] mb-10 max-xl:flex-col'>
       <div className='mr-16'>
-        <Reveal keyframes={revealRight} triggerOnce duration={750} delay={250}><Image src={benefitsMan01} alt='personne tarvaillant derrière un ordinateur' className='absolute -top-20' /></Reveal>
-        <Reveal keyframes={revealBottom} triggerOnce duration={750} delay={1500}><Image src={benefitsStonks} alt='dessin de graphique allant vers le haut' className='absolute -top-24' /></Reveal>
-        <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={1000}><Image src={benefitsMan02} alt='personne sur un canapé' className='absolute -top-20 z-10' /></Reveal>
-        <Reveal keyframes={revealRight} triggerOnce duration={750} delay={2100}><Image src={benefitsTarget} alt='dessin de cible' className='absolute -top-20 z-0' /></Reveal>
-        <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={2500}><Image src={benefitsLine} alt='ligne de décoration' className='relative bottom-20' /></Reveal>
+        <Image id='benefitsReveal1' src={benefitsMan01} alt='personne tarvaillant derrière un ordinateur' className='opacity-0 absolute -top-20' />
+        <Image id='benefitsReveal2' src={benefitsStonks} alt='dessin de graphique allant vers le haut' className='opacity-0 absolute -top-24' />
+        <Image id='benefitsReveal3' src={benefitsMan02} alt='personne sur un canapé' className='opacity-0 absolute -top-20 z-10' />
+        <Image id='benefitsReveal4' src={benefitsTarget} alt='dessin de cible' className='opacity-0 absolute -top-20 z-0' />
+        <Image id='benefitsReveal5' src={benefitsLine} alt='ligne de décoration' className='opacity-0 relative bottom-20' />
       </div>
 
       <div className='font-NunitoSans w-5/12 max-xl:w-auto'>

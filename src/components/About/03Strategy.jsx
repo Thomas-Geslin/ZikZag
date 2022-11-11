@@ -1,10 +1,6 @@
 import Image from "next/image"
 import { useEffect } from "react";
 
-// Reveal
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
-
 import cardIcon02 from '../../public/assets/About/card_02_icon.png'
 import people from '../../public/assets/About/strategy_people.png'
 import graphic from '../../public/assets/About/strategy_graphic.png'
@@ -13,47 +9,17 @@ import line02 from '../../public/assets/About/strategy_line_02.png'
 import line03 from '../../public/assets/About/strategy_line_03.png'
 import line04 from '../../public/assets/About/strategy_line_04.png'
 
-const revealRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealBottom = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-
 
 export default function Strategy() {
     useEffect(() => {
         // Intersection Obeserver for fixed progress-bar Strategy
         const target = document.querySelectorAll('.progressBarStrategyTarget');
+        const target2 = document.getElementById('strategyAbout01');
+        const target3 = document.getElementById('strategyAbout02');
+        const target4 = document.getElementById('strategyAbout03');
+        const target5 = document.getElementById('strategyAbout04');
+        const target6 = document.getElementById('strategyAbout05');
+        const target7 = document.getElementById('strategyAbout06');
         const viewport = document.getElementById('progressBarStrategy');
     
         const options = {
@@ -67,6 +33,12 @@ export default function Strategy() {
                 for(entry of target) {
                 entry.classList.add('strategy-bar-animation')
                 }
+                target2.classList.add('revealStrategyAbout-1');
+                target3.classList.add('revealStrategyAbout-2');
+                target4.classList.add('revealStrategyAbout-3');
+                target5.classList.add('revealStrategyAbout-4');
+                target6.classList.add('revealStrategyAbout-5');
+                target7.classList.add('revealStrategyAbout-6');
               };
           })
           
@@ -159,12 +131,12 @@ export default function Strategy() {
                 </div>
 
                 <div className="relative -ml-12 max-xl:pl-20">
-                    <Reveal keyframes={revealBottom} triggerOnce duration={750} delay={300}><Image src={people} alt='dessin de personne ayant une conversation' className="w-[300px]" /></Reveal>
-                    <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={800}><Image src={graphic} alt='dessin de graphique' className="absolute bottom-0" /></Reveal>
-                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={1300}><Image src={line01} alt='ligne de décoration' className="absolute bottom-0 right-0" /></Reveal>
-                    <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={1800}><Image src={line02} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
-                    <Reveal keyframes={revealRight} triggerOnce duration={750} delay={2300}><Image src={line03} alt='ligne de décoration' className="absolute bottom-0 right-0" /></Reveal>
-                    <Reveal keyframes={revealLeft} triggerOnce duration={750} delay={2800}><Image src={line04} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
+                    <Image id='strategyAbout01' src={people} alt='dessin de personne ayant une conversation' className="opacity-0" />
+                    <Image id='strategyAbout02' src={graphic} alt='dessin de graphique' className="opacity-0 absolute bottom-0" />
+                    <Image id='strategyAbout03' src={line01} alt='ligne de décoration' className="opacity-0 absolute bottom-0 right-0" />
+                    <Image id='strategyAbout04' src={line02} alt='ligne de décoration' className="opacity-0 absolute bottom-0" />
+                    <Image id='strategyAbout05' src={line03} alt='ligne de décoration' className="opacity-0 absolute bottom-0 right-0" />
+                    <Image id='strategyAbout06' src={line04} alt='ligne de décoration' className="opacity-0 absolute bottom-0" />
                 </div>
             </div>
         </section>

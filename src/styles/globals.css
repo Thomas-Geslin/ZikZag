@@ -234,7 +234,188 @@
 }
 /**/
 
-/* Offer Home02 Appearence */
+/* Home02 Appearence */
+@keyframes landingFirstReveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.revealLandingFirstHome02-1 {
+ animation: landingFirstReveal .7s 1.35s ease-in-out forwards;
+}
+.revealLandingFirstHome02-2 {
+  animation: landingFirstReveal .7s 1.2s ease-in-out forwards;
+}
+.revealLandingFirstHome02-3 {
+  animation: landingFirstReveal .7s 3.1s ease-in-out forwards;
+}
+.revealLandingFirstHome02-4 {
+  animation: landingFirstReveal .7s 3.7s ease-in-out forwards;
+}
+.revealLandingFirstHome02-5 {
+  animation: landingFirstReveal .7s 4s ease-in-out forwards;
+}
+.revealLandingFirstHome02-6 {
+  animation: landingFirstReveal .7s 4.2s ease-in-out forwards;
+}
+.revealLandingFirstHome02-7 {
+  animation: landingFirstReveal .7s 4.8s ease-in-out forwards;
+}
+.revealLandingFirstHome02-8 {
+  animation: landingFirstReveal .7s 5.4s ease-in-out forwards;
+}
+@keyframes landingRightReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealLandingRightHome02-1{
+  animation: landingRightReveal .7s 1.8s ease-in-out forwards;
+}
+.revealLandingRightHome02-2{
+  animation: landingRightReveal .7s ease-in-out forwards;
+}
+.revealLandingRightHome02-3{
+  animation: landingRightReveal .7s .5s ease-in-out forwards;
+}
+.revealLandingRightHome02-4{
+  animation: landingRightReveal .7s 2.4s ease-in-out forwards;
+}
+
+@keyframes landingLeftReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealLandingLeftHome02 {
+  animation: landingLeftReveal .7s 3s ease-in-out forwards;
+}
+.revealLandingLeftHome02-2 {
+  animation: landingLeftReveal .7s 1.2s ease-in-out forwards;
+}
+
+@keyframes landingBottomReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealLandingBottomHome02-1 {
+  animation: landingBottomReveal .7s 1.8s ease-in-out forwards;
+}
+
+@keyframes benefitsRightReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealBenefitsHome02-1 {
+  animation: benefitsRightReveal .7s .25s ease-in-out forwards;
+}
+.revealBenefitsHome02-4 {
+  animation: benefitsRightReveal .7s 2.1s ease-in-out forwards;
+}
+@keyframes benefitsBottomReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.revealBenefitsHome02-2 {
+  animation: benefitsBottomReveal .7s 1.5s ease-in-out forwards;
+}
+@keyframes benefitsLeftReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-400px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealBenefitsHome02-3 {
+  animation: benefitsLeftReveal .7s 1s ease-in-out forwards;
+}
+.revealBenefitsHome02-5 {
+  animation: benefitsLeftReveal .7s 2.5s ease-in-out forwards;
+}
+
+@keyframes aboutBottomReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.revealStrategyAbout-1 {
+  animation: aboutBottomReveal .7s .3s ease-in-out forwards;
+}
+@keyframes aboutRightReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealStrategyAbout-3 {
+  animation: aboutRightReveal .7s 1.3s ease-in-out forwards;
+}
+.revealStrategyAbout-5 {
+  animation: aboutRightReveal .7s 2.3s ease-in-out forwards;
+}
+@keyframes aboutLeftReveal {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.revealStrategyAbout-2 {
+  animation: aboutLeftReveal .7s .8s ease-in-out forwards;
+}
+.revealStrategyAbout-4 {
+  animation: aboutLeftReveal .7s 1.8s ease-in-out forwards;
+}
+.revealStrategyAbout-6 {
+  animation: aboutLeftReveal .7s 2.8s ease-in-out forwards;
+}
+
 @keyframes offerCategorie {
   0% {
     transform: translateY(100%);

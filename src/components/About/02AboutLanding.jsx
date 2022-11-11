@@ -1,9 +1,6 @@
 import Image from "next/image"
 import { useEffect } from "react";
 
-// Reveal
-import Reveal from "react-awesome-reveal";
-import { keyframes } from "@emotion/react";
 
 import people from '../../public/assets/About/about_people.png'
 import line01 from '../../public/assets/About/about_line_01.png'
@@ -11,42 +8,6 @@ import line02 from '../../public/assets/About/about_line_02.png'
 import line03 from '../../public/assets/About/about_line_03.png'
 import line04 from '../../public/assets/About/about_line_04.png'
 import quote from '../../public/assets/About/about_quote.png'
-
-const revealRight = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealLeft = keyframes`
-  from {
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-`;
-
-const revealTop = keyframes`
-  from {
-    opacity: 0;
-    transform: translateY(-200px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
 
 export default function AboutLanding() {
   useEffect(() => {
