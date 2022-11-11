@@ -83,7 +83,7 @@ export default function Landing() {
             </div>
           </div>
 
-          <div id='landingReveal13' onClick={() => window.scrollTo({ top: 1050, behavior: 'smooth' })} className='opacity-0 delay-[1.6s] flex absolute bottom-4 left-36 -rotate-90 hover:cursor-pointer max-xl:left-8'><span className='relative top-3 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-semibold'>SCROLL</p></div>
+          <div id='landingReveal13' onClick={() => window.scrollTo({ top: 1050, behavior: 'smooth' })} className='opacity-0 flex absolute bottom-4 left-36 hover:cursor-pointer max-xl:left-8'><span className='relative top-3 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-semibold'>SCROLL</p></div>
 
           <div id='parallaxWrapper' className='max-xl:hidden'>
             <Image id='landingReveal3' className='opacity-0 absolute top-44 right-24' src={mouseoverLine01} alt='ligne de décoration' />

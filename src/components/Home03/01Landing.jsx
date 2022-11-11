@@ -5,10 +5,26 @@ import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFacebookF, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import background from '../../public/assets/Home03/landing_people.png'
+import squareLeft from '../../public/assets/Home03/landing_square_2.png'
+import squareRight from '../../public/assets/Home03/landing_square_1.png'
+
+import para1 from '../../public/assets/Home03/landing_parallax_1.png'
+import para2 from '../../public/assets/Home03/landing_parallax_2.png'
+import para3 from '../../public/assets/Home03/landing_parallax_3.png'
+
+import man from '../../public/assets/Home03/landing_man.png'
+import line1 from '../../public/assets/Home03/landing_line_1.png'
+import line2 from '../../public/assets/Home03/landing_line_2.png'
+import line3 from '../../public/assets/Home03/landing_line_3.png'
+import line4 from '../../public/assets/Home03/landing_line_4.png'
 
 export default function LandingHome03() {
     return(
         <section className='bg-orange pt-64 relative'>
+            <div>
+                <Image src={para1} alt='carré de décoration' className='absolute -left-64 -top-72' />
+            </div>
+            
             <div className='text-white ml-[19%]'>
                 <div className='flex items-center'>
                     <div className='shadow-[3px_3px_20px_3px_rgb(0,0,0,0.12)] group bg-white px-7 py-6 rounded-full hover:bg-darkBlueBackground hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-black group-hover:text-white' /></div>
@@ -21,10 +37,16 @@ export default function LandingHome03() {
                 </div>
             </div>
 
+            <Image src={squareLeft} alt='carré de décoration' className='absolute -left-64 -top-72' />
+            <Image src={squareRight} alt='carré de décoration' className='absolute -right-[520px] top-24' />
             <Image src={background} alt='réunion entreprise' className='absolute -right-[420px] top-24' />
 
-            <div>
-
+            <div className='absolute top-52 left-40 w-full'>
+                <Image src={man} alt='dessin super-héros' className='absolute left-[700px]' />
+                <Image src={line1} alt='ligne de décoration' className='absolute left-[700px]' />
+                <Image src={line2} alt='ligne de décoration' className='absolute' />
+                <Image src={line3} alt='ligne de décoration' className='absolute' />
+                <Image src={line4} alt='ligne de décoration' className='absolute' />
             </div>
 
             <div className='flex items-center -rotate-90 absolute bottom-52 -left-24'>

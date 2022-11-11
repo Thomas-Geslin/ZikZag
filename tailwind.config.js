@@ -60,6 +60,7 @@ module.exports = {
         'honeyBk': "url('../public/assets/Home02/logo_honey_grey.png')",
         'testimonialBackground': "url('../public/assets/Home02/testimonial_background.jpg')",
         /* Home03 */
+        // Landing
         // Division 
         'Home03DivisionBackground': "url('../public/assets/Home03/division_background.png')",
         // Contact

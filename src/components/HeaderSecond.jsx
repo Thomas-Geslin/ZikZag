@@ -59,20 +59,20 @@ export default function HeaderAbout() {
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation group-hover:after:scale-x-100'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5' /></div>
                         <div className='bg-darkBlueBackground hidden absolute -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:block group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
                             <div className='flex'>
-                                <div className='w-[280px] flex flex-col items-center mb-8'>
+                                <Link href='/Home01'><div className='w-[280px] flex flex-col items-center mb-8'>
                                     <Image src={home01} alt='miniature de la page Home01' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
-                                </div>
+                                </div></Link>
 
                                 <Link href='/'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home02} alt='miniature de la page Home02' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 2</p>
                                 </div></Link>
 
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home03'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home03} alt='miniature de la page Home03' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 3</p>
-                                </div>
+                                </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home04} alt='miniature de la page Home04' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
