@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useEffect } from 'react'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowDownLong } from '@fortawesome/free-solid-svg-icons'
@@ -17,8 +18,8 @@ import detersGrey from '../../public/assets/Home02/logo_deters_grey.png'
 import honeyGrey from '../../public/assets/Home02/logo_honey_grey.png'
 
 import background01 from '../../public/assets/Home03/benefits_background_1.png'
-import graphic  from '../../public/assets/About/slide_03_icon.png'
-import volume  from '../../public/assets/About/slide_01_icon.png'
+import graphic  from '../../public/assets/PAGES/About/slide_03_icon.png'
+import volume  from '../../public/assets/PAGES/About/slide_01_icon.png'
 import line from '../../public/assets/Home03/benefits_line.png'
 import background02 from '../../public/assets/Home03/benefits_background_2.png'
 
@@ -27,6 +28,41 @@ import { PhilosophyGridData } from '../../datas/Home02/PhilisophyGridData'
 
 
 export default function BenefitsHome03() {
+    useEffect(() => {
+        // Intersection Obeserver for fixed GoToTop
+        const target = document.getElementById('benefitsReveal1');
+        const target2 = document.getElementById('benefitsReveal2');
+        const viewport = document.getElementById('benefitsViewport01');
+        const viewport2 = document.getElementById('benefitsViewport02');
+    
+        const options = {
+          root: null,
+          treshold: 0.2
+        }
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+              if(entry.isIntersecting) { 
+                target.classList.add('revealBenefits-Home03-1');
+              }
+          })
+        }, options);
+        observer.observe(viewport);
+
+        const options2 = {
+            root: null,
+            treshold: 0.2
+          }
+          const observer2 = new IntersectionObserver(function (entries) {
+            entries.forEach((entry) => {
+                if(entry.isIntersecting) { 
+                  target2.classList.add('revealBenefits-Home03-2');
+                }
+            })
+          }, options2);
+          observer2.observe(viewport2);
+    },[])
+
+
     return(
         <section>
             <div className='flex mx-12'>
@@ -74,8 +110,8 @@ export default function BenefitsHome03() {
             </div>
 
             <div id='goTopViewport' className='bg-greyBackground'>
-                <div className='flex pt-16 relative'>
-                    <Image src={background01} alt='deux personnes travaillant ensemble' />
+                <div id="benefitsViewport01" className='flex pt-16 relative'>
+                    <Image id="benefitsReveal1" src={background01} alt='deux personnes travaillant ensemble' className='opacity-0' />
 
                     <div className='ml-32 mt-36'>
                         <h2 className='text-orange font-bold mb-2 relative'>OUR BENEFITS<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
@@ -102,7 +138,7 @@ export default function BenefitsHome03() {
                     <Image src={line} alt='ligne de décoration' className='absolute right-10 top-48' />
                 </div>
 
-                <div className='flex'>
+                <div id='benefitsViewport02' className='flex'>
                     <div className='w-7/12 relative rounded-bl-lg top-10 pl-[14%] max-2xl:rounded-none max-2xl:w-full max-2xl:top-0 850:pb-96 650:pl-10'>
                         <h2 className='text-orange font-bold mb-4 relative mt-20 650:mt-80'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                         <h3 className='font-Amiri text-slightGrey text-5xl w-8/12 leading-[55px] mb-4'>Our Core Values and Principes</h3>
@@ -120,7 +156,7 @@ export default function BenefitsHome03() {
                         </div>
                     </div>
 
-                    <Image src={background02} alt='deux personnes travaillant ensemble' className='pb-20' />
+                    <Image id='benefitsReveal2' src={background02} alt='deux personnes travaillant ensemble' className='pb-20 opacity-0' />
                 </div>
             </div>
         </section>

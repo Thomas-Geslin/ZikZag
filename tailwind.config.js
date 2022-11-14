@@ -34,13 +34,8 @@ module.exports = {
       backgroundImage: {
         /* Home01 */
         'Home1FirstSlide': "url('../public/assets/Home01/landing_slide_1.jpg')",
-        // Offer Slide
-        'Home1OfferFirst': "url('../public/assets/Home01/offer_slide_1.jpg')",
-        'Home1OfferSecond': "url('../public/assets/Home01/offer_slide_2.jpg')",
-        'Home1OfferThird': "url('../public/assets/Home01/offer_slide_3.jpg')",
-        'Home1OfferFourth': "url('../public/assets/Home01/offer_slide_4.jpg')",
-        'Home1OfferFifth': "url('../public/assets/Home01/offer_slide_5.jpg')",
-        'Home1OfferSixth': "url('../public/assets/Home01/offer_slide_6.jpg')",
+        'Home1SecondSlide': "url('../public/assets/Home01/landing_slide_2.jpg')",
+        'Home1ThirdSlide': "url('../public/assets/Home01/landing_slide_3.jpg')",
         /* Home02 */
         'squareBackground': "url('../public/assets/Home02/offer_background.png')",
         'businessBackground': "url('../public/assets/Home02/business_background.png')",
@@ -65,11 +60,46 @@ module.exports = {
         'Home03DivisionBackground': "url('../public/assets/Home03/division_background.png')",
         // Contact
         'Home03Contact': "url('../public/assets/Home03/contact_background.png')",
+        /* Home05 */
+        // Landing
+        'dynamicBkGrey': "url('../public/assets/Home05/landing_partner_1_grey.png')",
+        'oktaBkGrey': "url('../public/assets/Home05/landing_partner_2_grey.png')",
+        'maxBkGrey': "url('../public/assets/Home05/landing_partner_3_grey.png')",
+        'solanaBkGrey': "url('../public/assets/Home05/landing_partner_4_grey.png')",
+        'detersBkGrey': "url('../public/assets/Home05/landing_partner_5_grey.png')",
+        'honeyBkGrey': "url('../public/assets/Home05/landing_partner_6_grey.png')",
+        // Offer
+        'Home05Offer': "url('../public/assets/Home05/benefits_line_1.png')",
+        /* Home06 */
+        // Landing
+        'Home06Landing': "url('../public/assets/Home06/landing_background.jpg')",
+        'Home06Success': "url('../public/assets/Home06/success_background.jpg')",
+        'Home06Help': "url('../public/assets/Home06/help_background.jpg')",
         /* About */
-        'noticeBackground': "url('../public/assets/About/background_landing.jpg')",
-        'card01Background': "url('../public/assets/About/card_01.jpg')",
-        'card02Background': "url('../public/assets/About/card_02.jpg')",
-        'card03Background': "url('../public/assets/About/card_03.jpg')",
+        'noticeBackground': "url('../public/assets/PAGES/About/background_landing.jpg')",
+        'card01Background': "url('../public/assets/PAGES/About/card_01.jpg')",
+        'card02Background': "url('../public/assets/PAGES/About/card_02.jpg')",
+        'card03Background': "url('../public/assets/PAGES/About/card_03.jpg')",
+        /* Contact */
+        'contactBackground': "url('../public/assets/Contacts/background.jpg')",
+        /* OurServices */
+        'ourServicesBackground': "url('../public/assets/PAGES/OurServices/background.jpg')",
+        /* OurTeam */
+        'ourTeamBackground': "url('../public/assets/PAGES/OurTeam/background.jpg')",
+        /* SingleTeam */
+        'singleTeamBackground': "url('../public/assets/PAGES/SingleTeam/background.jpg')",
+        /* Value */
+        'valueTeamBackground': "url('../public/assets/PAGES/Value/background.jpg')",
+        /* Elements */
+        'elementsTeamBackground': "url('../public/assets/PAGES/Elements/background.jpg')",
+        /* Typography */
+        'typographyTeamBackground': "url('../public/assets/PAGES/Typography/background.jpg')",
+        /* FAQ */
+        'faqTeamBackground': "url('../public/assets/PAGES/FAQ/background.jpg')",
+        /* ComingSoon */
+        'comingTeamBackground': "url('../public/assets/PAGES/ComingSoon/background.jpg')",
+        /* 404 */
+        '404Background': "url('../public/assets/PAGES/Page404/background.jpg')",
       },
       screens: {
         'sm': '640px',

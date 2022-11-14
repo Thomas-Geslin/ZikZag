@@ -15,10 +15,10 @@ import slide8 from '../../public/assets/Home01/blog_slide_8.jpg'
 
 export default function BlogHome01() {
     return(
-        <section className='mb-40 w-[63%] m-auto'>
+        <section className='mb-40 w-[63%] m-auto '>
             <div className='flex items-center justify-between'>
                 <div>
-                    <h2 className='text-orange font-semibold mb-3 relative'>READ OUR BLOG<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className='text-orange font-bold mb-3 relative'>READ OUR BLOG<span className='absolute top-4 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full 650:text-4xl">Featured News and Insights</h3>
                 </div>
                 <button className="text-white font-semibold text-sm bg-darkBlueBackground px-9 py-4 rounded-sm hover:bg-orange ease-in-out duration-300">ALL NEWS</button>
@@ -27,7 +27,6 @@ export default function BlogHome01() {
             <Swiper
                 slidesPerView={3}
                 spaceBetween={30}
-
             >
                 <SwiperSlide className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[370px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
                     <Image  src={slide1} alt='persone travaillant sur un ordinateur' className='w-[330px] rounded-lg' />

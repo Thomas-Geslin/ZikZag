@@ -1,21 +1,75 @@
 import Image from "next/image"
 import { useEffect } from "react"
 
+// Awesome Reveal
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+
 import man from '../../public/assets/Home04/vision_man.png'
 import dot from '../../public/assets/Home04/vision_dot.png'
-import quote from '../../public/assets/About/about_quote.png'
+import quote from '../../public/assets/PAGES/About/about_quote.png'
 
 import dynamic from '../../public/assets/Home02/logo_dynamic_color.png'
 import okta from '../../public/assets/Home02/logo_okta_color.png'
-import max from '../../public/assets/Home02/logo_max_color.png'
 import solana from '../../public/assets/Home02/logo_solana_color.png'
-import deters from '../../public/assets/Home02/logo_deters_color.png'
 import honey from '../../public/assets/Home02/logo_honey_color.png'
+
+
+// Keyframe for smooth reveal
+const reveal = keyframes`
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+const revealLeft = keyframes`
+  from {
+    transform: translateX(-500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
+const revealRight = keyframes`
+  from {
+    transform: translateX(500px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+`;
 
 
 export default function VisionHome04() {
     useEffect(() => {
         // Intersection Obeserver for fixed progress-bar Strategy
+        function autoIncrementBar(limit, target) {
+            let numberLimit = limit;
+            let numberInitial = 0;
+            let timer = 1.5;
+            let interval = Math.ceil((timer * 1000) / numberLimit );
+            const numberTarget = document.getElementById(target);
+
+            function countdown() {
+                numberTarget.innerHTML = ++numberInitial + '%';
+                if (numberInitial < numberLimit) {
+                    setTimeout(countdown, interval);
+                }
+            }
+            setTimeout(countdown, interval);
+        }
+
         const target = document.querySelectorAll('.progressBarStrategyTarget');
         const viewport = document.getElementById('progressBarStrategy');
     
@@ -27,6 +81,9 @@ export default function VisionHome04() {
         const observer = new IntersectionObserver(function (entries) {
           entries.forEach((entry) => {
               if(entry.isIntersecting) {
+                autoIncrementBar(55, 'firstBar');
+                autoIncrementBar(75, 'secondBar');
+                autoIncrementBar(68, 'thirdBar');
                 for(entry of target) {
                 entry.classList.add('strategy-bar-animation')
                 }
@@ -42,14 +99,14 @@ export default function VisionHome04() {
         <section className='mb-10'>
             <div className='flex justify-center'>
                 <div className="w-1/3 max-xl:w-full relative top-20 left-16 mb-20">
-                    <h2 className='text-orange font-semibold mb-3 relative'>OUR VISION<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
-                    <h3 className="font-Amiri text-5xl text-slightGrey mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
+                    <h2 className='text-orange font-bold mb-3 relative'>OUR VISION<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h3 className="font-Amiri text-5xl leading-tight text-slightGrey mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
                     <p className="text-greyText text-lg w-3/4 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
 
                     <div className="relative w-3/4 mb-12 max-xl:w-full" id='progressBarStrategy'>
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>DIGITAL STRATEGY</p>
-                            <p id='firstBar'>55%</p>
+                            <p id='firstBar'>0%</p>
                         </div>
 
                         <span id='let' className="w-[55%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded ease-out duration-1000"></span>
@@ -59,7 +116,7 @@ export default function VisionHome04() {
                     <div className="relative w-3/4 mb-12 max-xl:w-full">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>FINANCIAL SERVICE</p>
-                            <p>75%</p>
+                            <p id='secondBar'>0%</p>
                         </div>
 
                         <span className="w-[75%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded"></span>
@@ -69,7 +126,7 @@ export default function VisionHome04() {
                     <div className="relative w-3/4 mb-10 max-xl:w-full max-xl:mb-44">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>CONSALTING</p>
-                            <p>68%</p>
+                            <p id='thirdBar'>0%</p>
                         </div>
 
                         <span className="w-[68%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded"></span>
@@ -78,12 +135,15 @@ export default function VisionHome04() {
                 </div>
 
                 <div className='relative'>
-                    <Image src={man} alt='discussion entre deux personnes' className='relative z-10' />
-                    <Image src={dot} alt='points de décoration' className='absolute top-0' />
+                    <Reveal keyframes={reveal} duration={800} delay={1100} triggerOnce className='absolute top-0'><Image src={dot} alt='points de décoration' /></Reveal>
+                    <Reveal keyframes={revealRight} duration={800} delay={500} triggerOnce className='relative'><Image src={man} alt='discussion entre deux personnes' /></Reveal>
+
+                    <Reveal keyframes={revealLeft} duration={800} triggerOnce>
                     <div className="bg-[#f5f5f5] w-[467px] py-1 border-l-orange border-l-[3px] rounded-br-lg absolute right-5 bottom-0 z-20 max-xl:w-full">
                         <Image src={quote} alt='icone de guillemet' className="w-20 absolute -top-3 right-0" />
                         <p className="relative font-Amiri text-3xl text-slightGrey leading-tight py-7 pl-9">Custom Consulting Solutions since 2002.</p>
                     </div>
+                    </Reveal>
                 </div>
             </div>
             

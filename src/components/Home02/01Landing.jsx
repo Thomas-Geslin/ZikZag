@@ -1,5 +1,4 @@
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -78,7 +77,7 @@ export default function Landing() {
             <h1 id='landingReveal10' className='opacity-0 font-Amiri text-slightGrey text-xl leading-90 w-5/12  max-xl:w-10/12 850:text-3xl'>Your Business from Idea to Launching</h1>
 
             <div className='flex items-center pb-64 mt-8'>
-              <Link href='/About'><div id='landingReveal1' className='opacity-0 group bg-white px-7 py-6 rounded-full shadow-[5px_5px_15px_3px_#dddddd] hover:bg-orange hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-orangeBright group-hover:text-white' /></div></Link>
+              <div id='landingReveal1' className='opacity-0 group bg-white px-7 py-6 rounded-full shadow-[5px_5px_15px_3px_#dddddd] hover:bg-orange hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-orangeBright group-hover:text-white' /></div>
               <p id='landingReveal2' className='font-bold text-slightGrey text-sm ml-5 opacity-0'>HOW IT WORKS</p>
             </div>
           </div>

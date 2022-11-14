@@ -27,7 +27,7 @@ export default function Header() {
             root: null
         }
 
-        const observer = new IntersectionObserver(function (entries, self) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach((entry) => {
                 if(!entry.isIntersecting) setTimeout(() => {
                     target.classList.add('fixed-header');
@@ -73,12 +73,12 @@ export default function Header() {
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
                             <div className='flex'>
-                                <Link href='/Home01'><div className='w-[280px] flex flex-col items-center mb-8'>
+                                <Link href='/'><div className='w-[280px] flex flex-col items-center mb-8'>
                                     <Image src={home01} alt='miniature de la page Home01' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div></Link>
 
-                                <Link href='/'><div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home02'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home02} alt='miniature de la page Home02' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 2</p>
                                 </div></Link>
@@ -95,10 +95,10 @@ export default function Header() {
                             </div>
 
                             <div className='flex'>
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home05'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home05} alt='miniature de la page Home05' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 5</p>
-                                </div>
+                                </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home06} alt='miniature de la page Home06' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
@@ -121,16 +121,16 @@ export default function Header() {
                     <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground invisible absolute -left-10 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <Link href='/About'><p className='mb-4 hover-underline-animation'>About</p></Link>
-                            <p className='mb-4 w-24 hover-underline-animation'>Our Services</p>
-                            <p className='mb-4 hover-underline-animation'>Our Team</p>
-                            <p className='mb-4 hover-underline-animation'>Single Team</p>
-                            <p className='mb-4 hover-underline-animation'>Value</p>
-                            <p className='mb-4 hover-underline-animation'>Elements</p>
-                            <p className='mb-4 hover-underline-animation'>Typographie</p>
-                            <p className='mb-4 hover-underline-animation'>FAQ</p>
-                            <p className='mb-4 hover-underline-animation'>Coming Soon</p>
-                            <p className='hover-underline-animation'>Page 404</p>
+                            <Link href='/Pages/About'><p className='mb-4 hover-underline-animation'>About</p></Link>
+                            <Link href='/Pages/OurServices'><p className='mb-4 w-24 hover-underline-animation'>Our Services</p></Link>
+                            <Link href='/Pages/OurTeam'><p className='mb-4 hover-underline-animation'>Our Team</p></Link>
+                            <Link href='/Pages/SingleTeam'><p className='mb-4 hover-underline-animation'>Single Team</p></Link>
+                            <Link href='/Pages/Value'><p className='mb-4 hover-underline-animation'>Value</p></Link>
+                            <Link href='/Pages/Elements'><p className='mb-4 hover-underline-animation'>Elements</p></Link>
+                            <Link href='/Pages/Typographie'><p className='mb-4 hover-underline-animation'>Typographie</p></Link>
+                            <Link href='/Pages/FAQ'><p className='mb-4 hover-underline-animation'>FAQ</p></Link>
+                            <Link href='/Pages/ComingSoon'><p className='mb-4 hover-underline-animation'>Coming Soon</p></Link>
+                            <Link href='/Pages/Page404'><p className='hover-underline-animation'>Page 404</p></Link>
                         </div>
                     </div>
 
@@ -217,12 +217,12 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p>
+                    <Link href='/Contacts'><p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p></Link>
                 </nav>
 
                 <div className='flex items-center justify-end w-2/12'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
-                    <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
+                    <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor-pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>
             </div>
 
@@ -240,12 +240,12 @@ export default function Header() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>HOME</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 1</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 2</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 3</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 4</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 5</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 6</p>
+                                <Link href='/'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 1</p></Link>
+                                <Link href='/Home02'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 2</p></Link>
+                                <Link href='/Home03'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 3</p></Link>
+                                <Link href='/Home04'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 4</p></Link>
+                                <Link href='/Home05'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 5</p></Link>
+                                <Link href='/Home06'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 6</p></Link>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
                                 <p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
                             </div>
@@ -254,8 +254,8 @@ export default function Header() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>PAGES</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p>
+                                <Link href='/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p>
+                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p></Link>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Our Team</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Single Team</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[42px]'>Value</p>
@@ -297,7 +297,7 @@ export default function Header() {
                             </div>
                         </div>
 
-                        <p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p>
+                        <Link href='/Pages/Contacts'><p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p></Link>
                     </div>
 
                     <div className='pt-4 relative'>

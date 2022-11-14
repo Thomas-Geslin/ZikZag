@@ -60,12 +60,12 @@ export default function HeaderHome04() {
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
                             <div className='flex'>
-                                <Link href='/Home01'><div className='w-[280px] flex flex-col items-center mb-8'>
+                                <Link href='/'><div className='w-[280px] flex flex-col items-center mb-8'>
                                     <Image src={home01} alt='miniature de la page Home01' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
                                 </div></Link>
 
-                                <Link href='/'><div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home02'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home02} alt='miniature de la page Home02' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 2</p>
                                 </div></Link>
@@ -82,15 +82,15 @@ export default function HeaderHome04() {
                             </div>
 
                             <div className='flex'>
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home05'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home05} alt='miniature de la page Home05' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 5</p>
-                                </div>
+                                </div></Link>
 
-                                <div className='w-[280px] flex flex-col items-center'>
+                                <Link href='/Home06'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home06} alt='miniature de la page Home06' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>
-                                </div>
+                                </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
@@ -227,12 +227,12 @@ export default function HeaderHome04() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>HOME</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 1</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 2</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 3</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 4</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 5</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 6</p>
+                                <Link href='/'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 1</p></Link>
+                                <Link href='/Home02'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 2</p></Link>
+                                <Link href='/Home03'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 3</p></Link>
+                                <Link href='/Home04'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 4</p></Link>
+                                <Link href='/Home05'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 5</p></Link>
+                                <Link href='/Home06'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 6</p></Link>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
                                 <p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
                             </div>
@@ -241,7 +241,7 @@ export default function HeaderHome04() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>PAGES</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p>
+                                <Link href='/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p></Link>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Our Team</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Single Team</p>

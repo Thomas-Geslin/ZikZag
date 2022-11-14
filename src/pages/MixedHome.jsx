@@ -37,7 +37,7 @@ import honeyGrey from '../public/assets/Home02/logo_honey_grey.png'
 
 export default function MixedHome() {
     return(
-        <div>
+        <div className='font-NunitoSans'>
             <Head>
 
             </Head>

@@ -13,10 +13,10 @@ export default function ContactHome03() {
         <section className='flex justify-center bg-Home03Contact bg-no-repeat bg-[top_5rem_left_51rem] pt-40 pb-12 mb-40 ml-32'>
             <div className='mt-28 relative'>
                 <Image src={man} alt='dessin homme' className='mr-40' />
-                <Image src={line} alt='ligne de décoration' className='absolute top-0' />
-                <Image src={letter1} alt='dessin de lettre' className='absolute top-0' />
-                <Image src={letter2} alt='dessin de lettre' className='absolute top-0' />
-                <Image src={letter3} alt='dessin de lettre' className='absolute top-0' />
+                <Image src={line} alt='ligne de décoration' className='absolute top-0 animation-contact-Home05-left' />
+                <Image src={letter1} alt='dessin de lettre' className='absolute top-2 animation-contact-Home05-top-3' />
+                <Image src={letter2} alt='dessin de lettre' className='absolute top-2 animation-contact-Home05-top-1' />
+                <Image src={letter3} alt='dessin de lettre' className='absolute top-2 animation-contact-Home05-top-2' />
             </div>
             
             <div className='w-1/3'>
@@ -25,7 +25,7 @@ export default function ContactHome03() {
                 <p className='text-greyText text-lg leading-9 w-10/12 mb-8'>Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email or fill out the contact form and we’ll get back to you.</p>
             
                 <div className='flex items-start mb-8 leading-7'>
-                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={placeholder} alt='icone de telephone' className='w-7 mr-3 top-1.5 relative top-0 left-1.5' /></div>
+                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={placeholder} alt='icone de telephone' className='w-7 mr-3 relative top-0 left-1.5' /></div>
                     <div className='ml-8'>
                         <p className='font-bold text-slightGrey'>Visit Us:</p>
                         <p className='text-greyText'>27 Division ST, New York, NY 10002, USA</p>
@@ -33,7 +33,7 @@ export default function ContactHome03() {
                 </div>
                     
                 <div className='flex items-center mb-8'>
-                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={phone} alt='icone de telephone' className='w-7 mr-3 top-1.5 relative top-0 left-1.5' /></div>
+                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={phone} alt='icone de telephone' className='w-7 mr-3 relative top-0 left-1.5' /></div>
                     <div className='ml-8'>
                         <p className='font-bold text-slightGrey'>Mail  Us:</p>
                         <p className='text-greyText'>zik_zag.mail@mail.com</p>
@@ -41,7 +41,7 @@ export default function ContactHome03() {
                 </div>
 
                 <div className='flex items-center'>
-                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={phone} alt='icone de telephone' className='w-7 mr-3 top-1.5 relative top-0 left-1.5' /></div>
+                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={phone} alt='icone de telephone' className='w-7 mr-3 relative top-0 left-1.5' /></div>
                     <div className='ml-8'>
                         <p className='font-bold text-slightGrey'>Phone Us:</p>
                         <p className='text-greyText'>+1 (800) 123 456 789</p>

@@ -13,7 +13,6 @@ export const OfferGridData = [
         iconWhite: reportWhite,
         altIcon: 'icon de dossier',
         title: 'Advanced Analytic',
-        background: 'Home1OfferFirst',
     },
     {
         index: 1,
@@ -21,7 +20,6 @@ export const OfferGridData = [
         iconWhite: moneyWhite,
         altIcon: 'icon de sac argent',
         title: 'New Business Innovation',
-        background: 'Home1OfferSecond',
     },
     {
         index: 2,
@@ -29,7 +27,6 @@ export const OfferGridData = [
         iconWhite: statWhite,
         altIcon: 'icon de graphique',
         title: 'Corporate Finance',
-        background: 'Home1OfferThird',
     },
     {
         index: 3,
@@ -37,7 +34,6 @@ export const OfferGridData = [
         iconWhite: paymentWhite,
         altIcon: 'icon de paiement',
         title: 'Partnership System',
-        background: 'Home1OfferFourth',
     },
     {
         index: 4,
@@ -45,7 +41,6 @@ export const OfferGridData = [
         iconWhite: rocketWhite,
         altIcon: 'icon de fusée',
         title: 'Information Technology',
-        background: 'Home1OfferFifth',
     },
     {
         index: 5,
@@ -53,6 +48,5 @@ export const OfferGridData = [
         iconWhite: balanceWhite,
         altIcon: 'icon de balance',
         title: 'Recession Strategies',
-        background: 'Home1OfferSixth',
     }
 ]

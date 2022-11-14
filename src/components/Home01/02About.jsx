@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import arrow  from '../../public/assets/Home02/offer_arrow.png'
-import quote from '../../public/assets/About/about_quote.png'
+import quote from '../../public/assets/PAGES/About/about_quote.png'
 import man from '../../public/assets/Home01/about_man.png'
 import line from '../../public/assets/Home01/about_line.png'
 import twitter from '../../public/assets/Home01/about_icon_twitter.png'
@@ -10,19 +10,26 @@ import pinterest from '../../public/assets/Home01/about_icon_pinterest.png'
 
 export default function AboutHome01() {
     return(
-        <section className='relative -top-32 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 -top-48'>
+        <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 -top-32'>
             <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col max-xl:top-0 650:w-full'>
-                <div className='relative flex items-center bg-darkBlueBackground rounded-tl-lg group max-xl:rounded-lg'>
-                    <span className='text-8xl text-[#2a3843] absolute left-16 bottom-4 tracking-tighter'>01</span>
-                    <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
-                    <div className='px-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                <div className='relative flex items-center bg-orange rounded-tl-lg group max-xl:rounded-lg'>
+                    <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>01</span>
+                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                    <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
+                </div>
+
+                <div className='relative flex items-center bg-darkBlueBackground group max-xl:rounded-lg'>
+                    <span className='text-8xl text-[#2a3843] absolute left-10 bottom-4 tracking-tighter'>02</span>
+                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
+                    <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
 
                 <div className='relative flex items-center bg-orange rounded-tr-lg group max-xl:rounded-lg'>
-                    <span className='absolute left-16 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>02</span>
-                    <p className='text-3xl z-10 pl-32 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                    <div className='px-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>03</span>
+                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                    <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
             </div>
@@ -40,7 +47,7 @@ export default function AboutHome01() {
                 </div>
 
                 <div>
-                    <Image src={man} alt="dessin d'une personne les bras levé" className='relative top-10 left-32' />
+                    <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32' />
                     <Image src={line} alt="ligne de décoration" className='absolute top-48 right-20 lineOfferAnimation' />
                     <Image src={twitter} alt="icone de twitter" className='absolute top-48 right-20 twitterOfferAnimation' />
                     <Image src={facebook} alt="icone de facebook" className='absolute top-52 right-20 facebookOfferAnimation' />
