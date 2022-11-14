@@ -88,17 +88,17 @@ export default function HeaderAbout() {
 
                                 <Link href='/Home06'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home06} alt='miniature de la page Home06' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Home 6</p>
                                 </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
                                 </div>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
                                 </div>
                             </div>
                         </div>
@@ -197,17 +197,17 @@ export default function HeaderAbout() {
 
                                 <Link href='/Home06'><div className='w-[280px] flex flex-col items-center'>
                                     <Image src={home06} alt='miniature de la page Home06' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Home 6</p>
                                 </div></Link>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
                                 </div>
 
                                 <div className='w-[280px] flex flex-col items-center'>
                                     <Image src={coming} alt='miniature de la page Coming Soon' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)]' />
-                                    <p className='text-[20px] font-bold mt-3'>Home 1</p>
+                                    <p className='text-[20px] font-bold mt-3'>Coming Soon</p>
                                 </div>
                             </div>
                         </div>
