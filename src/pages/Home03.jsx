@@ -3,6 +3,7 @@ import Head from 'next/head'
 import HeaderSecond from '../components/HeaderSecond'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
+import WidgetTheme from '../components/WidgetTheme'
 
 import LandingHome03 from '../components/Home03/01Landing'
 import BenefitsHome03 from '../components/Home03/02Benefits'
@@ -35,6 +36,8 @@ export default function Home03() {
 
                 <ContactHome03 />
             </main>
+            
+            <WidgetTheme />
 
             <BackToTop />
 

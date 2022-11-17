@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
+import WidgetTheme from '../../components/WidgetTheme'
+
 import AccordionsElement from '../../components/PAGES/Elements/01Accordions'
 import InfoElement from '../../components/PAGES/Elements/02Info'
 import ProgressElement from '../../components/PAGES/Elements/03Progress'
@@ -50,6 +52,8 @@ export default function About() {
                     <ButtonsElement />
                 </div>
             </main>
+
+            <WidgetTheme />
 
             <Footer />
         </div>  

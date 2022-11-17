@@ -2,6 +2,7 @@ import Head from 'next/head'
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
+import WidgetTheme from '../../components/WidgetTheme'
 
 import AboutNotice from '../../components/PAGES/About/01AboutNotice'
 import AboutLanding from '../../components/PAGES/About/02AboutLanding'
@@ -32,6 +33,8 @@ export default function About() {
 
                 <Testimonial />
             </main>
+
+            <WidgetTheme />
 
             <Footer />
         </div>

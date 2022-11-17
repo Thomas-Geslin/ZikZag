@@ -207,12 +207,18 @@
 }
 /**/
 
+
+.scrollHidden::-webkit-scrollbar {
+  width: 0 !important
+}
+
+
 /* BackTopTop Animation OnScroll */
 .fixed-goTop {
   transform: rotate(270deg) translate(0);
   opacity: 1;
   visibility: visible;
-  z-index: 9999;
+  z-index: 999;
   animation: goTopAnimation .3s linear;
   animation-fill-mode: forwards;
 }
@@ -303,6 +309,21 @@
 
 
 /* Home01 */
+.nextNavHome01 {
+  background-image: url('../public/assets/Home02/navigation_arrow_left.png');
+  background-repeat: no-repeat;
+  background-size: 25px auto;
+  background-position: center;
+  padding: 0 25%!important;
+    background-color: transparent!important;
+    right:10px;
+    width: 10px!important;
+}
+.nextNavHome01::after {
+  display: none;
+}
+
+
 @keyframes animation-landingHome06-top {
   0% {
     transform: translateY(0);
@@ -455,106 +476,6 @@
 
 
 /* Home02 Appearence */
-@keyframes landingFirstReveal {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-.revealLandingFirstHome02-1 {
- animation: landingFirstReveal .7s 1.35s ease-in-out forwards;
-}
-.revealLandingFirstHome02-2 {
-  animation: landingFirstReveal .7s 1.2s ease-in-out forwards;
-}
-.revealLandingFirstHome02-3 {
-  animation: landingFirstReveal .7s 3.1s ease-in-out forwards;
-}
-.revealLandingFirstHome02-4 {
-  animation: landingFirstReveal .7s 3.7s ease-in-out forwards;
-}
-.revealLandingFirstHome02-5 {
-  animation: landingFirstReveal .7s 4s ease-in-out forwards;
-}
-.revealLandingFirstHome02-6 {
-  animation: landingFirstReveal .7s 4.2s ease-in-out forwards;
-}
-.revealLandingFirstHome02-7 {
-  animation: landingFirstReveal .7s 4.8s ease-in-out forwards;
-}
-.revealLandingFirstHome02-8 {
-  animation: landingFirstReveal .7s 5.4s ease-in-out forwards;
-}
-@keyframes landingRightReveal {
-  0% {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.revealLandingRightHome02-1{
-  animation: landingRightReveal .7s 1.8s ease-in-out forwards;
-}
-.revealLandingRightHome02-2{
-  animation: landingRightReveal .7s ease-in-out forwards;
-}
-.revealLandingRightHome02-3{
-  animation: landingRightReveal .7s .5s ease-in-out forwards;
-}
-.revealLandingRightHome02-4{
-  animation: landingRightReveal .7s 2.4s ease-in-out forwards;
-}
-
-@keyframes landingLeftReveal {
-  0% {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.revealLandingLeftHome02 {
-  animation: landingLeftReveal .7s 3s ease-in-out forwards;
-}
-.revealLandingLeftHome02-2 {
-  animation: landingLeftReveal .7s 1.2s ease-in-out forwards;
-}
-
-@keyframes landingBottomRevealScroll {
-  0% {
-    opacity: 0;
-    transform: translateY(50px) rotate(270deg);
-  }
-  100% {
-    opacity: 1;
-    transform: rotate(270deg) translateY(0);
-  }
-}
-.revealLandingBottomHome02 {
-  animation: landingBottomRevealScroll .7s 1.6s ease-in-out forwards;
-  
-}
-@keyframes landingBottomReveal {
-  0% {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.revealLandingBottomHome02-1 {
-  animation: landingBottomReveal .7s 1.8s ease-in-out forwards;
-}
-
 @keyframes benefitsRightReveal {
   0% {
     opacity: 0;
@@ -1081,6 +1002,67 @@
 }
 .FaqCardBackground-2 {
   background: url('../public//assets/PAGES/FAQ/card_03.jpg') no-repeat center;
+}
+/**/
+
+
+
+/* Article Animation */
+@keyframes articleAppear {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+.articleAppear {
+  animation: articleAppear .3s ease-in-out forwards;
+}
+/**/
+
+
+
+/* Filter Portfolio Style */
+.filterPortfolioActive {
+  color: white;
+  background-color: #ff4a17;
+  border-radius: 3px;
+}
+/**/
+
+
+/* Item Page Mode Button */
+.activeModeItemPage{
+  color: white;
+  background-color: #14212b;
+}
+
+.strokeStar {
+  -webkit-text-stroke: 1px #f9d322;
+}
+/**/
+
+
+/* Loader Style */
+.spinnerArticle {
+  margin: auto;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 2.9px;
+  background: conic-gradient(from 135deg at top,black 90deg, #0000 0) 0 calc(50% - 1.9px)/8.2px 4.1px,
+         radial-gradient(farthest-side at bottom left,#0000 calc(100% - 2.9px),black calc(100% - 2.4px) 99%,#0000) top right/50%  50% content-box content-box,
+         radial-gradient(farthest-side at top,#0000 calc(100% - 2.9px),black calc(100% - 2.4px) 99%,#0000) bottom   /100% 50% content-box content-box;
+  background-repeat: no-repeat;
+  animation: spinner-v8og74 1s infinite linear;
+}
+@keyframes spinner-v8og74 {
+  100% {
+     transform: rotate(1turn);
+  }
 }
 /**/
 

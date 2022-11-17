@@ -21,6 +21,7 @@ import line1 from '../../public/assets/Home03/landing_line_1.png'
 import line2 from '../../public/assets/Home03/landing_line_2.png'
 import line3 from '../../public/assets/Home03/landing_line_3.png'
 import line4 from '../../public/assets/Home03/landing_line_4.png'
+import { useEffect } from 'react';
 
 
 // Keyframe for smooth reveal
@@ -102,8 +103,24 @@ const revealLeft = keyframes`
 
 
 export default function LandingHome03() {
+  useEffect(() => {
+    // Mouseover Parallax
+    document.getElementById('parallaxViewport').addEventListener('mousemove', parallax);
+    function parallax(e) {
+      this.querySelectorAll('.layerHome03').forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
+
+        const x = (window.innerWidth - e.pageX*speed)/100;
+        const y = (window.innerHeight - e.pageY*speed)/100;
+
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+      })
+    }
+  }, [])
+
+
     return(
-        <section className='bg-orange pt-64 relative overflow-hidden'>
+        <section id='parallaxViewport' className='z-10 bg-orange pt-64 relative overflow-hidden'>
             <div>
                 <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce  className='absolute'><Image src={para1} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
                 <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='landingBackgroundAnimation absolute bottom-56 -left-80'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
@@ -128,11 +145,11 @@ export default function LandingHome03() {
             <Reveal keyframes={revealRight} duration={800} triggerOnce className='absolute -right-[420px] top-24'><Image src={background} alt='réunion entreprise' /></Reveal>
 
             <div className='absolute top-52 left-40 w-full'>
-                <Reveal keyframes={revealBottom} duration={800} delay={900} triggerOnce><Image src={man} alt='dessin super-héros' className='absolute left-[700px]' /></Reveal>
-                <Reveal keyframes={revealBottom} duration={800} delay={1500} triggerOnce><Image src={line1} alt='ligne de décoration' className='absolute left-[700px]' /></Reveal>
-                <Reveal keyframes={revealLeft} duration={800} delay={2100} triggerOnce><Image src={line2} alt='ligne de décoration' className='absolute' /></Reveal>
-                <Reveal keyframes={reveal} duration={800} delay={2600} triggerOnce><Image src={line3} alt='ligne de décoration' className='absolute' /></Reveal>
-                <Reveal keyframes={reveal} duration={800} delay={3100} triggerOnce><Image src={line4} alt='ligne de décoration' className='absolute' /></Reveal>
+                <Reveal keyframes={revealBottom} duration={800} delay={900} triggerOnce><Image src={man} alt='dessin super-héros' data-speed='-1.5' className='absolute left-[700px] layerHome03' /></Reveal>
+                <Reveal keyframes={revealBottom} duration={800} delay={1500} triggerOnce><Image src={line1} alt='ligne de décoration' data-speed='-2.5' className='absolute left-[700px] layerHome03' /></Reveal>
+                <Reveal keyframes={revealLeft} duration={800} delay={2100} triggerOnce><Image src={line2} alt='ligne de décoration' data-speed='1.5' className='absolute layerHome03' /></Reveal>
+                <Reveal keyframes={reveal} duration={800} delay={2600} triggerOnce><Image src={line3} alt='ligne de décoration' data-speed='1.8' className='absolute layerHome03' /></Reveal>
+                <Reveal keyframes={reveal} duration={800} delay={3100} triggerOnce><Image src={line4} alt='ligne de décoration' data-speed='1.8' className='absolute layerHome03' /></Reveal>
             </div>
 
             <div className='flex items-center -rotate-90 absolute bottom-52 -left-24'>

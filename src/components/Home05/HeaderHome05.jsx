@@ -65,7 +65,7 @@ export default function HeaderHome05() {
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <div className='flex'>
+                            <div className='flex z-[100]'>
                                 <Link href='/'><div className='w-[280px] flex flex-col items-center mb-8'>
                                     <Image src={home01} alt='miniature de la page Home01' className='rounded-md shadow-[11px_11px_15px_1px_rgb(0,0,0,0.50)] hover:-translate-y-4 ease-in-out duration-500' />
                                     <p className='text-[20px] font-bold mt-3'>Home 1</p>

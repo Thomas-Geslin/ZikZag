@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
+import WidgetTheme from '../../components/WidgetTheme'
+
 import HelpFAQ from '../../components/PAGES/FAQ/01Help'
 import ConsultancyFAQ from '../../components/PAGES/FAQ/02Consultancy'
 
@@ -29,6 +31,8 @@ export default function FAQ() {
                     <ConsultancyFAQ />
                 </div>
             </main>
+
+            <WidgetTheme />
 
             <Footer />
         </div>  

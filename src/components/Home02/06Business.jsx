@@ -7,7 +7,7 @@ import { BusinessData } from '../../datas/Home02/BusinessData'
 export default function Business() {
     return(
         <section className='text-center mt-48 bg-businessBackground bg-no-repeat bg-[center_bottom_12rem] mb-36 max-2xl:mt-20 max-xl:bg-none'>
-          <h2 className='text-orange font-semibold mb-4 relative w-52 m-auto'><span className='absolute bottom-1 left-1.5 bg-orange h-0.5 w-2'></span>BUSINESS TO BUSINESS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+          <h2 className='text-orange font-bold mb-4 relative w-52 m-auto'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>BUSINESS TO BUSINESS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
           <h3 className='text-slightGrey text-5xl font-Amiri leading-tight'>AI and Machine Learning<br></br>Analytics Solutions</h3>
 
           <div className='flex mt-12 justify-between w-[63%] m-auto max-xl:w-[80%] 650:flex-col'>

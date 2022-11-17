@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 export default function Testimonial() {
     return(
         <section className='bg-testimonialBackground bg-no-repeat text-center pb-40 430:pb-24 850:pb-10'>
-          <h2 className='text-orange text-base font-semibold mb-4 pt-32 relative w-36 m-auto'><span className='absolute bottom-1 left-0.5 bg-orange h-0.5 w-2'></span>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+          <h2 className='text-orange text-base font-bold mb-4 pt-32 relative w-36 m-auto'><span className='absolute bottom-1 left-0.5 bg-orange h-0.5 w-2'></span>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
           <h3 className='font-Amiri text-6xl mb-6'>What People Say</h3>
 
           <Swiper

@@ -100,6 +100,23 @@ module.exports = {
         'comingTeamBackground': "url('../public/assets/PAGES/ComingSoon/background.jpg')",
         /* 404 */
         '404Background': "url('../public/assets/PAGES/Page404/background.jpg')",
+        /* Blog Standard */
+        'blogStandardBackground': "url('../public/assets/BLOG/BlogSingle/Standard/background.jpg')",
+        /* Blog Video */
+        'videoStandardBackground': "url('../public/assets/BLOG/BlogSingle/Video/background.jpg')",
+        /* Blog Link */
+        'linkStandardBackground': "url('../public/assets/BLOG/BlogSingle/Link/background.jpg')",
+        /* Blog Quote */
+        'quoteStandardBackground': "url('../public/assets/BLOG/BlogSingle/Quote/background.jpg')",
+        /* Blog Music */
+        'musicStandardBackground': "url('../public/assets/BLOG/BlogSingle/Music/background.jpg')",
+        /* Blog Single Layouts */
+        'singleLayoutsStandardBackground': "url('../public/assets/BLOG/SingleLayouts/background.jpg')",
+        /* Portfolio Single */
+        'singlePortfolioStandardBackground': "url('../public/assets/PORTFOLIO/Single/background.jpg')",
+      },
+      translate: {
+        'widgetTranslate': '0px!important'
       },
       screens: {
         'sm': '640px',

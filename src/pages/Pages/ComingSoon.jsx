@@ -1,12 +1,49 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import WidgetTheme from '../../components/WidgetTheme'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import logo from '../../public/assets/PAGES/ComingSoon/logo.png'
+import { useEffect } from 'react'
+
 
 export default function About() {
+    useEffect(() => {
+        // Actualise le compteur toutes les secondes
+        function setChrono() {
+            const now = new Date().getTime();
+            const countdownDate = new Date('Januar 01, 2023').getTime();
+
+            const difference = (countdownDate - now) / 1000;
+
+            let days = Math.floor(difference / (60 * 60 *24));
+            if(days < 10) days = '0' + days;
+            let hours = Math.floor((difference - (days * 60 * 60 *24)) / (60 * 60));
+            if(hours < 10) hours = '0' + hours;
+            let minutes = Math.floor((difference - (days * 60 * 60 *24 + hours * 60 * 60)) / 60);
+            if(minutes < 10) minutes = '0' + minutes;
+            let seconds = Math.floor((difference - (days * 60 * 60 *24 + hours * 60 * 60 + minutes * 60)));
+            if(seconds < 10) seconds = '0' + seconds;
+
+            const daysTarget = document.getElementById('dayTarget');
+            daysTarget.innerText = days;
+            const hoursTarget = document.getElementById('hoursTarget');
+            hoursTarget.innerText = hours;
+            const minutesTarget = document.getElementById('minutesTarget');
+            minutesTarget.innerText = minutes;
+            const secondsTarget = document.getElementById('secondsTarget');
+            secondsTarget.innerText = seconds;
+        }
+
+        setInterval(() => {
+            setChrono();
+        }, 1000)
+    }, [])
+
+    
     return (
         <div className='font-NunitoSans'>
             <Head>
@@ -19,30 +56,30 @@ export default function About() {
                 <Image src={logo} alt="logo de l'entreprise" className='pt-14 pb-24 ml-auto mr-auto' />
                 <h1 className='font-Amiri text-white text-[80px]'>We`re Coming Soon</h1>
 
-                <div className='flex justify-center items-center text-white font-Amiri text-[120px] mt-4'>
+                <div id='date' className='flex justify-center items-center text-white font-Amiri text-[120px] mt-4'>
                     <div>
-                        <p>47</p>
+                        <p id='dayTarget'></p>
                         <p className='font-NunitoSans text-lg font-bold relative -top-8'>DAYS</p>
                     </div>
                     
                     <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
 
                     <div>
-                        <p>05</p>
+                        <p id='hoursTarget'></p>
                         <p className='font-NunitoSans text-lg font-bold relative -top-8'>HOURS</p>
                     </div>
                     
                     <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
 
                     <div>
-                        <p>25</p>
+                        <p id='minutesTarget'></p>
                         <p className='font-NunitoSans text-lg font-bold relative -top-8'>MINUTES</p>
                     </div>
                     
                     <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
 
                     <div>
-                        <p>32</p>
+                        <p id='secondsTarget'></p>
                         <p className='font-NunitoSans text-lg font-bold relative -top-8'>SECONDS</p>
                     </div>
                 </div>
@@ -61,6 +98,8 @@ export default function About() {
                     <div className='bg-[#C32AA3] p-2 rounded-full mb-3 mr-3 hover:shadow-none hover:bg-white ease-in-out duration-300 group'><FontAwesomeIcon icon={faInstagram} className='w-3.5 text-white group-hover:text-[#C32AA3]' /></div>
                 </div>
             </main>
+
+            <WidgetTheme />
         </div>  
     )
 }

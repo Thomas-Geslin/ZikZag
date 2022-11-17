@@ -3,6 +3,7 @@ import Head from 'next/head'
 import HeaderHome05 from '../components/Home05/HeaderHome05';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
+import WidgetTheme from '../components/WidgetTheme'
 
 import LandingHome05 from '../components/Home05/01Landing';
 import WhatOfferHome05 from '../components/Home05/02WhatOffer';
@@ -38,6 +39,8 @@ export default function Home05() {
 
                 <PopularHome05 />
             </main>
+
+            <WidgetTheme />
 
             <BackToTop />
 

@@ -17,17 +17,17 @@ import home06 from '../../public/assets/Header/home_06.jpg'
 import coming from '../../public/assets/Header/coming_soon.jpg'
 import { useEffect } from 'react'
 
-export default function HeaderHome04() {
+export default function Header() {
     useEffect(() => {
         // Intersection Obeserver for fixed Header
         const target = document.getElementById('fixedHeader');
-        const viewport = document.getElementById('headerViewport');
+        const sticky = document.getElementById('stickyHeader');
 
         const options = {
             root: null
         }
 
-        const observer = new IntersectionObserver(function (entries, self) {
+        const observer = new IntersectionObserver(function (entries) {
             entries.forEach((entry) => {
                 if(!entry.isIntersecting) setTimeout(() => {
                     target.classList.add('fixed-header');
@@ -35,7 +35,7 @@ export default function HeaderHome04() {
                 if(entry.isIntersecting) target.classList.remove('fixed-header');
             })
         }, options);
-        observer.observe(viewport);
+        observer.observe(sticky);
     }, [])
 
 
@@ -51,11 +51,26 @@ export default function HeaderHome04() {
 
 
     return(
-        <header className='shadow-[5px_6px_30px_0_rgba(0,0,0,0.12)] z-50 relative top-0 right-0 left-0'>
+        <header className='shadow-[5px_6px_30px_0_rgba(0,0,0,0.12)] z-50 absolute top-0 right-0 left-0'>
+            <div className="hidden flex font-Amiri bg-darkBlueBackground text-white py-2 px-14 max-xl:hidden">
+                <p>Call Us: <span className="text-orangeBright">+1 800 123 456 789</span></p>
+                <p className="ml-10 mr-auto">Mail Us: <span className="text-orangeBright">zikzag@mail.com</span></p>
+
+                <p>Bespoke Solutions Tailored to Your Business. <span className="text-orangeBright">Free Counsultancy</span></p>
+                <div className='flex justify-between w-36 ml-12'>
+                    <FontAwesomeIcon icon={faTwitter} className='w-3 hover:text-[#1d9bf0] hover:cursor-pointer ease-linear duration-300' />
+                    <FontAwesomeIcon icon={faFacebookF} className='w-2 hover:text-[#587abf] hover:cursor-pointer ease-linear duration-300' />
+                    <FontAwesomeIcon icon={faPinterestP} className='w-2.5 hover:text-[#c42d2f] hover:cursor-pointer ease-linear duration-300' />
+                    <FontAwesomeIcon icon={faInstagram} className='w-3 hover:text-[#af50a0] hover:cursor-pointer ease-linear duration-300' />
+                </div>
+            </div>
+
+            <div id='stickyHeader'></div>
+
             <div id='fixedHeader' className='flex justify-between font-NunitoSans text-sm font-bold items-center px-14 bg-white max-xl:hidden'>
                 <Image src={logo} alt="logo de l'entreprise" className='w-36 my-7' />
 
-                <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50 min-w-[550px]'>
+                <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
@@ -108,16 +123,16 @@ export default function HeaderHome04() {
                     <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation'></span>PAGES</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground invisible absolute -left-10 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <Link href='/About'><p className='mb-4 hover-underline-animation'>About</p></Link>
-                            <p className='mb-4 w-24 hover-underline-animation'>Our Services</p>
-                            <p className='mb-4 hover-underline-animation'>Our Team</p>
-                            <p className='mb-4 hover-underline-animation'>Single Team</p>
-                            <p className='mb-4 hover-underline-animation'>Value</p>
-                            <p className='mb-4 hover-underline-animation'>Elements</p>
-                            <p className='mb-4 hover-underline-animation'>Typographie</p>
-                            <p className='mb-4 hover-underline-animation'>FAQ</p>
-                            <p className='mb-4 hover-underline-animation'>Coming Soon</p>
-                            <p className='hover-underline-animation'>Page 404</p>
+                            <Link href='/Pages/About'><p className='mb-4 hover-underline-animation'>About</p></Link>
+                            <Link href='/Pages/OurServices'><p className='mb-4 w-24 hover-underline-animation'>Our Services</p></Link>
+                            <Link href='/Pages/OurTeam'><p className='mb-4 hover-underline-animation'>Our Team</p></Link>
+                            <Link href='/Pages/SingleTeam'><p className='mb-4 hover-underline-animation'>Single Team</p></Link>
+                            <Link href='/Pages/Value'><p className='mb-4 hover-underline-animation'>Value</p></Link>
+                            <Link href='/Pages/Elements'><p className='mb-4 hover-underline-animation'>Elements</p></Link>
+                            <Link href='/Pages/Typographie'><p className='mb-4 hover-underline-animation'>Typographie</p></Link>
+                            <Link href='/Pages/FAQ'><p className='mb-4 hover-underline-animation'>FAQ</p></Link>
+                            <Link href='/Pages/ComingSoon'><p className='mb-4 hover-underline-animation'>Coming Soon</p></Link>
+                            <Link href='/Pages/Page404'><p className='hover-underline-animation'>Page 404</p></Link>
                         </div>
                     </div>
 
@@ -128,10 +143,10 @@ export default function HeaderHome04() {
                             <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation'>Blog Grid</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-12 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
-                                    <p className='hover-underline-animation mb-4'>2 Columns</p>
-                                    <p className='hover-underline-animation mb-4'>2 columns + Sidebar</p>
-                                    <p className='hover-underline-animation mb-4'>3 Columns</p>
-                                    <p className='hover-underline-animation w-40'>4 Columns Full Width</p>
+                                    <Link href='/Blog/BlogGrid/2Columns'><p className='hover-underline-animation mb-4'>2 Columns</p></Link>
+                                    <Link href='/Blog/BlogGrid/2ColumnsSidebar'><p className='hover-underline-animation mb-4'>2 columns + Sidebar</p></Link>
+                                    <Link href='/Blog/BlogGrid/3Columns'><p className='hover-underline-animation mb-4'>3 Columns</p></Link>
+                                    <Link href='/Blog/BlogGrid/4Columns'><p className='hover-underline-animation w-40'>4 Columns Full Width</p></Link>
                                 </div>
                             </div>
 
@@ -148,21 +163,21 @@ export default function HeaderHome04() {
                             <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation'>Blog Single</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-32 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
-                                    <p className='hover-underline-animation w-16 mb-4'>Standard</p>
-                                    <p className='hover-underline-animation mb-4'>Video</p>
-                                    <p className='hover-underline-animation mb-4'>Gallery</p>
-                                    <p className='hover-underline-animation mb-4'>Link</p>
-                                    <p className='hover-underline-animation mb-4'>Quote</p>
-                                    <p className='hover-underline-animation'>Music</p>
+                                    <Link href='/Blog/BlogSingle/Standard'><p className='hover-underline-animation w-16 mb-4'>Standard</p></Link>
+                                    <Link href='/Blog/BlogSingle/Video'><p className='hover-underline-animation mb-4'>Video</p></Link>
+                                    <Link href='/Blog/BlogSingle/Gallery'><p className='hover-underline-animation mb-4'>Gallery</p></Link>
+                                    <Link href='/Blog/BlogSingle/Link'><p className='hover-underline-animation mb-4'>Link</p></Link>
+                                    <Link href='/Blog/BlogSingle/Quote'><p className='hover-underline-animation mb-4'>Quote</p></Link>
+                                    <Link href='/Blog/BlogSingle/Music'><p className='hover-underline-animation'>Music</p></Link>
                                 </div>
                             </div>
 
                             <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation'>Single Layouts</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-20 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
-                                    <p className='hover-underline-animation w-28 mb-4'>Overlay Image</p>
-                                    <p className='hover-underline-animation mb-4'>Title First</p>
-                                    <p className='hover-underline-animation'>Image First</p>
+                                    <Link href='/Blog/SingleLayouts/OverlayImage'><p className='hover-underline-animation w-28 mb-4'>Overlay Image</p></Link>
+                                    <Link href='/Blog/SingleLayouts/TitleFirst'><p className='hover-underline-animation mb-4'>Title First</p></Link>
+                                    <Link href='/Blog/SingleLayouts/ImageFirst'><p className='hover-underline-animation'>Image First</p></Link>
                                 </div>
                             </div>
                         </div>
@@ -174,47 +189,47 @@ export default function HeaderHome04() {
                         <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation'>Portfolio Grid</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-1.5 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
-                                    <p className='hover-underline-animation mb-4'>2 Columns</p>
-                                    <p className='hover-underline-animation mb-4'>3 Columns</p>
-                                    <p className='hover-underline-animation mb-4 w-32'>4 Columns Wide</p>
-                                    <p className='hover-underline-animation'>5 Colums Wide</p>
+                                    <Link href='/Portfolio/PortfolioGrid/2Columns'><p className='hover-underline-animation mb-4'>2 Columns</p></Link>
+                                    <Link href='/Portfolio/PortfolioGrid/3Columns'><p className='hover-underline-animation mb-4'>3 Columns</p></Link>
+                                    <Link href='/Portfolio/PortfolioGrid/3Columns'><p className='hover-underline-animation mb-4 w-32'>4 Columns Wide</p></Link>
+                                    <Link href='/Portfolio/PortfolioGrid/4Columns'><p className='hover-underline-animation'>5 Colums Wide</p></Link>
                                 </div>
                             </div>
 
                             <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation w-2/3'>Portfolio Masonry</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-11 rounded-md pl-10 pr-48 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
-                                    <p className='hover-underline-animation w-14 mb-4'>Style 1</p>
-                                    <p className='hover-underline-animation mb-4'>Style 2</p>
-                                    <p className='hover-underline-animation'>Style 3</p>
+                                    <Link href='/Portfolio/PortfolioMasonry/Style-1'><p className='hover-underline-animation w-14 mb-4'>Style 1</p></Link>
+                                    <Link href='/Portfolio/PortfolioMasonry/Style-2'><p className='hover-underline-animation mb-4'>Style 2</p></Link>
+                                    <Link href='/Portfolio/PortfolioMasonry/Style-3'><p className='hover-underline-animation'>Style 3</p></Link>
                                 </div>
                             </div>
 
-                            <p className='mb-4 hover-underline-animation w-32'>Portfolio Gallery</p>
-                            <p className='hover-underline-animation w-12'>Single</p>
+                            <Link href='/Portfolio/Gallery'><p className='mb-4 hover-underline-animation w-32'>Portfolio Gallery</p></Link>
+                            <Link href='/Portfolio/Single'><p className='hover-underline-animation w-12'>Single</p></Link>
                         </div>
                     </div>
 
                     <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1'></span>SHOP</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground invisible absolute right-0 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <p className='mb-4 hover-underline-animation'>Shop</p>
-                            <p className='mb-4 hover-underline-animation'>Cart</p>
-                            <p className='w-18 hover-underline-animation'>Checkout</p>
+                            <Link href='/Shop/Shop'><p className='mb-4 hover-underline-animation'>Shop</p></Link>
+                            <Link href='/Shop/Cart'><p className='mb-4 hover-underline-animation'>Cart</p></Link>
+                            <Link href='/Shop/Checkout'><p className='w-18 hover-underline-animation'>Checkout</p></Link>
                         </div>
                     </div>
 
-                    <p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p>
+                    <Link href='/Contacts'><p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p></Link>
                 </nav>
 
                 <div className='flex items-center justify-end w-2/12'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
-                    <button className='inline-block p-9 py-5 ml-9 rounded hover:cursor-pointer bg-orange hover:bg-darkBlueBackground text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
+                    <button className='inline-block p-9 py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor-pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>
             </div>
 
 
-            <div className='bg-darkBlueBackground flex justify-between items-center relative top-0 left-0 right-0 h-28 text-white px-20 z-100 min-xl:hidden 650:px-6'>
+            <div className='bg-darkBlueBackground flex justify-between items-center absolute top-0 left-0 right-0 h-28 text-white px-20 z-100 min-xl:hidden 650:px-6'>
                 <FontAwesomeIcon icon={faBars} onClick={asideHeaderOpen} className='w-5' />
                 <Image src={logoQueries} alt='logo de entreprise' />
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='w-6' />
@@ -241,8 +256,8 @@ export default function HeaderHome04() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>PAGES</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <Link href='/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p></Link>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p>
+                                <Link href='/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p>
+                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p></Link>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Our Team</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Single Team</p>
                                 <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[42px]'>Value</p>
@@ -284,7 +299,7 @@ export default function HeaderHome04() {
                             </div>
                         </div>
 
-                        <p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p>
+                        <Link href='/Pages/Contacts'><p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p></Link>
                     </div>
 
                     <div className='pt-4 relative'>

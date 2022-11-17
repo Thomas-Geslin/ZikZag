@@ -2,6 +2,8 @@ import Head from 'next/head'
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
+import WidgetTheme from '../../components/WidgetTheme'
+
 import HeadingsTypography from '../../components/PAGES/Typography/01Headings'
 import TextTypography from '../../components/PAGES/Typography/02Text'
 import HighlightersTypography from '../../components/PAGES/Typography/03Highlighters'
@@ -41,6 +43,8 @@ export default function About() {
                     <ListingsTypography />
                 </div>
             </main>
+
+            <WidgetTheme />
 
             <Footer />
         </div>  

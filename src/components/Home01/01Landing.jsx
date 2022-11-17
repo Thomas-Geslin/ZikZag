@@ -45,7 +45,7 @@ const revealLeft = keyframes`
 
   to {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 1; 
   }
 `;
 
@@ -55,7 +55,9 @@ export default function Landing01() {
         <section className='overflow-hidden'>
             <Swiper
                 modules={[Navigation, Autoplay, EffectFade]}
-                navigation
+                navigation={{
+                  nextEl: 'nextNavHome01'
+                }}
                 effect="fade"
                 speed={1000}
                 autoplay={{
@@ -65,7 +67,7 @@ export default function Landing01() {
             >
                 <SwiperSlide>
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
-                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-Home1FirstSlide bg-no-repeat'>
+                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1FirstSlide bg-no-repeat'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>GIVING BACK - OUR COMMITMENT</p></Reveal>
                         <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Services that Lead the Way to Better Business</h1></Reveal>
                         <div className='font-semibold flex'>

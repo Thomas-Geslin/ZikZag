@@ -1,6 +1,11 @@
 import Image from 'next/image'
 import { useEffect } from 'react';
 
+// Awesome Reveal
+import Reveal from "react-awesome-reveal";
+import { keyframes } from "@emotion/react";
+
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 
@@ -17,85 +22,104 @@ import mouseoverSquareRight from "../../public/assets/Home02/mouseover_square_or
 import mouseoverStanding from "../../public/assets/Home02/mouseover_standing.png"
 import mouseoverSit from "../../public/assets/Home02/mouseover_sit.png"
 
+// Keyframe for smooth reveal
+const reveal = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+`;
+const revealScale= keyframes`
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+`;
+const revealRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+const revealLeft = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+const revealBottom = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 
 export default function Landing() {
   useEffect(() => {
-    // Intersection Obeserver for fixed GoToTop
-    const target = document.getElementById('landingReveal1');
-    const target2 = document.getElementById('landingReveal2');
-    const target3 = document.getElementById('landingReveal3');
-    const target4 = document.getElementById('landingReveal4');
-    const target5 = document.getElementById('landingReveal5');
-    const target6 = document.getElementById('landingReveal6');
-    const target7 = document.getElementById('landingReveal7');
-    const target8 = document.getElementById('landingReveal8');
-    const target9 = document.getElementById('landingReveal9');
-    const target10 = document.getElementById('landingReveal10');
-    const target11 = document.getElementById('landingReveal11');
-    const target12 = document.getElementById('landingReveal12');
-    const target13 = document.getElementById('landingReveal13');
-    const target14 = document.getElementById('landingReveal14');
-    const target15 = document.getElementById('landingReveal15');
-    const target16 = document.getElementById('landingReveal16');
+    // Mouseover Parallax
+    document.getElementById('landingViewport').addEventListener('mousemove', parallax);
+    function parallax(e) {
+      this.querySelectorAll('.layerHome02').forEach(layer => {
+        const speed = layer.getAttribute('data-speed');
 
-    const viewport = document.getElementById('landingViewport');
+        const x = (window.innerWidth - e.pageX*speed)/100;
+        const y = (window.innerHeight - e.pageY*speed)/100;
 
-    const options = {
-      root: null,
-      treshold: 0.5
-    }
-
-    const observer = new IntersectionObserver(function (entries) {
-      entries.forEach((entry) => {
-          if(entry.isIntersecting) { 
-            target.classList.add('revealLandingFirstHome02-1');
-            target2.classList.add('revealLandingFirstHome02-2');
-            target3.classList.add('revealLandingFirstHome02-3');
-            target4.classList.add('revealLandingFirstHome02-4');
-            target5.classList.add('revealLandingFirstHome02-5');
-            target6.classList.add('revealLandingFirstHome02-6');
-            target7.classList.add('revealLandingFirstHome02-7');
-            target8.classList.add('revealLandingFirstHome02-8');
-            target9.classList.add('revealLandingRightHome02-2');
-            target10.classList.add('revealLandingRightHome02-3');
-            target11.classList.add('revealLandingRightHome02-1');
-            target12.classList.add('revealLandingRightHome02-4');
-            target13.classList.add('revealLandingBottomHome02');
-            target14.classList.add('revealLandingBottomHome02-1');
-            target15.classList.add('revealLandingLeftHome02');
-            target16.classList.add('revealLandingLeftHome02-2');
-          }
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
-    }, options);
-    observer.observe(viewport);
+    }
   },[])
 
     return(
-        <section id="landingViewport" className='bg-greyBackground bg-squareBackground bg-no-repeat bg-[bottom_-50rem_left_43rem] relative mt-32 pb-6 max-xl:mt-28'>
+        <section id="landingViewport" className='bg-greyBackground z-10 overflow-hidden bg-squareBackground bg-no-repeat bg-[bottom_-50rem_left_43rem] relative mt-32 pb-6 max-xl:mt-28'>
           <div className='ml-52 pt-56 1060:ml-10 1060:pt-20'>
-            <h2 id='landingReveal9' className='opacity-0 font-NunitoSans text-orange text-lg font-semibold max-xl:w-10/12 850:text-base'>PERFECT SOLUTION FOR YOUR COMPAGNY</h2>
-            <h1 id='landingReveal10' className='opacity-0 font-Amiri text-slightGrey text-xl leading-90 w-5/12  max-xl:w-10/12 850:text-3xl'>Your Business from Idea to Launching</h1>
+            <Reveal keyframes={revealRight} duration={1000} delay={700} triggerOnce><h2 className='font-NunitoSans text-orange text-lg font-semibold max-xl:w-10/12 850:text-base'>PERFECT SOLUTION FOR YOUR COMPAGNY</h2></Reveal>
+            <Reveal keyframes={revealRight} duration={1000} triggerOnce><h1 className='font-Amiri text-slightGrey text-xl leading-90 w-5/12  max-xl:w-10/12 850:text-3xl'>Your Business from Idea to Launching</h1></Reveal>
 
             <div className='flex items-center pb-64 mt-8'>
-              <div id='landingReveal1' className='opacity-0 group bg-white px-7 py-6 rounded-full shadow-[5px_5px_15px_3px_#dddddd] hover:bg-orange hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-orangeBright group-hover:text-white' /></div>
-              <p id='landingReveal2' className='font-bold text-slightGrey text-sm ml-5 opacity-0'>HOW IT WORKS</p>
+              <Reveal keyframes={reveal} duration={1000} delay={1550} triggerOnce><div className='group bg-white px-7 py-6 rounded-full shadow-[5px_5px_15px_3px_#dddddd] hover:bg-orange hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-orangeBright group-hover:text-white' /></div></Reveal>
+              <Reveal keyframes={revealScale} duration={1000} delay={1400} triggerOnce><p className='font-bold text-slightGrey text-sm ml-5'>HOW IT WORKS</p></Reveal>
             </div>
           </div>
 
-          <div id='landingReveal13' onClick={() => window.scrollTo({ top: 1050, behavior: 'smooth' })} className='opacity-0 flex absolute bottom-4 left-36 hover:cursor-pointer max-xl:left-8'><span className='relative top-3 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-semibold'>SCROLL</p></div>
+          <Reveal keyframes={revealBottom} duration={1000} delay={2000} triggerOnce><div onClick={() => window.scrollTo({ top: 1050, behavior: 'smooth' })} className='flex absolute bottom-4 -rotate-90 left-36 hover:cursor-pointer max-xl:left-8'><span className='relative top-2 h-0.5 w-14 mr-2 bg-orange'></span><p className='font-bold text-sm'>SCROLL</p></div></Reveal>
 
-          <div id='parallaxWrapper' className='max-xl:hidden'>
-            <Image id='landingReveal3' className='opacity-0 absolute top-44 right-24' src={mouseoverLine01} alt='ligne de décoration' />
-            <Image id='landingReveal4' className='opacity-0 absolute top-36 right-[850px]' src={mouseoverLine02} alt='ligne de décoration' />
-            <Image id='landingReveal5' className='opacity-0 absolute top-[130px] right-72' src={mouseoverLine03} alt='ligne de décoration' />
-            <Image id='landingReveal6' className='opacity-0 absolute top-[550px] right-28' src={mouseoverLine04} alt='ligne de décoration' />
-            <Image id='landingReveal7' className='opacity-0 absolute top-[300px] right-[920px]' src={mouseoverLine05} alt='ligne de décoration' />
-            <Image id='landingReveal8' className='opacity-0 absolute top-[660px] right-[880px]' src={mouseoverLine06} alt='ligne de décoration' />
-            <Image id='landingReveal14' className='opacity-0 absolute top-80 right-72' src={mouseoverRocket} alt='fusée de décoration' />
-            <Image id='landingReveal15' className='opacity-0 absolute top-40 -left-[680px]' src={mouseoverSquareLeft} alt='carré de décoration' />
-            <Image id='landingReveal11' className='opacity-0 absolute top-20 right-0' src={mouseoverSquareRight} alt='carré de décoration' />
-            <Image id='landingReveal12' className='opacity-0 absolute top-44 right-[610px] max-[1660px]:w-[200px]' src={mouseoverStanding} alt="dessin d'un homme ayant les bras levés" />
-            <Image id='landingReveal16' className='absolute top-80 right-56 opacity-0 max-[1660px]:w-[350px]' src={mouseoverSit} alt="dessin d'un homme assis" />
+          <div>
+            <Reveal keyframes={reveal} duration={1000} delay={4600} triggerOnce className='absolute top-44 right-24'><Image data-speed="-1" className='layerHome02' src={mouseoverLine01} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={5200} triggerOnce className='absolute top-36 right-[850px] layerHome02'><Image data-speed="-1" className='layerHome02' src={mouseoverLine02} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={5800} triggerOnce className='absolute top-[130px] right-72 layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine03} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={6300} triggerOnce className='absolute top-[550px] right-28 layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine04} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={6800} triggerOnce className='absolute top-[300px] right-[920px] layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine05} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={7300} triggerOnce className='absolute top-[660px] right-[880px] layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine06} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={revealBottom} duration={1000} delay={2850} triggerOnce className=' absolute top-80 right-72'><Image data-speed="-2" className='layerHome02' src={mouseoverRocket} alt='fusée de décoration' /></Reveal>
+            <Reveal keyframes={revealLeft} duration={1000} delay={3500} triggerOnce className='absolute top-40 -left-[680px]'><Image data-speed="2" className='layerHome02' src={mouseoverSquareLeft} alt='carré de décoration' /></Reveal>
+            <Reveal keyframes={revealRight} duration={1000} delay={3400} triggerOnce className='absolute top-20 -right-44'><Image data-speed="2" className='layerHome02' src={mouseoverSquareRight} alt='carré de décoration' /></Reveal>
+            <Reveal keyframes={revealLeft} duration={1000} delay={2600} triggerOnce className='absolute top-44 right-[610px] max-[1660px]:w-[200px]'><Image data-speed="-1" className='layerHome02' src={mouseoverStanding} alt="dessin d'un homme ayant les bras levés" /></Reveal>
+            <Reveal keyframes={revealRight} duration={1000} delay={1200} triggerOnce className='absolute top-80 right-56 max-[1660px]:w-[350px]'><Image data-speed="-1" className='layerHome02' src={mouseoverSit} alt="dessin d'un homme assis" /></Reveal>
           </div>
         </section>
     )
