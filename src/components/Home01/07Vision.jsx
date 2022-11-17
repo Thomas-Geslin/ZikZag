@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { useEffect } from 'react';
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper';
@@ -35,6 +38,9 @@ import honeyGrey from '../../public/assets/Home02/logo_honey_grey.png'
 
 
 export default function VisionHome01() {
+    const { color, secondaryColor } = useContext(ColorContext);
+
+
     useEffect(() => {
         // Function for auto-increment counter on scroll
         function autoIncrement(limit, target, detail) {
@@ -118,33 +124,38 @@ export default function VisionHome01() {
     
     return(
         <section id='numberViewport' className='mt-32 mb-32 items-center '>
-            <div className='rounded-lg bg-darkBlueBackground flex text-center py-16 relative w-[1150px] m-auto'>
-                <div className='relative ml-20'>
-                    <p id='numberTarget1' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
-                    <p className='text-white font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+            <div className='relative mx-[19%]'>
+                <div className={`parallaxDivision-Home01 rounded-lg bg-${secondaryColor} z-10`}></div>
+
+                <div className='flex text-center py-16 absolute left-[50%] translate-x-[-50%] top-0 m-auto'>
+                    <div className='relative ml-20'>
+                        <p id='numberTarget1' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>0</p>
+                        <p className='text-white font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
+                        <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                    </div>
+
+                    <div className='relative mx-36'>
+                        <p id='numberTarget2' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>250</p>
+                        <p className='text-white font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
+                        <span className='absolute text-3xl text-greyText font-light -top-5 -right-3'>+</span>
+                    </div>
+
+                    <div className='relative mr-36'>
+                        <p id='numberTarget3' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>36</p>
+                        <p className='text-white font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
+                        <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                    </div>
+
+                    <div className='relative mr-20'>
+                        <p id='numberTarget4' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>17</p>
+                        <p className='text-white font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
+                        <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                    </div>
                 </div>
 
-                <div className='relative mx-36'>
-                    <p id='numberTarget2' className='font-Amiri text-7xl text-orange tracking-tighter'>250</p>
-                    <p className='text-white font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3'>+</span>
-                </div>
-
-                <div className='relative mr-36'>
-                    <p id='numberTarget3' className='font-Amiri text-7xl text-orange tracking-tighter'>36</p>
-                    <p className='text-white font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
-                </div>
-
-                <div className='relative mr-20'>
-                    <p id='numberTarget4' className='font-Amiri text-7xl text-orange tracking-tighter'>17</p>
-                    <p className='text-white font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
-                </div>
-
-                <Image src={square} alt='carré de decoration' className='absolute -z-10 -right-28' />
+                <Image src={square} alt='carré de decoration' className='absolute -z-10 -bottom-12 -right-24' />
             </div>
+            
 
             <div className='flex justify-center mt-40'>
                 <div className='relative'>
@@ -160,7 +171,7 @@ export default function VisionHome01() {
                 </div>
 
                 <div className="w-1/3 max-xl:w-full relative left-72 mb-20">
-                    <h2 className='text-orange font-bold mb-3 relative'>OUR VISION<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className={`text-${color} font-bold mb-3 relative`}>OUR VISION<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
                     <p className="text-greyText text-lg  w-10/12 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
 

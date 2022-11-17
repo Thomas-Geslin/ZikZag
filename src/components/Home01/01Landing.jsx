@@ -1,5 +1,8 @@
 import Image from "next/image";
 
+import { useContext, useEffect } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -51,6 +54,8 @@ const revealLeft = keyframes`
 
 
 export default function Landing01() {
+  const { color } = useContext(ColorContext);
+
     return(
         <section className='overflow-hidden'>
             <Swiper
@@ -71,7 +76,7 @@ export default function Landing01() {
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>GIVING BACK - OUR COMMITMENT</p></Reveal>
                         <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Services that Lead the Way to Better Business</h1></Reveal>
                         <div className='font-semibold flex'>
-                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className="rounded bg-orange py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500">LEARN MORE</button></Reveal>
+                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                         </div>
                     </div>
@@ -91,7 +96,7 @@ export default function Landing01() {
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>TECHNOLOGICAL SOLUTIONS</p></Reveal>
                         <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Transformation is at the Hearth of What We Do</h1></Reveal>
                         <div className='font-semibold flex'>
-                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className="rounded bg-orange py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500">LEARN MORE</button></Reveal>
+                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                         </div>
                     </div>
@@ -111,7 +116,7 @@ export default function Landing01() {
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>OUTSOURCING & NEARSHORE</p></Reveal>
                         <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>We Combine Business with Technologies</h1></Reveal>
                         <div className='font-semibold flex'>
-                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className="rounded bg-orange py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500">LEARN MORE</button></Reveal>
+                            <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                         </div>
                     </div>

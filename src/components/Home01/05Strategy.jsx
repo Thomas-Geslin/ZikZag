@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -70,9 +73,12 @@ const revealScale = keyframes`
 
 
 export default function StrategyHome01() {
+  const { color } = useContext(ColorContext);
+
+
     return(
         <section className='text-center pb-60'>
-            <h2 className='text-orange font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-2 bg-orange h-0.5 w-2'></span>OUR STRATEGY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+            <h2 className={`text-${color} font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-2 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
             <h3 className='font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
 
             <div className='mt-20 relative'>
@@ -93,7 +99,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Organization</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div>
                     </Reveal>
 
@@ -105,7 +111,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Sustainability</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div>
                     </Reveal>
                     
@@ -117,7 +123,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Marketing</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div>
                     </Reveal>
                     
@@ -129,7 +135,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Customer Strategy</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div>
                     </Reveal>
                     
@@ -141,7 +147,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Improvement</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div>
                     </Reveal>
                     
@@ -153,7 +159,7 @@ export default function StrategyHome01() {
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Transformation</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                         </div>
-                        <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                        <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                     </div> 
                     </Reveal>             
                 </div>

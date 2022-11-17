@@ -22,6 +22,7 @@ module.exports = {
       colors: {
         'orangeBright': '#ff4916',
         'orange': '#ff4a17',
+        'red': '#f03759',
         'slightGrey': '#222222',
         'greyText': '#616161',
         'navFooter': '#CCCCCC',

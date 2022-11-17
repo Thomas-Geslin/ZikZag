@@ -308,16 +308,73 @@
 
 
 
+/* Classes for Color Context */
+.text-red {
+  color: #ec3b3b;
+}
+.group:hover > .group-hover-text-red {
+  color: #ec3b3b;
+}
+.text-orange {
+  color: #ff4a17;
+}
+.group:hover > .group-hover-text-orange {
+  color: #ff4a17;
+}
+.bg-red {
+  background-color: #ec3b3b;
+}
+.group:hover > .group-hover-bg-red {
+  background-color: #ec3b3b;
+}
+.bg-orange {
+  background-color: #ff4a17;
+}
+.group:hover > .group-hover-bg-orange {
+  background-color: #ff4a17;
+}
+.border-l-orange {
+  border-left: #ff4a17 solid 4px;
+}
+.border-l-red {
+  border-left: #ec3b3b solid 4px;
+}
+
+.bg-darkBlueBackground {
+  background-color: #14212b;
+}
+.hover-bg-darkBlueBackground:hover {
+  background-color: #14212b;
+}
+.bg-secondaryBlue {
+  background-color: #2c396b;
+}
+.hover-bg-secondaryBlue:hover {
+  background-color: #2c396b;
+}
+/**/
+
+
+
 /* Home01 */
+.parallaxDivision-Home01 {
+  background-image: url('../public/assets/Home01/vision_division_background.png');
+  height: 250px; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .nextNavHome01 {
   background-image: url('../public/assets/Home02/navigation_arrow_left.png');
   background-repeat: no-repeat;
   background-size: 25px auto;
   background-position: center;
   padding: 0 25%!important;
-    background-color: transparent!important;
-    right:10px;
-    width: 10px!important;
+  background-color: transparent!important;
+  right:10px;
+  width: 10px!important;
 }
 .nextNavHome01::after {
   display: none;
@@ -476,6 +533,16 @@
 
 
 /* Home02 Appearence */
+.parallaxConsultancy-Home02 {
+  background-image: url('../public/assets/Home02/consultancy_background_01.png');
+  height: 420px; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @keyframes benefitsRightReveal {
   0% {
     opacity: 0;
@@ -686,6 +753,16 @@
 
 
 /* Home03 */
+.parallaxDivision-Home03 {
+  background-image: url('../public/assets/Home03/division_parallax.png');
+  height: 515px; 
+  width: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 @keyframes landingBackgroundAnimation {
   0% {
     transform: translate(0);

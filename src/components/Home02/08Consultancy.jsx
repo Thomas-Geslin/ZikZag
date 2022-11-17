@@ -37,7 +37,9 @@ export default function Consultancy() {
 
     return(
         <section className='-mb-20 relative -top-32'>
-          <div className='bg-darkBlueBackground w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full'>
+          <div className='bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full'>
+            <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl'></div>
+            
             <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0'>
               <Image src={orangeSquare} alt='carré orange' className='w-80' />
               <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
@@ -47,7 +49,7 @@ export default function Consultancy() {
               </div>
             </div>
 
-            <div className='mb-20'>
+            <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0'>
               <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
               <p className='font-Amiri text-white text-5xl mb-3'>Get a Free Counsultancy Right Now!</p>
               <p className='text-[#dddfe1] text-[20px] px-7'>We help you see the world differently, discover opportunities you may never have imagined.</p>
