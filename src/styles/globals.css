@@ -352,6 +352,19 @@
 .hover-bg-secondaryBlue:hover {
   background-color: #2c396b;
 }
+
+.text-slightOrange {
+  color: #ff673c;
+}
+.text-slightRed {
+  color: rgb(235, 104, 104);
+}
+.text-slightBlue {
+  color: #2a3843;
+}
+.text-slightSecondaryBlue {
+  color: #384886;
+}
 /**/
 
 

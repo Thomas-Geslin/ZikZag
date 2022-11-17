@@ -13,27 +13,33 @@ import pinterest from '../../public/assets/Home01/about_icon_pinterest.png'
 
 export default function AboutHome01() {
     const { color, secondaryColor } = useContext(ColorContext);
+    let slightColor = 'slightOrange';
+    let slightBlue = 'slightBlue'
+    if(color === 'red') {
+        slightColor = 'slightRed';
+        slightBlue = 'slightSecondaryBlue'
+    }
 
 
     return(
         <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 -top-32'>
             <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col max-xl:top-0 650:w-full'>
                 <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
-                    <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>01</span>
+                    <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                     <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
 
                 <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
-                    <span className='text-8xl text-[#2a3843] absolute left-10 bottom-4 tracking-tighter'>02</span>
+                    <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
                     <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
 
                 <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
-                    <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>03</span>
+                    <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                     <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
