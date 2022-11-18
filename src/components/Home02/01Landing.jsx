@@ -89,17 +89,7 @@ export default function Landing() {
         const x = (window.innerWidth - e.pageX*speed)/100;
         const y = (window.innerHeight - e.pageY*speed)/100;
 
-        layer.style.transform = `translateX(${x}px) translateY(${y}px)`;
-        layer.style.transition = 'all .15s'
-      })
-    }
-
-    document.getElementById('landingViewport').addEventListener('mouseleave', rebout);
-    function rebout() {
-      this.querySelectorAll('.layerHome02').forEach(layer => {
-
-        layer.style.transform = `translateX(0px) translateY(0px)`;
-        layer.style.transition = 'all .15s'
+        layer.style.transform = `translateX(${x}px) translateY(${y}px)`
       })
     }
   },[])
@@ -120,11 +110,11 @@ export default function Landing() {
 
           <div>
             <Reveal keyframes={reveal} duration={1000} delay={4600} triggerOnce className='absolute top-44 right-24'><Image data-speed="-1" className='layerHome02' src={mouseoverLine01} alt='ligne de décoration' /></Reveal>
-            <Reveal keyframes={reveal} duration={1000} delay={5200} triggerOnce className='absolute top-36 right-[850px] layerHome02'><Image data-speed="-1" className='layerHome02' src={mouseoverLine02} alt='ligne de décoration' /></Reveal>
-            <Reveal keyframes={reveal} duration={1000} delay={5800} triggerOnce className='absolute top-[130px] right-72 layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine03} alt='ligne de décoration' /></Reveal>
-            <Reveal keyframes={reveal} duration={1000} delay={6300} triggerOnce className='absolute top-[550px] right-28 layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine04} alt='ligne de décoration' /></Reveal>
-            <Reveal keyframes={reveal} duration={1000} delay={6800} triggerOnce className='absolute top-[300px] right-[920px] layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine05} alt='ligne de décoration' /></Reveal>
-            <Reveal keyframes={reveal} duration={1000} delay={7300} triggerOnce className='absolute top-[660px] right-[880px] layerHome02'><Image data-speed="-2" className='layerHome02' src={mouseoverLine06} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={5200} triggerOnce className='absolute top-36 right-[850px]'><Image data-speed="-1" className='layerHome02' src={mouseoverLine02} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={5800} triggerOnce className='absolute top-[130px] right-72'><Image data-speed="-2" className='layerHome02' src={mouseoverLine03} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={6300} triggerOnce className='absolute top-[550px] right-28'><Image data-speed="-2" className='layerHome02' src={mouseoverLine04} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={6800} triggerOnce className='absolute top-[300px] right-[920px]'><Image data-speed="-2" className='layerHome02' src={mouseoverLine05} alt='ligne de décoration' /></Reveal>
+            <Reveal keyframes={reveal} duration={1000} delay={7300} triggerOnce className='absolute top-[660px] right-[880px]'><Image data-speed="-2" className='layerHome02' src={mouseoverLine06} alt='ligne de décoration' /></Reveal>
             <Reveal keyframes={revealBottom} duration={1000} delay={2850} triggerOnce className=' absolute top-80 right-72'><Image data-speed="-2" className='layerHome02' src={mouseoverRocket} alt='fusée de décoration' /></Reveal>
             <Reveal keyframes={revealLeft} duration={1000} delay={3500} triggerOnce className='absolute top-40 -left-[680px]'><Image data-speed="2" className='layerHome02' src={mouseoverSquareLeft} alt='carré de décoration' /></Reveal>
             <Reveal keyframes={revealRight} duration={1000} delay={3400} triggerOnce className='absolute top-20 -right-44'><Image data-speed="2" className='layerHome02' src={mouseoverSquareRight} alt='carré de décoration' /></Reveal>
