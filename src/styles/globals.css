@@ -942,17 +942,32 @@
   background-size: cover;
 }
 
+.faqText{
+  max-height: 0;
+  overflow: hidden;
+  transition: .5s max-height;
+  position: absolute;
+	top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+	max-height:0em;	
+}
+.faqResponseActive > p {
+  max-height: 80px;
+}
+.faqResponseActive{
+  box-shadow: 3px 3px 20px 3px #eae9e9;
+}
+.faqResponseActive > div{
+  background-color: white;
+}
 .faqResponseActive > div > p {
   color: #ff4a17;
+  
 }
 .faqResponseActive > div > .rotate-45 {
   color: #ff4a17;
   transform: rotate(-45deg);
-}
-.faqResponseActive > p {
-  display: block;
-  height: 100%;
-  transition: all .5s linear;
 }
 /**/
 
@@ -1115,6 +1130,104 @@
 
 
 
+/**/
+.smallArticle1 {
+  height: 280px;
+}
+.smallArticle2 {
+  position: relative;
+  top: -430px;
+}
+.smallArticle3 {
+  position: relative;
+  top: -320px;
+}
+.smallArticle4 {
+  position: relative;
+  top: -670px;
+}
+.smallArticle5 {
+  position: relative;
+  top: -820px;
+}
+
+.smallSidebarArticle1 {
+  height: 220px;
+}
+.smallSidebarArticle2 {
+  position: relative;
+  top: -300px;
+}
+.smallSidebarArticle3 {
+  position: relative;
+  top: -120px;
+}
+.smallSidebarArticle4 {
+  position: relative;
+  top: -370px;
+}
+.smallSidebarArticle5 {
+  position: relative;
+  top: -590px;
+}
+
+.smallArticle1-3 {
+  position: relative;
+  top: -260px;
+}
+.smallArticle2-3 {
+  position: relative;
+  top: -300px;
+}
+.smallArticle3-3 {
+  position: relative;
+  top: -35px;
+}
+.smallArticle4-3 {
+  position: relative;
+  top: -300px;
+}
+.smallArticle5-3 {
+  position: relative;
+  top: -480px;
+}
+.smallArticle6-3 {
+  position: relative;
+  top: -80px;
+}
+.smallArticle7-3 {
+  position: relative;
+  top: -580px;
+}
+
+.smallArticle1-4 {
+  position: relative;
+  top: -130px;
+}
+.smallArticle2-4 {
+  position: relative;
+  top: -300px;
+}
+.smallArticle3-4 {
+  position: relative;
+  top: -260px;
+}
+.smallArticle4-4 {
+  position: relative;
+  top: -130px;
+}
+.smallArticle5-4 {
+  position: relative;
+  top: -320px;
+}
+.smallArticle6-4 {
+  position: relative;
+  top: -320px;
+}
+/**/
+
+
+
 /* Filter Portfolio Style */
 .filterPortfolioActive {
   color: white;
@@ -1153,6 +1266,21 @@
   100% {
      transform: rotate(1turn);
   }
+}
+/**/
+
+
+
+/* Input Number Style */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number]
+{
+  -moz-appearance: textfield;
 }
 /**/
 

@@ -7,6 +7,7 @@ import letter2 from '../../public/assets/Home03/contact_letter_2.png'
 import letter3 from '../../public/assets/Home03/contact_letter_3.png'
 import phone from '../../public/assets/footer/icon_phone.png'
 import placeholder from '../../public/assets/footer/icon_placeholder.png'
+import at from '../../public/assets/Home03/icon_at.png'
 
 export default function ContactHome03() {
     return(
@@ -33,7 +34,7 @@ export default function ContactHome03() {
                 </div>
                     
                 <div className='flex items-center mb-8'>
-                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={phone} alt='icone de telephone' className='w-7 mr-3 relative top-0 left-1.5' /></div>
+                    <div className=' bg-white rounded-full py-3.5 px-2 relative shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'><Image src={at} alt='icone de telephone' className='w-7 mr-3 relative top-0 left-1.5' /></div>
                     <div className='ml-8'>
                         <p className='font-bold text-slightGrey'>Mail  Us:</p>
                         <p className='text-greyText'>zik_zag.mail@mail.com</p>

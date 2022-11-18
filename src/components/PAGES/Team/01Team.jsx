@@ -9,6 +9,7 @@ import 'swiper/css/autoplay';
 
 import background from '../../../public/assets/PAGES/OurTeam/team_background.jpg'
 import man from '../../../public/assets/PAGES/OurTeam/team_man.png'
+import line from  '../../../public/assets/PAGES/OurTeam/line.png'
 
 import dynamic from '../../../public/assets/Home02/logo_dynamic_color.png'
 import okta from '../../../public/assets/Home02/logo_okta_color.png'
@@ -66,6 +67,7 @@ export default function TeamOurTeam() {
         <section className='mt-40'>
             <div className='flex items-center justify-center'>
                 <div className='ml-48 relative'>
+                    <Image src={line} alt='ligne de décoration' className='absolute bottom-0 -left-28' />
                     <Image src={background} alt='réunion entreprise' className='rounded-lg relative' />
                     <Image src={man} alt='dessin de super-héros' className='absolute top-12 left-80' />
                 </div>

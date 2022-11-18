@@ -5,7 +5,7 @@ import back4 from '../../public/assets/BLOG/Grid/article_4.jpg'
 import back5 from '../../public/assets/BLOG/Grid/article_5.jpg'
 import back6 from '../../public/assets/BLOG/Grid/article_6.jpg'
 
-export const ArticleDataMasonry = [
+export const ArticleDataMasonrySidebar = [
     {
         index: 0,
         background: back1,
@@ -18,7 +18,7 @@ export const ArticleDataMasonry = [
         categorie: 'FINANCE',
         title: 'What Gets in the Way of Great Strategy?',
         href: '/Blog/BlogSingle/Standard',
-        class: 'smallArticle1'
+        class: 'smallSidebarArticle1'
     },
     {
         index: 2,
@@ -33,7 +33,7 @@ export const ArticleDataMasonry = [
         categorie: 'ANALYSIS _ NEWS',
         title: 'When Sustainability Requires Change',
         href: '/Blog/BlogSingle/Standard',
-        class: 'smallArticle2'
+        class: 'smallSidebarArticle2'
     },
     {
         index: 4,
@@ -41,7 +41,7 @@ export const ArticleDataMasonry = [
         categorie: 'FINANCE',
         title: 'Getting Teamwork Right at the Top',
         href: '/Blog/BlogSingle/Link',
-        class: 'smallArticle3'
+        class: 'smallSidebarArticle3'
         
     },
     {
@@ -50,7 +50,7 @@ export const ArticleDataMasonry = [
         categorie: 'ANALYSIS _ NEWS',
         title: 'A New Age for Trade & Supply Chain Finance',
         href: '/Blog/BlogSingle/Video',
-        class: 'smallArticle2'
+        class: 'smallSidebarArticle2'
     },
     {
         index: 6,
@@ -58,14 +58,14 @@ export const ArticleDataMasonry = [
         categorie: 'ANALYSIS _ NEWS',
         title: 'Automation Nation: Whose Job Is Next?',
         href: '/Blog/BlogSingle/Standard',
-        class: 'smallArticle4'
+        class: 'smallSidebarArticle4'
     },
     {
         index: 7,
         categorie: 'FINANCE',
         title: 'Getting Teamwork Right at the Top',
         href: '/Blog/BlogSingle/Music',
-        class: 'smallArticle2'
+        class: 'smallSidebarArticle2'
     },
     {
         index: 8,
@@ -73,7 +73,7 @@ export const ArticleDataMasonry = [
         categorie: 'BUSINESS _ NEWS',
         title: 'For the Wealthy, Work Is the New Retirement',
         href: '/Blog/BlogSingle/Standard',
-        class: 'smallArticle4'
+        class: 'smallSidebarArticle4'
     },
     {
         index: 9,
@@ -81,6 +81,6 @@ export const ArticleDataMasonry = [
         categorie: 'ANALYSIS _ FINANCE',
         title: 'Finding Hidden Value in a Company’s Investors',
         href: '/Blog/BlogSingle/Standard',
-        class: 'smallArticle5'
+        class: 'smallSidebarArticle5'
     },
 ]

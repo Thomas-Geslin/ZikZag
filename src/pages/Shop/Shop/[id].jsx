@@ -29,11 +29,26 @@ export default function ItemPage() {
     const { id } = router.query;
     const data = ItemsData[id];
 
+    // Function that change between Review and Description
     function changeMode(modeChoose) {
         let target = document.getElementById(modeChoose);
         let remove = document.querySelector('.activeModeItemPage');
         remove.classList.remove('activeModeItemPage');
         target.classList.add('activeModeItemPage');
+    }
+
+
+    // function that handle incr and decr for input number
+    function inc(element) {
+        let el = document.getElementById(element);
+        el.value = parseInt(el.value) + 1;
+    }
+      
+    function dec(element) {
+      let el = document.getElementById(element);
+        if (parseInt(el.value) > 0) {
+          el.value = parseInt(el.value) - 1;
+      }
     }
 
 
@@ -67,10 +82,18 @@ export default function ItemPage() {
 
                             <p className='mt-16 text-slightGrey font-bold mb-10'>Categories: <span className='font-normal text-greyText'>{data.categorie}</span></p>
 
-                            <div>
-                                <input type='number' min={1} max={9} className='bg-greyBackground font-bold pl-4 py-3.5 rounded mr-4 outline-none' />
+                            <div className='flex'>
+                            <div class='relative quantity flex mr-4'>
+                                    <input name='number' id='number' type='number' defaultValue={1} step={1} placeholder='1' inputMode='numeric' min={1} max={9} className='bg-greyBackground font-bold pl-4 rounded outline-none' />
+                                    <div className='flex flex-col'>
+                                        <button onClick={() => inc('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>+</button>
+                                        <button onClick={() => dec('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>-</button>
+                                    </div>
+                                </div>
+
                                 <button className="text-white font-bold text-sm bg-orange rounded py-4 px-10 hover:bg-darkBlueBackground ease-in-out duration-500">ADD TO CART</button>
                             </div>
+                           
                         </div>
                     </div>
 
@@ -149,7 +172,7 @@ export default function ItemPage() {
                                 <p className='ml-3 relative top-1.5 text-greyText'>Save my name, email, and website in this browser for the next time I comment.</p>
                             </div>
 
-                            <button className="bg-orange font-bold text-white text-sm px-12 py-3.5 mt-5">SUBMIT</button>
+                            <button className="bg-orange font-bold text-white text-sm px-12 py-3.5 mt-5 hover:bg-darkBlueBackground ease-in-out duration-300">SUBMIT</button>
                         </div>
                       </div>
                     }

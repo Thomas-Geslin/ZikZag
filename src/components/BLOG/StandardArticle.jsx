@@ -96,21 +96,21 @@ export default function StandardArticle() {
 
             <div className='flex text-white justify-center h-36 mb-28 relative max-xl:flex-col max-xl:top-0 650:w-full'>
                 <div className='relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg'>
-                    <span className='absolute left-12 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:-translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                    <div className='ml-6 mr-10 rotate-180 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <span className='absolute left-14 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:-translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
+                    <div className='ml-8 mr-14 rotate-180 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <div className='mr-20'>
                         <p className='font-bold leading-7 mb-3'>Delivering What Consumers<br></br>Really Value</p>
-                        <p className='text-greyText text-sm font-bold'>FEBRUARY 21, 2020</p>
+                        <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                     </div>
                 </div>
 
                 <div className='relative flex items-center bg-orange rounded-r-lg group max-xl:rounded-lg'>
                     <div className='ml-20'>
                         <p className='font-bold leading-7 mb-3'>Delivering What Consumers<br></br>Really Value</p>
-                        <p className='text-greyText text-sm font-bold'>FEBRUARY 21, 2020</p>
+                        <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                     </div>
-                    <span className='absolute right-14 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                    <div className='ml-6 mr-10 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <span className='absolute right-20 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
+                    <div className='ml-8 mr-14 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                 </div>
             </div>
 

@@ -13,12 +13,15 @@ export default function TestimonialElement() {
 
             <Swiper
                 modules={[Navigation]}
-                navigation
+                navigation={{
+                  nextEl: '.nextElements',
+                  prevEl: '.prevElements'
+                }}
                 loop
                 speed={300}
             >
             <SwiperSlide>
-              <div className='bg-white rounded-lg w-[90%] text-center m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
+              <div className='relative group/arrow bg-white rounded-lg w-[90%] text-center m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                   <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                   c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -36,11 +39,14 @@ export default function TestimonialElement() {
                 <p className='text-[#61616b] text-[22px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                 <p className='font-Amiri text-3xl mb-2'>Emmy Barton</p>
                 <p className='font-semibold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
+
+                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
+                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
               </div>
             </SwiperSlide>
 
             <SwiperSlide>
-              <div className='bg-white rounded-lg w-[90%] text-center my-5 m-auto shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
+              <div className='relative group/arrow bg-white rounded-lg w-[90%] text-center my-5 m-auto shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                   <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                   c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -58,6 +64,9 @@ export default function TestimonialElement() {
                 <p className='text-greyText text-[22px] font-light mb-10'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
                 <p className='font-Amiri text-3xl mb-2'>Tina Johanson</p>
                 <p className='font-semibold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
+
+                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
+                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
               </div>
             </SwiperSlide>
           </Swiper>

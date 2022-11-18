@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { faMagnifyingGlass, faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 import { faTwitter, faFacebookF, faTelegramPlane, faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import face from '../../public/assets/BLOG/BlogSingle/Standard/aside_portrait_face.jpg'
@@ -54,10 +54,10 @@ export default function AsideArticle() {
                 <span className='w-[13%] h-[3px] bg-orange rounded absolute top-[15px] right-0'></span>
             </div>
 
-            <p className='text-slightGrey font-bold text-sm mb-4'>ANALYSIS <span className='text-[#bab3b3]'>(9)</span></p>
-            <p className='text-slightGrey font-bold text-sm mb-4'>BUSINESS <span className='text-[#bab3b3]'>(7)</span></p>
-            <p className='text-slightGrey font-bold text-sm mb-4'>FINANCE <span className='text-[#bab3b3]'>(8)</span></p>
-            <p className='text-slightGrey font-bold text-sm mb-10'>NEW <span className='text-[#bab3b3]'>(8)</span></p>
+            <div className='group flex relative hover:cursor-pointer'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 text-orange relative bottom-2 -translate-x-4 -translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ease-in-out duration-300' /><p className='text-slightGrey font-extrabold text-sm mb-4 -translate-x-4 group-hover:text-orange group-hover:translate-x-2 ease-in-out duration-300'>ANALYSIS <span className='text-[#bab3b3]'>(9)</span></p></div>
+            <div className='group flex relative hover:cursor-pointer'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 text-orange relative bottom-2 -translate-x-4 -translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ease-in-out duration-300' /><p className='text-slightGrey font-extrabold text-sm mb-4 -translate-x-4 group-hover:text-orange group-hover:translate-x-2 ease-in-out duration-300'>BUSINESS <span className='text-[#bab3b3]'>(7)</span></p></div>
+            <div className='group flex relative hover:cursor-pointer'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 text-orange relative bottom-2 -translate-x-4 -translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ease-in-out duration-300' /><p className='text-slightGrey font-extrabold text-sm mb-4 -translate-x-4 group-hover:text-orange group-hover:translate-x-2 ease-in-out duration-300'>FINANCE <span className='text-[#bab3b3]'>(8)</span></p></div>
+            <div className='group flex relative hover:cursor-pointer'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 text-orange relative bottom-2 -translate-x-4 -translate-y-3 opacity-0 group-hover:opacity-100 group-hover:translate-x-0 group-hover:translate-y-0 ease-in-out duration-300' /><p className='text-slightGrey font-extrabold text-sm mb-4 -translate-x-4 group-hover:text-orange group-hover:translate-x-2 ease-in-out duration-300'>NEWS <span className='text-[#bab3b3]'>(8)</span></p></div>
 
 
             <div className='flex relative mb-6'>

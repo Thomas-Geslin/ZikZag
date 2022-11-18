@@ -55,12 +55,15 @@ export default function DivisionHome03() {
                 <div className='absolute w-full top-0 bg-Home03DivisionBackground bg-center bg-no-repeat py-8'>
                     <Swiper
                         modules={[Navigation]}
-                        navigation
+                        navigation={{
+                            nextEl: '.nextHome03Divison',
+                            prevEl: '.prevHome03Divison'
+                        }}
                         loop
                         speed={300}
                     >
                         <SwiperSlide>
-                            <div className='w-[60%] m-auto my-5 max-xl:w-[850px] 850:w-10/12 testimonialSlide text-center'>
+                            <div className='w-[60%] relative m-auto my-5 max-xl:w-[850px] 850:w-10/12 testimonialSlide text-center'>
                                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                                 <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                                 c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -78,11 +81,14 @@ export default function DivisionHome03() {
                                 <p className='text-white text-[22px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Emmy Barton</p>
                                 <p className='text-orange font-bold text-sm pb-14'>CLIENT OF COMPAGNY</p>
+
+                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%]'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
+                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%]'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
                             </div>
                         </SwiperSlide>
 
                         <SwiperSlide>
-                            <div className='w-[60%] my-5 m-auto max-xl:w-[850px] 850:w-10/12 testimonialSlide text-center'>
+                            <div className='w-[60%] relative my-5 m-auto max-xl:w-[850px] 850:w-10/12 testimonialSlide text-center'>
                                 <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
                                 <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                                 c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -100,6 +106,9 @@ export default function DivisionHome03() {
                                 <p className='text-white text-[22px] font-light mb-10'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Tina Johanson</p>
                                 <p className='text-orange font-bold text-sm pb-14'>UI DESIGNER</p>
+
+                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%]'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
+                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%]'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
                             </div>
                         </SwiperSlide>
                     </Swiper>

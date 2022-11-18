@@ -19,6 +19,7 @@ import squareOrange from '../../public/assets/Home01/landing_square_orange.png'
 import squareWhite from '../../public/assets/Home01/landing_square_white.png'
 import squareDark from '../../public/assets/Home01/landing_square_dark.png'
 
+
 // Keyframe for smooth reveal
 const reveal = keyframes`
   from {
@@ -61,7 +62,8 @@ export default function Landing01() {
             <Swiper
                 modules={[Navigation, Autoplay, EffectFade]}
                 navigation={{
-                  nextEl: 'nextNavHome01'
+                  nextEl: '.nextHome01Landing',
+                  prevEl: '.prevHome01Landing'
                 }}
                 effect="fade"
                 speed={1000}
@@ -70,7 +72,7 @@ export default function Landing01() {
                 }}
                 loop
             >
-                <SwiperSlide>
+                <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
                     <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1FirstSlide bg-no-repeat'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>GIVING BACK - OUR COMMITMENT</p></Reveal>
@@ -88,9 +90,12 @@ export default function Landing01() {
                         <Reveal keyframes={revealRight} duration={800} delay={1500} triggerOnce><Image src={squareOrange} alt='carré orange' className='z-10 absolute top-4 -right-[450px] animation-landingHome06-top-3' /></Reveal>
                         <Reveal keyframes={reveal} duration={800} delay={1000} triggerOnce><Image src={squareDark} alt='carré sombre' className='absolute -top-72 -left-60' /></Reveal>
                     </div>
+
+                    <button className='prevHome01Landing group w-14 h-0.5 bg-white absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span><span className='absolute -right-7 -top-2.5 text-white'>03</span></button>
+                    <button className='nextHome01Landing w-14 h-0.5 bg-white absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span><span className='absolute -left-7 -top-2.5 text-white'>02</span></button>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
                     <div className='text-white pt-[310px] pb-96 pl-[370px] bg-Home1SecondSlide bg-no-repeat'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>TECHNOLOGICAL SOLUTIONS</p></Reveal>
@@ -108,9 +113,12 @@ export default function Landing01() {
                         <Reveal keyframes={revealRight} duration={800} delay={1500} triggerOnce><Image src={squareOrange} alt='carré orange' className='z-10 absolute top-4 -right-[450px] animation-landingHome06-top-3' /></Reveal>
                         <Reveal keyframes={reveal} duration={800} delay={1000} triggerOnce><Image src={squareDark} alt='carré sombre' className='absolute -top-72 -left-60' /></Reveal>
                     </div>
+
+                    <button className='prevHome01Landing group w-14 h-0.5 bg-white absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span><span className='absolute -right-7 -top-2.5 text-white'>01</span></button>
+                    <button className='nextHome01Landing w-14 h-0.5 bg-white absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span><span className='absolute -left-7 -top-2.5 text-white'>03</span></button>
                 </SwiperSlide>
 
-                <SwiperSlide>
+                <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
                     <div className='text-white pt-[310px] pb-96 pl-[370px] bg-Home1ThirdSlide bg-no-repeat'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>OUTSOURCING & NEARSHORE</p></Reveal>
@@ -128,6 +136,10 @@ export default function Landing01() {
                         <Reveal keyframes={revealRight} duration={800} delay={1500} triggerOnce><Image src={squareOrange} alt='carré orange' className='z-10 absolute top-4 -right-[450px] animation-landingHome06-top-3' /></Reveal>
                         <Reveal keyframes={reveal} duration={800} delay={1000} triggerOnce><Image src={squareDark} alt='carré sombre' className='absolute -top-72 -left-60' /></Reveal>
                     </div>
+
+                    
+                    <button className='prevHome01Landing group w-14 h-0.5 bg-white absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span><span className='absolute -right-7 -top-2.5 text-white'>02</span></button>
+                    <button className='nextHome01Landing w-14 h-0.5 bg-white absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span><span className='absolute -left-7 -top-2.5 text-white'>01</span></button>
                 </SwiperSlide>
             </Swiper>    
         </section>

@@ -114,6 +114,17 @@ export default function LandingHome03() {
         const y = (window.innerHeight - e.pageY*speed)/100;
 
         layer.style.transform = `translateX(${x}px) translateY(${y}px)`
+        layer.style.transition = 'all .15s'
+      })
+    }
+
+    
+    document.getElementById('parallaxViewport').addEventListener('mouseleave', rebout);
+    function rebout() {
+      this.querySelectorAll('.layerHome02').forEach(layer => {
+
+        layer.style.transform = `translateX(0px) translateY(0px)`;
+        layer.style.transition = 'all .15s'
       })
     }
   }, [])

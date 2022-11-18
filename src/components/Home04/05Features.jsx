@@ -2,7 +2,13 @@ import Image from "next/image"
 
 import hand from '../../public/assets/Home04/feature_hand.jpg'
 import line from '../../public/assets/Home04/feature_line.jpg'
-import stat from '../../public/assets/Home02/offer_icon_stat_color.png'
+
+import mission from '../../public/assets/Home02/benefits_icon_mission.png'
+import light from '../../public/assets/Home02/benefits_icon_light.png'
+import work from '../../public/assets/Home02/benefits_icon_work.png'
+import target from '../../public/assets/Home02/benefits_icon_target.png'
+import chart from '../../public/assets/Home01/icon_chart.png'
+import pyramid from '../../public/assets/Home01/icon_pyramid.png'
 
 export default function FeatureHome04() {
     return(
@@ -27,7 +33,7 @@ export default function FeatureHome04() {
 
                 <div className='grid grid-cols-2 relative -top-8'>
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={pyramid} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -35,7 +41,7 @@ export default function FeatureHome04() {
                     </div>
 
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={mission} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-3 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -43,7 +49,7 @@ export default function FeatureHome04() {
                     </div>
 
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={light} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -51,7 +57,7 @@ export default function FeatureHome04() {
                     </div>
 
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={work} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -59,7 +65,7 @@ export default function FeatureHome04() {
                     </div>
 
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={chart} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -67,7 +73,7 @@ export default function FeatureHome04() {
                     </div>
 
                     <div className='flex items-center group py-4'>
-                        <Image src={stat} alt='icone de graphique' className='w-16 mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
+                        <Image src={target} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                             <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>

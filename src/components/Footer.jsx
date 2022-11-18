@@ -4,6 +4,7 @@ import logo from '../public/assets/Home02/logo_consultancy.png'
 import line from '../public/assets/footer/footer_line.png'
 import phone from '../public/assets/footer/icon_phone.png'
 import placeholder from '../public/assets/footer/icon_placeholder.png'
+import at from '../public/assets/Home03/icon_at.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -28,7 +29,7 @@ export default function Footer() {
                     </div>
                     
                     <div className='flex items-center mb-5'>
-                        <Image src={phone} alt='icone de telephone' className='w-7 mr-3' />
+                        <Image src={at} alt='icone de telephone' className='w-7 mr-3' />
                         <p>zik_zag.mail@mail.com</p>
                     </div>
 

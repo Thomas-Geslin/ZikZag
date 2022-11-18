@@ -40,7 +40,7 @@ export default function TwoColumnsSidebar() {
                 </section>
 
 
-                <div className='mx-[18%] mt-12 mb-40 flex jsutify-between'>
+                <div className='mx-[18%] mt-12 mb-40 flex justify-between'>
                     <div className='w-[74%]'>
                         <div className='articleAppear grid grid-cols-2 relative -top-4'>
                             {ArticleData.slice(0, loadMore).map((el) => {

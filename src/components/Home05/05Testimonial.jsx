@@ -30,7 +30,7 @@ export default function TestimonialHome05() {
                     speed={300}
                 >
                     <SwiperSlide>
-                    <div className='rounded-lg w-[60%] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
+                    <div className='rounded-lg relative w-[60%] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                         <svg viewBox="0 0 62.4 44.8" className='w-16 pt-14 pb-6'>
                         <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                         c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -48,11 +48,16 @@ export default function TestimonialHome05() {
                         <p className='text-[#61616b] text-[20px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                         <p className='font-Amiri text-3xl mb-2'>Emmy Barton</p>
                         <p className='font-bold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
+
+                        <div className='absolute bottom-24 right-96 w-40'>
+                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
+                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
+                        </div>
                     </div>
                     </SwiperSlide>
 
                     <SwiperSlide>
-                    <div className='rounded-lg w-[60%] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
+                    <div className='relative rounded-lg w-[60%] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
                         <svg viewBox="0 0 62.4 44.8" className='w-16 pt-14 pb-6'>
                         <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
                         c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
@@ -70,6 +75,11 @@ export default function TestimonialHome05() {
                         <p className='text-greyText text-[20px] font-light mb-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                         <p className='font-Amiri text-3xl mb-2'>Tina Johanson</p>
                         <p className='font-bold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
+
+                        <div className='absolute bottom-24 right-96 w-40'>
+                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
+                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
+                        </div>
                     </div>
                     </SwiperSlide>
                 </Swiper>

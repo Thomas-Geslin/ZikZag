@@ -75,7 +75,10 @@ export default function Gallery() {
                         <div className='mb-10 rounded-xl overflow-hidden'>
                             <Swiper
                                 modules={[Navigation, Autoplay, EffectFade]}
-                                navigation
+                                navigation={{
+                                    nextEl: '.GalleryNavigationNext',
+                                    prevEl: '.GalleryNavigationPrev'
+                                }}
                                 effect="fade"
                                 speed={1000}
                                 autoplay={{
@@ -83,16 +86,28 @@ export default function Gallery() {
                                 }}
                                 loop
                             >
-                                <SwiperSlide>
+                                <SwiperSlide className="relative group">
                                     <Image src={slide1} alt="clavier d'ordinateur" />
+                                    <div className='absolute bottom-10 left-10 w-32'>
+                                        <button className='GalleryNavigationPrev group-hover:-translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white right-20 absolute'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span></button>
+                                        <button className='GalleryNavigationNext group-hover:translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white absolute left-20'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                    </div>
                                 </SwiperSlide>
 
-                                <SwiperSlide>
+                                <SwiperSlide className="relative group">
                                     <Image src={slide2} alt="réunion entreprise" />
+                                    <div className='absolute bottom-10 left-10 w-32'>
+                                        <button className='GalleryNavigationPrev group-hover:-translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white right-20 absolute'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span></button>
+                                        <button className='GalleryNavigationNext group-hover:translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white absolute left-20'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                    </div>
                                 </SwiperSlide>
 
-                                <SwiperSlide>
+                                <SwiperSlide className="relative group">
                                     <Image src={slide3} alt="femme travaillant sur un ordinateur" />
+                                    <div className='absolute bottom-10 left-10 w-32'>
+                                        <button className='GalleryNavigationPrev group-hover:-translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white right-20 absolute'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span></button>
+                                        <button className='GalleryNavigationNext group-hover:translate-x-1.5 ease-in-out duration-500 w-14 h-0.5 bg-white absolute left-20'><span className='w-3 h-0.5 bg-white rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                    </div>
                                 </SwiperSlide>
                             </Swiper>
                         </div>

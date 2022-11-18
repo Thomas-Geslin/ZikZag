@@ -17,8 +17,8 @@ export default function BenefitsHome01() {
 
     return(
         <section className='flex'>
-            <div className='relative -top-10'>
-                <Image src={background} alt="réunion d'entreprise" className='rounded-tr-lg' />
+            <div className='relative -top-10 w-1/2'>
+                <Image src={background} alt="réunion d'entreprise" className='rounded-tr-lg w-full' />
                 <Image src={square} alt='infographie' className='absolute -bottom-10' />
             </div>
 

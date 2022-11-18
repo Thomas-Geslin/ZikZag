@@ -17,6 +17,9 @@ import slide2 from '../../public/assets/Home04/landing_slide_2.jpg'
 import slide3 from '../../public/assets/Home04/landing_slide_3.jpg'
 
 import stat from '../../public/assets/Home02/offer_icon_stat_color.png'
+import report from  '../../public/assets/Home02/offer_icon_report_color.png'
+import chess from  '../../public/assets/Home04/icon_chess.png'
+
 
 // Keyframe for smooth reveal
 const reveal = keyframes`
@@ -91,7 +94,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={report} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -99,7 +102,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={chess} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -137,7 +140,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={report} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -145,7 +148,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={chess} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -183,7 +186,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={report} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
@@ -191,7 +194,7 @@ export default function LandingHome04() {
                             </div>
 
                             <div className='flex items-center hover:bg-white group ease-in-out duration-500  py-8 pl-8'>
-                                <Image src={stat} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
+                                <Image src={chess} alt='icone de graphique' className='w-11 mr-6 relative bottom-4' />
                                 <div className='text-white'>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
                                     <p className='leading-7 group-hover:text-black ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>

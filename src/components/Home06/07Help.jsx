@@ -22,7 +22,7 @@ export default function HelpHome06() {
             <div className='shadow-[13px_11px_81px_0px_rgb(0,0,0,0.10)] backdrop-blur-[7.2px] rounded-3xl border border-solid border-white w-1/3 relative top-28 left-[46%] pl-[70px] py-[60px]'>
                 <Image src={logo} alt='logo de entreprise' className='w-36' />
                 <h2 className='font-Amiri text-slightGrey leading-tight text-5xl my-9 w-9/12'>Need help finding the best solution?</h2>
-                <button className="text-sm bg-orange font-semibold py-5 px-10 rounded text-white">GET IN TOUCH</button>
+                <button className="text-sm bg-orange font-semibold py-5 px-10 rounded text-white hover:bg-darkBlueBackground ease-in-out duration-300">GET IN TOUCH</button>
 
                 <div className='absolute -right-64 -bottom-28 max-xl:relative max-xl:right-0'>
                     <Image src={square} alt='carré orange' className='w-80' />

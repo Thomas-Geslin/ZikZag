@@ -15,7 +15,7 @@ export default function WidgetColor() {
 
     return(
             <div id='colorWidgetTarget' className='fixed left-0 top-96 z-[200] flex flex-col bg-[#fcfcfc] shadow-lg text-center rounded-br px-6 pt-8 pb-10 -translate-x-full ease-in-out duration-500'>
-                <button onClick={activeWidget} className={`absolute top-0 -right-14 bg-${color} p-4 rounded-r`}>
+                <button onClick={activeWidget} className={`absolute top-0 -right-14 bg-${color} p-4 rounded-r shadow-[6px_5px_15px_0px_rgb(0,0,0,0.2)]`}>
                     <FontAwesomeIcon icon={faPaintRoller} className='w-6 text-white' />
                 </button>
 

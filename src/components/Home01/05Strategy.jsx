@@ -23,6 +23,8 @@ import mission from '../../public/assets/Home02/benefits_icon_mission.png'
 import light from '../../public/assets/Home02/benefits_icon_light.png'
 import work from '../../public/assets/Home02/benefits_icon_work.png'
 import target from '../../public/assets/Home02/benefits_icon_target.png'
+import chart from '../../public/assets/Home01/icon_chart.png'
+import pyramid from '../../public/assets/Home01/icon_pyramid.png'
 
 
 // Keyframe for smooth reveal
@@ -82,19 +84,19 @@ export default function StrategyHome01() {
             <h3 className='font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
 
             <div className='mt-20 relative'>
-                <div className='absolute top-0'>
-                    <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0 left-[530px]' /></Reveal>
-                    <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                    <Reveal keyframes={revealScale} duration={800} delay={1500} triggerOnce><Image src={line02} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                    <Reveal keyframes={revealScale} duration={800} delay={2100} triggerOnce><Image src={line03} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                    <Reveal keyframes={revealScale} duration={800} delay={2700} triggerOnce><Image src={line04} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                    <Reveal keyframes={revealScale} duration={800} delay={3600} triggerOnce><Image src={line05} alt='ligne de décoration' className='relative left-[530px]' /></Reveal>
+                <div className='absolute top-0 left-[50%] translate-x-[-50%]'>
+                    <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0' /></Reveal>
+                    <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute' /></Reveal>
+                    <Reveal keyframes={revealScale} duration={800} delay={1500} triggerOnce><Image src={line02} alt='ligne de décoration' className='absolute' /></Reveal>
+                    <Reveal keyframes={revealScale} duration={800} delay={2100} triggerOnce><Image src={line03} alt='ligne de décoration' className='absolute' /></Reveal>
+                    <Reveal keyframes={revealScale} duration={800} delay={2700} triggerOnce><Image src={line04} alt='ligne de décoration' className='absolute' /></Reveal>
+                    <Reveal keyframes={revealScale} duration={800} delay={3600} triggerOnce><Image src={line05} alt='ligne de décoration' className='relative' /></Reveal>
                 </div>
 
                 <div className='relative grid grid-cols-2 relative'>
                     <Reveal keyframes={revealLeft} duration={800} triggerOnce>
                     <div className='flex relative bg-white left-44 text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
-                        <Image src={light} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
+                        <Image src={pyramid} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                         <div>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Organization</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
@@ -142,7 +144,7 @@ export default function StrategyHome01() {
 
                     <Reveal keyframes={revealLeft} duration={800} triggerOnce>
                     <div className='flex relative bg-white text-left items-center top-24 left-40 rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
-                        <Image src={light} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
+                        <Image src={chart} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                         <div>
                             <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Improvement</p>
                             <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>

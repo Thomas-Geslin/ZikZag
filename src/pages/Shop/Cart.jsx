@@ -1,5 +1,7 @@
 import Head from "next/head"
 import Image from "next/image"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from "../../components/Footer"
@@ -11,6 +13,37 @@ import item from '../../public/assets/SHOP/item_1.jpg'
 
 
 export default function Cart() {
+    const [item, setItem] = useState([]);
+    const [price, setPrice] = useState(0)
+
+    useEffect(() => {
+        const itemData = sessionStorage.getItem('itemData');
+        const item = JSON.parse(itemData);
+        setItem(item);
+
+        if(item) setPrice(item[0].price)
+    }, [])
+
+    function clearCart() {
+        sessionStorage.clear();
+        location.reload();
+    }
+
+
+    // function that handle incr and decr for input number
+    function inc(element) {
+        let el = document.getElementById(element);
+        el.value = parseInt(el.value) + 1;
+    }
+      
+    function dec(element) {
+      let el = document.getElementById(element);
+        if (parseInt(el.value) > 0) {
+          el.value = parseInt(el.value) - 1;
+      }
+    }
+
+
     return(
         <div className='font-NunitoSans'>
              <Head>
@@ -28,7 +61,7 @@ export default function Cart() {
                 </section>
 
 
-                {7 == 7 
+                {item
                 ?   <section className='mt-20 mb-40 mx-[19%]'>
                         <div className='flex font-bold text-white text-lg bg-darkBlueBackground py-5 rounded'>
                             <p className='ml-8 mr-96'>Product</p>
@@ -37,14 +70,27 @@ export default function Cart() {
                             <p className='mr-32'>Total</p>
                         </div>
 
-                        <div className='flex items-center mt-8'>
-                            <Image src={item} alt='photo de produit' className='w-20' />
-                            <p className='font-Amiri text-slightGrey pl-12 mr-2'>Flying Ninja</p>
-                            <p className='font-bold text-lg pl-64'>$12.00</p>
-                            <input type='number' value={1} min={1} max={9} className='font-bold ml-36 pl-4 bg-greyBackground' />
-                            <p className='font-bold text-lg pl-64 ml-2'>$12.00</p>
-                            <FontAwesomeIcon icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out durattion-300 hover:cursor-pointer' />
-                        </div>
+                        {item.map((el, index) => {
+                            return(
+                                <div key={index} className='flex items-center mt-8'>
+                                    <Image src={el.picture} alt='photo de produit' className='w-20' />
+                                    <p className='font-Amiri text-slightGrey pl-12 mr-2'>{el.name}</p>
+                                    <p className='font-bold text-lg pl-64'>{el.price}</p>
+
+                                    <div class='relative quantity flex ml-36'>
+                                        <input name='number' id='number' type='number' defaultValue={1} step={1} placeholder='1' inputMode='numeric' min={1} max={9} className='bg-greyBackground font-bold pl-4 rounded outline-none' />
+                                        <div className='flex flex-col'>
+                                            <button onClick={() => inc('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>+</button>
+                                            <button onClick={() => dec('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>-</button>
+                                        </div>
+                                    </div>
+
+                                    <p className='font-bold text-lg pl-60 ml-2'>{el.price}</p>
+                                    <FontAwesomeIcon onClick={() => clearCart()} icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out durattion-300 hover:cursor-pointer' />
+                                </div>
+                            )
+                        })}
+                        
 
                         <span className='mt-8 h-px w-[62%] bg-[#e4e4e4] absolute'></span>
                         
@@ -59,12 +105,12 @@ export default function Cart() {
                             <span className='h-px w-[15%] bg-[#e4e4e4] absolute'></span>
                             <div className='mt-12 flex justify-between mb-6'>
                                 <p className='font-Amiri text-lg'>Subtotal</p>
-                                <p className='text-lg font-semibold'>$12.00</p>
+                                <p className='text-lg font-semibold'>{price}</p>
                             </div>
                             <span className='h-px w-[15%] bg-[#e4e4e4] absolute'></span>
                             <div className='mt-12 flex justify-between mb-8'>
                                 <p className='font-Amiri text-lg'>Total</p>
-                                <p className='font-bold text-[20px]'>$12.00</p>
+                                <p className='font-bold text-[20px]'>{price}</p>
                             </div>
                             <button className='bg-orange w-full rounded py-3.5 text-white font-bold hover:bg-darkBlueBackground ease-in-out duration-300'>PROCEED TO CHECKOUT</button>
                         </div>
@@ -72,7 +118,7 @@ export default function Cart() {
             
                 :   <section className='pt-24 mb-80 flex ml-96 items-center'>
                         <p className='text-lg text-greyText mr-10 font-NunitoSans'>Your cart is currently empty.</p>
-                        <button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button>
+                        <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button></Link>
                     </section>
                 }
             </main>

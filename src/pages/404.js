@@ -37,7 +37,7 @@ export default function FourOhFour() {
                     <p className='bg-greyBackground text-[#7e7e7e] rounded w-[450px] p-3 850:w-[180px]'>Search ...</p><div className='absolute bottom-1 right-1 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4 text-white' /></div>
                 </div>
 
-                <Link href="/"><button className='bg-orange rounded text-sm text-white font-semibold px-7 py-4'>TAKE ME HOME</button></Link>
+                <Link href="/"><button className='bg-orange rounded text-sm text-white font-semibold px-7 py-4 hover:bg-darkBlueBackground ease-in-out duration-300'>TAKE ME HOME</button></Link>
             </section>
         </main>
 

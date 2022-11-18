@@ -17,7 +17,7 @@ import honey from '../../public/assets/Home05/landing_partner_6.png'
 export default function LandingHome05() {
     return(
         <section className='pt-48 relative'>
-            <Image src={line1} alt='ligne de décoration' className='absolute top-0 left-0 z-50' />
+            <Image src={line1} alt='ligne de décoration' className='absolute top-0 left-0' />
             <Image src={line2} alt='ligne de décoration' className='absolute bottom-0 right-0' />
 
             <div className='flex items-end justify-end mr-8'>
