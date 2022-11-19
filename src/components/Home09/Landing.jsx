@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -54,6 +57,15 @@ const revealBottom = keyframes`
 
 
 export default function LandingHome09() {
+    const { color, secondaryColor } = useContext(ColorContext);
+    let slightColor = 'slightOrange';
+    let slightBlue = 'slightBlue'
+    if(color === 'red') {
+        slightColor = 'slightRed';
+        slightBlue = 'slightSecondaryBlue'
+    }
+
+
     return(
         <section className="relative top-24">
             <Swiper
@@ -70,7 +82,7 @@ export default function LandingHome09() {
                 loop
             >
                 <SwiperSlide className="relative">
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide1} alt='personne avec un casque de réalité virtuelle' /></Reveal>
+                    <Reveal keyframes={reveal} duration={400} className="absolute w-screen"><Image src={slide1} alt='personne avec un casque de réalité virtuelle' className='w-full' /></Reveal>
 
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>PERFECT SOLUTION FOR YOUR COMPAGNY</p></Reveal>
@@ -83,22 +95,22 @@ export default function LandingHome09() {
                         </div>
 
                         <div id='headerViewport' className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
-                            <div className='relative flex items-center bg-orange rounded-tl-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>01</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-darkBlueBackground group max-xl:rounded-lg'>
-                                <span className='text-8xl text-[#2a3843] absolute left-10 bottom-4 tracking-tighter'>02</span>
+                            <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
+                                <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
                                 <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-orange rounded-tr-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>03</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
@@ -113,7 +125,7 @@ export default function LandingHome09() {
 
 
                 <SwiperSlide >
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide2} alt='personne avec un casque de réalité virtuelle' /></Reveal>
+                    <Reveal keyframes={reveal} duration={400} className="absolute w-screen"><Image src={slide2} alt='personne avec un casque de réalité virtuelle' className='w-full' /></Reveal>
 
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>GLOBAL REACH WITH LOCAL UNDERSTANDING</p></Reveal>
@@ -126,22 +138,22 @@ export default function LandingHome09() {
                         </div>
 
                         <div className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
-                            <div className='relative flex items-center bg-orange rounded-tl-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>01</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-darkBlueBackground group max-xl:rounded-lg'>
-                                <span className='text-8xl text-[#2a3843] absolute left-10 bottom-4 tracking-tighter'>02</span>
+                            <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
+                                <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
                                 <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-orange rounded-tr-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>03</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
@@ -156,7 +168,7 @@ export default function LandingHome09() {
 
 
                 <SwiperSlide >
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide3} alt='personne avec un casque de réalité virtuelle' /></Reveal>
+                    <Reveal keyframes={reveal} duration={400} className="absolute w-screen"><Image src={slide3} alt='personne avec un casque de réalité virtuelle' className='w-full' /></Reveal>
 
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>CREATING YOUR STARTUP NUSINESS WITH</p></Reveal>
@@ -169,22 +181,22 @@ export default function LandingHome09() {
                         </div>
 
                         <div className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
-                            <div className='relative flex items-center bg-orange rounded-tl-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>01</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-darkBlueBackground group max-xl:rounded-lg'>
-                                <span className='text-8xl text-[#2a3843] absolute left-10 bottom-4 tracking-tighter'>02</span>
+                            <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
+                                <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
                                 <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                             </div>
 
-                            <div className='relative flex items-center bg-orange rounded-tr-lg group max-xl:rounded-lg'>
-                                <span className='absolute left-10 bottom-4 tracking-tighter text-8xl text-[#ff673c]'>03</span>
+                            <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
+                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
                                 <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                                 <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>

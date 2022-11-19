@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { useEffect } from 'react';
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,6 +16,9 @@ import benefitsTarget from '../../public/assets/Home02/benefits_target.png'
 
 
 export default function Benefits() {
+  const { color } = useContext(ColorContext);
+
+
   useEffect(() => {
     // Intersection Obeserver for fixed GoToTop
     const target = document.getElementById('benefitsReveal1');
@@ -53,22 +59,22 @@ export default function Benefits() {
       </div>
 
       <div className='font-NunitoSans w-5/12 max-xl:w-auto'>
-        <h2 className='text-orange font-bold mb-2 relative'>OUR BENEFITS<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+        <h2 className={`text-${color} font-bold mb-2 relative`}>OUR BENEFITS<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
         <h3 className='text-slightGrey font-Amiri text-5xl leading-tight mb-4'>Few Resons Why<br></br>You Should Choose Us</h3>
         <p className='text-greyText text-lg mb-5'>Our people define us and show who we are. When we put people to work with the client, they take with them not only our knowledge:</p>
 
         <div className='flex items-center mb-5 group'>
-          <div className='p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover:bg-orange ease-in-out duration-300'><FontAwesomeIcon icon={faCheck} className='w-5 text-orange group-hover:opacity-100 group-hover:text-white ease-in-out duration-300' /></div>
+          <div className={`p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover-bg-${color} ease-in-out duration-300`}><FontAwesomeIcon icon={faCheck} className={`w-5 text-${color} group-hover:opacity-100 group-hover:text-white ease-in-out duration-300`} /></div>
           <p className='text-greyText text-lg'>High standards of professionalism, integrity. Establishment of close working relationships.</p>
         </div>
 
         <div className='flex items-center mb-5 group'>
-          <div className='p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover:bg-orange ease-in-out duration-300'><FontAwesomeIcon icon={faCheck} className='w-5 text-orange group-hover:opacity-100 group-hover:text-white ease-in-out duration-300' /></div>
+          <div className={`p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover-bg-${color} ease-in-out duration-300`}><FontAwesomeIcon icon={faCheck} className={`w-5 text-${color} group-hover:opacity-100 group-hover:text-white ease-in-out duration-300`} /></div>
           <p className='text-greyText text-lg'>We do not have to be the best, we do ave to give our best. Ability to learn. Multicultural competence and cross-border operability.</p>
         </div>
 
         <div className='flex items-center 850:mb-20 group'>
-          <div className='p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover:bg-orange ease-in-out duration-300'><FontAwesomeIcon icon={faCheck} className='w-5 text-orange group-hover:opacity-100 group-hover:text-white ease-in-out duration-300' /></div>
+          <div className={`p-2 rounded-full shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] mr-6 group-hover-bg-${color} ease-in-out duration-300`}><FontAwesomeIcon icon={faCheck} className={`w-5 text-${color} group-hover:opacity-100 group-hover:text-white ease-in-out duration-300`} /></div>
           <p className='text-greyText text-lg'>A different way of thinking, both inside and outside box. We do not have the best, we do have to give our best.</p>
         </div>
       </div>

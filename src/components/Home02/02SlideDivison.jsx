@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
@@ -8,6 +11,8 @@ import { FirstSlideData } from '../../datas/Home02/FirstSlideData'
 
 
 export default function Division() {
+  const { color } = useContext(ColorContext);
+
     return(
         <section className='flex justify-between mx-6 mt-32 mb-52 max-xl:flex-col'>
           {FirstSlideData.map((el) =>
@@ -17,7 +22,7 @@ export default function Division() {
                 <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>{el.title}</p>
                 <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
               </div>
-              <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+              <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
             </div>
           )}
         </section>

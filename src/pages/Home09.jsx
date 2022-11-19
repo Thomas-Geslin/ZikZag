@@ -1,10 +1,14 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
+import { useContext } from "react";
+import { ColorContext } from "../context/colorContext";
+
 import HeaderHome04 from '../components/Home04/HeaderHome04'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import WidgetTheme from '../components/WidgetTheme'
+import WidgetColor from '../components/WidgetColor'
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -34,6 +38,8 @@ import detersGrey from '../public/assets/Home02/logo_deters_grey.png'
 import honeyGrey from '../public/assets/Home02/logo_honey_grey.png'
 
 export default function Home04() {
+    const { color } = useContext(ColorContext);
+
     return(
         <div className='font-NunitoSans'>
             <Head>
@@ -55,14 +61,14 @@ export default function Home04() {
 
                 <Philosophy />
 
-                <h2 className='text-center text-orange font-semibold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-3 bg-orange h-0.5 w-2'></span>OUR STRATEGY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                <h2 className={`text-center text-${color} font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-3 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className='text-center font-Amiri text-slightGrey text-6xl mb-5 -mb-10'>Main Principles</h3>
 
                 <Division />
 
                 <Benefits />
 
-                <h2 className='text-center text-orange font-semibold mb-4 pt-10 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-3 bg-orange h-0.5 w-2'></span>OUR STRATEGY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                <h2 className={`text-center text-${color} font-bold mb-4 pt-10 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-3 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className='text-center font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
 
                 <div className='px-12 pb-40'>
@@ -122,6 +128,8 @@ export default function Home04() {
 
                 <BlogHome01 />
             </main>
+
+            <WidgetColor />
 
             <WidgetTheme />
 

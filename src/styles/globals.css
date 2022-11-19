@@ -312,10 +312,16 @@
 .text-red {
   color: #ec3b3b;
 }
+.hover-text-red {
+  color: #ec3b3b;
+}
 .group:hover > .group-hover-text-red {
   color: #ec3b3b;
 }
 .text-orange {
+  color: #ff4a17;
+}
+.hover-text-orange {
   color: #ff4a17;
 }
 .group:hover > .group-hover-text-orange {
@@ -324,10 +330,16 @@
 .bg-red {
   background-color: #ec3b3b;
 }
+.hover-bg-red:hover {
+  background-color: #ec3b3b;
+}
 .group:hover > .group-hover-bg-red {
   background-color: #ec3b3b;
 }
 .bg-orange {
+  background-color: #ff4a17;
+}
+.hover-bg-orange:hover {
   background-color: #ff4a17;
 }
 .group:hover > .group-hover-bg-orange {

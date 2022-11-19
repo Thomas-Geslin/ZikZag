@@ -27,7 +27,7 @@ export default function BlogHome01() {
                     <h2 className={`text-${color} font-bold mb-3 relative`}>READ OUR BLOG<span className={`absolute top-4 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full 650:text-4xl">Featured News and Insights</h3>
                 </div>
-                <button className={`text-white font-semibold text-sm bg-${secondaryColor} px-9 py-4 rounded-sm hover:bg-${color} ease-in-out duration-300`}>ALL NEWS</button>
+                <button className={`text-white font-semibold text-sm bg-${secondaryColor} px-9 py-4 rounded-sm hover-bg-${color} ease-in-out duration-300`}>ALL NEWS</button>
             </div>
 
             <Swiper

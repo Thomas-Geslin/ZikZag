@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ColorContext } from "../../context/colorContext";
 
 // Awesome Reveal
@@ -56,6 +56,7 @@ const revealLeft = keyframes`
 
 export default function Landing01() {
   const { color } = useContext(ColorContext);
+
 
     return(
         <section className='overflow-hidden'>
