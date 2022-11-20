@@ -349,17 +349,17 @@
 }
 
 
-.border-orange {
-  border-color: #ff4a17;
-}
-.border-red {
-  border-color: #ec3b3b;
-}
 .border-l-orange {
   border-left: #ff4a17 solid 4px;
 }
 .border-l-red {
   border-left: #ec3b3b solid 4px;
+}
+.border-orange {
+  border-color: #ff4a17;
+}
+.border-red {
+  border-color: #ec3b3b;
 }
 
 

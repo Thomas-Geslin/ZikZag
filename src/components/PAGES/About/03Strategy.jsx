@@ -114,7 +114,7 @@ export default function Strategy() {
 
             <div className="flex justify-center mt-14 mx-12 max-xl:flex-col">
                 <div className="w-1/3 max-xl:w-full">
-                    <h2 className='text-orange font-semibold mb-3 relative'>OUR STRATEGY<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className='text-orange font-bold mb-3 relative'>OUR STRATEGY<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
                     <p className="text-greyText text-lg w-2/3 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
 
