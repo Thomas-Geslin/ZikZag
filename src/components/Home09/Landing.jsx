@@ -94,28 +94,7 @@ export default function LandingHome09() {
                             <Reveal keyframes={reveal} duration={600} delay={2300}><button className="rounded border border-[#c0c0c3] border-solid py-4 px-9 text-[15px] font-semibold hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                         </div>
 
-                        <div id='headerViewport' className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
-                            <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
-                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                                <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
-
-                            <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
-                                <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
-                                <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
-
-                            <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
-                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                                <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
-                        </div>
+                        
                     </div>
 
                     <button className='prevHome04Landing group w-14 h-0.5 bg-white absolute left-10 top-96'><span className='w-3 h-0.5 bg-white -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-white rotate-45 absolute -left-0.5 top-1'></span><span className='absolute -right-7 -top-2.5 text-white'>03</span></button>
@@ -135,29 +114,6 @@ export default function LandingHome09() {
                         <div className='mt-11 flex justify-center'>
                             <Reveal keyframes={reveal} duration={600} delay={1700}><button className="rounded bg-white py-4 px-9 mr-5 text-[15px] border-transparent font-semibold text-black border-solid hover:text-white border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500">LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={600} delay={2300}><button className="rounded border border-[#c0c0c3] border-solid py-4 px-9 text-[15px] font-semibold hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
-                        </div>
-
-                        <div className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
-                            <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
-                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                                <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
-
-                            <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
-                                <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
-                                <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
-
-                            <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
-                                <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
-                                <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                                <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                                <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                            </div>
                         </div>
                     </div>
 
@@ -180,7 +136,7 @@ export default function LandingHome09() {
                             <Reveal keyframes={reveal} duration={600} delay={2300}><button className="rounded border border-[#c0c0c3] border-solid py-4 px-9 text-[15px] font-semibold hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                         </div>
 
-                        <div className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
+                        <div className='invisible flex font-Amiri text-white h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
                             <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
                                 <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                                 <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>

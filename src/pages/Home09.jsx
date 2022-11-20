@@ -1,7 +1,10 @@
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { useContext } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
+
+import { useContext, useEffect } from "react";
 import { ColorContext } from "../context/colorContext";
 
 import HeaderHome04 from '../components/Home04/HeaderHome04'
@@ -10,35 +13,84 @@ import BackToTop from '../components/BackToTop'
 import WidgetTheme from '../components/WidgetTheme'
 import WidgetColor from '../components/WidgetColor'
 
-// Swiper
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Autoplay, Pagination } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/autoplay';
-import 'swiper/css/pagination';
-
 import LandingHome09 from '../components/Home09/Landing'
 import StrategyHome01 from '../components/Home01/05Strategy'
-import Philosophy from '../components/Home02/05Philosophy';
-import Division from '../components/Home02/02SlideDivison';
-import Benefits from '../components/Home02/03Benefits';
-import BlogHome01 from '../components/Home01/08Blog'
+import AboutLanding from '../components/PAGES/About/02AboutLanding'
 
-import dynamic from '../public/assets/Home02/logo_dynamic_color.png'
-import okta from '../public/assets/Home02/logo_okta_color.png'
-import max from '../public/assets/Home02/logo_max_color.png'
-import solana from '../public/assets/Home02/logo_solana_color.png'
-import deters from '../public/assets/Home02/logo_deters_color.png'
-import honey from '../public/assets/Home02/logo_honey_color.png'
-import dynamicGrey from '../public/assets/Home02/logo_dynamic_grey.png'
-import oktaGrey from '../public/assets/Home02/logo_okta_grey.png'
-import maxGrey from '../public/assets/Home02/logo_max_grey.png'
-import solanaGrey from '../public/assets/Home02/logo_solana_grey.png'
-import detersGrey from '../public/assets/Home02/logo_deters_grey.png'
-import honeyGrey from '../public/assets/Home02/logo_honey_grey.png'
+import arrow  from '../public/assets/Home02/offer_arrow.png'
+
+import quote from '../public/assets/PAGES/About/about_quote.png'
+import man from '../public/assets/Home01/about_man.png'
+import line from '../public/assets/Home01/about_line.png'
+import twitter from '../public/assets/Home01/about_icon_twitter.png'
+import facebook from '../public/assets/Home01/about_icon_facebook.png'
+import pinterest from '../public/assets/Home01/about_icon_pinterest.png'
+
+import line01 from '../public/assets/Home02/mouseover_line_01.png'
+import line02 from '../public/assets/Home02/mouseover_line_02.png'
+import line03 from '../public/assets/Home02/mouseover_line_03.png'
+import line04 from '../public/assets/Home02/mouseover_line_04.png'
+import line05 from '../public/assets/Home02/mouseover_line_05.png'
+import line06 from '../public/assets/Home02/mouseover_line_06.png'
+import rocket from '../public/assets/Home02/mouseover_rocket.png'
+import standing from "../public/assets/Home02/mouseover_standing.png"
+import sit from "../public/assets/Home02/mouseover_sit.png"
+
+import logo from "../public/assets/Home02/logo_consultancy.png"
+import orangeSquare from '../public/assets/Home02/consultancy_widget_background.png'
+
 
 export default function Home04() {
-    const { color } = useContext(ColorContext);
+    const { color, secondaryColor } = useContext(ColorContext);
+    let slightColor = 'slightOrange';
+    let slightBlue = 'slightBlue'
+    if(color === 'red') {
+        slightColor = 'slightRed';
+        slightBlue = 'slightSecondaryBlue'
+    }
+
+    useEffect(() => {
+        // Intersection Obeserver for fixed progress-bar Strategy
+        function autoIncrementBar(limit, target) {
+            let numberLimit = limit;
+            let numberInitial = 0;
+            let timer = 1.5;
+            let interval = Math.ceil((timer * 1000) / numberLimit );
+            const numberTarget = document.getElementById(target)
+
+            function countdown() {
+                numberTarget.innerHTML = ++numberInitial + '%';
+                if (numberInitial < numberLimit) {
+                    setTimeout(countdown, interval);
+                }
+            }
+            setTimeout(countdown, interval);
+        }
+
+        const target = document.querySelectorAll('.progressBarStrategyTarget');
+        const viewport = document.getElementById('progressBarStrategy');
+    
+        const options = {
+          root: null,
+          treshold: 0.5
+        }
+    
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+              if(entry.isIntersecting) {
+                autoIncrementBar(55, 'firstBar');
+                autoIncrementBar(75, 'secondBar');
+                autoIncrementBar(68, 'thirdBar');
+                for(entry of target) {
+                entry.classList.add('strategy-bar-animation')
+                }
+              };
+          })
+          
+        }, options);
+        observer.observe(viewport);
+    }, [])
+
 
     return(
         <div className='font-NunitoSans'>
@@ -53,80 +105,132 @@ export default function Home04() {
             <main>
                 <LandingHome09 />
 
-                <div className='mt-32'></div>
+                <div id='headerViewport' className='z-30 flex font-Amiri text-white relative bottom-52 relative h-36 justify-center max-xl:flex-col mt-[177px] max-xl:top-0 650:w-full'>
+                    <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
+                        <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                        <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
+                    </div>
+
+                    <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
+                        <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
+                        <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
+                    </div>
+
+                    <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
+                        <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                        <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
+                    </div>
+                </div>
+
+                <div className='-mt-40'></div>
 
                 <StrategyHome01 />
 
-                <div id='goTopViewport' className='pb-28'></div>
+                <section id='goTopViewport' className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 mt-12'>                    
+                    <div className='flex bg-white rounded-b-xl'>
+                        <div>
+                            <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-24' />
+                            <Image src={line} alt="ligne de décoration" className='absolute top-10 left-24 lineOfferAnimation' />
+                            <Image src={twitter} alt="icone de twitter" className='absolute top-10 left-20 twitterOfferAnimation' />
+                            <Image src={facebook} alt="icone de facebook" className='absolute top-14 left-20 facebookOfferAnimation' />
+                            <Image src={pinterest} alt="icone de pinterest" className='absolute top-20 left-20 pinterestOfferAnimation' />
+                        </div>
 
-                <Philosophy />
+                        <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-10/12 max-xl:mx-10 max-xl:mt-10">
+                            <h2 className={`text-${color} font-bold mb-3 relative`}>ABOUT ZIKZAG<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
+                            <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full">We Shape the Perfect Solution for Company</h3>
+                            <p className="text-greyText text-lg leading-7 mb-8 max-xl:w-full">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
 
-                <h2 className={`text-center text-${color} font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-3 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
-                <h3 className='text-center font-Amiri text-slightGrey text-6xl mb-5 -mb-10'>Main Principles</h3>
-
-                <Division />
-
-                <Benefits />
-
-                <h2 className={`text-center text-${color} font-bold mb-4 pt-10 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-3 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
-                <h3 className='text-center font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
-
-                <div className='px-12 pb-40'>
-                    <Swiper
-                        modules={[Autoplay, Pagination]}
-                        slidesPerView={6}
-                        loop
-                        autoplay={{
-                            delay: 3500
-                        }}
-                        pagination
-                        speed={1000}
-                    >
-                        <SwiperSlide className="w-40 rounded-lg py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
-                            <div className='h-14 overflow-hidden'>
-                                <Image src={dynamic} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={dynamicGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
+                            <div className={`bg-[#f5f5f5] border-l-${color} border-l-[3px] rounded-br-lg relative max-xl:w-full`}>
+                                <p className="font-Amiri text-3xl text-slightGrey w-10/12 leading-tight py-7 pl-9">Best Counsalting Solutions since 2002.</p>
+                                <Image src={quote} alt='icone de guillemet' className="w-20 absolute -top-3 right-0" />
                             </div>
-                        </SwiperSlide>
+                        </div>
+                    </div>
+                </section>
 
-                        <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
-                            <div className='h-14 overflow-hidden'>
-                                <Image src={okta} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={oktaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
+
+                <section>
+                    <div className='flex justify-center mt-60'>
+                        <div className='relative'>
+                            <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 -right-8' /> 
+                            <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top' /> 
+                            <Image src={rocket} alt='dessin de personne assise' className='w-20 absolute top-28 right-6 animation-vision-Home01-top-2' /> 
+                            <Image src={line01} alt='dessin de personne assise' className='w-72 absolute top-4 left-40 animation-vision-Home01-top-3' /> 
+                            <Image src={line02} alt='dessin de personne assise' className='w-24 absolute -top-20 right-[420px] animation-vision-Home01-left' /> 
+                            <Image src={line03} alt='dessin de personne assise' className='w-40 absolute -top-10 right-0 animation-vision-Home01-left' /> 
+                            <Image src={line04} alt='dessin de personne assise' className='w-10 absolute top-72 -right-36 animation-vision-Home01-left' /> 
+                            <Image src={line05} alt='dessin de personne assise' className='w-8 absolute top-8 right-[460px] animation-vision-Home01-left' /> 
+                            <Image src={line06} alt='dessin de personne assise' className='w-16 absolute top-[270px] right-[450px] animation-vision-Home01-left' /> 
+                        </div>
+
+                        <div className="w-1/3 max-xl:w-full relative left-72 mb-20">
+                            <h2 className={`text-${color} font-bold mb-3 relative`}>OUR VISION<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
+                            <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
+                            <p className="text-greyText text-lg  w-10/12 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
+
+                            <div className="relative w-10/12 mb-12 max-xl:w-full" id='progressBarStrategy'>
+                                <div className="flex justify-between text-slightGrey font-bold text-sm">
+                                    <p>DIGITAL STRATEGY</p>
+                                    <p id='firstBar'>55%</p>
+                                </div>
+
+                                <span id='let' className={`w-[55%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded ease-out duration-1000`}></span>
+                                <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                             </div>
-                        </SwiperSlide>
 
-                        <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
-                            <div className='h-14 overflow-hidden'>
-                                <Image src={max} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={maxGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
+                            <div className="relative  w-10/12 mb-12 max-xl:w-full">
+                                <div className="flex justify-between text-slightGrey font-bold text-sm">
+                                    <p>FINANCIAL SERVICE</p>
+                                    <p id='secondBar'>75%</p>
+                                </div>
+
+                                <span className={`w-[75%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded`}></span>
+                                <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                             </div>
-                        </SwiperSlide>
 
-                        <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
-                            <div className='h-16 overflow-hidden'>
-                                <Image src={solana} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-16 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={solanaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-2 ease-in-out duration-300' />
+                            <div className="relative  w-10/12 mb-10 max-xl:w-full max-xl:mb-44">
+                                <div className="flex justify-between text-slightGrey font-bold text-sm">
+                                    <p>CONSALTING</p>
+                                    <p id='thirdBar'>68%</p>
+                                </div>
+
+                                <span className={`w-[68%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded`}></span>
+                                <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                             </div>
-                        </SwiperSlide>
+                        </div>
+                    </div>
+                </section>
 
-                        <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
-                            <div className='h-14 overflow-hidden'>
-                                <Image src={deters} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={detersGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
-                            </div>
-                        </SwiperSlide>
 
-                        <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
-                            <div className='h-14 overflow-hidden'>
-                                <Image src={honey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
-                                <Image src={honeyGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
-                            </div>
-                        </SwiperSlide>
-                    </Swiper>
-                </div>
+                <section className='mt-20 mb-44 bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full'>
+                    <div className={'bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl'}></div>
+                    
+                    <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0'>
+                        <Image src={orangeSquare} alt='carré orange' className='w-80' />
+                        <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
+                            <div className='p-4 w-14 rounded-full bg-white'><FontAwesomeIcon icon={faPhoneVolume} className={`relative left-px bottom-px w-6 -rotate-45 text-${color}`} /></div>
+                            <p className='font-Amiri text-3xl my-4'>+1 800 123 456 789</p>
+                            <p className='font-semibold'>OR CALL US 24/7</p>
+                        </div>
+                    </div>
 
-                <BlogHome01 />
+                    <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0'>
+                        <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
+                        <p className='font-Amiri text-white text-5xl mb-3'>Get a Free Counsultancy Right Now!</p>
+                        <p className='text-[#dddfe1] text-[20px] px-7'>We help you see the world differently, discover opportunities you may never have imagined.</p>
+                        <button className={`text-white font-semibold bg-${color} rounded px-8 py-4 border border-solid border-${color} hover:bg-transparent ease-in duration-300 mt-12 mb-16`}>GET IN TOUCH</button>
+                    </div>
+                </section>
+
+
+                <AboutLanding />
             </main>
 
             <WidgetColor />

@@ -1,5 +1,6 @@
 import Image from "next/image"
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { ColorContext } from "../../../context/colorContext";
 
 
 import people from '../../../public/assets/PAGES/About/about_people.png'
@@ -10,6 +11,8 @@ import line04 from '../../../public/assets/PAGES/About/about_line_04.png'
 import quote from '../../../public/assets/PAGES/About/about_quote.png'
 
 export default function AboutLanding() {
+  const { color } = useContext(ColorContext);
+
   useEffect(() => {
     // Intersection Obeserver for fixed GoToTop
     const target = document.getElementById('aboutFirstReveal');
@@ -50,11 +53,11 @@ export default function AboutLanding() {
             </div>
 
             <div className="w-1/3 max-xl:w-10/12 max-xl:mx-10 max-xl:mt-10">
-                <h2 className='text-orange font-semibold mb-3 relative'>ABOUT ZIKZAG<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                <h2 className={`text-${color} font-bold mb-3 relative`}>ABOUT ZIKZAG<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className="font-Amiri text-5xl text-slightGrey w-2/3 leading-tight mb-4 max-xl:w-full">We Work for Your Incredible Success</h3>
                 <p className="text-greyText text-lg w-9/12 leading-7 mb-8 max-xl:w-full">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
 
-                <div className="bg-[#f5f5f5] w-9/12 border-l-orange border-l-[3px] rounded-br-lg relative max-xl:w-full">
+                <div className={`bg-[#f5f5f5] w-9/12 border-l-${color} border-l-[3px] rounded-br-lg relative max-xl:w-full`}>
                     <p className="font-Amiri text-3xl text-slightGrey w-10/12 leading-tight py-7 pl-9">Best Counsalting Solutions since 2002.</p>
                     <Image src={quote} alt='icone de guillemet' className="w-20 absolute -top-3 right-0" />
                 </div>

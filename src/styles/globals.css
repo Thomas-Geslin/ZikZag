@@ -327,6 +327,8 @@
 .group:hover > .group-hover-text-orange {
   color: #ff4a17;
 }
+
+
 .bg-red {
   background-color: #ec3b3b;
 }
@@ -345,12 +347,21 @@
 .group:hover > .group-hover-bg-orange {
   background-color: #ff4a17;
 }
+
+
+.border-orange {
+  border-color: #ff4a17;
+}
+.border-red {
+  border-color: #ec3b3b;
+}
 .border-l-orange {
   border-left: #ff4a17 solid 4px;
 }
 .border-l-red {
   border-left: #ec3b3b solid 4px;
 }
+
 
 .bg-darkBlueBackground {
   background-color: #14212b;
@@ -364,6 +375,7 @@
 .hover-bg-secondaryBlue:hover {
   background-color: #2c396b;
 }
+
 
 .text-slightOrange {
   color: #ff673c;
