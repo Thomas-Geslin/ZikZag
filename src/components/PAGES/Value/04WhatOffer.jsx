@@ -51,10 +51,10 @@ export default function WhatOfferValue() {
             <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
         
 
-            <div className="w-[60.5%] m-auto flex justify-between relative max-xl:w-10/12 1060:flex-col 1060:items-center">
+            <div className="w-[60.5%] max-w-[1170px] m-auto flex justify-between relative max-xl:w-10/12 1060:flex-col 1060:items-center">
                 <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front bg-card01Background bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front max-w-[370px] bg-card01Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Mission</p>
                             <span className="text-5xl text-white">→</span>
@@ -68,7 +68,7 @@ export default function WhatOfferValue() {
 
                 <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front bg-card02Background bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front max-w-[370px] bg-card02Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Vision</p>
                             <span className="text-5xl text-white">→</span>
@@ -82,7 +82,7 @@ export default function WhatOfferValue() {
 
                 <div className="flip-card hover:cursor-pointer 1060:min-w-[310px]">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front bg-card03Background bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front max-w-[370px] bg-card03Background bg-cover  bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Value</p>
                             <span className="text-5xl text-white">→</span>

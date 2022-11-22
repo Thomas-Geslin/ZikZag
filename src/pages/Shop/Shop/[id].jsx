@@ -69,14 +69,14 @@ export default function ItemPage() {
                     <p className="font-semibold text-sm pb-48 z-10 uppercase"><span className="opacity-50">HOME &gt; {data.categorie} &gt;</span> {data.name}</p>
                 </section>
 
-                <div class='mx-[19%] mb-40'>
-                    <div className='flex justify-between'>
-                        <Image src={data.picture} alt="photo de l'article" />
+                <div class='w-[74%] m-auto mb-40 pl-[5%] max-2xl: pl-0'>
+                    <div className='flex'>
+                        <Image src={data.picture} alt="photo de l'article" className='w-[540px] h-[540px]' />
 
                         <div className='pl-20'>
                             <h2 className='text-slightGrey text-4xl font-Amiri mb-6'>{data.name}</h2>
                             <p className='text-[#14212b] font-bold text-2xl mb-8'>{data.price}</p>
-                            <p className='text-greyText leading-7'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <p className='text-greyText leading-7 w-8/12'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                         
                             <span className='absolute bg-[#d6d6d6] h-px w-24 mt-8'></span>
 

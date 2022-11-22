@@ -75,9 +75,9 @@ export default function Landing01() {
             >
                 <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
-                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1FirstSlide bg-no-repeat'>
+                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1FirstSlide bg-no-repeat max-2xl:bg-auto max-xl:pl-[150px]'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>GIVING BACK - OUR COMMITMENT</p></Reveal>
-                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Services that Lead the Way to Better Business</h1></Reveal>
+                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='min-w-[780px] font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Services that Lead the Way to Better Business</h1></Reveal>
                         <div className='font-semibold flex'>
                             <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
@@ -98,9 +98,9 @@ export default function Landing01() {
 
                 <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
-                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-Home1SecondSlide bg-no-repeat'>
+                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1SecondSlide bg-no-repeat max-2xl:bg-auto max-xl:pl-[150px]'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>TECHNOLOGICAL SOLUTIONS</p></Reveal>
-                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Transformation is at the Hearth of What We Do</h1></Reveal>
+                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='min-w-[780px] font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>Transformation is at the Hearth of What We Do</h1></Reveal>
                         <div className='font-semibold flex'>
                             <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>
@@ -121,9 +121,9 @@ export default function Landing01() {
 
                 <SwiperSlide className="relative">
                     <Reveal keyframes={reveal} duration={600} triggerOnce className="relative">
-                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-Home1ThirdSlide bg-no-repeat'>
+                    <div className='text-white pt-[310px] pb-96 pl-[370px] bg-cover bg-Home1ThirdSlide bg-no-repeat max-2xl:bg-auto max-xl:pl-[150px]'>
                         <Reveal keyframes={revealLeft} duration={800} delay={1300} triggerOnce><p className='font-semibold mb-2'>OUTSOURCING & NEARSHORE</p></Reveal>
-                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>We Combine Business with Technologies</h1></Reveal>
+                        <Reveal keyframes={revealLeft} duration={800} delay={800} triggerOnce><h1 className='min-w-[780px] font-Amiri text-7xl w-1/2 mb-10 leading-[80px]'>We Combine Business with Technologies</h1></Reveal>
                         <div className='font-semibold flex'>
                             <Reveal keyframes={reveal} duration={800} delay={1800} triggerOnce><button className={`rounded bg-${color} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500`}>LEARN MORE</button></Reveal>
                             <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-white hover:text-black ease-in-out duration-500">GET IN TOUCH</button></Reveal>

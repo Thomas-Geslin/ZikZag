@@ -1071,6 +1071,12 @@
 .animation-philosophy-home06 {
   animation: animation-philosophy-Home06 ease-in-out infinite 4s;
 }
+
+
+.home06-philosophy-active {
+  background-color: #14212b;
+  color: white;
+}
 /**/
 
 

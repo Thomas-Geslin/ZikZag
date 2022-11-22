@@ -41,13 +41,13 @@ export default function TwoColumnsMasonry() {
                 </section>
 
 
-                <div className='mx-[19%] relative mt-12 flex flex-wrap justify-between'>
+                <div className='w-[62%] min-w-[1180px] max-xl:min-w-[950px] m-auto relative mt-12 flex flex-wrap justify-between'>
                     {ArticleDataMasonry.slice(0, loadMore).map((el) => {
                         return(
                             <Link key={el.index} href={el.href} className={`${el.class} relative`}>
                             {!el.background && <div className='mb-8'></div>}
-                            <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[570px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
-                                {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[530px]' />}
+                            <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[570px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer max-xl:max-w-[460px]'>
+                                {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[530px] max-xl:max-w-[420px]' />}
                                 
                                 {el.quote && <div>
                                                 <svg viewBox="0 0 62.4 44.8" className='w-14 absolute -top-8'>

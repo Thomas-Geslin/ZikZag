@@ -45,17 +45,26 @@ export default function PhilosophyHome06() {
     }, [])
 
 
+    function activeRectangle(categorie) {
+        let currentCategorie = categorie;
+        let remove = document.getElementsByClassName('home06-philosophy-active');
+        remove[0].classList.remove('home06-philosophy-active');
+        let target = document.getElementById(currentCategorie);
+        target.classList.add('home06-philosophy-active');
+    }
+
+
     return(
         <section className='mb-32 flex flex-col items-center mt-16'>
             <div className='flex justify-center'>
                 <div className='w-1/4'>
-                    <h2 className='text-orange font-semibold mb-4 relative mt-32 650:mt-80'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className='text-orange font-bold mb-4 relative mt-32 650:mt-80'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className='font-Amiri text-black text-5xl leading-[55px] mb-4'>Solutions that Grow Your Business</h3>
                     
                     <div className='mb-6'>
-                        <button className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">Quality</button>
-                        <button className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">Support</button>
-                        <button className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">People</button>
+                        <button id="quality" onClick={() => activeRectangle('quality')} className="home06-philosophy-active bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">Quality</button>
+                        <button id="support" onClick={() => activeRectangle('support')} className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">Support</button>
+                        <button id="people" onClick={() => activeRectangle('people')} className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded hover:bg-darkBlueBackground hover:text-white hovercursor-pointer ease-in-out duration-300">People</button>
                     </div>
                     <p className='text-greyText mb-6 leading-7 w-[95%]'>From implantables to wearables, embedded system software has become an integrated part of our lives. We help companies across all markets continue to push the boundaries of hardware and software design through our dedicated embedded system engineering practice</p>
                     <p className='text-greyText leading-7 w-11/12'>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve.</p>
@@ -67,7 +76,7 @@ export default function PhilosophyHome06() {
                 </div>
             </div>
 
-            <div id='numberViewport' className='flex text-center pt-16 relative w-2/3 pl-6'>
+            <div id='numberViewport' className='flex text-center pt-16 relative w-2/3 max-w-[1190px] pl-6'>
               <div className='relative flex items-center'>
                   <p id='numberTarget1' className='font-Amiri text-7xl text-orange tracking-tighter mr-5'>0</p>
                   <p className='text-slightGrey font-bold text-sm text-left leading-6'>YEARS OF EXPERIENCE</p>

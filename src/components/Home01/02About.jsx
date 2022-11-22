@@ -22,32 +22,32 @@ export default function AboutHome01() {
 
 
     return(
-        <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 m-auto z-20 -top-32'>
-            <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col max-xl:top-0 650:w-full'>
-                <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-lg`}>
+        <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 min-w-[1260px] m-auto z-20 -top-32 max-xl:min-w-[970px] max-xl:mb-28 max-xl:-top-60 850-1050:min-w-[750px] 650-850:min-w-[480px] 430-650:min-w-[400px]'>
+            <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col'>
+                <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-t-lg`}>
                     <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                    <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <div className='pr-24 850:right-0 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
 
-                <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-lg`}>
+                <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-none`}>
                     <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
-                    <div className='pr-24 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <div className='pr-24 650:px-16 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
 
-                <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-lg`}>
+                <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-b-lg`}>
                     <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
                     <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                    <div className='pr-24 850:right-0 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <div className='pr-24 850:right-0 650:px-16 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                     <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
                 </div>
             </div>
             
-            <div className='flex bg-white rounded-b-xl'>
-                <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-10/12 max-xl:mx-10 max-xl:mt-10">
+            <div className='flex bg-white rounded-b-xl max-xl:flex-col'>
+                <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-11/12 max-xl:mt-60 max-xl:pb-10 850-1050:pl-[5%] 850:pl-[20px]">
                     <h2 className={`text-${color} font-bold mb-3 relative`}>ABOUT ZIKZAG<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full">We Shape the Perfect Solution for Company</h3>
                     <p className="text-greyText text-lg leading-7 mb-8 max-xl:w-full">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
@@ -58,12 +58,12 @@ export default function AboutHome01() {
                     </div>
                 </div>
 
-                <div>
-                    <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32' />
-                    <Image src={line} alt="ligne de décoration" className='absolute top-48 right-20 lineOfferAnimation' />
-                    <Image src={twitter} alt="icone de twitter" className='absolute top-48 right-20 twitterOfferAnimation' />
-                    <Image src={facebook} alt="icone de facebook" className='absolute top-52 right-20 facebookOfferAnimation' />
-                    <Image src={pinterest} alt="icone de pinterest" className='absolute top-56 right-20 pinterestOfferAnimation' />
+                <div className='relative max-w-[90%]'>
+                    <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32 850:left-20' />
+                    <Image src={line} alt="ligne de décoration" className='absolute top-6 left-24 lineOfferAnimation 850:left-12' />
+                    <Image src={twitter} alt="icone de twitter" className='absolute top-6 left-24 twitterOfferAnimation 850:left-12' />
+                    <Image src={facebook} alt="icone de facebook" className='absolute top-10 left-24 facebookOfferAnimation 850:left-12' />
+                    <Image src={pinterest} alt="icone de pinterest" className='absolute top-14 left-24 pinterestOfferAnimation 850:left-12' />
                 </div>
             </div>
         </section>

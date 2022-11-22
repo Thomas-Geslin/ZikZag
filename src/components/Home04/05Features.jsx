@@ -13,7 +13,7 @@ import pyramid from '../../public/assets/Home01/icon_pyramid.png'
 export default function FeatureHome04() {
     return(
         <section className='mx-6 relative mt-16 mb-28'>
-            <Image src={line} alt='graphique de décoration' className='absolute right-0 bottom-0 rounded-3xl' />
+            <Image src={line} alt='graphique de décoration' className='absolute left-[50%] translate-x-[-50%] bottom-0 rounded-3xl' />
 
             <div className='bg-orange flex w-[63%] m-auto rounded-lg overflow-hidden relative top-0 mb-24'>
                 <Image src={hand} alt='poignée de main' className='w-96' />
@@ -35,48 +35,48 @@ export default function FeatureHome04() {
                     <div className='flex items-center group py-4'>
                         <Image src={pyramid} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Organization</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
 
                     <div className='flex items-center group py-4'>
                         <Image src={mission} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-3 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Sustainability</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
 
                     <div className='flex items-center group py-4'>
                         <Image src={light} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Marketing</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
 
                     <div className='flex items-center group py-4'>
                         <Image src={work} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Customer Strategy</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
 
                     <div className='flex items-center group py-4'>
                         <Image src={chart} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-4 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Improvement</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
 
                     <div className='flex items-center group py-4'>
                         <Image src={target} alt='icone de graphique' className='w-[70px] mr-6 relative bottom-4 group-hover:bg-white group-hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] ease-in-out duration-500 p-2 rounded-lg' />
                         <div className='text-black'>
-                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Corporate Finance</p>
-                            <p className='leading-7 w-10/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
+                            <p className='font-Amiri text-2xl mb-1 group-hover:text-black ease-in-out duration-500'>Transformation</p>
+                            <p className='leading-7 w-11/12 text-greyText ease-in-out duration-500'>Strategy experience and analytical expertise combine to enable</p>
                         </div>
                     </div>
                 </div>

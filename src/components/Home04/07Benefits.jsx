@@ -7,7 +7,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 export default function BenefitsHome04() {
     return(
         <section className='relative mx-4 rounded-3xl overflow-hidden mb-32'>
-            <div className='parallaxBenefits-Home04'></div>
+            <div className='parallaxBenefits-Home04 max-w-[1840px] ml-auto mr-auto rounded-3xl'></div>
 
             <div className='h-[645px] w-full bg-transparent absolute top-0'>
                 <div className='text-white bg-orange relative my-12 w-[585px] pl-16 pr-12 pt-20 rounded-xl ml-[50%]'>

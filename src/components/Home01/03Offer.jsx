@@ -17,7 +17,7 @@ export default function OfferHome01() {
             <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Business Shaped Solutions</h3>
             <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
         
-            <div className='grid grid-cols-3 m-auto w-[63%] mt-20'>
+            <div className='grid grid-cols-3 m-auto w-[63%] max-w-[1170px] mt-20'>
                 {OfferGridData.map((el) => {
                     return(
                         <div key={el.index} className={`OfferCardBackground-${el.index} rounded-lg w-[370px] m-auto mb-20 relative group hover:cursor-pointer hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.15)] ease-in-out duration-500`}>

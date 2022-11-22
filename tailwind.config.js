@@ -61,6 +61,11 @@ module.exports = {
         'Home03DivisionBackground': "url('../public/assets/Home03/division_background.png')",
         // Contact
         'Home03Contact': "url('../public/assets/Home03/contact_background.png')",
+        /* Home04 */
+        // Landing
+        'Home3FirstSlide': "url('../public/assets/Home04/landing_slide_1.jpg')",
+        'Home3SecondSlide': "url('../public/assets/Home04/landing_slide_2.jpg')",
+        'Home3ThirdSlide': "url('../public/assets/Home04/landing_slide_3.jpg')",
         /* Home05 */
         // Landing
         'dynamicBkGrey': "url('../public/assets/Home05/landing_partner_1_grey.png')",
@@ -128,18 +133,32 @@ module.exports = {
   
         'lg': '1024px',
         // => @media (min-width: 1024px) { ... }
+
+        'min-3xl': {'min': '1921px'},
   
         'max-xl': {'max': '1280px'},
 
-        'min-xl': '1280px',
+        'min-xl': {'min': '1280px'},
+
+        'xl-2xl': {'min': '1281px', 'max': '1650px'},
 
         'max-2xl': {'max': '1650px'},
 
-        '1060': {'max': '1060px'},
+        '1050-xl': {'min': '1051px', 'max': '1279px'},
 
-        '850': {'max': '850px'},
+        '850-xl': {'min': '851px', 'max': '1279px'},
 
-        '650': {'max': '650px'},
+        '1050': { 'max': '1050px' },
+
+        '850-1050': {'min': '851px', 'max': '1050px'},
+
+        '850': { 'max': '850px' },
+
+        '650-850': {'min': '651px', 'max': '850px'},
+
+        '650': { 'min': '200px', 'max': '650px' },
+
+        '430-650': {'min': '431px', 'max': '650px'},
 
         '430': {'max': '430px'},
       }

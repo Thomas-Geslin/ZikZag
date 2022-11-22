@@ -1,6 +1,9 @@
 import Head from "next/head"
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -38,6 +41,8 @@ import mission from '../../public/assets/Home02/benefits_icon_mission.png'
 import light from '../../public/assets/Home02/benefits_icon_light.png'
 import work from '../../public/assets/Home02/benefits_icon_work.png'
 import target from '../../public/assets/Home02/benefits_icon_target.png'
+import chart from '../../public/assets/Home01/icon_chart.png'
+import pyramid from '../../public/assets/Home01/icon_pyramid.png'
 
 
 // Keyframe for smooth reveal
@@ -89,6 +94,9 @@ const revealScale = keyframes`
 
 
 export default function OurServices() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <div class='font-NunitoSans'>
             <Head>
@@ -100,7 +108,7 @@ export default function OurServices() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-ourServicesBackground bg-no-repeat text-center text-white">
+                <section className="bg-ourServicesBackground bg-cover bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Our Services</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> OUR SERVICES</p>
                 </section>
@@ -113,7 +121,7 @@ export default function OurServices() {
                 
                     <Image src={line} alt='ligne de décoration' className='absolute left-28 top-32' />
 
-                    <div className='grid grid-cols-3 m-auto w-[63%] mt-20'>
+                    <div className='grid grid-cols-3 m-auto w-[63%] max-w-[1170px] mt-20'>
                         {OfferGridData.map((el) => {
                             return(
                                 <div key={el.index} className={`OfferCardBackground-${el.index} rounded-lg w-[370px] m-auto mb-20 relative group hover:cursor-pointer hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.15)] ease-in-out duration-500`}>
@@ -130,7 +138,9 @@ export default function OurServices() {
 
 
                 <section className='flex relative -top-10 max-2xl:flex-col'>
-                    <Image src={philosophyBackground} alt="Réunion d'entreprise" className='rounded-xl max-2xl:rounded-none max-2xl:w-full' />
+                    <div className='w-1/2 max-h-[720px] overflow-hidden'>
+                        <Image src={philosophyBackground} alt="Réunion d'entreprise" className='w-full rounded-xl max-2xl:rounded-none max-2xl:w-full' />
+                    </div>
 
                     <div className='bg-[#14212B] w-1/2 relative rounded-bl-lg top-10 pl-20 max-2xl:rounded-none max-2xl:w-full max-2xl:top-0 850:pb-96 650:pl-10'>
                         <Image src={philosophyLine} alt='dessin de ligne de décoration' className='absolute right-1 top-1' />
@@ -155,26 +165,26 @@ export default function OurServices() {
                 <PricingHome03 />
 
 
-                <section className='text-center mb-80 mt-40'>
+                <section className='text-center pb-80 mt-40 overflow-hidden'>
                     <div className='mt-20 relative'>
-                        <div className='absolute top-0'>
-                            <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0 left-[530px]' /></Reveal>
-                            <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                            <Reveal keyframes={revealScale} duration={800} delay={1500} triggerOnce><Image src={line02} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                            <Reveal keyframes={revealScale} duration={800} delay={2100} triggerOnce><Image src={line03} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                            <Reveal keyframes={revealScale} duration={800} delay={2700} triggerOnce><Image src={line04} alt='ligne de décoration' className='absolute left-[530px]' /></Reveal>
-                            <Reveal keyframes={revealScale} duration={800} delay={3600} triggerOnce><Image src={line05} alt='ligne de décoration' className='relative left-[530px]' /></Reveal>
+                        <div className='absolute top-0 left-[50%] translate-x-[-50%]'>
+                            <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0' /></Reveal>
+                            <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute' /></Reveal>
+                            <Reveal keyframes={revealScale} duration={800} delay={1500} triggerOnce><Image src={line02} alt='ligne de décoration' className='absolute' /></Reveal>
+                            <Reveal keyframes={revealScale} duration={800} delay={2100} triggerOnce><Image src={line03} alt='ligne de décoration' className='absolute' /></Reveal>
+                            <Reveal keyframes={revealScale} duration={800} delay={2700} triggerOnce><Image src={line04} alt='ligne de décoration' className='absolute' /></Reveal>
+                            <Reveal keyframes={revealScale} duration={800} delay={3600} triggerOnce><Image src={line05} alt='ligne de décoration' className='relative' /></Reveal>
                         </div>
 
-                        <div className='relative grid grid-cols-2 relative'>
+                        <div className='relative grid grid-cols-2 min-3xl:ml-40'>
                             <Reveal keyframes={revealLeft} duration={800} triggerOnce>
                             <div className='flex relative bg-white left-44 text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
-                                <Image src={light} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
+                                <Image src={pyramid} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Organization</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
 
@@ -186,7 +196,7 @@ export default function OurServices() {
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Sustainability</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
@@ -198,7 +208,7 @@ export default function OurServices() {
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Marketing</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
@@ -210,19 +220,19 @@ export default function OurServices() {
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Customer Strategy</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
 
                             <Reveal keyframes={revealLeft} duration={800} triggerOnce>
                             <div className='flex relative bg-white text-left items-center top-24 left-40 rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
-                                <Image src={light} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
+                                <Image src={chart} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Improvement</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
@@ -234,7 +244,7 @@ export default function OurServices() {
                                     <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Transformation</p>
                                     <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
-                                <FontAwesomeIcon icon={faArrowRightLong} className='w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover:text-orange' />
+                                <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div> 
                             </Reveal>             
                         </div>

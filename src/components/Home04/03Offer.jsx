@@ -26,7 +26,7 @@ const revealBottom = keyframes`
 
 export default function OfferHome04() {
     return(
-        <section id='goTopViewport' className='text-center bg-darkBlueBackground mx-8 rounded-3xl mb-20 relative'>
+        <section id='goTopViewport' className='text-center max-w-[1840px] ml-auto mr-auto bg-darkBlueBackground mx-8 rounded-3xl mb-20 relative'>
             <div className='absolute flex text-[#182631] font-Amiri text-[400px] left-[50%] translate-x-[-50%] -top-10'>
                 <Reveal keyframes={revealBottom} duration={600} triggerOnce><span>s</span></Reveal>
                 <Reveal keyframes={revealBottom} duration={600} delay={300} triggerOnce><span>o</span></Reveal>

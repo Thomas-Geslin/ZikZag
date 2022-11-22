@@ -21,7 +21,7 @@ export default function SingleTeam() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-singleTeamBackground bg-no-repeat text-center text-white">
+                <section className="bg-singleTeamBackground bg-no-repeat bg-cover text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Team</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; TEAM &gt;</span> MARRY CLARINS</p>
                 </section>

@@ -20,8 +20,8 @@ export default function LandingHome05() {
             <Image src={line1} alt='ligne de décoration' className='absolute top-0 left-0' />
             <Image src={line2} alt='ligne de décoration' className='absolute bottom-0 right-0' />
 
-            <div className='flex items-end justify-end mr-8'>
-                <div className='relative w-[30%] mb-32 mr-20'>
+            <div className='flex items-end justify-end mr-8 min-3xl:justify-center'>
+                <div className='relative w-[30%] mb-32 mr-20 min-3xl:ml-32'>
                     <p className='absolute -top-56 right-32 text-greyBackground text-[300px] font-Amiri'>Start</p>
                     <p className='text-sm font-bold text-slightGrey relative'>PERFECT SOLUTION FOR YOUR COMPANY</p>
                     <h1 className='font-Amiri text-[56px] leading-[60px] mt-6 relative'>We Champion the Striking to Accomplish the <span className='text-orange'>Exceptional</span></h1>

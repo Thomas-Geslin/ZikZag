@@ -138,7 +138,7 @@ export default function BenefitsHome03() {
                     <Image src={line} alt='ligne de décoration' className='absolute right-10 top-48' />
                 </div>
 
-                <div id='benefitsViewport02' className='flex'>
+                <div id='benefitsViewport02' className='flex justify-end'>
                     <div className='w-7/12 relative rounded-bl-lg top-10 pl-[14%] max-2xl:rounded-none max-2xl:w-full max-2xl:top-0 850:pb-96 650:pl-10'>
                         <h2 className='text-orange font-bold mb-4 relative mt-20 650:mt-80'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                         <h3 className='font-Amiri text-slightGrey text-5xl w-8/12 leading-[55px] mb-4'>Our Core Values and Principes</h3>

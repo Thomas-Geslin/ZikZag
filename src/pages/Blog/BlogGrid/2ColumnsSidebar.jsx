@@ -40,14 +40,14 @@ export default function TwoColumnsSidebar() {
                 </section>
 
 
-                <div className='mx-[18%] mt-12 mb-40 flex justify-between'>
-                    <div className='w-[74%]'>
-                        <div className='articleAppear grid grid-cols-2 relative -top-4'>
+                <div className='w-[62%] m-auto min-w-[1180px] mt-20 mb-40 flex justify-between max-xl:flex-col max-xl:min-w-fit'>
+                    <div className='m-auto'>
+                        <div className='articleAppear min-w-[900px] grid grid-cols-2 relative -top-20 max-xl:min-w-[705px] 850:grid-cols-1 650-850:min-w-[520px] 430-650:min-w-[420px]'>
                             {ArticleData.slice(0, loadMore).map((el) => {
                                 return(
                                     <Link key={el.index} href='/Blog/BlogSingle/Standard'>
-                                    <div className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
-                                        <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='w-[380px] rounded-lg' />
+                                    <div className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer max-xl:w-[350px] 650-850:w-[560px] 430-650:w-[420px]'>
+                                        <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='w-[380px] rounded-lg max-xl:w-[300px] 650-850:w-[520px] 430-650:w-[380px]' />
                                         <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
                                             <p className='font-Amiri text-2xl -mb-1'>24</p>
                                             <p className='text-xs font-semibold pb-1'>FEB</p>

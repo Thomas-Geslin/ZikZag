@@ -27,12 +27,12 @@ export default function About() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-elementsTeamBackground bg-no-repeat text-center text-white">
+                <section className="bg-elementsTeamBackground bg-cover bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Elements</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> ELEMENTS</p>
                 </section>
 
-                <div className='mx-[20%] mb-40'>
+                <div className='w-[60%] m-auto mb-40'>
                     <AccordionsElement />
 
                     <InfoElement />

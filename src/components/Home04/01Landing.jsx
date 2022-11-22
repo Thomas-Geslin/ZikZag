@@ -71,9 +71,7 @@ export default function LandingHome04() {
                 }}
                 loop
             >
-                <SwiperSlide className="relative">
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide1} alt='personne avec un casque de réalité virtuelle' /></Reveal>
-
+                <SwiperSlide className="relative bg-Home3FirstSlide bg-center bg-cover bg-no-repeat">
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>PERFECT SOLUTION FOR YOUR COMPAGNY</p></Reveal>
                         <Reveal keyframes={revealTop} duration={600} delay={300}><h1 className='text-[130px] font-Amiri -mb-7 -mt-4'>Custom Solutions</h1></Reveal>
@@ -117,8 +115,8 @@ export default function LandingHome04() {
 
 
 
-                <SwiperSlide >
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide2} alt='personne avec un casque de réalité virtuelle' /></Reveal>
+                <SwiperSlide className="relative bg-Home3SecondSlide bg-center bg-cover bg-no-repeat">
+                    
 
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>GLOBAL REACH WITH LOCAL UNDERSTANDING</p></Reveal>
@@ -163,8 +161,8 @@ export default function LandingHome04() {
 
 
 
-                <SwiperSlide >
-                    <Reveal keyframes={reveal} duration={400} className="absolute"><Image src={slide3} alt='personne avec un casque de réalité virtuelle' /></Reveal>
+                <SwiperSlide className="relative bg-Home3ThirdSlide bg-center bg-cover bg-no-repeat">
+                    
 
                     <div className='text-center text-white relative pt-44'>
                         <Reveal keyframes={revealTop} duration={600} delay={1200}><p className='text-[20px] font-light'>CREATING YOUR STARTUP NUSINESS WITH</p></Reveal>

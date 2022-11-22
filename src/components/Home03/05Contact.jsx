@@ -11,7 +11,7 @@ import at from '../../public/assets/Home03/icon_at.png'
 
 export default function ContactHome03() {
     return(
-        <section className='flex justify-center bg-Home03Contact bg-no-repeat bg-[top_5rem_left_51rem] pt-40 pb-12 mb-40 ml-32'>
+        <section className='flex justify-center bg-Home03Contact bg-no-repeat bg-[top_5rem_left_51rem] pt-40 pb-12 mb-40 ml-32 min-3xl:bg-[top_5rem_left_70rem]'>
             <div className='mt-28 relative'>
                 <Image src={man} alt='dessin homme' className='mr-40' />
                 <Image src={line} alt='ligne de décoration' className='absolute top-0 animation-contact-Home05-left' />
@@ -20,7 +20,7 @@ export default function ContactHome03() {
                 <Image src={letter3} alt='dessin de lettre' className='absolute top-2 animation-contact-Home05-top-2' />
             </div>
             
-            <div className='w-1/3'>
+            <div className='w-1/3 min-3xl:relative min-3xl:left-32'>
                 <h2 className='text-orange font-bold mb-4 pt-32 relative w-40 max-xl:pt-36 850:mt-12'>CONTACT US<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                 <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Get in Touch</h3>
                 <p className='text-greyText text-lg leading-9 w-10/12 mb-8'>Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email or fill out the contact form and we’ll get back to you.</p>

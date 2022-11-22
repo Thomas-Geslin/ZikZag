@@ -48,16 +48,16 @@ export default function ShopPage2() {
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; </span> SHOP</p>
                 </section>
 
-                <div class='mx-[19%] flex justify-between'>
+                <div class='w-[74%] flex justify-center relative left-[50%] translate-x-[-50%] max-xl:flex-col-reverse 650-850:w-[90%]'>
                     <ShopAside />
 
-                    <div className='w-[74%] mt-14'>
+                    <div className='w-[60%] ml-10 mt-14 min-w-[650px] 650-850:min-w-[550px] 430-650:min-w-[350px] 430-650:ml-0'>
                         <div className='flex justify-between mb-14'>
                             <p className='text-greyText'>Showing 13–23 of 23 results</p>
 
                         </div>
 
-                        <div className='grid grid-cols-3 gap-7'>
+                        <div className='grid grid-cols-3 gap-7 650-850:grid-cols-2 430-650:grid-cols-1'>
                             {ItemsData.slice(12, 23).map((el) => {
                                 return(
                                     <div key={el.id}  className='text-center group relative'>

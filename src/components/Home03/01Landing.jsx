@@ -123,10 +123,10 @@ export default function LandingHome03() {
     return(
         <section id='parallaxViewport' className='z-10 bg-orange pt-64 relative overflow-hidden'>
             <div>
-                <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce  className='absolute'><Image src={para1} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
-                <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='landingBackgroundAnimation absolute bottom-56 -left-80'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
-                <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce   className='absolute bottom-10'><Image src={para3} alt='carré de décoration' className="landingBackgroundAnimation-delay" /></Reveal>
-                <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='absolute top-[550px] left-[900px]'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation-delay' /></Reveal>
+                <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce  className='absolute min-3xl:top-40 min-3xl:left-60'><Image src={para1} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
+                <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='landingBackgroundAnimation absolute bottom-56 -left-80 min-3xl:-left-40'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
+                <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce   className='absolute bottom-10 min-3xl:left-52'><Image src={para3} alt='carré de décoration' className="landingBackgroundAnimation-delay" /></Reveal>
+                <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='absolute top-[550px] left-[900px] min-3xl:left-[400px]'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation-delay' /></Reveal>
             </div>
 
             <div className='text-white ml-[19%] relative'>

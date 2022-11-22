@@ -65,32 +65,32 @@ export default function VisionHome06() {
     return(
         <section id='goTopViewport' className='mb-20 mt-40'>
             <div className='flex justify-center'>
-                <div className='grid grid-cols-2 w-1/3 relative mr-32 ml-80'>
+                <div className='grid grid-cols-2 w-1/3 relative mr-32 ml-80 max-w-[600px]'>
                     <Image src={square} alt='carré de décoration' className='absolute top-28 animation-vision-Home06' />
                     <Image src={line} alt='ligne de décoration' className='absolute top-28 -left-40' />
                     
-                    <div className='bg-white text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
+                    <div className='max-w-[270px] bg-white text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
                         <div className='w-16 rounded-full mr-6 mt-8'><Image src={payment} alt='icone de paiement'className='w-10' /></div>
                         <p className='font-Amiri text-3xl mt-6 group-hover:text-white ease-in-out duration-300'>Partnership System</p>
                         <p className='text-greyText mt-3 w-10/12 leading-7 group-hover:text-white ease-in-out duration-300'>Strategy experience and analytical expertise combine</p>
                         <div className='pb-8 flex items-center group -ml-1 mt-6 relative max-xl:mb-10'><span className='w-10 h-0.5 bg-orange absolute scale-x-0 group-hover:scale-x-100 origin-left ease-in-out duration-500'></span><span className='w-3 h-0.5 top-[9px] left-[28px] bg-orange absolute scale-x-0 group-hover:rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><span className='w-3 h-0.5 bg-orange absolute left-[28px] scale-x-0 group-hover:-rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><p className='text-sm text-orange font-semibold pl-1 group-hover:translate-x-10 ease-in-out duration-500'>READ MORE</p></div>
                     </div>
 
-                    <div className='relative top-6 bg-white text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
+                    <div className='max-w-[270px] relative top-6 bg-white text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
                         <div className='w-16 rounded-full mr-6 mt-8'><Image src={money} alt='icone de paiement'className='w-10' /></div>
                         <p className='font-Amiri text-3xl mt-6 group-hover:text-white ease-in-out duration-300'>Partnership System</p>
                         <p className='text-greyText mt-3 w-10/12 leading-7 group-hover:text-white ease-in-out duration-300'>Strategy experience and analytical expertise combine</p>
                         <div className='pb-8 flex items-center group -ml-1 mt-6 relative max-xl:mb-10'><span className='w-10 h-0.5 bg-orange absolute scale-x-0 group-hover:scale-x-100 origin-left ease-in-out duration-500'></span><span className='w-3 h-0.5 top-[9px] left-[28px] bg-orange absolute scale-x-0 group-hover:rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><span className='w-3 h-0.5 bg-orange absolute left-[28px] scale-x-0 group-hover:-rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><p className='text-sm text-orange font-semibold pl-1 group-hover:translate-x-10 ease-in-out duration-500'>READ MORE</p></div>
                     </div>
 
-                    <div className='bg-white relative top-8 text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
+                    <div className='max-w-[270px] bg-white relative top-8 text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
                         <div className='w-16 rounded-full mr-6 mt-8'><Image src={balance} alt='icone de paiement'className='w-10' /></div>
                         <p className='font-Amiri text-3xl mt-6 group-hover:text-white ease-in-out duration-300'>Partnership System</p>
                         <p className='text-greyText mt-3 w-10/12 leading-7 group-hover:text-white ease-in-out duration-300'>Strategy experience and analytical expertise combine</p>
                         <div className='pb-8 flex items-center group -ml-1 mt-6 relative max-xl:mb-10'><span className='w-10 h-0.5 bg-orange absolute scale-x-0 group-hover:scale-x-100 origin-left ease-in-out duration-500'></span><span className='w-3 h-0.5 top-[9px] left-[28px] bg-orange absolute scale-x-0 group-hover:rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><span className='w-3 h-0.5 bg-orange absolute left-[28px] scale-x-0 group-hover:-rotate-45 group-hover:scale-x-100 ease-linear duration-300 delay-500 origin-right'></span><p className='text-sm text-orange font-semibold pl-1 group-hover:translate-x-10 ease-in-out duration-500'>READ MORE</p></div>
                     </div>
 
-                    <div className='bg-white relative top-14 text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
+                    <div className='max-w-[270px] bg-white relative top-14 text-left relative mx-4 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.25)] hover:shadow-none rounded-lg pl-9 group hover:bg-darkBlueBackground ease-in-out duration-300'>
                         <div className='w-16 rounded-full mr-6 mt-8'><Image src={light} alt='icone de paiement'className='w-10' /></div>
                         <p className='font-Amiri text-3xl mt-6 group-hover:text-white ease-in-out duration-300'>Partnership System</p>
                         <p className='text-greyText mt-3 w-10/12 leading-7 group-hover:text-white ease-in-out duration-300'>Strategy experience and analytical expertise combine</p>

@@ -52,7 +52,7 @@ export default function DivisionHome03() {
                 <div className='parallaxDivision-Home03 bg-greyBackground'></div>
 
 
-                <div className='absolute w-full top-0 bg-Home03DivisionBackground bg-center bg-no-repeat py-8'>
+                <div className='absolute w-full top-0 bg-Home03DivisionBackground bg-cover bg-center bg-no-repeat py-8'>
                     <Swiper
                         modules={[Navigation]}
                         navigation={{

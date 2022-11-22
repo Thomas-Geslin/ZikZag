@@ -42,7 +42,7 @@ export default function OfferHome06() {
 
         <div className='flex justify-center relative'>
             <div className='ml-28'>
-              <h2 className='text-orange font-semibold mb-4 pt-32 relative max-xl:pt-36 850:mt-12'>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+              <h2 className='text-orange font-bold mb-4 pt-32 relative max-xl:pt-36 850:mt-12'>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
               <h3 className='font-Amiri text-slightGrey text-5xl mb-5 w-2/3'>Generating New Business Ideas</h3>
               <p className='text-greyText text-lg mb-10 w-2/3'>We seamlessly merge two key components – economics and information technology.</p>
 
@@ -87,7 +87,7 @@ export default function OfferHome06() {
               <Image src={background} alt='réunion en entreprise' className='w-[600px] rounded' />
             </div>
 
-            <Image src={widget} alt='réunion en entreprise' className='absolute -bottom-16 right-64' />
+            <Image src={widget} alt='réunion en entreprise' className='absolute -bottom-16 right-64 min-3xl:right-[600px]' />
         </div>
     </section>
     )  

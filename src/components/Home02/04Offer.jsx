@@ -154,7 +154,7 @@ export default function Offer() {
           <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Business Shaped Solutions</h3>
           <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
 
-          <div className='flex justify-between w-[60%] m-auto mb-12 max-xl:w-[80%] max-xl:flex-wrap'>
+          <div className='flex justify-between w-[60%] max-w-[1170px] m-auto mb-12 max-xl:w-[80%] max-xl:flex-wrap'>
                 <div onClick={() => addActiveOffer('business', 'businessSlide', 0)} id='business' className='relative bg-white bg-reportIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] home02-offer-active border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 850:w-full'>
                   <Image src={reportWhite} alt='icone de contrat' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>BUSINESS CONSULTATION</p>
@@ -187,7 +187,7 @@ export default function Offer() {
           </div>
 
 
-          <div id='offerViewport' className='relative w-[63%] left-[50%] translate-x-[-50%] shadow-[6px_5px_30px_0_rgb(0,0,0,0.12)] overflow-hidden rounded-md group'>
+          <div id='offerViewport' className='relative w-[63%] max-w-[1170px] left-[50%] translate-x-[-50%] shadow-[6px_5px_30px_0_rgb(0,0,0,0.12)] overflow-hidden rounded-md group'>
             <div id='businessSlide' className='offerSlide-active offerSlide flex relative bg-white m-auto items-center max-xl:w-[80%] max-xl:flex-col'>
               <div className='text-left ml-16'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>

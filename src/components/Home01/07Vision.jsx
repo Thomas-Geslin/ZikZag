@@ -123,8 +123,8 @@ export default function VisionHome01() {
 
     
     return(
-        <section id='numberViewport' className='mt-32 mb-32 items-center '>
-            <div className='relative mx-[19%]'>
+        <section id='numberViewport' className='relative -top-20 mb-12 items-center '>
+            <div className='relative w-[1170px] m-auto'>
                 <div className={`parallaxDivision-Home01 rounded-lg bg-${secondaryColor} z-10`}></div>
 
                 <div className='flex text-center py-16 absolute left-[50%] translate-x-[-50%] top-0 m-auto'>
@@ -153,7 +153,7 @@ export default function VisionHome01() {
                     </div>
                 </div>
 
-                <Image src={square} alt='carré de decoration' className='absolute -z-10 -bottom-12 -right-24' />
+                <Image src={square} alt='carré de decoration' className='absolute -z-10 -bottom-16 -right-24' />
             </div>
             
 
