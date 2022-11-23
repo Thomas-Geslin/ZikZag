@@ -13,18 +13,22 @@ import { AboutSwiperData } from "../../../datas/About/AboutSwiperData";
 export default function SwiperAbout() {
     let [slideNumber, setSlideNumber] = useState(4);
     
-    /* useEffect(() => {
+    useEffect(() => {
         const windowSize = window.innerWidth;
+        console.log(windowSize)
         if(windowSize < 599) {
             setSlideNumber(1);
         }
-        else if(600 < windowSize < 1280) {
+        else if(600 < windowSize && windowSize < 1280) {
             setSlideNumber(2);
         }
         else if(1281 < windowSize && windowSize < 1650) {
             setSlideNumber(3);
         }
-    }, [slideNumber]) */
+        else {
+            setSlideNumber(4);
+        }
+    }, [slideNumber])
 
     return (
         <section className="mt-7 mb-12">

@@ -119,8 +119,8 @@ export default function BlogHome01() {
                     </SwiperSlide>
                 </Swiper>
 
-                <button className='prevHome01Blog group w-14 h-0.5 bg-black absolute -left-20 top-[50%]'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
-                <button className='nextHome01Blog w-14 h-0.5 bg-black absolute -right-20 top-[50%]'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
+                <button className='prevHome01Blog group w-14 h-0.5 bg-black absolute -left-20 top-[50%] 430:w-9 430:-left-12'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
+                <button className='nextHome01Blog w-14 h-0.5 bg-black absolute -right-20 top-[50%] 430:w-9 430:-right-12'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
             </div>
             
         </section>

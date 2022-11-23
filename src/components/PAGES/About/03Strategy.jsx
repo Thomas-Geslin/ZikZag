@@ -67,8 +67,8 @@ export default function Strategy() {
     }, [])
     return(
         <section className="bg-greyBackground bg-squareBackground bg-no-repeat pb-32">
-            <div className="w-[60.5%] m-auto flex justify-between relative -top-32 max-xl:w-10/12 1060:flex-col 1060:items-center">
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
+            <div className="w-[60.5%] m-auto flex justify-between relative -top-32 max-xl:w-10/12 max-xl:flex-col max-xl:items-center max-xl:top-0">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px]">
                     <div className="flip-card-inner">
                         <div className="flip-card-front bg-card01Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
@@ -82,7 +82,7 @@ export default function Strategy() {
                     </div>
                 </div>
 
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px] 1060:mb-8 max-xl:my-10">
                     <div className="flip-card-inner">
                         <div className="flip-card-front bg-card02Background bg-no-repeat bg-cover text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
@@ -96,7 +96,7 @@ export default function Strategy() {
                     </div>
                 </div>
 
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px]">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px]">
                     <div className="flip-card-inner">
                         <div className="flip-card-front bg-card03Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
@@ -112,7 +112,7 @@ export default function Strategy() {
             </div>
 
 
-            <div className="flex justify-center mt-14 mx-12 max-xl:flex-col">
+            <div className="flex justify-center mt-14 px-12 max-xl:flex-col overflow-hidden">
                 <div className="w-1/3 max-xl:w-full">
                     <h2 className='text-orange font-bold mb-3 relative'>OUR STRATEGY<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
@@ -149,7 +149,7 @@ export default function Strategy() {
                     </div>
                 </div>
 
-                <div className="relative -ml-12 max-xl:pl-20">
+                <div className="relative -ml-12 650-xl:pl-20 430-650:left-[5%] 430:left-[10%]">
                     <Image id='strategyAbout01' src={people} alt='dessin de personne ayant une conversation' className="opacity-0" />
                     <Image id='strategyAbout02' src={graphic} alt='dessin de graphique' className="opacity-0 absolute bottom-0" />
                     <Image id='strategyAbout03' src={line01} alt='ligne de décoration' className="opacity-0 absolute bottom-0 right-0" />

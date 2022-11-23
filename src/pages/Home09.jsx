@@ -167,20 +167,20 @@ export default function Home04() {
             <main>
                 <LandingHome09 />
 
-                <div className='mt-10'></div>
+                <div className='mt-20 850:hidden'></div>
 
                 <StrategyHome01 />
 
-                <section id='goTopViewport' className='flex bg-white rounded-b-xl justify-center mr-40 1050:flex-col'>
-                    <div className='relative 1050-xl:mt-40'>
-                        <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32' />
-                        <Image src={line} alt="ligne de décoration" className='absolute top-10 left-28 lineOfferAnimation' />
-                        <Image src={twitter} alt="icone de twitter" className='absolute top-10 left-28 twitterOfferAnimation' />
-                        <Image src={facebook} alt="icone de facebook" className='absolute top-14 left-28 facebookOfferAnimation' />
-                        <Image src={pinterest} alt="icone de pinterest" className='absolute top-20 left-28 pinterestOfferAnimation' />
+                <section id='goTopViewport' className='flex bg-white rounded-b-xl justify-center mr-40 1050:flex-col 1050:mr-0 overflow-hidden'>
+                    <div className='relative 1050-xl:mt-40 850:max-w-[90%]'>
+                        <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32 850:left-[5%]' />
+                        <Image src={line} alt="ligne de décoration" className='absolute top-10 left-28 lineOfferAnimation 850:left-[5%]' />
+                        <Image src={twitter} alt="icone de twitter" className='absolute top-10 left-28 twitterOfferAnimation 850:left-[5%]' />
+                        <Image src={facebook} alt="icone de facebook" className='absolute top-14 left-28 facebookOfferAnimation 850:left-[5%]' />
+                        <Image src={pinterest} alt="icone de pinterest" className='absolute top-20 left-28 pinterestOfferAnimation 850:left-[5%]' />
                     </div>
 
-                    <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-full max-xl:mx-10 max-xl:mt-10 1050:pl-[10%] 1050:pb-10">
+                    <div className="w-5/12 pt-32 pl-32 pb-48 max-xl:w-[90%] 1050-xl:mx-10 max-xl:mt-10 1050:pl-[5%] 1050:pb-10 650:pt-14">
                         <h2 className={`text-${color} font-bold mb-3 relative`}>ABOUT ZIKZAG<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                         <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full 650-850:text-3xl 650:text-2xl">We Shape the Perfect Solution for Company</h3>
                         <p className="text-greyText w-10/12 text-lg leading-7 mb-8 max-xl:w-full 650-850:text-base">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
@@ -193,17 +193,17 @@ export default function Home04() {
                 </section>
 
 
-                <section className='flex relative justify-center pt-40 max-xl:flex-col overflow-hidden 850:-mb-32'>
-                    <div className='relative max-xl:left-[10%]'>
-                        <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 850-xl:left-60 850:w-[180px] 850:left-48' /> 
-                        <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top 850-xl:left-20 850:w-[100px] 850:left-20 850:top-0' /> 
-                        <Image src={rocket} alt='dessin de personne assise' className='w-20 absolute top-28 right-6 animation-vision-Home01-top-2 850-xl:left-96 850:w-[50px] 850:left-72' /> 
-                        <Image src={line01} alt='dessin de personne assise' className='w-72 absolute top-4 left-40 animation-vision-Home01-top-3 850-xl:left-96 850:w-[170px] 850:left-60' /> 
-                        <Image src={line02} alt='dessin de personne assise' className='w-24 absolute -top-20 right-[420px] animation-vision-Home01-left 850-xl:left-0 850:w-[70px] 850:left-0 850:top-0' /> 
-                        <Image src={line03} alt='dessin de personne assise' className='w-40 absolute -top-10 right-0 animation-vision-Home01-left 850-xl:left-96 850:w-[100px] 850:left-60 850:-top-6' /> 
-                        <Image src={line04} alt='dessin de personne assise' className='w-10 absolute top-72 -right-36 animation-vision-Home01-left 850-xl:left-[610px] 850:w-[20px] 850:left-96 850:top-52' /> 
-                        <Image src={line05} alt='dessin de personne assise' className='w-8 absolute top-8 right-[460px] animation-vision-Home01-left 850-xl:left-0 850:w-[35px] 850:left-0 850:top-14' /> 
-                        <Image src={line06} alt='dessin de personne assise' className='w-16 absolute top-[270px] right-[450px] animation-vision-Home01-left 850-xl:left-0 850:w-[40px] 850:left-3' /> 
+                <section className='flex relative justify-center pt-40 max-xl:flex-col overflow-hidden 850:-mb-32 850:pt-20'>
+                    <div className='relative 850-xl:left-[10%] 650-850:left-[20%] 650:left-[10%] 430:max-w-[70%]'>
+                        <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 850-xl:left-60 430-850:w-[180px] 430-850:left-48 430:w-[150px] 430:left-36' /> 
+                        <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top 850-xl:left-20 430-850:w-[100px] 430-850:left-20 850:top-0 430:w-[75px] 430:left-14' /> 
+                        <Image src={rocket} alt='dessin de personne assise' className='w-20 absolute top-28 right-6 animation-vision-Home01-top-2 850-xl:left-96 430-850:w-[50px] 430-850:left-72 430:w-[35px] 430:left-56' /> 
+                        <Image src={line01} alt='dessin de personne assise' className='w-72 absolute top-4 left-40 animation-vision-Home01-top-3 850-xl:left-96 430-850:w-[170px] 430-850:left-60 430:w-[140px] 430:left-48' /> 
+                        <Image src={line02} alt='dessin de personne assise' className='w-24 absolute -top-20 right-[420px] animation-vision-Home01-left 850-xl:left-0 430-850:w-[70px] 850:left-0 850:top-0 430:w-[50px]' /> 
+                        <Image src={line03} alt='dessin de personne assise' className='w-40 absolute -top-10 right-0 animation-vision-Home01-left 850-xl:left-96 430-850:w-[100px] 430-850:left-60 850:-top-6 430:w-[75px] 430:left-48' /> 
+                        <Image src={line04} alt='dessin de personne assise' className='w-10 absolute top-72 -right-36 animation-vision-Home01-left 850-xl:left-[610px] 430-850:w-[20px] 430-850:left-96 430-850:top-52 430:w-[15px] 430:left-80 430:top-40' /> 
+                        <Image src={line05} alt='dessin de personne assise' className='w-8 absolute top-8 right-[460px] animation-vision-Home01-left 850-xl:left-0 430-850:w-[35px] 430-850:left-0 850:top-14 430:w-[20px] 430:left-1' /> 
+                        <Image src={line06} alt='dessin de personne assise' className='w-16 absolute top-[270px] right-[450px] animation-vision-Home01-left 850-xl:left-0 430-850:w-[40px] 430-850:left-3 430:w-[30px] 430:left-1 430:top-[190px]' /> 
                     </div>
 
                     <div className="w-1/3 max-xl:w-10/12 relative left-72 max-xl:left-[10%] max-xl:top-32">
@@ -260,7 +260,7 @@ export default function Home04() {
                         <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
                         <p className='font-Amiri text-white text-5xl mb-3 max-xl:w-full 850:text-3xl'>Get a Free Counsultancy Right Now!</p>
                         <p className='text-[#dddfe1] text-[20px] px-7 850:text-base'>We help you see the world differently, discover opportunities you may never have imagined.</p>
-                        <button className={`text-white font-semibold bg-${color} rounded px-8 py-4 border border-solid border-${color} hover:bg-transparent ease-in duration-300 mt-12 mb-16 850:px-6 850:py-3 850:text-base`}>GET IN TOUCH</button>
+                        <button className={`text-white font-semibold bg-${color} rounded px-8 py-4 border border-solid border-${color} hover:bg-transparent ease-in duration-300 mt-12 mb-16 850:px-6 850:py-3 850:text-base 430:mt-4`}>GET IN TOUCH</button>
                     </div>
                 </section>
 
@@ -330,7 +330,7 @@ export default function Home04() {
                 <h2 className={`text-center text-${color} font-bold mb-4 pt-10 relative w-40 m-auto max-xl:pt-20 max-xl:mt-0`}><span className={`absolute bottom-1 left-3 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className='text-center font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
 
-                <div className='px-12 pb-40'>
+                <div className='px-12 pb-40 850:px-0'>
                     <Swiper
                         modules={[Autoplay, Pagination]}
                         slidesPerView={5}

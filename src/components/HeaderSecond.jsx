@@ -206,7 +206,7 @@ export default function HeaderAbout() {
                     <Link href='/Contacts'><p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p></Link>
                 </nav>
 
-            <div className='flex justify-end w-2/12 min-w-[300px]'>
+            <div className='flex justify-end w-2/12 min-w-[300px] max-xl:hidden'>
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
                 <p className='font-Amiri text-[22px] ml-8 hover:cursor-pointer hover:opacity-70 ease-in-out duration-500'>+1 800 123 456 789</p>
             </div>
@@ -216,7 +216,7 @@ export default function HeaderAbout() {
             <div id='fixedHeader' className='flex justify-between invisible fixed left-0 right-0 font-NunitoSans text-sm font-bold items-center px-14 bg-white ease-linear duration-300 max-xl:hidden'>
                 <Image src={logoFixed} alt="logo de l'entreprise" className='w-36 my-7' />
 
-                <nav className='flex justify-between items-center min-w-[650px] ml-36 text-slightGrey z-50'>
+                <nav className='flex justify-between items-center min-w-[650px] ml-36 text-slightGrey z-50  max-xl:hidden'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
@@ -368,7 +368,7 @@ export default function HeaderAbout() {
                     <Link href='/Contacts'><p className='hover-nav'><span className='hover-nav-animation realtive left-2'></span>CONTACTS</p></Link>
                 </nav>
 
-                <div className='flex items-center justify-end w-2/12'>
+                <div className='flex items-center justify-end w-2/12  max-xl:hidden'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
                     <button className='inline-block p-9 text-black py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
                 </div>

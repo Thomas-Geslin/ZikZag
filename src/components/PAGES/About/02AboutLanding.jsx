@@ -41,12 +41,12 @@ export default function AboutLanding() {
 
     return(
         <section className="z-10 flex justify-center items-center mt-24 mb-64 max-xl:flex-col max-xl:items-start 850:mt-14 max-xl:mb-20 overflow-hidden">
-            <div id='aboutViewport' className="relative 430:w-[280px]">
-                <Image id='aboutFirstReveal' src={people} alt='dessin de personnes se saluant' className="mr-28 ml-28 opacity-0 min-w-[250px] 850:w-5/12 850:ml-8" />
-                <Image id='aboutSecondReveal' src={line01} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 850:w-5/12 850:left-8" />
-                <Image id='aboutThirdReveal' src={line02} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 850:w-5/12 850:left-14 430:left-8" />
-                <Image id='aboutFourthReveal' src={line03} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 850:w-5/12 850:left-8" />
-                <Image id='aboutFifthReveal' src={line04} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 850:w-5/12 850:left-14 430:left-8" />
+            <div id='aboutViewport' className="relative 430-850:min-w-[90%]">
+                <Image id='aboutFirstReveal' src={people} alt='dessin de personnes se saluant' className="mr-28 ml-28 opacity-0 min-w-[250px] 430-850:w-10/12 430-850:ml-8 430:w-8/12 430:ml-8" />
+                <Image id='aboutSecondReveal' src={line01} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 430-850:w-10/12 430-850:left-8 430:w-8/12 430:left-6" />
+                <Image id='aboutThirdReveal' src={line02} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 430-850:w-10/12 430-850:left-14 430:w-8/12 430:left-8" />
+                <Image id='aboutFourthReveal' src={line03} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 430-850:w-10/12 430-850:left-8 430:w-8/12 430:left-6" />
+                <Image id='aboutFifthReveal' src={line04} alt='ligne de décoration' className="absolute bottom-0 left-28 opacity-0 min-w-[250px] 430-850:w-10/12 430-850:left-14 430:w-8/12 430:left-8" />
             </div>
 
             <div className="w-1/3 max-xl:w-10/12 max-xl:mx-10 max-xl:mt-10">
