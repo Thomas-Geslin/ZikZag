@@ -41,18 +41,18 @@ export default function TwoColumns() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-singlePortfolioStandardBackground bg-no-repeat text-center text-white">
+                <section className="bg-singlePortfolioStandardBackground bg-cover bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Portfolio Single</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; PORTFOLIO &gt; </span> BUSINESS PLANNING</p>
                 </section>
 
-                <div className='mx-[19%] mt-24 mb-40 leading-7 text-greyText'>
+                <div className='w-[62%] min-w-[1050px] m-auto mt-24 mb-40 leading-7 text-greyText max-xl:min-w-fit max-xl:mx-[5%]'>
                     <Image src={background} alt='fiche de statistiques' className='rounded-xl' />
 
 
                     <h2 className='font-Amiri text-slightGrey text-5xl mt-10'>Business Planning</h2>
-                    <div className='rounded-xl bg-darkBlueBackground px-16 py-9 my-8 flex justify-between'>
-                        <div className='text-[#dddfe1]'>
+                    <div className='rounded-xl bg-darkBlueBackground px-16 py-9 my-8 flex justify-between 850:flex-col 850:w-[40%] min-w-[300px]'>
+                        <div className='text-[#dddfe1] 850:mb-5'>
                             <div className='flex items-center relative right-4'>
                                 <span className='text-orange font-bold text-3xl relative bottom-[10px] mr-2'>.</span>
                                 <p className='text-white font-semibold text-sm'>CLIENT</p>
@@ -61,7 +61,7 @@ export default function TwoColumns() {
                             <p>Creative Agency</p>
                         </div>
 
-                        <div className='text-[#dddfe1]'>
+                        <div className='text-[#dddfe1] 850:mb-5'>
                             <div className='flex items-center relative right-4'>
                                 <span className='text-orange font-bold text-3xl relative bottom-[10px] mr-2'>.</span>
                                 <p className='text-white font-semibold text-sm'>TEAM</p>
@@ -71,7 +71,7 @@ export default function TwoColumns() {
                             <p>Marketing Agency</p>
                         </div>
 
-                        <div className='text-[#dddfe1]'>
+                        <div className='text-[#dddfe1] 850:mb-5'>
                             <div className='flex items-center relative right-4'>
                                 <span className='text-orange font-bold text-3xl relative bottom-[10px] mr-2'>.</span>
                                 <p className='text-white font-semibold text-sm'>SERVICES</p>
@@ -80,7 +80,7 @@ export default function TwoColumns() {
                             <p>Planning & Marketing</p>
                         </div>
 
-                        <div className='text-[#dddfe1] mr-14'>
+                        <div className='text-[#dddfe1] mr-14 850:mr-0'>
                             <div className='flex items-center relative right-4'>
                                 <span className='text-orange font-bold text-3xl relative bottom-[10px] mr-2'>.</span>
                                 <p className='text-white font-semibold text-sm'>CATEGORY</p>
@@ -95,10 +95,10 @@ export default function TwoColumns() {
                     </div>
                     <p className='mb-10'>Companies and investors grapple with changing conditions constantly, but our research points to an unusual level of volatility in the decades ahead. To understand why, we look at the three major forces that will shape the 2020s: demographics, automation and inequality. These forces are already in motion and set to collide.</p>
                 
-                    <div className='flex justify-between'>
-                        <Image src={slide1} alt='feuille de statistique' className='w-[31.5%] rounded-lg' />
-                        <Image src={slide2} alt='feuille de statistique' className='w-[31.5%] rounded-lg'/>
-                        <Image src={slide3} alt='feuille de statistique' className='w-[31.5%] rounded-lg' />
+                    <div className='flex justify-between max-xl:flex-col max-xl:items-center'>
+                        <Image src={slide1} alt='feuille de statistique' className='w-[31.5%] rounded-lg 650-xl:w-[50%] max-xl:mb-4 650:w-full' />
+                        <Image src={slide2} alt='feuille de statistique' className='w-[31.5%] rounded-lg 650-xl:w-[50%] max-xl:mb-4 650:w-full'/>
+                        <Image src={slide3} alt='feuille de statistique' className='w-[31.5%] rounded-lg 650-xl:w-[50%] max-xl:mb-4 650:w-full' />
                     </div>
 
 
@@ -106,7 +106,7 @@ export default function TwoColumns() {
                     <p className='mb-6'>Companies and investors grapple with changing conditions constantly, but our research points to an unusual level of volatility in the decades ahead. To understand why, we look at the three major forces that will shape the 2020s: demographics, automation and inequality. These forces are already in motion and set to collide. Secondly, given those growth platforms, what is the brand portfolio, business portfolio that I’ll use to address them?</p>
                     <p className='mb-6'>We’re seeing an extreme rise in profitable growth from the clients that we’re supporting to reset their marketing model. But that isn’t straightforward. So actually, areas four and five are enablers. Four, what’s the data and technology strategy and the roadmap to implement that? The leaders are owning their own data, refreshing it constantly and, more importantly, using it to inform the business decisions. And they’re making the technology that underpins that a priority.</p>
 
-                    <div className='-mx-8'>
+                    <div className='max-xl:hidden'>
                         <Swiper
                             modules={[Navigation]}
                             navigation
@@ -114,47 +114,47 @@ export default function TwoColumns() {
                             speed={300}
                         >
                             <SwiperSlide>
-                                <div className='rounded-lg mx-8 bg-white rounded-lg text-center m-auto my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
-                                    <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
-                                    <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
-                                    c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
-                                    c-0.2,0.4-0.6,1.4-0.8,2C40.7,30.7,40.6,31.3,40.8,30.6z"></path>
-                                    <path style={{ fill: '#ff4a17' }} class="st0" d="M10,41.2c4.6,3.3,12.4,4.1,15.9-1.2c1-1.5,1.5-3.1,1.6-4.6c0.6-3-0.5-6-2.8-8c-0.5-0.7-1.1-1.3-1.6-2
-                                    c-1.8-2-4.9-2.2-7.2-1c-2.6,0-5.2,0.7-7.3,2.7C4.1,31.2,5.5,37.9,10,41.2z"></path>
-                                    <path class="st1" d="M42,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
-                                    C29,27.4,38.5,10.5,48.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C39.2,7.9,31.1,19.6,35,31.5c2.8,8.4,12.2,16.1,21.3,12
-                                    c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C41.2,37.8,42.5,37,42,36.2L42,36.2z"></path>
-                                    <path class="st1" d="M8,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
-                                    C-5,27.4,4.5,10.5,14.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C5.2,7.9-2.9,19.6,1,31.5c2.8,8.4,12.2,16.1,21.3,12
-                                    c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
-                                    </svg>
+                            <div className='bg-white rounded-lg m-auto text-center my-5 shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] testimonialSlide'>
+                                <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
+                                <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
+                                c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
+                                c-0.2,0.4-0.6,1.4-0.8,2C40.7,30.7,40.6,31.3,40.8,30.6z"></path>
+                                <path style={{ fill: '#ff4a17' }} class="st0" d="M10,41.2c4.6,3.3,12.4,4.1,15.9-1.2c1-1.5,1.5-3.1,1.6-4.6c0.6-3-0.5-6-2.8-8c-0.5-0.7-1.1-1.3-1.6-2
+                                c-1.8-2-4.9-2.2-7.2-1c-2.6,0-5.2,0.7-7.3,2.7C4.1,31.2,5.5,37.9,10,41.2z"></path>
+                                <path class="st1" d="M42,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
+                                C29,27.4,38.5,10.5,48.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C39.2,7.9,31.1,19.6,35,31.5c2.8,8.4,12.2,16.1,21.3,12
+                                c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C41.2,37.8,42.5,37,42,36.2L42,36.2z"></path>
+                                <path class="st1" d="M8,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
+                                C-5,27.4,4.5,10.5,14.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C5.2,7.9-2.9,19.6,1,31.5c2.8,8.4,12.2,16.1,21.3,12
+                                c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
+                                </svg>
 
-                                    <p className='text-[#61616b] text-[22px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
-                                    <p className='font-Amiri text-3xl text-slightGrey mb-2'>Emmy Barton</p>
-                                    <p className='font-semibold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
-                                </div>
+                                <p className='text-[#61616b] text-[22px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
+                                <p className='font-Amiri text-slightGrey text-3xl mb-2'>Emmy Barton</p>
+                                <p className='font-semibold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
+                            </div>
                             </SwiperSlide>
 
                             <SwiperSlide>
-                                <div className='rounded-lg mx-8 bg-white rounded-lg text-center my-5 m-auto shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] max-xl:w-[850px] 850:w-10/12 testimonialSlide'>
-                                    <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
-                                    <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
-                                    c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
-                                    c-0.2,0.4-0.6,1.4-0.8,2C40.7,30.7,40.6,31.3,40.8,30.6z"></path>
-                                    <path style={{ fill: '#ff4a17' }} class="st0" d="M10,41.2c4.6,3.3,12.4,4.1,15.9-1.2c1-1.5,1.5-3.1,1.6-4.6c0.6-3-0.5-6-2.8-8c-0.5-0.7-1.1-1.3-1.6-2
-                                    c-1.8-2-4.9-2.2-7.2-1c-2.6,0-5.2,0.7-7.3,2.7C4.1,31.2,5.5,37.9,10,41.2z"></path>
-                                    <path class="st1" d="M42,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
-                                    C29,27.4,38.5,10.5,48.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C39.2,7.9,31.1,19.6,35,31.5c2.8,8.4,12.2,16.1,21.3,12
-                                    c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C41.2,37.8,42.5,37,42,36.2L42,36.2z"></path>
-                                    <path class="st1" d="M8,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
-                                    C-5,27.4,4.5,10.5,14.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C5.2,7.9-2.9,19.6,1,31.5c2.8,8.4,12.2,16.1,21.3,12
-                                    c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
-                                    </svg>
-                                    
-                                    <p className='text-greyText text-[22px] font-light mb-10'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
-                                    <p className='font-Amiri text-3xl text-slightGrey mb-2'>Tina Johanson</p>
-                                    <p className='font-semibold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
-                                </div>
+                            <div className='bg-white rounded-lg my-5 m-auto text-center shadow-[6px_5px_20px_0px_rgb(0,0,0,0.12)] testimonialSlide'>
+                                <svg viewBox="0 0 62.4 44.8" className='w-16 m-auto pt-14 pb-6'>
+                                <path style={{ fill: '#ff4a17' }} class="st0" d="M40.8,30.6c-0.9,2.3-1.7,3.9-0.9,6.5c0.7,2.3,2.5,3.9,4.5,5.2c3.7,2.4,8.7,3.6,12.6,0.9
+                                c3.8-2.5,5.8-7.3,4.4-11.7c-0.4-1.3-1.2-2.4-2.2-3.2c-2.1-3.2-6.1-4.5-9.9-4.3c-2.2,0.1-4.5,0.8-6.2,2.4c-0.6,0.6-1.1,1.2-1.6,2
+                                c-0.2,0.4-0.6,1.4-0.8,2C40.7,30.7,40.6,31.3,40.8,30.6z"></path>
+                                <path style={{ fill: '#ff4a17' }} class="st0" d="M10,41.2c4.6,3.3,12.4,4.1,15.9-1.2c1-1.5,1.5-3.1,1.6-4.6c0.6-3-0.5-6-2.8-8c-0.5-0.7-1.1-1.3-1.6-2
+                                c-1.8-2-4.9-2.2-7.2-1c-2.6,0-5.2,0.7-7.3,2.7C4.1,31.2,5.5,37.9,10,41.2z"></path>
+                                <path class="st1" d="M42,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
+                                C29,27.4,38.5,10.5,48.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C39.2,7.9,31.1,19.6,35,31.5c2.8,8.4,12.2,16.1,21.3,12
+                                c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C41.2,37.8,42.5,37,42,36.2L42,36.2z"></path>
+                                <path class="st1" d="M8,36.2c-7.2-11.4,14.9-17.4,18.7-4.6c1.7,5.8-2.8,11.2-8.6,11.6c-3.9,0.2-7.6-1.4-10.5-4.1
+                                C-5,27.4,4.5,10.5,14.7,1.3c0.7-0.7-0.3-1.7-1.1-1.1C5.2,7.9-2.9,19.6,1,31.5c2.8,8.4,12.2,16.1,21.3,12
+                                c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
+                                </svg>
+                                
+                                <p className='text-greyText text-[22px] font-light mb-10'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
+                                <p className='font-Amiri text-slightGrey text-3xl mb-2'>Tina Johanson</p>
+                                <p className='font-semibold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
+                            </div>
                             </SwiperSlide>
                         </Swiper>
                     </div>
@@ -163,52 +163,52 @@ export default function TwoColumns() {
                     <h2 className='font-Amiri text-slightGrey text-4xl mt-12 mb-6'>Summary Results</h2>
                     <p className='leading-8 mb-10'>Consumer products marketing has experienced a profound change over the last 5 to 10 years, from a world dominated by large global brands and established TV and big-box retail models to a world that’s quickly much more complex, with a proliferation of brands, channels and marketing tools. <span className='text-slightGrey font-bold'>Technology’s disrupted the industry in three ways.</span> Firstly, it’s disrupted the way consumers engage with brands. In the UK and the US now, over 60% of consumers discover brands. There are five areas that we encourage CMOs to look at. The first is, what are my future-back platforms that will lead growth for the next 5 to 10 years? Taking today’s profit pools and forecasting them present forward just won’t capture the level of disruption that’s impacting these industries.</p>
                 
-                    <div className='flex items-center'>
-                        <p className='text-slightGrey font-bold text-sm mr-8'>SHARE ARTICLE:</p>
+                    <div className='flex items-center 650:flex-col 650:items-start'>
+                        <p className='text-slightGrey font-bold text-sm mr-8 650:mb-4'>SHARE ARTICLE:</p>
 
-                        <div className='flex items-center mr-auto'>
+                        <div className='flex items-center mr-auto 650:mb-4'>
                             <div className='mr-2.5 bg-[#1da1f2] p-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faTwitter} className='w-3.5 text-white' /></div>
                             <div className='mr-2.5 bg-[#3b5998] py-1.5 px-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faFacebookF} className='w-2.5 text-white' /></div>
                             <div className='mr-2.5 bg-[#e40000] py-1.5 px-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faPinterestP} className='w-3 text-white' /></div>
                             <div className='mr-2.5 bg-[#007bb5] p-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faLinkedinIn} className='w-3 text-white' /></div>
                         </div>
 
-                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold'>MARKETING</p>
-                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5'>STRATEGY</p>
-                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5'>TRADE</p>
-                        <div className='flex items-center rounded bg-darkBlueBackground px-2.5 text-white ml-4'>
+                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold 650:mb-2'>MARKETING</p>
+                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5 650:mb-2 650:ml-0'>STRATEGY</p>
+                        <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5 650:mb-2 650:ml-0'>TRADE</p>
+                        <div className='flex items-center rounded bg-darkBlueBackground px-2.5 text-white ml-4 650:mb-2 650:ml-0'>
                             <FontAwesomeIcon icon={faHeart} className='w-3 mr-1.5' />
                             <p className='font-semibold'>10</p>
                         </div>
                     </div>
                         
-                    <span className='w-[63%] bg-[#e5e5e5] h-px absolute mt-8'></span>
+                    <span className='w-[63%] bg-[#e5e5e5] h-px absolute mt-8 650:w-[90%]'></span>
 
 
-                    <div className='flex text-white justify-center h-36 mb-28 mt-16 relative max-xl:flex-col max-xl:top-0 650:w-full'>
-                        <div className='relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg'>
-                            <span className='absolute left-12 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:-translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                            <div className='ml-6 mr-10 rotate-180 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                            <div className='mr-80'>
-                                <p className='font-bold leading-7 mb-3'>Customer Strategy</p>
-                                <p className='text-[#afbdc0] text-sm font-bold'>FEBRUARY 21, 2020</p>
+                    <div className='flex text-white justify-center h-36 mb-28 relative max-xl:flex-col max-xl:top-0 650:w-[90%] 650:m-auto 650:mb-28 mt-20 max-xl:mt-32'>
+                        <div className='w-[50%] relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg max-xl:mb-6 max-xl:w-auto max-xl:py-4'>
+                            <span className='absolute left-14 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:-translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
+                            <div className='ml-8 mr-14 rotate-180 650:px-4 650:ml-0 650:mr-6'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                            <div className='mr-20 650:mr-6'>
+                                <p className='font-bold leading-7 mb-3 650:text-sm 650:min-w-[150px]'>Customer<br></br>Strategy</p>
+                                <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                             </div>
                         </div>
 
-                        <div className='relative flex items-center bg-orange rounded-r-lg group max-xl:rounded-lg'>
-                            <div className='ml-80'>
-                                <p className='font-bold leading-7 mb-3'>Partnership system</p>
-                                <p className='text-[#afbdc0] text-sm font-bold'>FEBRUARY 21, 2020</p>
+                        <div className='w-[50%] relative flex items-center bg-orange rounded-r-lg group max-xl:rounded-lg max-xl:w-auto max-xl:py-4'>
+                            <div className='ml-20 650:ml-6'>
+                                <p className='font-bold leading-7 mb-3 650:text-sm 650:min-w-[150px]'>Partnership<br></br>System</p>
+                                <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                             </div>
-                            <span className='absolute right-14 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                            <div className='ml-6 mr-10 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                            <span className='absolute right-20 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
+                            <div className='ml-8 mr-14 650:px-4 650:ml-0 650:mr-6'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                         </div>
                     </div>
 
 
                     <h2 className='font-Amiri text-slightGrey text-4xl mb-6'>Related Projects</h2>
-                    <div className='flex justify-between mb-8'>
-                        <div class='w-[31.5%] relative hover:cursor-pointer group'>
+                    <div className='flex justify-between mb-8 650:flex-col 650:items-center'>
+                        <div class='w-[31.5%] relative hover:cursor-pointer group 650:w-full 650:mb-4'>
                             <Image src={card1} alt='réunion entreprise' className=' rounded-lg' />
                             <div className='text-center bg-white rounded-lg absolute -bottom-5 left-[50%] translate-x-[-50%] py-5 w-[90%] shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 ease-in-out duration-500'>
                                 <p className='font-Amiri text-slightGrey text-3xl leading-[32px] mb-2 hover:text-orange ease-in-out duration-300'>People<br></br>Profesionnalism</p>
@@ -216,7 +216,7 @@ export default function TwoColumns() {
                             </div>
                         </div>
 
-                        <div class='w-[31.5%] relative hover:cursor-pointer group'>
+                        <div class='w-[31.5%] relative hover:cursor-pointer group 650:w-full 650:mb-4'>
                             <Image src={card2} alt='réunion entreprise' className=' rounded-lg' />
                             <div className='text-center bg-white rounded-lg absolute -bottom-5 left-[50%] translate-x-[-50%] py-5 w-[90%] shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 ease-in-out duration-500'>
                                 <p className='font-Amiri text-slightGrey text-3xl leading-[32px] mb-2 hover:text-orange ease-in-out duration-300'>Corporate Finance</p>
@@ -224,7 +224,7 @@ export default function TwoColumns() {
                             </div>
                         </div>
 
-                        <div class='w-[31.5%] relative hover:cursor-pointer group'>
+                        <div class='w-[31.5%] relative hover:cursor-pointer group 650:w-full'>
                             <Image src={card3} alt='réunion entreprise' className=' rounded-lg' />
                             <div className='text-center bg-white rounded-lg absolute -bottom-5 left-[50%] translate-x-[-50%] py-5 w-[90%] shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] -translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 ease-in-out duration-500'>
                                 <p className='font-Amiri text-slightGrey text-3xl leading-[32px] mb-2 hover:text-orange ease-in-out duration-300'>Flexibility &<br></br>Adaptability</p>
@@ -248,9 +248,9 @@ export default function TwoColumns() {
                             <p className='text-orange text-sm font-semibold absolute top-0 right-0'>REPLY</p>
                         </div>
 
-                        <span className='w-[40%] bg-[#e5e5e5] h-px absolute'></span>
+                        <span className='w-[40%] bg-[#e5e5e5] h-px absolute 850:w-[80%]'></span>
 
-                        <div className='flex relative mt-16 ml-28'>
+                        <div className='flex relative mt-16 ml-28 850:ml-0'>
                             <Image src={face2} alt='portrait' className='w-[80px] h-[80px] relative top-2.5' />
 
                             <div className='pl-8'>
@@ -264,15 +264,15 @@ export default function TwoColumns() {
                     </div>
 
 
-                    <div className='rounded-2xl px-14 py-14 mt-32 bg-white shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] mb-48'>
+                    <div className='rounded-2xl px-14 py-14 mt-32 bg-white shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] mb-48 430:px-4 max-xl:mb-20'>
                         <p className='font-Amiri text-slightGrey text-[36px]'>Leave a Reply</p>
                         <p className='text-sm mb-7'>Your email address will not be published. Required fields are marked *</p>
 
                         <form className='flex flex-col'>
-                            <div className='flex justify-between'>
-                                <input type='text' placeholder='Name *' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                            <div className='flex justify-between 650:flex-col'>
+                                <input type='text' placeholder='Name *' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full 650:mb-4'></input>
 
-                                <input type='text' placeholder='Your Email*' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                                <input type='text' placeholder='Your Email*' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full'></input>
                             </div>
 
                             <input type='text' placeholder='Website' className='bg-greyBackground px-4 py-2.5 rounded mt-5 placeholder:text-greyText outline-none'></input>

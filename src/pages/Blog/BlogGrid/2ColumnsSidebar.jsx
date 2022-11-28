@@ -36,19 +36,19 @@ export default function TwoColumnsSidebar() {
             <main>
                 <section className="bg-singleLayoutsStandardBackground bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Grid 2 Columns + Sidebar</h1>
-                    <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; </span> GRID 2 COLUMNS + SIDEBAR</p>
+                    <p className="font-semibold text-sm pb-48 z-10 430:pb-20"><span className="opacity-50">HOME &gt; </span> GRID 2 COLUMNS + SIDEBAR</p>
                 </section>
 
 
                 <div className='w-[62%] m-auto min-w-[1180px] mt-20 mb-40 flex justify-between max-xl:flex-col max-xl:min-w-fit'>
                     <div className='m-auto'>
-                        <div className='articleAppear min-w-[900px] grid grid-cols-2 relative -top-20 max-xl:min-w-[705px] 850:grid-cols-1 650-850:min-w-[520px] 430-650:min-w-[420px]'>
+                        <div className='articleAppear min-w-[900px] grid grid-cols-2 relative -top-20 1050-xl:min-w-[705px] 850:grid-cols-1 650-850:min-w-[520px] 430-650:min-w-[420px] 430:min-w-[310px]'>
                             {ArticleData.slice(0, loadMore).map((el) => {
                                 return(
                                     <Link key={el.index} href='/Blog/BlogSingle/Standard'>
-                                    <div className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer max-xl:w-[350px] 650-850:w-[560px] 430-650:w-[420px]'>
-                                        <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='w-[380px] rounded-lg max-xl:w-[300px] 650-850:w-[520px] 430-650:w-[380px]' />
-                                        <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
+                                    <div className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer 1050-xl:w-[350px] 650-850:w-[560px] 430-650:w-[420px] 430:w-[310px]'>
+                                        <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='w-[380px] rounded-lg 1050-xl:w-[300px] 650-850:w-[520px] 430-650:w-[380px] 430:w-[270px]' />
+                                        <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] 430-650:bottom-52 430:bottom-60'>
                                             <p className='font-Amiri text-2xl -mb-1'>24</p>
                                             <p className='text-xs font-semibold pb-1'>FEB</p>
                                         </div>

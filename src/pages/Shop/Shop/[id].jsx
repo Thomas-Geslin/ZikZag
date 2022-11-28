@@ -52,6 +52,21 @@ export default function ItemPage() {
     }
 
 
+    function addToCart(name, picture, price) {
+        const itemData = {
+            name: name,
+            price: price,
+            picture: picture
+        }
+
+        let itemArray = [];
+        itemArray.push(itemData)
+
+        sessionStorage.setItem('itemData', JSON.stringify(itemArray));
+        location.reload();
+    }
+
+
     return(
         <div class='font-NunitoSans'>
             <Head>
@@ -69,14 +84,14 @@ export default function ItemPage() {
                     <p className="font-semibold text-sm pb-48 z-10 uppercase"><span className="opacity-50">HOME &gt; {data.categorie} &gt;</span> {data.name}</p>
                 </section>
 
-                <div class='w-[74%] m-auto mb-40 pl-[5%] max-2xl: pl-0'>
-                    <div className='flex'>
-                        <Image src={data.picture} alt="photo de l'article" className='w-[540px] h-[540px]' />
+                <div class='w-[74%] m-auto mb-40 pl-[5%] max-2xl: pl-0 850:w-[90%] 850:pl-0'>
+                    <div className='flex 1050:flex-col 1050:items-center'>
+                        <Image src={data.picture} alt="photo de l'article" className='min-w-[540px] min-h-[540px] 650:min-w-[310px] 650:min-h-[310px]' />
 
-                        <div className='pl-20'>
-                            <h2 className='text-slightGrey text-4xl font-Amiri mb-6'>{data.name}</h2>
+                        <div className='pl-20 650:pl-[5%]'>
+                            <h2 className='text-slightGrey text-4xl font-Amiri mb-6 1050:mt-10'>{data.name}</h2>
                             <p className='text-[#14212b] font-bold text-2xl mb-8'>{data.price}</p>
-                            <p className='text-greyText leading-7 w-8/12'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                            <p className='text-greyText leading-7 w-8/12 min-w-[525px] xl-2xl:min-w-[450px] max-xl:min-w-[300px] max-xl:w-10/12'>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
                         
                             <span className='absolute bg-[#d6d6d6] h-px w-24 mt-8'></span>
 
@@ -91,7 +106,7 @@ export default function ItemPage() {
                                     </div>
                                 </div>
 
-                                <button className="text-white font-bold text-sm bg-orange rounded py-4 px-10 hover:bg-darkBlueBackground ease-in-out duration-500">ADD TO CART</button>
+                                <button onClick={() => addToCart(data.name, data.picture, data.price)} className="text-white font-bold text-sm bg-orange rounded py-4 px-10 hover:bg-darkBlueBackground ease-in-out duration-500">ADD TO CART</button>
                             </div>
                            
                         </div>
@@ -109,7 +124,7 @@ export default function ItemPage() {
                    
                     : <div className='mt-20 mb-20'>
                         <div className='flex'>
-                            <Image src={avatar1} alt='photo de profil' className='w-20' />
+                            <Image src={avatar1} alt='photo de profil' className='w-20 h-20' />
                             <div className='pl-6'>
                                 <div className='flex'>
                                     <p className='text-slightGrey font-bold mr-5'>Cobus Bester</p>
@@ -127,7 +142,7 @@ export default function ItemPage() {
                         <span className='bg-[#e5e5e5] absolute mt-10 h-px w-[61.5%]'></span>
 
                         <div className='flex mt-20'>
-                            <Image src={avatar2} alt='photo de profil' className='w-20' />
+                            <Image src={avatar2} alt='photo de profil' className='w-20 h-20' />
                             <div className='pl-6'>
                                 <div className='flex'>
                                     <p className='text-slightGrey font-bold mr-5'>Coen Jacobs</p>
@@ -157,10 +172,10 @@ export default function ItemPage() {
                             </div>
 
                             <form className='flex flex-col'>
-                                <div className='flex justify-between'>
-                                    <input type='text' placeholder='Name' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                                <div className='flex justify-between 650:flex-col'>
+                                    <input type='text' placeholder='Name' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full 650:mb-4'></input>
 
-                                    <input type='text' placeholder='Email' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                                    <input type='text' placeholder='Email' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full'></input>
                                 </div>
 
 
@@ -179,7 +194,7 @@ export default function ItemPage() {
                 
 
                     <p className='font-Amiri text-slightGrey text-center text-3xl mb-10'>You May Also Like...</p>
-                    <Link href='/Shop/Shop/2'>
+                    <Link href='/Shop/Shop/2' className="w-[25%] 850:ml-auto 850:w-fit">
                     <div className='text-center group relative w-64 mb-16'>
                         <div className='relative'>
                             <Image src={item3} alt='photo de produit' className='w-64 rounded-md overflow-hidden hover:brightness-75 ease-in-out duration-300' />
@@ -196,8 +211,8 @@ export default function ItemPage() {
 
 
                     <p className='font-Amiri text-slightGrey text-center text-3xl mb-10'>Related Products</p>
-                    <div className='flex justify-between'>
-                    <Link href='/Shop/Shop/19'>
+                    <div className='flex justify-between min-w-[1050px] max-xl:flex-wrap max-xl:min-w-fit 650:flex-col 650:items-center'>
+                        <Link href='/Shop/Shop/19'>
                         <div className='text-center group relative w-64 mb-16'>
                             <div className='relative'>
                                 <Image src={item20} alt='photo de produit' className='w-64 rounded-md overflow-hidden hover:brightness-75 ease-in-out duration-300' />

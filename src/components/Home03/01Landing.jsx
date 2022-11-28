@@ -129,31 +129,31 @@ export default function LandingHome03() {
                 <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='absolute top-[550px] left-[900px] min-3xl:left-[400px]'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation-delay' /></Reveal>
             </div>
 
-            <div className='text-white ml-[19%] relative'>
+            <div className='text-white ml-[19%] relative z-10 430:ml-[5%] 650:mt-96'>
                 <div className='flex items-center'>
                     <Reveal keyframes={reveal} duration={600} delay={600} triggerOnce><div className='shadow-[3px_3px_20px_3px_rgb(0,0,0,0.12)] group bg-white px-7 py-6 rounded-full hover:bg-darkBlueBackground hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-black group-hover:text-white' /></div></Reveal>
                     <Reveal keyframes={revealRight} duration={700} delay={900} triggerOnce><p className='font-bold text-sm ml-5'>HOW IT WORKS</p></Reveal>
                 </div>
-                <Reveal keyframes={revealLeft} duration={800} triggerOnce><h1 className='font-Amiri text-7xl w-5/12 leading-[80px] mt-9'>We Champion the Bold to Achieve the Extraordinary</h1></Reveal>
-                <div className='font-semibold mt-10 pb-60 flex'>
-                    <Reveal keyframes={reveal} duration={800} delay={1600} triggerOnce><button className="rounded bg-darkBlueBackground py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500">LEARN MORE</button></Reveal>
+                <Reveal keyframes={revealLeft} duration={800} triggerOnce><h1 className='font-Amiri text-7xl w-5/12 leading-[80px] mt-9 max-xl:w-9/12 430:text-5xl'>We Champion the Bold to Achieve the Extraordinary</h1></Reveal>
+                <div className='font-semibold mt-10 pb-60 flex 430:flex-col'>
+                    <Reveal keyframes={reveal} duration={800} delay={1600} triggerOnce><button className="rounded bg-darkBlueBackground py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500 430:mb-4">LEARN MORE</button></Reveal>
                     <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-darkBlueBackground hover:text-white hover:border-transparent ease-in-out duration-500">GET IN TOUCH</button></Reveal>
                 </div>
             </div>
 
             <Reveal keyframes={revealTop} duration={800} triggerOnce className='absolute -left-64 -top-72'><Image src={squareLeft} alt='carré de décoration' /></Reveal>
-            <Reveal keyframes={revealTop} duration={800} delay={700} triggerOnce className='absolute -right-[520px] top-24'><Image src={squareRight} alt='carré de décoration' /></Reveal>
-            <Reveal keyframes={revealRight} duration={800} triggerOnce className='absolute -right-[420px] top-24'><Image src={background} alt='réunion entreprise' /></Reveal>
+            <Reveal keyframes={revealTop} duration={800} delay={700} triggerOnce className='absolute -right-[520px] top-24 max-xl:hidden'><Image src={squareRight} alt='carré de décoration' /></Reveal>
+            <Reveal keyframes={revealRight} duration={800} triggerOnce className='absolute -right-[420px] top-24 max-w-[75%] max-xl:hidden'><Image src={background} alt='réunion entreprise' /></Reveal>
 
-            <div className='absolute top-52 left-40 w-full'>
-                <Reveal keyframes={revealBottom} duration={800} delay={900} triggerOnce><Image src={man} alt='dessin super-héros' data-speed='-1.5' className='absolute left-[700px] layerHome03' /></Reveal>
+            <div className='absolute top-52 left-[10%] w-full z-10 max-xl:left-[5%]'>
+                <Reveal keyframes={revealBottom} duration={800} delay={900} triggerOnce><Image src={man} alt='dessin super-héros' data-speed='-1.5' className='absolute left-[700px] layerHome03 1050-xl:left-[60%] 850-1050:left-[50%] 650-850:left-[45%] 430-650:left-[15%] 650:-top-10 430:left-0' /></Reveal>
                 <Reveal keyframes={revealBottom} duration={800} delay={1500} triggerOnce><Image src={line1} alt='ligne de décoration' data-speed='-2.5' className='absolute left-[700px] layerHome03' /></Reveal>
                 <Reveal keyframes={revealLeft} duration={800} delay={2100} triggerOnce><Image src={line2} alt='ligne de décoration' data-speed='1.5' className='absolute layerHome03' /></Reveal>
                 <Reveal keyframes={reveal} duration={800} delay={2600} triggerOnce><Image src={line3} alt='ligne de décoration' data-speed='1.8' className='absolute layerHome03' /></Reveal>
                 <Reveal keyframes={reveal} duration={800} delay={3100} triggerOnce><Image src={line4} alt='ligne de décoration' data-speed='1.8' className='absolute layerHome03' /></Reveal>
             </div>
 
-            <div className='flex items-center -rotate-90 absolute bottom-52 -left-24'>
+            <div className='flex items-center -rotate-90 absolute bottom-52 -left-24 430:left-[40%]'>
                 <Reveal keyframes={reveal} duration={500} delay={4900} triggerOnce><FontAwesomeIcon icon={faLinkedin} className='w-3.5 text-white rotate-90 mr-6 hover:cursor-pointer' /></Reveal>
                 <Reveal keyframes={reveal} duration={500} delay={4700} triggerOnce><FontAwesomeIcon icon={faFacebookF} className='w-3 text-white rotate-90 mr-6 hover:cursor-pointer' /></Reveal>
                 <Reveal keyframes={reveal} duration={500} delay={4500} triggerOnce><FontAwesomeIcon icon={faTwitter} className='w-3.5 text-white rotate-90 mr-6 hover:cursor-pointer' /></Reveal>

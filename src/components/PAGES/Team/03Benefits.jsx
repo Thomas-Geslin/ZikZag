@@ -53,8 +53,8 @@ const revealLeft = keyframes`
 
 export default function BenefitsTeam() {
     return(
-        <section className='flex justify-center mb-40'>
-            <div className="relative w-[35%] max-xl:pl-20">
+        <section className='flex justify-center mb-40 mt-20 max-xl:flex-col max-xl:items-center overflow-hidden'>
+            <div className="relative w-[35%] min-w-[700px] max-xl:min-w-fit max-xl:w-[60%] max-xl:left-[7.5%]">
                 <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image id='strategyAbout01' src={people} alt='dessin de personne ayant une conversation' /></Reveal>
                 <Reveal keyframes={revealLeft} duration={800} delay={700} triggerOnce><Image id='strategyAbout02' src={graphic} alt='dessin de graphique' className="absolute bottom-0" /></Reveal>
                 <Reveal keyframes={revealRight} duration={800} delay={1400} triggerOnce><Image id='strategyAbout03' src={line01} alt='ligne de décoration' className="absolute bottom-0 right-0" /></Reveal>
@@ -63,7 +63,7 @@ export default function BenefitsTeam() {
                 <Reveal keyframes={revealLeft} duration={800} delay={3500} triggerOnce><Image id='strategyAbout06' src={line04} alt='ligne de décoration' className="absolute bottom-0" /></Reveal>
             </div>
 
-            <div className='font-NunitoSans w-1/3 relative top-24 ml-28 max-xl:w-auto'>
+            <div className='font-NunitoSans w-1/3 relative top-24 pb-4 ml-28 max-xl:w-[90%] 650:ml-10'>
                 <h2 className='text-orange font-bold mb-2 relative'>OUR BENEFITS<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                 <h3 className='text-slightGrey w-3/4 font-Amiri text-5xl leading-tight mb-4'>Few Resons Why You Should Choose Us</h3>
 

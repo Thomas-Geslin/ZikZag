@@ -41,13 +41,13 @@ export default function TwoColumnsMasonry() {
                 </section>
 
 
-                <div className='w-[62%] min-w-[1180px] max-xl:min-w-[950px] m-auto relative mt-12 flex flex-wrap justify-between'>
+                <div className='w-[62%] min-w-[1180px] max-w-[1200px] 1050-xl:min-w-[950px] m-auto relative mt-12 flex flex-wrap justify-between max-xl:mb-96 1050:flex-col 1050:items-center 1050:min-w-fit 1050:w-[85%]'>
                     {ArticleDataMasonry.slice(0, loadMore).map((el) => {
                         return(
-                            <Link key={el.index} href={el.href} className={`${el.class} relative`}>
-                            {!el.background && <div className='mb-8'></div>}
-                            <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[570px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer max-xl:max-w-[460px]'>
-                                {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[530px] max-xl:max-w-[420px]' />}
+                            <Link key={el.index} href={el.href} className={`${el.class} relative max-xl:top-0 1050:mb-14`}>
+                            {!el.background && <div className='mb-8 1050:mb-0'></div>}
+                            <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[570px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer 650-xl:max-w-[460px] 650:max-w-[310px]'>
+                                {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[530px] 650-xl:max-w-[420px] 650:max-w-[270px]' />}
                                 
                                 {el.quote && <div>
                                                 <svg viewBox="0 0 62.4 44.8" className='w-14 absolute -top-8'>
@@ -99,9 +99,9 @@ export default function TwoColumnsMasonry() {
                 </div>
                 
                 {loadMore < ArticleDataMasonry.length 
-                    ? <button onClick={loadMoreArticle} className='relative -top-96 text-sm text-slightGrey font-bold w-[170px] relative left-[50%] translate-x-[-50%] py-5 border border-orange rounded border-solid hover:bg-orange hover:border-transparent hover:text-white ease-in-out duration-300'>{loading === false ? 'LOAD MORE' : <div class="spinnerArticle"></div>}</button>
+                    ? <button onClick={loadMoreArticle} className='relative -top-96 text-sm text-slightGrey font-bold w-[170px] relative left-[50%] translate-x-[-50%] py-5 border border-orange rounded border-solid hover:bg-orange hover:border-transparent hover:text-white ease-in-out duration-300 max-xl:-top-80'>{loading === false ? 'LOAD MORE' : <div class="spinnerArticle"></div>}</button>
                     
-                    : <p className='font-Amiri relative -mb-[500px] -top-[600px] text-2xl text-slightGrey text-center'>Vous avez chargé tous les articles</p> 
+                    : <p className='font-Amiri relative -mb-[500px] -top-[600px] text-2xl text-slightGrey text-center max-xl:-top-96 -mb-0'>Vous avez chargé tous les articles</p> 
                 }
                 
             </main>

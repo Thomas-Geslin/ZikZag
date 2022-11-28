@@ -95,10 +95,10 @@ export default function Landing() {
   },[])
 
     return(
-        <section id="landingViewport" className='bg-greyBackground z-10 overflow-hidden bg-squareBackground bg-no-repeat bg-[bottom_-50rem_left_43rem] relative mt-32 pb-6 max-xl:mt-28'>
-          <div className='ml-52 pt-56 1060:ml-10 1060:pt-20'>
+        <section id="landingViewport" className='bg-greyBackground z-10 overflow-hidden bg-squareBackground bg-no-repeat bg-[bottom_-50rem_left_43rem] relative mt-32 pb-6 max-xl:mt-28 max-2xl:pt-[700px]'>
+          <div className='ml-52 pt-56 1050:ml-[10%]'>
             <Reveal keyframes={revealRight} duration={1000} delay={700} triggerOnce><h2 className='font-NunitoSans text-orange text-lg font-semibold max-xl:w-10/12 850:text-base'>PERFECT SOLUTION FOR YOUR COMPAGNY</h2></Reveal>
-            <Reveal keyframes={revealRight} duration={1000} triggerOnce><h1 className='font-Amiri text-slightGrey text-xl leading-90 w-5/12  max-xl:w-10/12 850:text-3xl'>Your Business from Idea to Launching</h1></Reveal>
+            <Reveal keyframes={revealRight} duration={1000} triggerOnce><h1 className='font-Amiri text-slightGrey text-xl leading-90 w-5/12 max-2xl:w-10/12 650:pt-8 650:text-6xl'>Your Business from Idea to Launching</h1></Reveal>
 
             <div className='flex items-center pb-64 mt-8'>
               <Reveal keyframes={reveal} duration={1000} delay={1550} triggerOnce><div className='group bg-white px-7 py-6 rounded-full shadow-[5px_5px_15px_3px_#dddddd] hover:bg-orange hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-orangeBright group-hover:text-white' /></div></Reveal>

@@ -24,7 +24,7 @@ import face2  from '../../public/assets/BLOG/BlogSingle/Standard/comment_2.jpeg'
 
 export default function StandardArticle() {
     return(
-        <section className={`text-greyText leading-7`}>
+        <section className={`text-greyText relative leading-7 w-[73%] 850:w-[90%] max-xl:m-auto`}>
             <div className='mb-6'>
                 <p className='float-left font-Amiri text-3xl text-orange bg-white px-3 pb-0.5 pt-1.5 rounded shadow-[5px_4px_13px_0_rgb(145,145,145,0.3)] mt-2 mr-4'>C</p>
                 <p>ybercrime is a threat to all the organizations, but when we take in consideration the financial market the level of menace increases increases exponentially. Today banks and other financial organizations face the need of providing the best possible services in the best possible way and reachable by everyone everywhere. We are watching to a spread of different products and services being available through the use.</p>
@@ -32,11 +32,11 @@ export default function StandardArticle() {
             <p className='mb-10'>By 2030—little more than a decade from now—the <span className='text-orange underline'>global economy will likely be in the midst</span> of a major transformation. Companies and investors grapple with changing conditions constantly, but our research points to an unusual level of volatility in the decades ahead. To understand why, we look at the three major forces that will shape the 2020s: demographics, automation and inequality. These forces are already in motion and set to collide.</p>
         
 
-            <div className='flex justify-between mb-6'>
-                <Image src={slide1} alt='check entre plusieurs personnes' className='rounded-2xl w-[420px] h-[350px]' />
-                <Image src={slide2} alt='cfemme travaillant ur ordinateur' className='rounded-2xl w-[420px] h-[350px]' />
+            <div className='flex justify-between mb-6 min-w-[850px] 1050:flex-col 1050:items-center 650-1050:min-w-fit 430-650:min-w-[420px] 430:min-w-[290px]'>
+                <Image src={slide1} alt='check entre plusieurs personnes' className='rounded-2xl w-[420px] h-[350px] 1050:mb-6 430:max-w-[290px] 430:h-[250px]' />
+                <Image src={slide2} alt='cfemme travaillant ur ordinateur' className='rounded-2xl w-[420px] h-[350px] 430:max-w-[290px] 430:h-[250px]' />
             </div>
-            <Image src={slide3} alt='réunion en entreprise' className='rounded-2xl' />
+            <Image src={slide3} alt='réunion en entreprise' className='rounded-2xl min-w-[850px] 650-1050:min-w-full 430-650:min-w-[420px] 430:min-w-[290px]' />
 
 
             <h2 className='font-Amiri text-slightGrey text-3xl py-10'>The New Rules for Marketing Your Brand</h2>
@@ -45,17 +45,17 @@ export default function StandardArticle() {
         
             <div className="relative bg-[#f5f5f5] mb-10 py-1 border-l-orange border-l-[3px] rounded-br-lg max-xl:w-full">
                 <Image src={quote} alt='icone de guillemet' className="w-20 absolute -top-3 right-0" />
-                <p className="relative font-Amiri text-2xl text-slightGrey leading-tight pt-7 pb-5 pl-9">“There are no secrets to success. It is the result of preparation, hard work, and learning failure.”</p>
+                <p className="relative font-Amiri text-2xl text-slightGrey leading-tight pt-7 pb-5 pl-9 1050:w-10/12">“There are no secrets to success. It is the result of preparation, hard work, and learning failure.”</p>
                 <p className='text-[#a1a1a1] font-bold text-sm pl-9 pb-6'>– OLIVER SANDERO</p>
             </div> 
 
             <p className='mb-12'>Secondly, given those growth platforms, what is the brand portfolio, business portfolio that I’ll use to address them? Brand portfolio strategy is definitely rising in importance. And thirdly, when I’m clear on those platforms and those brands, how am I going to implement modern marketing to engage with the consumer? We’re seeing an extreme rise in profitable growth from the clients that we’re supporting to reset their marketing model. <span className='text-orange underline'>But that isn’t straightforward.</span> So actually, areas four and five are enablers. Four, what’s the data and technology strategy and the roadmap to implement that? The leaders are owning their own data, refreshing it constantly and, more importantly, using it to inform the business decisions. And they’re making the technology that underpins that a priority.</p>
         
         
-            <div className='flex items-center'>
-                <p className='text-slightGrey font-bold text-sm mr-8'>SHARE ARTICLE:</p>
+            <div className='flex items-center 850:flex-col'>
+                <p className='text-slightGrey font-bold text-sm mr-8 850:mr-0'>SHARE ARTICLE:</p>
 
-                <div className='flex items-center mr-auto'>
+                <div className='flex items-center mr-auto 850:ml-auto 850:my-6'>
                     <div className='mr-2.5 bg-[#1da1f2] p-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faTwitter} className='w-3.5 text-white' /></div>
                     <div className='mr-2.5 bg-[#3b5998] py-1.5 px-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faFacebookF} className='w-2.5 text-white' /></div>
                     <div className='mr-2.5 bg-[#e40000] py-1.5 px-2 rounded-full hover:-translate-y-0.5 ease-in-out duration-500'><FontAwesomeIcon icon={faPinterestP} className='w-3 text-white' /></div>
@@ -63,16 +63,16 @@ export default function StandardArticle() {
                 </div>
 
                 <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold'>MARKETING</p>
-                <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5'>STRATEGY</p>
+                <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5 850:my-3'>STRATEGY</p>
                 <p className='bg-greyBackground rounded py-1.5 px-2.5 text-xs font-semibold ml-2.5'>TRADE</p>
             </div>
                 
-            <span className='w-[40%] bg-[#e5e5e5] h-px absolute mt-8'></span>
+            <span className='w-[40%] bg-[#e5e5e5] h-px absolute 850:w-full 850:mt-4'></span>
 
-            <div className='mt-16 bg-greyBackground rounded-r-2xl flex mb-10'>
-                <Image src={women} alt='portrait de femme' />
+            <div className='mt-16 bg-greyBackground rounded-r-2xl flex mb-10 850:flex-col 850:items-center 850:pb-8 850:rounded-xl'>
+                <Image src={women} alt='portrait de femme' className='850:rounded-2xl 850:pt-4' />
 
-                <div className='pt-10 pl-9'>
+                <div className='pt-10 pl-9 850:w-11/12'>
                     <p className='font-Amiri text-slightGrey text-2xl mb-2'>About Kate Black</p>
                     <p className='leading-7 mb-6'>She is an economist and entrepreneur who has been a journalist since 2013. He has spoken about the promise of economy and marketing technology at numerous financial conferences.</p>
                     <div className='flex items-center mr-auto'>
@@ -85,29 +85,29 @@ export default function StandardArticle() {
             </div>
 
 
-            <div className='flex text-white justify-center h-36 mb-28 relative max-xl:flex-col max-xl:top-0 650:w-full'>
-                <div className='relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg'>
+            <div className='flex text-white justify-center h-36 mb-28 relative max-xl:flex-col max-xl:top-0 650:w-[90%] 650:m-auto 650:mb-28'>
+                <div className='relative flex items-center bg-darkBlueBackground rounded-l-lg group max-xl:rounded-lg max-xl:mb-6'>
                     <span className='absolute left-14 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:-translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                    <div className='ml-8 mr-14 rotate-180 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                    <div className='mr-20'>
-                        <p className='font-bold leading-7 mb-3'>Delivering What Consumers<br></br>Really Value</p>
+                    <div className='ml-8 mr-14 rotate-180 650:px-4 650:ml-0 650:mr-6'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <div className='mr-20 650:mr-6'>
+                        <p className='font-bold leading-7 mb-3 650:text-sm 650:min-w-[150px]'>Delivering What Consumers<br></br>Really Value</p>
                         <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                     </div>
                 </div>
 
                 <div className='relative flex items-center bg-orange rounded-r-lg group max-xl:rounded-lg'>
-                    <div className='ml-20'>
-                        <p className='font-bold leading-7 mb-3'>Delivering What Consumers<br></br>Really Value</p>
+                    <div className='ml-20 650:ml-6'>
+                        <p className='font-bold leading-7 mb-3 650:text-sm 650:min-w-[150px]'>Delivering What Consumers<br></br>Really Value</p>
                         <p className='text-[#ffffff83] text-sm font-bold'>FEBRUARY 21, 2020</p>
                     </div>
                     <span className='absolute right-20 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-7 ease-in-out duration-500 max-xl:right-56'></span>
-                    <div className='ml-8 mr-14 650:px-16'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                    <div className='ml-8 mr-14 650:px-4 650:ml-0 650:mr-6'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
                 </div>
             </div>
 
 
             <h2 className='font-Amiri text-slightGrey text-4xl'>Related Posts</h2>
-            <div className='flex justify-between mb-10'>
+            <div className='flex justify-between mb-10 min-w-[850px] 1050:flex-col 1050:items-center 1050:min-w-fit'>
                 <div className='mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
                     <Image  src={card1} alt='persone travaillant sur un ordinateur' className='w-[380px] rounded-lg' />
                     <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
@@ -146,9 +146,9 @@ export default function StandardArticle() {
                     <p className='text-orange text-sm font-semibold absolute top-0 right-0'>REPLY</p>
                 </div>
 
-                <span className='w-[40%] bg-[#e5e5e5] h-px absolute'></span>
+                <span className='w-[40%] bg-[#e5e5e5] h-px absolute 850:w-[80%]'></span>
 
-                <div className='flex relative mt-16 ml-28'>
+                <div className='flex relative mt-16 ml-28 850:ml-0'>
                     <Image src={face2} alt='portrait' className='w-[80px] h-[80px] relative top-2.5' />
 
                     <div className='pl-8'>
@@ -162,15 +162,15 @@ export default function StandardArticle() {
             </div>
 
 
-            <div className='rounded-2xl px-14 py-14 mt-32 bg-white shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] mb-48'>
+            <div className='rounded-2xl px-14 py-14 mt-32 bg-white shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] mb-48 430:px-4 max-xl:mb-20'>
                 <p className='font-Amiri text-slightGrey text-[36px]'>Leave a Reply</p>
                 <p className='text-sm mb-7'>Your email address will not be published. Required fields are marked *</p>
 
                 <form className='flex flex-col'>
-                    <div className='flex justify-between'>
-                        <input type='text' placeholder='Name *' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                    <div className='flex justify-between 650:flex-col'>
+                        <input type='text' placeholder='Name *' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full 650:mb-4'></input>
 
-                        <input type='text' placeholder='Your Email*' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%]'></input>
+                        <input type='text' placeholder='Your Email*' className='bg-greyBackground px-4 py-2.5 rounded placeholder:text-greyText outline-none w-[49%] 650:w-full'></input>
                     </div>
 
                     <input type='text' placeholder='Website' className='bg-greyBackground px-4 py-2.5 rounded mt-5 placeholder:text-greyText outline-none'></input>

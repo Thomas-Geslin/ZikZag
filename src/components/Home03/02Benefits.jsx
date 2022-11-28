@@ -64,44 +64,44 @@ export default function BenefitsHome03() {
 
 
     return(
-        <section>
-            <div className='flex mx-12'>
-                <div className="w-2/12 rounded-lg py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
+        <section className='overflow-hidden relative z-10'>
+            <div className='flex mx-12 max-xl:mx-0 max-xl:grid 850-xl:grid-cols-3 650-850:grid-cols-2 650:grid-cols-1'>
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-lg py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
                     <div className='h-14 overflow-hidden'>
                         <Image src={dynamic} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={dynamicGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                     </div>
                 </div>
 
-                <div className="w-2/12 rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                     <div className='h-14 overflow-hidden'>
                         <Image src={okta} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={oktaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                     </div>
                 </div>
 
-                <div className="w-2/12 rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                     <div className='h-14 overflow-hidden'>
                         <Image src={max} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={maxGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                     </div>
                 </div>
 
-                <div className="w-2/12 rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                     <div className='h-16 overflow-hidden'>
                         <Image src={solana} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-16 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={solanaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-2 ease-in-out duration-300' />
                     </div>
                 </div>
 
-                <div className="w-2/12 rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                     <div className='h-14 overflow-hidden'>
                         <Image src={deters} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={detersGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                     </div>
                 </div>
 
-                <div className="w-2/12 rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                <div className="w-2/12 max-xl:min-w-[260px] max-xl:justify-self-center rounded-md py-14 px-10 mt-5 mb-6 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                     <div className='h-14 overflow-hidden'>
                         <Image src={honey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                         <Image src={honeyGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
@@ -110,15 +110,15 @@ export default function BenefitsHome03() {
             </div>
 
             <div id='goTopViewport' className='bg-greyBackground'>
-                <div id="benefitsViewport01" className='flex pt-16 relative'>
-                    <Image id="benefitsReveal1" src={background01} alt='deux personnes travaillant ensemble' className='opacity-0' />
+                <div id="benefitsViewport01" className='flex pt-16 relative max-xl:flex-col'>
+                    <Image id="benefitsReveal1" src={background01} alt='deux personnes travaillant ensemble' className='opacity-0 w-1/2 h-[80%] 850-xl:min-w-[636px] 850-xl:min-h-[575px] 650-850:min-w-[500px] 650-850:min-h-[450px] 650:min-w-[310px]' />
 
-                    <div className='ml-32 mt-36'>
+                    <div className='ml-[7%] mt-36 850:mt-14'>
                         <h2 className='text-orange font-bold mb-2 relative'>OUR BENEFITS<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                         <h3 className='text-slightGrey font-Amiri text-5xl leading-tight mb-4'>Few Resons Why<br></br>You Should Choose Us</h3>
                         <p className='text-greyText text-lg mb-5 w-9/12 leading-8'>We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
                    
-                        <div className='mt-12 flex w-2/3'>
+                        <div className='mt-12 flex w-2/3 min-w-[570px] 650:flex-col 650:min-w-fit'>
                             <div>
                                 <Image src={graphic} alt='icone de graphique' className='mb-6' />
                                 <p className='font-Amiri text-slightGrey text-3xl'>Business Idea</p>
@@ -135,16 +135,16 @@ export default function BenefitsHome03() {
                         </div>
                     </div>
 
-                    <Image src={line} alt='ligne de décoration' className='absolute right-10 top-48' />
+                    <Image src={line} alt='ligne de décoration' className='absolute right-10 top-48 max-xl:hidden' />
                 </div>
 
-                <div id='benefitsViewport02' className='flex justify-end'>
+                <div id='benefitsViewport02' className='flex justify-end max-xl:flex-col-reverse max-xl:items-end max-xl:mt-20'>
                     <div className='w-7/12 relative rounded-bl-lg top-10 pl-[14%] max-2xl:rounded-none max-2xl:w-full max-2xl:top-0 850:pb-96 650:pl-10'>
-                        <h2 className='text-orange font-bold mb-4 relative mt-20 650:mt-80'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                        <h2 className='text-orange font-bold mb-4 relative mt-20 650:mt-14'>OUR PHILOSOPHY<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                         <h3 className='font-Amiri text-slightGrey text-5xl w-8/12 leading-[55px] mb-4'>Our Core Values and Principes</h3>
                         <p className='text-greyText text-lg w-3/4 leading-8 mb-10'>We’ve designed a culture that allows our stewards to assimilate with our clients and bring the best of who we are to your business. Our culture drives our – and more importantly – your success.</p>
 
-                        <div className='grid grid-cols-3 h-48 w-10/12 max-2xl:h-60 850:flex 850:flex-col 650:pl-0'>
+                        <div className='grid grid-cols-3 h-48 min-w-[470px] w-10/12 max-2xl:h-60 850:flex 850:flex-col 650:pl-0 650:min-w-fit'>
                         {PhilosophyGridData.map((el) => {
                             return (
                             <div key={el.index} className='flex rounded-md w-[210px] mb-4 pl-4 hover:cursor-pointer hover:bg-orange ease-in-out duration-500 group'>
@@ -156,7 +156,7 @@ export default function BenefitsHome03() {
                         </div>
                     </div>
 
-                    <Image id='benefitsReveal2' src={background02} alt='deux personnes travaillant ensemble' className='pb-20 opacity-0' />
+                    <Image id='benefitsReveal2' src={background02} alt='deux personnes travaillant ensemble' className='pb-20 opacity-0 w-1/2 h-[80%] 850-xl:min-w-[720px] 850-xl:min-h-[650px] 650-850:min-w-[600px] 650-850:min-h-[550px] 650:min-w-[310px]' />
                 </div>
             </div>
         </section>

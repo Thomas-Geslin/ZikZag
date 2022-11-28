@@ -48,74 +48,74 @@ export default function WhatOfferValue() {
         <section id='goTopViewport' className='relative text-center mb-32'>
             <h2 className='text-orange font-bold mb-4 pt-60 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Our Business Philosophy</h3>
-            <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+            <p className='text-greyText text-lg w-[40%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
         
 
-            <div className="w-[60.5%] max-w-[1170px] m-auto flex justify-between relative max-xl:w-10/12 1060:flex-col 1060:items-center">
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
+            <div className="w-[60.5%] min-w-[1050px] m-auto flex justify-between relative max-xl:w-10/12 max-xl:min-w-fit max-xl:flex-col max-xl:items-center">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px]">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front max-w-[370px] bg-card01Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front bg-card01Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Mission</p>
                             <span className="text-5xl text-white">→</span>
                         </div>
 
                         <div className="flip-card-back rounded-lg bg-orange">
-                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support yoou for the long term. We&apos;re never judgmental because we understand on a human level.</p>
+                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support you for the long term. We&apos;re never judgmental because we understand on a human level.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px] 1060:mb-8">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px] 1060:mb-8 max-xl:my-10">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front max-w-[370px] bg-card02Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front bg-card02Background bg-no-repeat bg-cover text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Vision</p>
                             <span className="text-5xl text-white">→</span>
                         </div>
 
                         <div className="flip-card-back rounded-lg bg-orange">
-                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support yoou for the long term. We&apos;re never judgmental because we understand on a human level.</p>
+                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support you for the long term. We&apos;re never judgmental because we understand on a human level.</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="flip-card hover:cursor-pointer 1060:min-w-[310px]">
+                <div className="flip-card hover:cursor-pointer max-xl:min-w-[310px]">
                     <div className="flip-card-inner">
-                        <div className="flip-card-front max-w-[370px] bg-card03Background bg-cover  bg-no-repeat text-center text-white rounded-lg pb-14">
+                        <div className="flip-card-front bg-card03Background bg-cover bg-no-repeat text-center text-white rounded-lg pb-14">
                             <Image src={cardIcon02} alt='dessin de puzzle' className="w-12 m-auto pt-16 mb-6" />
                             <p className="font-Amiri text-[42px] text-white mb-2">Our Value</p>
                             <span className="text-5xl text-white">→</span>
                         </div>
 
                         <div className="flip-card-back rounded-lg bg-orange">
-                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support yoou for the long term. We&apos;re never judgmental because we understand on a human level.</p>
+                            <p className="text-white text-lg pt-20 w-10/12 leading-8 m-auto">Partnerships are important so we&apos;re here to support you for the long term. We&apos;re never judgmental because we understand on a human level.</p>
                         </div>
                     </div>
                 </div>
             </div>
 
 
-            <div id='numberViewport' className='flex text-center py-16 relative w-[1150px] m-auto'>
-                <div className='relative ml-20'>
+            <div id='numberViewport' className='flex text-center py-16 relative w-[1150px] m-auto max-xl:flex-col max-xl:w-auto max-xl:items-center'>
+                <div className='relative ml-20 max-xl:ml-0 max-xl:mb-10'>
                     <p id='numberTarget1' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
                     <span className='absolute text-3xl text-[#bfbfbf] -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mx-36'>
+                <div className='relative mx-36 max-xl:mx-0 max-xl:mb-10'>
                     <p id='numberTarget2' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
                     <span className='absolute text-3xl text-[#bfbfbf] -top-5 -right-3'>+</span>
                 </div>
 
-                <div className='relative mr-36'>
+                <div className='relative mr-36 max-xl:mr-0 max-xl:mb-10'>
                     <p id='numberTarget3' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
                     <span className='absolute text-3xl text-[#bfbfbf] -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mr-20'>
+                <div className='relative mr-20 max-xl:mr-0'>
                     <p id='numberTarget4' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
                     <span className='absolute text-3xl text-[#bfbfbf] -top-5 right-5'>+</span>

@@ -25,7 +25,7 @@ export default function FAQ() {
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> FAQ</p>
                 </section>
 
-                <div className='mx-[20%] mb-40'>
+                <div className='w-[60%] m-auto max-xl:w-[90%] mb-40'>
                     <HelpFAQ />
 
                     <ConsultancyFAQ />

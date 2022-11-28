@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons';
@@ -171,7 +170,7 @@ export default function Home04() {
 
                 <StrategyHome01 />
 
-                <section id='goTopViewport' className='flex bg-white rounded-b-xl justify-center mr-40 1050:flex-col 1050:mr-0 overflow-hidden'>
+                <section id='goTopViewport' className='flex bg-white rounded-b-xl relative z-10 justify-center mr-40 1050:flex-col 1050:mr-0 overflow-hidden'>
                     <div className='relative 1050-xl:mt-40 850:max-w-[90%]'>
                         <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32 850:left-[5%]' />
                         <Image src={line} alt="ligne de décoration" className='absolute top-10 left-28 lineOfferAnimation 850:left-[5%]' />
@@ -193,7 +192,7 @@ export default function Home04() {
                 </section>
 
 
-                <section className='flex relative justify-center pt-40 max-xl:flex-col overflow-hidden 850:-mb-32 850:pt-20'>
+                <section className='flex relative z-10 justify-center pt-40 max-xl:flex-col overflow-hidden 850:-mb-32 850:pt-20'>
                     <div className='relative 850-xl:left-[10%] 650-850:left-[20%] 650:left-[10%] 430:max-w-[70%]'>
                         <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 850-xl:left-60 430-850:w-[180px] 430-850:left-48 430:w-[150px] 430:left-36' /> 
                         <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top 850-xl:left-20 430-850:w-[100px] 430-850:left-20 850:top-0 430:w-[75px] 430:left-14' /> 
@@ -244,7 +243,7 @@ export default function Home04() {
                 </section>
 
 
-                <section className='bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full max-xl:h-[800px] max-xl:mb-60'>
+                <section className='bg-transparent relative z-10 w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full max-xl:h-[800px] max-xl:mb-60'>
                     <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl max-xl:w-full max-xl:h-[800px]'></div>
                     
                     <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0 max-xl:top-[650px]'>

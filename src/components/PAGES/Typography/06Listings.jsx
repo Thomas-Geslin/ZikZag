@@ -8,15 +8,15 @@ export default function ListingsTypography() {
             <p className='text-slightGrey font-Amiri text-4xl mb-7'>Blockquote</p>
             
 
-            <div className="flex justify-between text-greyText">
-                <div>
+            <div className="flex justify-between text-greyText 850:flex-col 850:items-center">
+                <div className='850:mb-12'>
                     <p className='mb-3'><span className='font-Amiri text-orange text-[20px] mr-3'>1.</span> Digital project planning and resourcing</p>
                     <p className='mb-3'><span className='font-Amiri text-orange text-[20px] mr-3'>2.</span> In-House digital consulting</p>
                     <p className='mb-3'><span className='font-Amiri text-orange text-[20px] mr-3'>3.</span> Permanent and contract recruitement</p>
                     <p><span className='font-Amiri text-orange text-[20px] mr-3'>4.</span> Developers and technical architects</p>
                 </div>
 
-                <div>
+                <div className='850:mb-12'>
                     <div className='flex mb-2'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 relative bottom-2 rotate-45 text-orange mr-3' /><p className='mb-3'>Digital project planning and resourcing</p></div>
                     <div className='flex mb-2'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 relative bottom-2 rotate-45 text-orange mr-3' /><p className='mb-3'>In-House digital consulting</p></div>
                     <div className='flex mb-2'><FontAwesomeIcon icon={faArrowRightLong} className='w-4 relative bottom-2 rotate-45 text-orange mr-3' /><p className='mb-3'>Permanent and contract recruitement</p></div>

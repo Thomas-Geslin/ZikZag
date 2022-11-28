@@ -16,8 +16,8 @@ export default function SuccessHome06() {
                 <Image src={line2} alt='ligne de décoration' className='absolute top-[520px] left-[770px] z-10' />
             </div>
 
-            <div className='shadow-[13px_11px_81px_0px_rgb(0,0,0,0.10)] backdrop-blur-[7.2px] rounded-3xl border border-solid border-white w-[37.5%] relative top-40 left-[350px] pl-[70px] py-[60px]'>
-                <h2 className='font-Amiri text-slightGrey leading-tight border-l-2 border-orange text-5xl mb-5 w-11/12 pl-8'>Success Usually Comes to Those Who are too Busy to be Looking for It</h2>
+            <div className='shadow-[13px_11px_81px_0px_rgb(0,0,0,0.10)] backdrop-blur-[7.2px] rounded-3xl border border-solid border-white min-w-[690px] w-[37.5%] relative top-40 left-[350px] pl-[70px] py-[60px] max-xl:left-[5%] 850:min-w-fit 850:mr-[10%] 650:pl-4'>
+                <h2 className='font-Amiri text-slightGrey leading-tight border-l-2 border-orange text-5xl mb-5 w-11/12 pl-8 850:text-3xl'>Success Usually Comes to Those Who are too Busy to be Looking for It</h2>
                 <p className='mt-8 pl-7 text-greyText font-semibold text-sm'>CO-FOUNDER OF <span className='text-black'>ZIKZAG</span></p>
                 <p className='pl-7 font-Amiri text-orange text-[24px]'>Harry Barton</p>
             </div>

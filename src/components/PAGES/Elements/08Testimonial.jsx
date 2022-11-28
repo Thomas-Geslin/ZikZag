@@ -7,7 +7,7 @@ import 'swiper/css/navigation';
 
 export default function TestimonialElement() {
     return(
-        <section className='mt-20'>
+        <section className='mt-20 w-[60%] m-auto min-w-[1150px] max-xl:w-[85%] max-xl:min-w-[300px]'>
             <p className='text-slightGrey font-Amiri text-4xl mb-10'>Testimonials</p>
 
 
@@ -40,8 +40,8 @@ export default function TestimonialElement() {
                 <p className='font-Amiri text-3xl mb-2'>Emmy Barton</p>
                 <p className='font-semibold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
 
-                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
-                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
+                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
+                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
               </div>
             </SwiperSlide>
 
@@ -65,8 +65,8 @@ export default function TestimonialElement() {
                 <p className='font-Amiri text-3xl mb-2'>Tina Johanson</p>
                 <p className='font-semibold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
 
-                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%]'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
-                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%]'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
+                <button className='prevElements group-hover/arrow:-translate-x-2 ease-in-out duration-300 group w-14 h-0.5 bg-black absolute left-10 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-black -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute -left-0.5 top-1'></span></button>
+                <button className='nextElements group-hover/arrow:translate-x-2 ease-in-out duration-300 w-14 h-0.5 bg-black absolute right-10 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-black rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute -right-0.5 top-1'></span></button>
               </div>
             </SwiperSlide>
           </Swiper>

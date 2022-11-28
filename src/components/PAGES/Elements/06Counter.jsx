@@ -50,22 +50,22 @@ export default function CounterElement() {
 
 
     return(
-        <section className='mt-20'>
+        <section className='mt-20 max-xl:px-[5%]'>
             <p className='text-slightGrey font-Amiri text-4xl mb-10'>Counters</p>
 
 
-            <div id="numberViewport" className='flex justify-between m-auto'>
-                <div className='flex items-center'>
+            <div id="numberViewport" className='flex justify-between m-auto 1050:flex-col 1050:items-center 1050:mb-20'>
+                <div className='flex items-center 1050:mb-3'>
                     <p id='numberTarget1' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>YEARS OF EXPERIENCE</p>
                 </div>
 
-                <div className='flex items-center'>
+                <div className='flex items-center 1050:mb-3'>
                     <p id='numberTarget2' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>TRUSTED CLIENTS</p>
                 </div>
 
-                <div className='flex items-center'>
+                <div className='flex items-center 1050:mb-3'>
                     <p id='numberTarget3' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>VISITED CONFERENCES</p>
                 </div>
@@ -77,26 +77,26 @@ export default function CounterElement() {
             </div>
 
 
-            <div className='rounded-lg bg-darkBlueBackground flex text-center py-16 relative m-auto my-10'>
-                <div className='relative ml-20'>
+            <div className='rounded-lg bg-darkBlueBackground min-w-[220px] flex text-center py-16 relative m-auto my-10 1050:flex-col 1050:mb-10 1050:w-[25%]'>
+                <div className='relative ml-20 1050:ml-0 1050:mb-3'>
                     <p id='numberTarget5' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='text-white font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mx-36'>
+                <div className='relative mx-36 1050:mx-0 1050:mb-3'>
                     <p id='numberTarget6' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='text-white font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3'>+</span>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3 1050:right-5'>+</span>
                 </div>
 
-                <div className='relative mr-36'>
+                <div className='relative mr-36 1050:mr-0 1050:mb-3'>
                     <p id='numberTarget7' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='text-white font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mr-20'>
+                <div className='relative mr-20 1050:mr-0 1050:mb-3'>
                     <p id='numberTarget8' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='text-white font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
@@ -104,26 +104,26 @@ export default function CounterElement() {
             </div>
 
 
-            <div className='flex text-center py-16 relative m-auto my-10'>
-                <div className='relative ml-20'>
+            <div className='flex text-center py-16 relative m-auto min-w-[220px] my-10 1050:flex-col 1050:mb-10 1050:w-[25%]'>
+                <div className='relative ml-20 1050:ml-0 1050:mb-3'>
                     <p id='numberTarget9' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mx-36'>
+                <div className='relative mx-36 1050:mx-0 1050:mb-3'>
                     <p id='numberTarget10' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
-                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3'>+</span>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3 1050:right-4'>+</span>
                 </div>
 
-                <div className='relative mr-36'>
+                <div className='relative mr-36 1050:mr-0 1050:mb-3'>
                     <p id='numberTarget11' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                 </div>
 
-                <div className='relative mr-20'>
+                <div className='relative mr-20 1050:mr-0'>
                     <p id='numberTarget12' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
                     <p className='font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
                     <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>

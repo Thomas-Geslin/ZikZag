@@ -1,6 +1,9 @@
 import Image from "next/image"
 import Head from "next/head"
 
+import { useContext, useEffect } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
 import WidgetTheme from '../../components/WidgetTheme'
@@ -17,6 +20,9 @@ import orangeSquare from '../../public/assets/Home02/consultancy_widget_backgrou
 
 
 export default function OurTeam() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <div class='font-NunitoSans'>
             <Head>
@@ -37,25 +43,25 @@ export default function OurTeam() {
 
                 <OfferTeam />
                 
-                <div className='bg-transparent relative -top-32 w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full'>
-                    <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl'></div>
+                <section className='bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full max-xl:h-[800px] max-xl:mb-60 850:-mt-60'>
+                    <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl max-xl:w-full max-xl:h-[800px]'></div>
                     
-                    <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0'>
-                    <Image src={orangeSquare} alt='carré orange' className='w-80' />
-                    <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
-                        <div className='p-4 w-14 rounded-full bg-white'><FontAwesomeIcon icon={faPhoneVolume} className='relative left-px bottom-px w-6 -rotate-45 text-orange' /></div>
-                        <p className='font-Amiri text-3xl my-4'>+1 800 123 456 789</p>
-                        <p className='font-semibold'>OR CALL US 24/7</p>
-                    </div>
+                    <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0 max-xl:top-[650px]'>
+                        <Image src={orangeSquare} alt='carré orange' className='w-80' />
+                        <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
+                            <div className='p-4 w-14 rounded-full bg-white'><FontAwesomeIcon icon={faPhoneVolume} className={`relative left-px bottom-px w-6 -rotate-45 text-${color}`} /></div>
+                            <p className='font-Amiri text-3xl my-4'>+1 800 123 456 789</p>
+                            <p className='font-semibold'>OR CALL US 24/7</p>
+                        </div>
                     </div>
 
-                    <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0'>
-                    <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
-                    <p className='font-Amiri text-white text-5xl mb-3'>Get a Free Counsultancy Right Now!</p>
-                    <p className='text-[#dddfe1] text-[20px] px-7'>We help you see the world differently, discover opportunities you may never have imagined.</p>
-                    <button className='text-white font-semibold bg-orange rounded px-8 py-4 border border-solid border-orange hover:bg-transparent ease-in duration-300 mt-12 mb-16'>GET IN TOUCH</button>
+                    <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0 max-xl:top-60 max-xl:w-full'>
+                        <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
+                        <p className='font-Amiri text-white text-5xl mb-3 max-xl:w-full 850:text-3xl'>Get a Free Counsultancy Right Now!</p>
+                        <p className='text-[#dddfe1] text-[20px] px-7 850:text-base'>We help you see the world differently, discover opportunities you may never have imagined.</p>
+                        <button className={`text-white font-semibold bg-${color} rounded px-8 py-4 border border-solid border-${color} hover:bg-transparent ease-in duration-300 mt-12 mb-16 850:px-6 850:py-3 850:text-base 430:mt-4`}>GET IN TOUCH</button>
                     </div>
-                </div>
+                </section>
 
                 <BenefitsTeam />
             </main>

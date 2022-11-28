@@ -51,16 +51,16 @@ export default function PopularHome05() {
 
 
     return(
-        <section className='mb-48 relative'>
-            <div className='flex justify-center -mb-10'>
-                <div className='relative w-1/3'>
+        <section className='mb-48 relative z-10'>
+            <div className='flex justify-center -mb-10 1050:flex-col 1050:items-center'>
+                <div className='relative w-1/3 1050:w-11/12 1050:mb-10 1050:m-auto'>
                     <p className='font-Amiri text-[300px] text-greyBackground absolute top-0 right-72'>Rise</p>
                     <h2 className='text-orange font-bold mb-4 pt-10 relative relative'>POPULAR QUESTIONS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className='font-Amiri text-5xl text-slightGrey relative w-10/12 mb-16'>Discover Frequently Asked Questions from Our Support</h3>
                     <button className="relative text-white text-sm font-bold bg-orange px-7 py-4 rounded hover:bg-darkBlueBackground ease-in-out duration-300">WORK TOGETHER</button>
                 </div>
 
-                <div className='w-[550px] z-10'>
+                <div className='w-[550px] z-10 650:w-[310px]'>
                     <div id='wrong' onClick={() => { activeResponse('wrong'); setFaqResponse('wrong'); }} className='mb-5 relative ease-in-out duration-500 top-2'>
                         <div className='mb-5 flex items-center justify-between bg-greyBackground relative w-full p-4 rounded hover:bg-white hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer group ease-in-out duration-300'>
                             <p className='text-slightGrey font-bold group-hover:text-orange ease-in-out duration-300'>What if I pick the wrong plan?</p>
@@ -134,9 +134,9 @@ export default function PopularHome05() {
                 </div>
             </div>
 
-            <Image src={line} alt='ligne de décoration' className='absolute' />
+            <Image src={line} alt='ligne de décoration' className='absolute 850:hidden' />
 
-            <div className='relative mt-64 flex justify-center'>
+            <div className='relative mt-64 flex justify-center 1050:w-[90%] 1050:m-auto 1050:mt-20'>
                 <Reveal keyframes={revealBottom} duration={700} triggerOnce><Image src={person1} alt='portrait' /></Reveal>
                 <Reveal keyframes={revealBottom} duration={700} delay={200} triggerOnce  className='absolute top-0'><Image src={person2} alt='portrait' /></Reveal>
                 <Reveal keyframes={revealBottom} duration={700} delay={400} triggerOnce  className='absolute top-0'><Image src={person3} alt='portrait' /></Reveal>

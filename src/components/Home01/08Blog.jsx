@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 
 import { useContext, useEffect, useState } from "react";
 import { ColorContext } from "../../context/colorContext";
@@ -33,13 +34,13 @@ export default function BlogHome01() {
     }, [])
 
     return(
-        <section className='mb-40 w-[63%] m-auto '>
-            <div className='flex items-center justify-between'>
+        <section className='mb-40 w-[63%] m-auto relative z-10'>
+            <div className='flex items-center justify-between 650:flex-col 650:items-start'>
                 <div>
                     <h2 className={`text-${color} font-bold mb-3 relative`}>READ OUR BLOG<span className={`absolute top-4 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full 650:text-4xl">Featured News and Insights</h3>
                 </div>
-                <button className={`text-white font-semibold text-sm bg-${secondaryColor} px-9 py-4 rounded-sm hover-bg-${color} ease-in-out duration-300`}>ALL NEWS</button>
+                <Link href='/Blog/Listing'><button className={`text-white font-semibold text-sm bg-${secondaryColor} px-9 py-4 rounded-sm hover-bg-${color} ease-in-out duration-300`}>ALL NEWS</button></Link>
             </div>
 
             <div className='relative'>

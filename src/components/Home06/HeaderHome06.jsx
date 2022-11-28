@@ -55,7 +55,7 @@ export default function HeaderAbout() {
 
             <div id='stickyHeader'></div>
 
-            <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50'>
+            <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50 max-xl:hidden'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
@@ -372,14 +372,14 @@ export default function HeaderAbout() {
 
                 <div className='flex items-center justify-end w-2/12'>
                     <FontAwesomeIcon icon={faMagnifyingGlass} className='w-5' />
-                    <button className='inline-block p-9 text-black py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button>
+                    <Link href='/Contacts'><button className='inline-block p-9 text-black py-4 ml-9 border-solid border border-orangeBright rounded hover:cursor_pointer hover:text-white hover:bg-darkBlueBackground hover:border-darkBlueBackground ease-in duration-300'>CONTACT US</button></Link>
                 </div>
             </div>
 
 
 
             {/* Header Small Device */}
-            <div className='bg-darkBlueBackground flex justify-between items-center absolute top-0 left-0 right-0 h-28 text-white px-20 min-xl:hidden indexHeader 650:px-6'>
+            <div className='bg-darkBlueBackground flex justify-between items-center absolute top-0 left-0 right-0 h-28 text-white px-20 z-100 min-xl:hidden 650:px-6'>
                 <FontAwesomeIcon icon={faBars} onClick={asideHeaderOpen} className='w-5' />
                 <Image src={logoQueries} alt='logo de entreprise' />
                 <FontAwesomeIcon icon={faMagnifyingGlass} className='w-6' />
@@ -398,7 +398,7 @@ export default function HeaderAbout() {
                                 <Link href='/Home04'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 4</p></Link>
                                 <Link href='/Home05'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 5</p></Link>
                                 <Link href='/Home06'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[58px]'>Home 6</p></Link>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
+                                <Link href='/Home09'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p></Link>
                                 <p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
                             </div>
                         </div>
@@ -406,16 +406,16 @@ export default function HeaderAbout() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>PAGES</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <Link href='/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p></Link>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Our Services</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Our Team</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Single Team</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[42px]'>Value</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[64px]'>Elements</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Typography</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[30px]'>FAQ</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p>
-                                <p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[65px]'>Page 404</p>
+                                <Link href='/Pages/About'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[48px]'>About</p></Link>
+                                <Link href='/Pages/OurServices'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[95px]'>Our Services</p></Link>
+                                <Link href='/Pages/OurTeam'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[75px]'>Our Team</p></Link>
+                                <Link href='/Pages/SingleTeam'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[90px]'>Single Team</p></Link>
+                                <Link href='/Pages/Value'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[42px]'>Value</p></Link>
+                                <Link href='/Pages/Elements'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[64px]'>Elements</p></Link>
+                                <Link href='/Pages/Typographie'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[85px]'>Typography</p></Link>
+                                <Link href='/Pages/FAQ'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[30px]'>FAQ</p></Link>
+                                <Link href='/Pages/ComingSoon'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[100px]'>Coming Soon</p></Link>
+                                <Link href='/Pages/404'><p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Page 404</p></Link>
                             </div>
                         </div>
 
@@ -443,17 +443,17 @@ export default function HeaderAbout() {
                         <div className='group'>
                             <div className='flex items-center justify-between pt-8 font-semibold text-sm group-hover:text-orange ease-linear duration-300'><p>SHOP</p><FontAwesomeIcon icon={faAngleRight} className='w-3 group-hover:rotate-90 ease-in duration-200' /></div>
                             <div className='ml-8 hidden group-hover:block'>
-                                <p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[35px]'>Shop</p>
-                                <p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[30px]'>Cart</p>
-                                <p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Checkout</p>
+                                <Link href='/Shop/Shop/Page1'><p className='mb-6 mt-10 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[35px]'>Shop</p></Link>
+                                <Link href='/Shop/Shop/Cart'><p className='mb-6 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[30px]'>Cart</p></Link>
+                                <Link href='/Shop/Shop/Checkout'><p className='mb-3 hover:border-b hover:border-b-px hover:border-b-orange hover:text-orange ease-linear duration-200 w-[70px]'>Checkout</p></Link>
                             </div>
                         </div>
 
-                        <p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p>
+                        <Link href='/Pages/Contacts'><p className='flex items-center justify-between py-8 font-semibold text-sm hover:text-orange ease-linear duration-300'>CONTACTS</p></Link>
                     </div>
 
                     <div className='pt-4 relative'>
-                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute bottom-0.5 right-0.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
+                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute top-5 right-1.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
                     </div>
                 </div>
             </div>

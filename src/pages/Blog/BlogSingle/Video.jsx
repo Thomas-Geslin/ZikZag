@@ -21,7 +21,7 @@ export default function Video() {
             <HeaderSecond />
 
             <main>
-                <section className='bg-videoStandardBackground bg-top bg-no-repeat pt-80 px-[19%] text-white'>
+                <section className='bg-videoStandardBackground bg-top bg-cover bg-no-repeat pt-80 px-[19%] text-white 430-850:px-[5%] 430:px-[5%]'>
                     <div className='bg-orange flex flex-col items-center justify-center rounded w-[60px] py-0.5 mb-7'>
                         <p className='font-Amiri text-[26px]'>24</p>
                         <p className='text-xs font-semibold relative bottom-2'>FEB</p>
@@ -30,25 +30,25 @@ export default function Video() {
                     <p className='font-semibold mb-6'>BUSINESS _ NEWS</p>
                     <h1 className='font-Amiri text-6xl'>A New Age for Trade & Supply Chain Finance</h1>
 
-                    <span className='w-[62%] h-px bg-[#6e6f6f] absolute mt-10'></span>
+                    <span className='w-[62%] h-px bg-[#6e6f6f] absolute mt-10 850:w-[90%]'></span>
 
-                    <div className='flex mt-16 pb-8'>
-                        <div className='flex items-center mr-8'>
+                    <div className='flex mt-16 pb-8 650-850:min-w-[470px] 650:min-w-[300px] 650:flex-col'>
+                        <div className='flex items-center mr-8 650:mb-3'>
                             <FontAwesomeIcon icon={faUser} className='w-3 mr-2' />
                             <p className='font-semibold'>By Kate Black</p>
                         </div>
 
-                        <div className='flex items-center mr-auto'>
+                        <div className='flex items-center mr-auto 650:mb-3'>
                             <FontAwesomeIcon icon={faComment} className='w-3 mr-2' />
                             <p className='font-semibold'>2 Comments</p>
                         </div>
 
-                        <div className='flex items-center rounded bg-darkBlueBackground py-0.5 px-2.5'>
+                        <div className='flex items-center rounded bg-darkBlueBackground py-0.5 px-2.5 650:mb-3 650:w-[60px]'>
                             <FontAwesomeIcon icon={faHeart} className='w-3 mr-1' />
                             <p className='font-semibold'>11</p>
                         </div>
 
-                        <div className='flex items-center rounded bg-darkBlueBackground py-0.5 px-2.5 ml-2'>
+                        <div className='flex items-center rounded bg-darkBlueBackground py-0.5 px-2.5 ml-2 650:mb-3 650:ml-0 650:w-[60px]'>
                             <FontAwesomeIcon icon={faEye} className='w-3 mr-1' />
                             <p className='font-semibold'>139</p>
                         </div>
@@ -56,9 +56,9 @@ export default function Video() {
                 </section>
 
 
-                <div className='mx-[19%] mt-12 flex justify-between'>
-                    <div className=' w-[74%]'>
-                        <iframe className='mb-10' width="870" height="505" src="https://www.youtube.com/embed/jqRdl2P2CjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div className='w-[62%] m-auto mt-12 flex justify-between min-w-[1180px] max-xl:flex-col max-xl:items-center max-xl:pb-40 max-xl:min-w-fit'>
+                    <div className='w-[74%] max-xl:w-full'>
+                        <iframe className='mb-10 max-xl:w-[90%] m-auto' width="870" height="505" src="https://www.youtube.com/embed/jqRdl2P2CjE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
                         <StandardArticle />
                     </div>

@@ -115,16 +115,16 @@ export default function OurServices() {
 
 
                 <section className='text-center relative mb-20'>
-                    <h2 className='text-orange font-bold mb-4 pt-24 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className='text-orange font-bold mb-4 pt-24 relative w-40 m-auto 850-xl:pt-36 850:mt-12 850:pt-100'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Business Shaped Solutions</h3>
-                    <p className='text-greyText text-lg w-[40%] leading-8 m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+                    <p className='text-greyText text-lg w-[40%] leading-8 m-auto mb-10 1060:w-9/12 850:min-w-[310px]'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
                 
-                    <Image src={line} alt='ligne de décoration' className='absolute left-28 top-32' />
+                    <Image src={line} alt='ligne de décoration' className='absolute left-28 top-32 1050:hidden' />
 
-                    <div className='grid grid-cols-3 m-auto w-[63%] max-w-[1170px] mt-20'>
+                    <div className='grid grid-cols-3 m-auto w-[63%] max-w-[1170px] mt-20 min-w-[1170px] 850-xl:grid-cols-2 850-xl:min-w-[780px] 850:grid-cols-1 850:min-w-fit'>
                         {OfferGridData.map((el) => {
                             return(
-                                <div key={el.index} className={`OfferCardBackground-${el.index} rounded-lg w-[370px] m-auto mb-20 relative group hover:cursor-pointer hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.15)] ease-in-out duration-500`}>
+                                <div key={el.index} className={`OfferCardBackground-${el.index} rounded-lg w-[370px] m-auto mb-20 relative group hover:cursor-pointer hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.15)] ease-in-out duration-500 430:w-[310px]`}>
                                     <span className='w-full h-full absolute bg-white left-0 rounded-lg opacity-0 group-hover:opacity-100 ease-in-out duration-500'></span>
                                     <div className={`bg-${el.icon} bg-no-repeat bg-center bg-[length:45px_45px] bg-white z-10 rounded-full -top-10 left-12 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] w-20 h-20 absolute group-hover:bg-orange ease-in-out duration-500`}><Image src={el.iconWhite} alt={el.altIcon} className='opacity-0 w-12 group-hover:opacity-100 relative left-4 top-4 ease-in-out duration-500' /></div>
                                     <p className='relative z-10 text-white font-Amiri text-4xl w-9/12 text-left pl-12 pb-28 pt-16 group-hover:text-slightGrey ease-in-out duration-500'>{el.title}</p>
@@ -138,7 +138,7 @@ export default function OurServices() {
 
 
                 <section className='flex relative -top-10 max-2xl:flex-col'>
-                    <div className='w-1/2 max-h-[720px] overflow-hidden'>
+                    <div className='w-1/2 max-h-[720px] max-2xl:w-full overflow-hidden'>
                         <Image src={philosophyBackground} alt="Réunion d'entreprise" className='w-full rounded-xl max-2xl:rounded-none max-2xl:w-full' />
                     </div>
 
@@ -165,9 +165,9 @@ export default function OurServices() {
                 <PricingHome03 />
 
 
-                <section className='text-center pb-80 mt-40 overflow-hidden'>
+                <section className='text-center pb-80 mt-40 overflow-hidden max-xl:mt-0 650-xl:pb-[900px] 430-650:pb-[550px] 430:pb-[450px]'>
                     <div className='mt-20 relative'>
-                        <div className='absolute top-0 left-[50%] translate-x-[-50%]'>
+                        <div className='absolute top-0 left-[50%] translate-x-[-50%] xl-2xl:left-80 max-2xl:translate-x-0 650-xl:top-[500px] max-xl:min-w-[90%] max-xl:right-[5%] max-xl:left-[5%] 650:top-[450px]'>
                             <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0' /></Reveal>
                             <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute' /></Reveal>
                             <Reveal keyframes={revealScale} duration={800} delay={1500} triggerOnce><Image src={line02} alt='ligne de décoration' className='absolute' /></Reveal>
@@ -176,73 +176,73 @@ export default function OurServices() {
                             <Reveal keyframes={revealScale} duration={800} delay={3600} triggerOnce><Image src={line05} alt='ligne de décoration' className='relative' /></Reveal>
                         </div>
 
-                        <div className='relative grid grid-cols-2 min-3xl:ml-40'>
-                            <Reveal keyframes={revealLeft} duration={800} triggerOnce>
-                            <div className='flex relative bg-white left-44 text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                        <div className='relative grid grid-cols-2 relative min-3xl:left-20 max-xl:grid-cols-1'>
+                            <Reveal keyframes={revealLeft} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white left-44 text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 1050-xl:left-[150px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%]'>
                                 <Image src={pyramid} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Organization</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Organization</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
 
 
-                            <Reveal keyframes={revealRight} duration={800} triggerOnce>
-                            <div className='flex relative bg-white top-4 left-[330px] text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                            <Reveal keyframes={revealRight} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white top-4 left-[330px] text-left items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 1050-xl:left-[80px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%] 650:top-0'>
                                 <Image src={mission} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Sustainability</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Sustainability</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
 
-                            <Reveal keyframes={revealLeft} duration={800} triggerOnce>
-                            <div className='flex relative bg-white text-left top-12 left-32 items-center  rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                            <Reveal keyframes={revealLeft} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white text-left top-12 left-32 items-center rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%] 650:top-0'>
                                 <Image src={light} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Marketing</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Marketing</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
 
-                            <Reveal keyframes={revealRight} duration={800} triggerOnce>
-                            <div className='flex relative bg-white text-left top-16 left-96 items-center  rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                            <Reveal keyframes={revealRight} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white text-left top-16 left-96 items-center  rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 1050-xl:left-[80px] 1050-xl:top-[600px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%] 850-1050:top-[600px] 650-850:top-[500px] 430-650:top-[300px] 430:top-[280px]'>
                                 <Image src={work} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Customer Strategy</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Customer Strategy</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
 
-                            <Reveal keyframes={revealLeft} duration={800} triggerOnce>
-                            <div className='flex relative bg-white text-left items-center top-24 left-40 rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                            <Reveal keyframes={revealLeft} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white text-left items-center top-24 left-40 rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 1050-xl:top-[650px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%] 850-1050:top-[650px] 650-850:top-[550px] 430-650:top-[320px] 430:top-[285px]'>
                                 <Image src={chart} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Improvement</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Improvement</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div>
                             </Reveal>
                             
 
-                            <Reveal keyframes={revealRight} duration={800} triggerOnce>
-                            <div className='flex relative bg-white text-left  left-[340px] top-28 items-center  rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto'>
+                            <Reveal keyframes={revealRight} duration={800} triggerOnce className="h-[150px]">
+                            <div className='flex relative bg-white text-left  left-[340px] top-28 items-center  rounded-lg shadow-[3px_3px_20px_3px_#eae9e9] h-[150px] w-[45%] max-xl:w-auto hover:bg-[#14212b] hover:cursor-pointer group ease-linear duration-300 max-xl:mb-8 max-xl:h-auto 1050-xl:max-w-[800px] 1050-xl:left-[80px] 1050-xl:top-[700px] 650-1050:left-[10%] 650-1050:max-w-[80%] 650:max-w-[90%] 650:left-[5%] 850-1050:top-[700px] 650-850:top-[600px] 430-650:top-[340px] 430:top-[290px]'>
                                 <Image src={target} alt="icone d'ampoule" className='mx-6 max-xl:py-10' />
                                 <div>
-                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white'>Transformation</p>
-                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white'>Strategy experience and analytical expertise combine to enable.</p>
+                                    <p className='font-Amiri text-2xl mb-1 group-hover:text-white 650:text-[22px]'>Transformation</p>
+                                    <p className='font-NunitoSans w-10/12 leading-7 text-[#616161] group-hover:text-white 650:text-sm'>Strategy experience and analytical expertise combine to enable.</p>
                                 </div>
                                 <FontAwesomeIcon icon={faArrowRightLong} className={`w-4 rotate-45 absolute right-3 bottom-3 text-[#cccccc] group-hover-text-${color}`} />
                             </div> 

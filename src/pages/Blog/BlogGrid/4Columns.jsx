@@ -46,7 +46,7 @@ export default function FourColumns() {
                                 <Link key={el.index} href='/Blog/BlogSingle/Standard'>
                                 <div className='articleAppear mt-4 mb-6 relative border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[440px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer 650:max-w-[560px]'>
                                     <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='w-[400px] rounded-lg 650:w-[520px]' />
-                                    <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
+                                    <div className='absolute right-10 bottom-44 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] 430-650:bottom-52 430:bottom-60'>
                                         <p className='font-Amiri text-2xl -mb-1'>24</p>
                                         <p className='text-xs font-semibold pb-1'>FEB</p>
                                     </div>

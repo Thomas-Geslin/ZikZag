@@ -49,7 +49,7 @@ export default function Benefits() {
   },[])
 
   return(
-    <section id='benefitsViewport' className='flex relative mx-[13%] mb-10 max-xl:flex-col 850:-mb-14'>
+    <section id='benefitsViewport' className='flex relative z-10 pt-14 mx-[13%] overflow-hidden mb-10 max-xl:flex-col 850:-mb-14'>
       <div className='mr-16 top-10 relative 850:min-w-[90%] 850:mr-0'>
         <Image id='benefitsReveal1' src={benefitsMan01} alt='personne tarvaillant derrière un ordinateur' className='opacity-0 absolute -top-20 overflow-hidden' />
         <Image id='benefitsReveal2' src={benefitsStonks} alt='dessin de graphique allant vers le haut' className='opacity-0 absolute -top-24' />

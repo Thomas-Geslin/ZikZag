@@ -39,25 +39,25 @@ export default function Checkout() {
                 </section>
 
                 {item
-                ?   <div className='mt-20 mb-40 mx-[19%]'>
+                ?   <div className='mt-20 mb-40 w-[62%] m-auto min-w-[1050px] max-xl:min-w-fit'>
                         <div className='flex items-center bg-white p-2 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] rounded'>
                             <div className='p-2.5 rounded bg-[#179fff]'><FontAwesomeIcon icon={faCircleInfo} className='w-9 text-white' /></div>
                             <p className='text-sm font-light ml-5'>Have a coupon? <span className='text-orange ml-2'>Click here to enter your code</span></p>
                             <FontAwesomeIcon icon={faXmark} className='w-3 text-[#e5e5e5] ml-auto mr-4' />
                         </div>
 
-                        <div className='flex justify-between mt-8'>
-                            <div className='w-[47%]'>
+                        <div className='flex justify-between mt-8 max-xl:flex-col max-xl:items-center'>
+                            <div className='w-[47%] 650-xl:w-[70%] max-xl:mb-24 650:w-[90%]'>
                                 <h2 className='font-Amiri text-slightGrey text-4xl'>Billing Details</h2>
 
                                 <form className='mt-6'>
-                                    <div className='flex justify-between'>
-                                        <div className='flex flex-col w-[48%]'>
+                                    <div className='flex justify-between 650:flex-col'>
+                                        <div className='flex flex-col w-[48%] 650:w-full'>
                                             <label htmlfor='firstName' className='text-slightGrey font-bold mb-2'>First Name*</label>
                                             <input name='firstName' type='text' className='bg-greyBackground rounded py-4 px-5 outline-none' />
                                         </div>
 
-                                        <div className='flex flex-col w-[48%]'>
+                                        <div className='flex flex-col w-[48%] 650:w-full'>
                                             <label htmlfor='lastName' className='text-slightGrey font-bold mb-2'>Last Name*</label>
                                             <input name='lastName' type='text' className='bg-greyBackground rounded py-4 px-5 outline-none' />
                                         </div>
@@ -114,17 +114,17 @@ export default function Checkout() {
 
 
 
-                            <div className='w-[47%] relative'>
+                            <div className='w-[47%] relative 650-xl:w-[70%] 650:w-[90%]'>
                                 <h2 className='font-Amiri text-slightGrey text-4xl mb-6'>Your order</h2>
 
-                                <div className='rounded bg-darkBlueBackground flex items-center justify-between pl-10 pr-24 py-4 text-lg text-white font-bold'>
+                                <div className='rounded bg-darkBlueBackground flex items-center justify-between pl-10 pr-24 py-4 text-lg text-white font-bold 430:pr-10'>
                                     <p>Product</p>
                                     <p>Subtotal</p>
                                 </div>
 
                                 {item.map((el, index) => {
                                     return(
-                                        <div key={index} className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-4'>
+                                        <div key={index} className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-4 430:pr-10'>
                                             <p className='font-Amiri text-[17px]'>{el.name} <span className='text-[#e5e5e5]'>x 1</span></p>
                                             <p className='font-bold'>{el.price}</p>
                                         </div>
@@ -133,29 +133,29 @@ export default function Checkout() {
 
                                 <span className='h-px bg-[#e5e5e5] w-full absolute mt-6'></span>
 
-                                <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-6'>
+                                <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-6 430:pr-10'>
                                     <p className='font-extrabold'>Subtotal</p>
                                     <p className='font-extrabold'>{price}</p>
                                 </div>
 
                                 <span className='h-px bg-[#e5e5e5] w-full absolute'></span>
 
-                                <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-0'>
+                                <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-0 430:pr-10'>
                                     <p className='font-extrabold'>Total</p>
                                     <p className='font-extrabold text-orange'>{price}</p>
                                 </div>
 
 
-                                <div className='bg-greyBackground rounded pt-8 mt-8'>
+                                <div className='bg-greyBackground rounded pt-8 mt-8 pb-4'>
                                     <p className='text-sm text-[#616161] bg-white rounded mx-5 py-4 px-4 leading-6'>Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.</p>
                                     <p className='text-sm text-[#616161] leading-6 mx-5 mt-4'>Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our <span className='text-orange'>privacy policy.</span></p>
-                                    <button className="bg-darkBlueBackground ml-[65%] rounded py-4 px-8 font-bold text-sm text-white ml-auto my-6 hover:bg-orange ease-in-out duration-300">PLACE ORDER</button>
+                                    <button className="bg-darkBlueBackground 650:w-[90%] rounded py-4 px-8 font-bold text-sm text-white flex justify-center m-auto my-6 hover:bg-orange ease-in-out duration-300">PLACE ORDER</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 
-                :   <section className='pt-24 mb-80 flex ml-96 items-center'>
+                :   <section className='pt-24 mb-80 flex ml-[15%] items-center 650:mx-[5%]'>
                         <p className='text-lg text-greyText mr-10 font-NunitoSans'>Your cart is currently empty.</p>
                         <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button></Link>
                     </section>

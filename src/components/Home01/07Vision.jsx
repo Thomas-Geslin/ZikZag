@@ -124,53 +124,54 @@ export default function VisionHome01() {
     
     return(
         <section id='numberViewport' className='relative -top-20 mb-12 items-center '>
-            <div className='relative w-[1170px] m-auto'>
-                <div className={`parallaxDivision-Home01 rounded-lg bg-${secondaryColor} z-10`}></div>
+            <div className='relative w-[60%] min-w-[1000px] m-auto 1050:min-w-[220px] 1050:w-[25%]'>
+                <div className={`parallaxDivision-Home01 rounded-lg bg-${secondaryColor} z-10 1050:h-[650px]`}></div>
 
-                <div className='flex text-center py-16 absolute left-[50%] translate-x-[-50%] top-0 m-auto'>
-                    <div className='relative ml-20'>
+                <div className='flex text-center py-16 absolute left-[50%] translate-x-[-50%] top-0 m-auto 1050:flex-col 1050:items-center'>
+                    <div className='relative ml-20 1050:ml-0 1050:mb-4'>
                         <p id='numberTarget1' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>0</p>
                         <p className='text-white font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
                         <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                     </div>
 
-                    <div className='relative mx-36'>
+                    <div className='relative mx-36 1050:mx-0 1050:mb-4'>
                         <p id='numberTarget2' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>250</p>
                         <p className='text-white font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
-                        <span className='absolute text-3xl text-greyText font-light -top-5 -right-3'>+</span>
+                        <span className='absolute text-3xl text-greyText font-light -top-5 -right-3 1050:right-0'>+</span>
                     </div>
 
-                    <div className='relative mr-36'>
+                    <div className='relative mr-36 1050:mr-0 1050:mb-4'>
                         <p id='numberTarget3' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>36</p>
                         <p className='text-white font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
                         <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                     </div>
 
-                    <div className='relative mr-20'>
+                    <div className='relative mr-20 1050:mr-0'>
                         <p id='numberTarget4' className={`font-Amiri text-7xl text-${color} tracking-tighter`}>17</p>
                         <p className='text-white font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
                         <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
                     </div>
                 </div>
 
-                <Image src={square} alt='carré de decoration' className='absolute -z-10 -bottom-16 -right-24' />
+                <Image src={square} alt='carré de decoration' className='absolute -z-10 -bottom-16 -right-24 max-xl:hidden' />
             </div>
             
 
-            <div className='flex justify-center mt-40'>
-                <div className='relative'>
-                    <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 -right-8' /> 
-                    <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top' /> 
-                    <Image src={rocket} alt='dessin de personne assise' className='w-20 absolute top-28 right-6 animation-vision-Home01-top-2' /> 
-                    <Image src={line01} alt='dessin de personne assise' className='w-72 absolute top-4 left-40 animation-vision-Home01-top-3' /> 
-                    <Image src={line02} alt='dessin de personne assise' className='w-24 absolute -top-20 right-[420px] animation-vision-Home01-left' /> 
-                    <Image src={line03} alt='dessin de personne assise' className='w-40 absolute -top-10 right-0 animation-vision-Home01-left' /> 
-                    <Image src={line04} alt='dessin de personne assise' className='w-10 absolute top-72 -right-36 animation-vision-Home01-left' /> 
-                    <Image src={line05} alt='dessin de personne assise' className='w-8 absolute top-8 right-[460px] animation-vision-Home01-left' /> 
-                    <Image src={line06} alt='dessin de personne assise' className='w-16 absolute top-[270px] right-[450px] animation-vision-Home01-left' /> 
+            <div className='flex justify-center mt-40 max-xl:flex-col max-xl:items-center'>
+                <div className='relative max-xl:mb-40 430-850:-left-[5%] 430:max-w-[70%] 430:-left-[20%]'>
+                    <Image src={sit} alt='dessin de personne assise' className='w-72 relative top-20 430-850:w-[180px] 430-850:left-20 430:w-[120px] 430:left-24' /> 
+                    <Image src={standing} alt='dessin de personne assise' className='w-40 absolute right-60 -top-16 animation-vision-Home01-top 430-850:w-[100px] 850:top-0 430-850:-left-10 430:w-[60px] 430:left-8' /> 
+                    <Image src={rocket} alt='dessin de personne assise' className='w-20 absolute top-28 right-6 animation-vision-Home01-top-2 430-850:w-[50px] 430:w-[35px] 430-850:left-44 430:left-40' /> 
+                    <Image src={line01} alt='dessin de personne assise' className='w-72 absolute top-4 left-40 animation-vision-Home01-top-3 430-850:w-[170px] 430:w-[115px] 430:left-40' /> 
+                    <Image src={line02} alt='dessin de personne assise' className='w-24 absolute -top-20 right-[420px] animation-vision-Home01-left 430-850:w-[70px] 430-850:-left-24 850:left-0 850:top-0 430:w-[30px]' /> 
+                    <Image src={line03} alt='dessin de personne assise' className='w-40 absolute -top-10 right-0 animation-vision-Home01-left 430-850:w-[100px] 430-850:left-36 850:-top-6 430:w-[60px] 430:left-48' /> 
+                    <Image src={line04} alt='dessin de personne assise' className='w-10 absolute top-72 -right-36 animation-vision-Home01-left 430-850:w-[20px] 430-850:left-[330px] 430-850:top-52 430:w-[10px] 430:left-64 430:top-32' /> 
+                    <Image src={line05} alt='dessin de personne assise' className='w-8 absolute top-8 right-[460px] animation-vision-Home01-left 430-850:w-[35px] 430-850:-left-24 430-850:top-14 430:w-[15px] 430:left-1 430:top-6' /> 
+                    <Image src={line06} alt='dessin de personne assise' className='w-16 absolute top-[270px] right-[450px] animation-vision-Home01-left 430-850:w-[40px] 430-850:-left-24 430:w-[20px] 430:left-1 430:top-[110px]' /> 
                 </div>
 
-                <div className="w-1/3 max-xl:w-full relative left-72 mb-20">
+
+                <div className="w-1/3 relative left-72 mb-20 max-xl:w-[90%] max-xl:left-0">
                     <h2 className={`text-${color} font-bold mb-3 relative`}>OUR VISION<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey leading-tight mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
                     <p className="text-greyText text-lg  w-10/12 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
@@ -218,42 +219,42 @@ export default function VisionHome01() {
                     pagination
                     speed={1000}
                 >
-                    <SwiperSlide className="w-40 rounded-lg py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-lg py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] ease-in duration-300 hover:cursor-pointer">
                         <div className='h-14 overflow-hidden'>
                             <Image src={dynamic} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={dynamicGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                         <div className='h-14 overflow-hidden'>
                             <Image src={okta} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={oktaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                         <div className='h-14 overflow-hidden'>
                             <Image src={max} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={maxGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                         <div className='h-16 overflow-hidden'>
                             <Image src={solana} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-16 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={solanaGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-2 ease-in-out duration-300' />
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                         <div className='h-14 overflow-hidden'>
                             <Image src={deters} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={detersGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />
                         </div>
                     </SwiperSlide>
 
-                    <SwiperSlide className="w-40 rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
+                    <SwiperSlide className="w-40 min-w-[360px] rounded-md py-14 px-10 mt-5 mb-10 group hover:shadow-[11px_10px_38px_0px_rgb(0,0,0,0.10)] hover:cursor-pointer ease-in-out duration-300">
                         <div className='h-14 overflow-hidden'>
                             <Image src={honey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-14 group-hover:translate-y-0 ease-in-out duration-300' />
                             <Image src={honeyGrey} alt="logo de l'entreprise dynamix" className='m-auto -translate-y-12 group-hover:translate-y-2 ease-in-out duration-300' />

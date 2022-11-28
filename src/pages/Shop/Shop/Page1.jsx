@@ -13,10 +13,6 @@ import { ItemsData } from "../../../datas/Shop/ItemsData"
 
 
 export default function ShopPage1() {
-    function setLoader() {
-        
-    }
-
     function addToCart(name, picture, price) {
         const itemData = {
             name: name,
@@ -48,10 +44,10 @@ export default function ShopPage1() {
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; </span> SHOP</p>
                 </section>
 
-                <div class='w-[74%] flex justify-center relative left-[50%] translate-x-[-50%] max-xl:flex-col-reverse 650-850:w-[90%]'>
+                <div class='w-[74%] flex justify-center relative left-[50%] translate-x-[-50%] max-xl:flex-col-reverse max-xl:items-center 650-850:w-[90%] 650:w-[90%]'>
                     <ShopAside />
 
-                    <div className='w-[60%] ml-10 mt-14 min-w-[650px] 650-850:min-w-[550px] 430-650:min-w-[350px] 430-650:ml-0'>
+                    <div className='w-[60%] ml-10 mt-14 min-w-[650px] 650-850:min-w-[550px] 430-650:min-w-[350px] 650:ml-0 430:min-w-[310px]'>
                         <div className='flex justify-between items-center mb-8'>
                             <p className='text-greyText'>Showing 1–12 of 23 results</p>
 
@@ -65,7 +61,7 @@ export default function ShopPage1() {
                             </select>
                         </div>
 
-                        <div className='grid grid-cols-3 gap-7 650-850:grid-cols-2 430-650:grid-cols-1'>
+                        <div className='grid grid-cols-3 gap-7 650-850:grid-cols-2 650:flex 650:flex-col 650:items-center'>
                             {ItemsData.slice(0, 12).map((el) => {
                                 return(
                                     <div key={el.id}  className='text-center group relative'>

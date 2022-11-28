@@ -14,7 +14,7 @@ import { PhilosophyGridData } from '../../../datas/Home02/PhilisophyGridData'
 export default function BenefitsValue() {
     return(
         <section className='flex relative max-2xl:flex-col'>
-          <div className='w-1/2 max-h-[720px] overflow-hidden rounded-br-xl'>
+          <div className='w-1/2 max-h-[720px] overflow-hidden rounded-br-xl max-2xl:w-full'>
             <Image src={background} alt="Réunion d'entreprise" className='w-full rounded-br-xl max-2xl:rounded-none max-2xl:w-full' />
           </div>
 

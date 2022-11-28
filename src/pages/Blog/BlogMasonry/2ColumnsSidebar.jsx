@@ -42,14 +42,14 @@ export default function TwoColumnsSidebarMasonry() {
                 </section>
 
 
-                <div className='mx-[19%] relative mt-12 flex justify-between'>
-                    <div className='w-[74%] flex flex-wrap justify-between'>
+                <div className='w-[62%] m-auto min-w-[1180px] mt-20 mb-40 flex justify-between max-xl:flex-col max-xl:min-w-fit'>
+                    <div className='w-[74%] flex flex-wrap justify-between max-xl:m-auto max-xl:flex-col max-xl:w-[90%] max-xl:items-center'>
                         {ArticleDataMasonrySidebar.slice(0, loadMore).map((el) => {
                             return(
-                                <Link key={el.index} href={el.href} className={`${el.class} relative`}>
-                                {!el.background && <div className='mb-8'></div>}
-                                <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
-                                    {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[380px]' />}
+                                <Link key={el.index} href={el.href} className={`${el.class} relative max-xl:top-0 1050:mb-14`}>
+                                {!el.background && <div className='mb-8 1050:mb-0'></div>}
+                                <div className='relative mb-12 border-solid border border-[#e5e5e5] rounded-lg p-5 max-w-[420px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer 650-xl:max-w-[460px] 650:max-w-[310px]'>
+                                    {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg max-w-[380px] 650-xl:max-w-[420px] 650:max-w-[270px]' />}
                                     
                                     {el.quote && <div>
                                                     <svg viewBox="0 0 62.4 44.8" className='w-14 absolute -top-8'>
@@ -80,7 +80,7 @@ export default function TwoColumnsSidebarMasonry() {
                                     
                                     
                                     {el.background 
-                                    ?   <div className='absolute right-20 bottom-48 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
+                                    ?   <div className='absolute right-20 bottom-48 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)] max-2xl:bottom-64'>
                                             <p className='font-Amiri text-2xl -mb-1'>24</p>
                                             <p className='text-xs font-semibold pb-1'>FEB</p>
                                         </div>
@@ -100,9 +100,9 @@ export default function TwoColumnsSidebarMasonry() {
                         })}
 
                         {loadMore < ArticleDataMasonrySidebar.length 
-                            ? <button onClick={loadMoreArticle} className='relative -top-72 text-sm text-slightGrey font-bold w-[170px] relative left-[50%] translate-x-[-50%] py-5 border border-orange rounded border-solid hover:bg-orange hover:border-transparent hover:text-white ease-in-out duration-300'>{loading === false ? 'LOAD MORE' : <div class="spinnerArticle"></div>}</button>
+                            ? <button onClick={loadMoreArticle} className='relative -top-72 text-sm text-slightGrey font-bold w-[170px] relative left-[50%] translate-x-[-50%] max-xl:left-0 max-xl:translate-x-0 py-5 border border-orange rounded border-solid hover:bg-orange hover:border-transparent hover:text-white ease-in-out duration-300 max-xl:-top-20'>{loading === false ? 'LOAD MORE' : <div class="spinnerArticle"></div>}</button>
                             
-                            : <p className='font-Amiri relative -top-[380px] left-[50%] translate-x-[-50%] text-2xl text-slightGrey text-center'>Vous avez chargé tous les articles</p> 
+                            : <p className='font-Amiri relative -top-[380px] left-[50%] translate-x-[-50%] text-2xl text-slightGrey text-center max-xl:-top-20 -mb-0'>Vous avez chargé tous les articles</p> 
                         }
                     </div>
 

@@ -62,45 +62,47 @@ export default function Cart() {
 
 
                 {item
-                ?   <section className='mt-20 mb-40 mx-[19%]'>
-                        <div className='flex font-bold text-white text-lg bg-darkBlueBackground py-5 rounded'>
-                            <p className='ml-8 mr-96'>Product</p>
-                            <p className='mr-40'>Price</p>
-                            <p className='mr-auto'>Quantity</p>
-                            <p className='mr-32'>Total</p>
-                        </div>
+                ?   <section className='mt-20 mb-40 w-[62%] m-auto min-w-[1180px] 1050-xl:min-w-[1000px] relative 850-1050:min-w-[820px] 850:min-w-fit 850:w-[90%]'>
+                        <div className='850:flex 850:justify-between'>
+                            <div className='flex font-bold text-white text-lg bg-darkBlueBackground py-5 rounded 650 850:flex-col 850:bg-white 850:text-slightGrey'>
+                                <p className='ml-[3%] 850:ml-0 850:mb-7'>Product</p>
+                                <p className='ml-[32%] 1050-xl:ml-[28%] 850-1050:ml-[24%] 850:ml-0 850:mb-7'>Price</p>
+                                <p className='ml-[14%] 850:ml-0 850:mb-9'>Quantity</p>
+                                <p className='ml-[21.5%] 1050-xl:ml-[18%] 850-1050:ml-[14%] 850:ml-0 850:mb-7'>Total</p>
+                            </div>
 
-                        {item.map((el, index) => {
-                            return(
-                                <div key={index} className='flex items-center mt-8'>
-                                    <Image src={el.picture} alt='photo de produit' className='w-20' />
-                                    <p className='font-Amiri text-slightGrey pl-12 mr-2'>{el.name}</p>
-                                    <p className='font-bold text-lg pl-64'>{el.price}</p>
+                            {item.map((el, index) => {
+                                return(
+                                    <div key={index} className='flex items-center mt-8 850:flex-col 850:items-end 850:mt-4'>
+                                        <Image src={el.picture} alt='photo de produit' className='w-20 ml-[1.5%] 850:hidden' />
+                                        <p className='font-Amiri text-slightGrey pl-8 850:pl-0 850:mb-7'>{el.name}</p>
+                                        <p className='font-bold text-lg ml-[22%] 1050-xl:ml-[17%] 850-1050:ml-[13%] 850:ml-0 850:mb-7'>{el.price}</p>
 
-                                    <div class='relative quantity flex ml-36'>
-                                        <input name='number' id='number' type='number' defaultValue={1} step={1} placeholder='1' inputMode='numeric' min={1} max={9} className='bg-greyBackground font-bold pl-4 rounded outline-none' />
-                                        <div className='flex flex-col'>
-                                            <button onClick={() => inc('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>+</button>
-                                            <button onClick={() => dec('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>-</button>
+                                        <div class='relative quantity flex ml-[13%] 850-1050:ml-[10%] 850:ml-0 850:mb-7'>
+                                            <input name='number' id='number' type='number' defaultValue={1} step={1} placeholder='1' inputMode='numeric' min={1} max={9} className='bg-greyBackground font-bold pl-4 rounded outline-none' />
+                                            <div className='flex flex-col'>
+                                                <button onClick={() => inc('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>+</button>
+                                                <button onClick={() => dec('number')} className='bg-greyBackground font-bold text-lg h-[26px] w-[36px]'>-</button>
+                                            </div>
                                         </div>
+
+                                        <p className='font-bold text-lg pl-[20%] 1050-xl:pl-[15%] 850-1050:pl-[10%] ml-2 850:ml-0 850:mb-7'>{el.price}</p>
+                                        <FontAwesomeIcon onClick={() => clearCart()} icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out duration-300 hover:cursor-pointer' />
                                     </div>
-
-                                    <p className='font-bold text-lg pl-60 ml-2'>{el.price}</p>
-                                    <FontAwesomeIcon onClick={() => clearCart()} icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out durattion-300 hover:cursor-pointer' />
-                                </div>
-                            )
-                        })}
+                                )
+                            })}
+                        </div>
                         
 
-                        <span className='mt-8 h-px w-[62%] bg-[#e4e4e4] absolute'></span>
+                        <span className='mt-8 h-px w-full bg-[#e4e4e4] absolute'></span>
                         
-                        <div className='mt-16'>
+                        <div className='mt-16 flex 850:flex-col'>
                             <input type='text' placeholder='Coupon code' className='bg-greyBackground rounded py-3.5 pl-4 placeholder:text-greyText mr-3' />
-                            <button className="text-white font-bold text-sm bg-darkBlueBackground rounded py-4 px-7 mr-[54.5%] hover:bg-orange ease-in-out duration-300">APPLY COUPON</button>
+                            <button className="text-white font-bold text-sm bg-darkBlueBackground mr-auto rounded py-4 px-7 hover:bg-orange ease-in-out duration-300 850:my-4">APPLY COUPON</button>
                             <button className="text-white font-bold text-sm bg-orange rounded py-4 px-7">UPDATE CART</button>
                         </div>
 
-                        <div className='mt-16 rounded border border-solid border-[#e4e4e4] w-[30%] ml-auto p-8'>
+                        <div className='mt-16 rounded border border-solid border-[#e4e4e4] w-[30%] ml-auto p-8 850:w-[95%] 850:mr-auto'>
                             <p className='font-Amiri text-2xl mb-6'>Cart Totals</p>
                             <span className='h-px w-[15%] bg-[#e4e4e4] absolute'></span>
                             <div className='mt-12 flex justify-between mb-6'>
@@ -116,7 +118,7 @@ export default function Cart() {
                         </div>
                     </section>
             
-                :   <section className='pt-24 mb-80 flex ml-96 items-center'>
+                :   <section className='pt-24 mb-80 flex ml-[15%] items-center 650:mx-[5%]'>
                         <p className='text-lg text-greyText mr-10 font-NunitoSans'>Your cart is currently empty.</p>
                         <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button></Link>
                     </section>

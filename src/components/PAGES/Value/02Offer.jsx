@@ -132,47 +132,47 @@ export default function OfferValue() {
 
 
     return(
-        <section className='pt-24 bg-greyBackground font-NunitoSans text-center pb-48 bg-squareBackground bg-cover bg-[center_bottom_-9rem] max-xl:mt-32' id='goTopViewport'>
+        <section className='pt-24 bg-greyBackground font-NunitoSans text-center pb-48 bg-squareBackground bg-cover bg-[center_bottom_-9rem] max-xl:mt-0 max-xl:pt-0' id='goTopViewport max-xl:pt-10'>
           <h2 className='text-orange font-bold mb-4 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
           <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Business Shaped Solutions</h3>
-          <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+          <p className='text-greyText text-lg w-[40%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
 
-          <div className='flex justify-between w-[60%] max-w-[1170px] m-auto mb-12 max-xl:w-[80%] max-xl:flex-wrap'>
-                <div onClick={() => addActiveOffer('business', 'businessSlide', 0)} id='business' className='relative bg-white bg-reportIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] home02-offer-active border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 850:w-full'>
+          <div className='flex justify-between w-[60%] w-[1170px] m-auto mb-12 max-xl:w-[80%] 1050-xl:flex-wrap 1050:grid 430-1050:grid-cols-2 430:grid-cols-1'>
+                <div onClick={() => addActiveOffer('business', 'businessSlide', 0)} id='business' className='relative bg-white bg-reportIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] home02-offer-active border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={reportWhite} alt='icone de contrat' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>BUSINESS CONSULTATION</p>
                 </div>
 
-                <div onClick={() => addActiveOffer('marketing', 'marketingSlide', 1)} id='marketing' className='relative bg-white bg-moneyIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 850:w-full 850:mt-8'>
+                <div onClick={() => addActiveOffer('marketing', 'marketingSlide', 1)} id='marketing' className='relative bg-white bg-moneyIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={moneyWhite} alt='icone de sac argent' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>MARKETING STRATEGY</p>
                 </div>
 
-                <div onClick={() => addActiveOffer('analytic', 'analyticSlide', 2)} id='analytic' className='relative bg-white bg-statIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 850:w-full 850:mt-8'>
+                <div onClick={() => addActiveOffer('analytic', 'analyticSlide', 2)} id='analytic' className='relative bg-white bg-statIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={statWhite} alt='icone de graphique' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>ADVANCED ANALYTIC</p>
                 </div>
 
-                <div onClick={() => addActiveOffer('entreprise', 'entrepriseSlide', 3)} id='entreprise' className='relative bg-white bg-rocketIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 850:w-full 850:mt-8'>
+                <div onClick={() => addActiveOffer('entreprise', 'entrepriseSlide', 3)} id='entreprise' className='relative bg-white bg-rocketIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={rocketWhite} alt='icone de fusée' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>ENTREPRISE TECHNOLOGY</p>
                 </div>
 
-                <div onClick={() => addActiveOffer('partnership', 'partnershipSlide', 4)} id='partnership' className='relative bg-white bg-paymentIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1060:w-full 1060:mt-8'>
+                <div onClick={() => addActiveOffer('partnership', 'partnershipSlide', 4)} id='partnership' className='relative bg-white bg-paymentIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1060:mt-8 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={paymentWhite} alt='icone de paiement' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>PARTNERSHIP SYSTEM</p>
                 </div>
 
-                <div onClick={() => addActiveOffer('innovation', 'innovationSlide', 5)} id='innovation' className='relative bg-white bg-balanceIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1060:w-5/12 max-xl:w-full max-xl:mt-8'>
+                <div onClick={() => addActiveOffer('innovation', 'innovationSlide', 5)} id='innovation' className='relative bg-white bg-balanceIcon bg-[center_top_1.2rem] bg-[length:50px_50px] bg-no-repeat border border-[#E6E6E6] border-solid rounded w-[170px] hover:cursor-pointer hover:bg-orange group ease-in-out duration-300 1060:w-5/12 1050-xl:w-full 1050-xl:mt-8 1050:mb-6 1050:justify-self-center 430:w-full'>
                   <Image src={balanceWhite} alt='icone de balance' className='m-auto py-5 w-12 -z-10 opacity-0 group-hover:opacity-100 ease-in-out duration-300 home02-offer-active--icon' />
                   <p className='text-sm text-slightGrey font-extrabold w-3/4 m-auto pb-3 group-hover:text-white ease-in-out duration-300 home02-offer-active--text'>BUSINESS INNOVATION</p>
                 </div>
           </div>
 
 
-          <div id='offerViewport' className='relative w-[63%] max-w-[1170px] left-[50%] translate-x-[-50%] shadow-[6px_5px_30px_0_rgb(0,0,0,0.12)] overflow-hidden rounded-md group'>
+          <div id='offerViewport' className='relative w-[63%] bg-white w-[1170px] left-[50%] translate-x-[-50%] shadow-[6px_5px_30px_0_rgb(0,0,0,0.12)] overflow-hidden rounded-md group max-xl:w-[90%]'>
             <div id='businessSlide' className='offerSlide-active offerSlide flex relative bg-white m-auto items-center max-xl:w-[80%] max-xl:flex-col'>
-              <div className='text-left ml-16'>
+              <div className='text-left ml-16 850:ml-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>
@@ -191,7 +191,7 @@ export default function OfferValue() {
                 <Image src={offerSecondBackground} alt='homme tenant un ordinateur' className='relative mt-4 mb-12 ml-12 1060:left-0' />
                 <Image src={secondSlide} alt="dessin d'une personne avec un bras levé" className='absolute bottom-12 left-12 1060:left-2' />
               </div>
-              <div className='text-left ml-10 mr-20'>
+              <div className='text-left ml-10 mr-20 850:ml-0 850:mr-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>
@@ -201,7 +201,7 @@ export default function OfferValue() {
 
 
             <div id='analyticSlide' className='offerSlide flex top-0 z-10 absolute translate-y-[100%] left-0 bg-white m-auto items-center max-xl:w-[80%] max-xl:flex-col'>
-              <div className='text-left ml-16'>
+              <div className='text-left ml-16 850:ml-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>
@@ -220,7 +220,7 @@ export default function OfferValue() {
                 <Image src={offerFourthBackground} alt='homme tenant un ordinateur' className='relative w-[550px] rounded-lg mt-4 mb-12 ml-12 1060:left-0' />
                 <Image src={secondSlide} alt="dessin d'une personne avec un bras levé" className='absolute bottom-12 left-28 1060:left-2' />
               </div>
-              <div className='text-left ml-32'>
+              <div className='text-left ml-32 850:ml-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>
@@ -230,7 +230,7 @@ export default function OfferValue() {
 
 
             <div id='partnershipSlide' className='offerSlide flex top-0 z-10 absolute translate-y-[100%] left-0 bg-white m-auto items-center max-xl:w-[80%] max-xl:flex-col'>
-              <div className='text-left ml-16'>
+              <div className='text-left ml-16 850:ml-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>
@@ -249,7 +249,7 @@ export default function OfferValue() {
                 <Image src={offerSixthBackground} alt='homme tenant un ordinateur' className='relative mt-4 mb-12 ml-12 1060:left-0' />
                 <Image src={secondSlide} alt="dessin d'une personne avec un bras levé" className='absolute bottom-12 left-12 1060:left-2' />
               </div>
-              <div className='text-left ml-10 mr-20'>
+              <div className='text-left ml-10 mr-20 850:ml-0  850:mr-0'>
                 <p className='font-Amiri text-3xl text-slightGrey mb-3 max-xl:mt-8'>Counsalting Service Include</p>
                 <p className='text-greyText w-[400px] leading-8 mb-6 max-xl:w-auto max-xl:pr-8'>Change is opportunity. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose and embrace.</p>
                 <p className='text-greyText w-[400px] leading-8 mb-8 max-xl:w-auto max-xl:pr-8'>Our results solution combines implementation support, capability building and state-of-the-art diagnostic and analytic tools so you can continually change.</p>

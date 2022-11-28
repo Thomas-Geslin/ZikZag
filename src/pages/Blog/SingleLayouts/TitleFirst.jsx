@@ -25,15 +25,15 @@ export default function TitleFirst() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-singleLayoutsStandardBackground bg-no-repeat text-center text-white">
+                <section className="bg-singleLayoutsStandardBackground bg-cover bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Blog Post</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; BUSINESS &gt;</span> REBOOTING A DIGITAL SOLUTION TO FINANCE</p>
                 </section>
 
 
-                <div className='mx-[19%] mt-12 flex justify-between'>
-                    <div className='w-[74%]'>
-                        <div className='mb-10'>
+                <div className='w-[62%] m-auto mt-12 flex justify-between min-w-[1180px] max-xl:flex-col max-xl:items-center max-xl:pb-40 max-xl:min-w-fit'>
+                    <div className='w-[74%] max-xl:w-full'>
+                        <div className='mb-10 max-xl:w-[90%] m-auto'>
                             <div className='bg-orange flex flex-col items-center justify-center rounded w-[60px] py-0.5 mb-7 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
                                 <p className='text-white font-Amiri text-[26px]'>24</p>
                                 <p className='text-white text-xs font-semibold relative bottom-2'>FEB</p>
@@ -42,23 +42,23 @@ export default function TitleFirst() {
                             <p className='font-semibold mb-3 text-[#989898]'>BUSINESS _ NEWS</p>
                             <h1 className='font-Amiri text-[42px]'>Rebooting a Digital Solution to Finance</h1>
 
-                            <div className='flex pb-14'>
-                                <div className='flex items-center mr-8'>
+                            <div className='flex pb-14 650-850:min-w-[470px] 650:min-w-[300px] 650:flex-col'>
+                                <div className='flex items-center mr-8 650:mb-3'>
                                     <FontAwesomeIcon icon={faUser} className='w-3 mr-2 text-[#989898]' />
                                     <p className='font-semibold text-[#989898]'>By Kate Black</p>
                                 </div>
 
-                                <div className='flex items-center mr-auto'>
+                                <div className='flex items-center mr-auto 650:mb-3'>
                                     <FontAwesomeIcon icon={faComment} className='w-3 mr-2 text-[#989898]' />
                                     <p className='font-semibold text-[#989898]'>2 Comments</p>
                                 </div>
 
-                                <div className='flex items-center rounded bg-greyBackground py-0.5 px-2.5'>
+                                <div className='flex items-center rounded bg-greyBackground py-0.5 px-2.5 650:mb-3 650:w-[60px]'>
                                     <FontAwesomeIcon icon={faHeart} className='w-3 mr-1 text-[#989898]' />
                                     <p className='font-semibold text-[#989898]'>11</p>
                                 </div>
 
-                                <div className='flex items-center rounded bg-greyBackground py-0.5 px-2.5 ml-2'>
+                                <div className='flex items-center rounded bg-greyBackground py-0.5 px-2.5 ml-2 650:mb-3 650:ml-0 650:w-[60px]'>
                                     <FontAwesomeIcon icon={faEye} className='w-3 mr-1 text-[#616161]' />
                                     <p className='font-semibold text-[#989898]'>139</p>
                                 </div>

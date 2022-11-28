@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { useState } from 'react'
 
 import HeaderSecond from '../../components/HeaderSecond'
 import Footer from '../../components/Footer'
@@ -16,6 +17,24 @@ import ButtonsElement from '../../components/PAGES/Elements/09Buttons'
 
 
 export default function About() {
+    const [faqResponse, setFaqResponse] = useState(null);
+
+    function activeResponse(responseTarget) {
+        let target = document.getElementById(responseTarget);
+        let remove = document.getElementsByClassName('faqResponseActive');
+        if(remove.length === 0) {
+            target.classList.add('faqResponseActive');
+            target.classList.add('mb-32');
+        } else if(faqResponse === responseTarget) {
+            remove[0].classList.remove('faqResponseActive', 'mb-32');
+        } else {
+            remove[0].classList.remove('faqResponseActive', 'mb-32');
+            target.classList.add('faqResponseActive');
+            target.classList.add('mb-32');
+        }
+    }
+
+
     return (
         <div className='font-NunitoSans'>
             <Head>
@@ -32,24 +51,28 @@ export default function About() {
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> ELEMENTS</p>
                 </section>
 
-                <div className='w-[60%] m-auto mb-40'>
-                    <AccordionsElement />
+                <div>
+                    <div className='w-[60%] min-w-[1150px] m-auto max-xl:w-[85%] max-xl:min-w-fit'>
+                        <AccordionsElement />
 
-                    <InfoElement />
+                        <InfoElement />
 
-                    <ProgressElement />
+                        <ProgressElement />
 
-                    <FlipElement />
+                        <FlipElement />
 
-                    <PricingElement />
+                        <PricingElement />
 
-                    <CounterElement />
+                        <CounterElement />
+                    </div>
 
                     <PartnersElement />
 
                     <TestimonialElement />
 
-                    <ButtonsElement />
+                    <div className='w-[60%] min-w-[1150px] m-auto mb-40 max-xl:w-[85%] max-xl:min-w-fit'>
+                        <ButtonsElement />
+                    </div>
                 </div>
             </main>
 

@@ -14,9 +14,9 @@ import line from '../../public/assets/Home05/testimonial_line.png'
 
 export default function TestimonialHome05() {
     return(
-        <section class='mb-40 relative mt-28'>
-            <div className='ml-96 relative'>
-                <p className='absolute text-[300px] text-greyBackground font-Amiri bottom-60 left-28'>Result</p>
+        <section class='mb-40 relative mt-28 max-xl:w-[90%] max-xl:m-auto max-xl:mb-20 z-10'>
+            <div className='ml-96 relative max-xl:ml-[10%]'>
+                <p className='absolute text-[300px] text-greyBackground font-Amiri bottom-60 left-28 650-1050:text-[200px] 650-1050:bottom-96 1050:left-0 650:text-[90px] 650:-top-8'>Result</p>
                 <h2 className='text-orange font-bold mb-4 pt-10 relative w-36 relative'>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                 <h3 className='font-Amiri text-6xl relative'>What People Say</h3>
 
@@ -50,8 +50,8 @@ export default function TestimonialHome05() {
                         <p className='font-bold text-sm text-[#989898] pb-14'>CLIENT OF COMPAGNY</p>
 
                         <div className='absolute bottom-24 right-96 w-40'>
-                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
-                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
+                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute 850:hidden'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
+                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32 850:hidden'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
                         </div>
                     </div>
                     </SwiperSlide>
@@ -77,15 +77,15 @@ export default function TestimonialHome05() {
                         <p className='font-bold text-sm text-[#989898] pb-14'>UI DESIGNER</p>
 
                         <div className='absolute bottom-24 right-96 w-40'>
-                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
-                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
+                            <button className='Home05NavigationPrev group w-14 h-0.5 bg-black right-32 absolute 850:hidden'><span className='w-3 h-0.5 bg-black -rotate-45 absolute left-3 bottom-1'></span><span className='w-3 h-0.5 bg-black rotate-45 absolute left-3 top-1'></span></button>
+                            <button className='Home05NavigationNext w-14 h-0.5 bg-black absolute left-32 850:hidden'><span className='w-3 h-0.5 bg-black rotate-45 absolute right-3 bottom-1'></span><span className='w-3 h-0.5 bg-black -rotate-45 absolute right-3 top-1'></span></button>
                         </div>
                     </div>
                     </SwiperSlide>
                 </Swiper>
             </div>
 
-            <div className='grid grid-cols-3 gap-7 w-[60%] m-auto mt-32'>
+            <div className='grid grid-cols-3 gap-7 min-w-[1000px] w-[60%] m-auto mt-32 850-1050:grid-cols-2 1050:min-w-fit 850:grid-cols-1'>
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
                     <p className='font-Amiri text-orange text-2xl'>01.</p>
                     <div className='ml-4'>
@@ -141,8 +141,8 @@ export default function TestimonialHome05() {
                 </div>
             </div>
 
-            <Image src={background} alt='arrière-plan' className='absolute right-0 -top-64' />
-            <Image src={line} alt='igne de décoration' className='absolute left-0 bottom-32' />
+            <Image src={background} alt='arrière-plan' className='absolute right-0 -top-64 max-xl:relative max-xl:top-0' />
+            <Image src={line} alt='igne de décoration' className='absolute left-0 bottom-32 max-xl:hidden' />
         </section>
     )
 }

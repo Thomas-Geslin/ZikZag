@@ -70,28 +70,28 @@ export default function ThreeColumnsPortfolio() {
             <HeaderSecond />
 
             <main>
-                <section className="bg-singlePortfolioStandardBackground bg-no-repeat text-center text-white">
+                <section className="bg-singlePortfolioStandardBackground bg-cover bg-no-repeat text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Portfolio 3 Col</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt; </span> PORTFOLIO 3 COL</p>
                 </section>
 
-                <div className='mx-[19%] text-center mb-40'>
+                <div className='w-[62%] min-w-[1180px] m-auto text-center mb-40 max-xl:w-[90%] max-xl:min-w-fit'>
                     <h2 className='text-orange font-semibold relative mb-2 mt-20 w-52 m-auto'><span className='absolute bottom-1 left-3 bg-orange h-0.5 w-2'></span>BUSINESS PORTFOLIO<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className='text-slightGrey text-5xl font-Amiri leading-tight mb-3'>Our Case Studies</h3>
                     <p className='text-greyText text-lg w-7/12 m-auto'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
 
 
-                    <div className='flex justify-between mt-14 w-2/3 m-auto'>
-                        <button onClick={() => filterCategorie('all')} id='all' className="font-bold text-sm py-1 px-3.5 filterPortfolioActive">ALL WORKS</button>
-                        <button onClick={() => filterCategorie('corporate')} id='corporate' className="font-bold text-sm py-1 px-3.5">CORPORATE</button>
-                        <button onClick={() => filterCategorie('finance')} id='finance' className="font-bold text-sm py-1 px-3.5">FINANCE</button>
-                        <button onClick={() => filterCategorie('marketing')} id='marketing' className="font-bold text-sm py-1 px-3.5">MARKETING</button>
-                        <button onClick={() => filterCategorie('startup')} id='startup' className="font-bold text-sm py-1 px-3.5">STARTUP</button>
-                        <button onClick={() => filterCategorie('strategy')} id='strategy' className="font-bold text-sm py-1 px-3.5">STRATEGY</button>
+                    <div className='flex justify-between mt-14 w-2/3 m-auto 850:flex-col 850:items-center 850:w-full'>
+                        <button onClick={() => filterCategorie('all')} id='all' className="font-bold text-sm py-1 px-3.5 filterPortfolioActive 850:mb-3">ALL WORKS</button>
+                        <button onClick={() => filterCategorie('corporate')} id='corporate' className="font-bold text-sm py-1 px-3.5 850:mb-3">CORPORATE</button>
+                        <button onClick={() => filterCategorie('finance')} id='finance' className="font-bold text-sm py-1 px-3.5 850:mb-3">FINANCE</button>
+                        <button onClick={() => filterCategorie('marketing')} id='marketing' className="font-bold text-sm py-1 px-3.5 850:mb-3">MARKETING</button>
+                        <button onClick={() => filterCategorie('startup')} id='startup' className="font-bold text-sm py-1 px-3.5 850:mb-3">STARTUP</button>
+                        <button onClick={() => filterCategorie('strategy')} id='strategy' className="font-bold text-sm py-1 px-3.5 850:mb-3">STRATEGY</button>
                     </div>
 
 
-                    <div className='grid grid-cols-3 mt-10 gap-6'>
+                    <div className='grid grid-cols-3 mt-10 gap-6 650-xl:grid-cols-2 max-xl:w-[90%] max-xl:m-auto max-xl:pt-10 650:grid-cols-1'>
                         {PortfolioData3Col.slice(0, loadMore).map((el) => {
                             if(el.categorie.includes(categorieFilter)) {
                                 return(

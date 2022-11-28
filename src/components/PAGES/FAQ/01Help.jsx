@@ -28,10 +28,10 @@ export default function HelpFAQ() {
         <section className='text-center'>
             <h2 className='text-orange font-bold mb-4 pt-32 w-40 m-auto relative max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-5 bg-orange h-0.5 w-2'></span>NEED HELP?<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Top 10 Most Popular FAQ`s</h3>
-            <p className='text-greyText text-lg w-[65%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+            <p className='text-greyText text-lg w-[65%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
         
-            <div className='flex justify-between'>
-                <div className='w-[550px] z-10'>
+            <div className='flex justify-between min-w-[1140px] max-xl:flex-col max-xl:items-center max-xl:min-w-fit'>
+                <div className='w-[550px] z-10 650:w-[90%]'>
                     <div id='wrong' onClick={() => { activeResponse('wrong'); setFaqResponse('wrong'); }} className='mb-5 relative ease-in-out duration-500 top-2'>
                         <div className='mb-5 flex items-center justify-between bg-greyBackground relative w-full p-4 rounded hover:bg-white hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer group ease-in-out duration-300'>
                             <p className='text-slightGrey font-bold group-hover:text-orange ease-in-out duration-300'>What if I pick the wrong plan?</p>
@@ -93,7 +93,7 @@ export default function HelpFAQ() {
                 </div>
 
 
-                <div className='w-[550px] z-10'>
+                <div className='w-[550px] z-10 650:w-[90%]'>
                     <div id='money' onClick={() => { activeResponse('money'); setFaqResponse('money'); }} className='mb-5 relative ease-in-out duration-500 top-2'>
                         <div className='mb-5 flex items-center justify-between bg-greyBackground relative w-full p-4 rounded hover:bg-white hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer group ease-in-out duration-300'>
                             <p className='text-slightGrey font-bold group-hover:text-orange ease-in-out duration-300'>When should I receive my money?</p>

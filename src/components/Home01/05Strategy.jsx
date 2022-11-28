@@ -79,11 +79,11 @@ export default function StrategyHome01() {
 
 
     return(
-        <section className='text-center pb-60 overflow-hidden 1050-xl:pb-[750px] 850-1050:pb-[750px] 650-850:pb-[700px] 430-650:pb-[400px] 430:pb-[300px]'>
+        <section className='text-center relative z-10 pb-60 overflow-hidden 1050-xl:pb-[750px] 850-1050:pb-[750px] 650-850:pb-[700px] 430-650:pb-[400px] 430:pb-[300px]'>
             <h2 className={`text-${color} font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12`}><span className={`absolute bottom-1 left-2 bg-${color} h-0.5 w-2`}></span>OUR STRATEGY<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
             <h3 className='font-Amiri text-slightGrey text-6xl mb-5'>Main Principles</h3>
 
-            <div className='mt-20 relative'>
+            <div className='mt-20 relative 1050-xl:left-[7%]'>
                 <div className='absolute top-0 left-[50%] translate-x-[-50%] xl-2xl:left-80 max-2xl:translate-x-0 650-xl:top-[500px] max-xl:min-w-[90%] max-xl:right-[5%] max-xl:left-[5%] 650:top-[450px]'>
                     <Reveal keyframes={revealBottom} duration={800} triggerOnce><Image src={people} alt='dessin de réunion' className='absolute top-0' /></Reveal>
                     <Reveal keyframes={revealScale} duration={800} delay={800} triggerOnce><Image src={line01} alt='ligne de décoration' className='absolute' /></Reveal>

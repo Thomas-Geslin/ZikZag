@@ -75,15 +75,15 @@ export default function AboutHome04() {
 
 
     return(
-        <section className='mt-32 mb-40 relative'>
-            <div className='flex justify-center ml-16 mb-40'>
+        <section className='mt-32 mb-40 relative z-10'>
+            <div className='flex justify-center ml-16 mb-40 max-xl:flex-col-reverse 850:ml-0'>
                 <div className='relative'>
                     <Reveal keyframes={reveal} duration={800} delay={700} triggerOnce><Image src={dot} alt='femme travaillant sur un ordinateur' className='absolute left-0' /></Reveal>
                     <Reveal keyframes={revealLeft} duration={800} triggerOnce><Image src={women} alt='femme travaillant sur un ordinateur' className='relative' /></Reveal>
-                    <Image src={video} alt='femme travaillant sur un ordinateur' className='absolute -bottom-20 -right-14' />
+                    <Image src={video} alt='femme travaillant sur un ordinateur' className='absolute -bottom-20 -right-14 max-xl:left-[30%] 850:w-[50%]' />
                 </div>
 
-                <div className='w-1/3 relative mt-20 ml-32'>
+                <div className='w-1/3 relative mt-20 ml-32 max-xl:w-10/12 max-xl:mb-14 max-xl:ml-[5%]'>
                     <h2 className='text-orange font-bold mb-3 relative'>ABOUT ZIKZAG<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
                     <h3 className="w-2/3 font-Amiri text-5xl text-slightGrey leading-tight mb-4 max-xl:w-full">Generating New Business Ideas</h3>
                     <p className="w-9/12 text-greyText text-lg leading-8 mb-8 max-xl:w-full">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service. The challenges it presents may seem daunting, but we help you approach change with confidence, adapt with purpose.</p>
@@ -91,18 +91,18 @@ export default function AboutHome04() {
                 </div>
             </div>
 
-            <div id="numberViewport" className='flex justify-between w-7/12 m-auto'>
-                <div className='flex items-center'>
+            <div id="numberViewport" className='flex justify-between w-7/12 max-xl:w-full m-auto max-xl:flex-col max-xl:items-center max-xl:mb-20'>
+                <div className='flex items-center max-xl:mb-3'>
                     <p id='numberTarget1' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>YEARS OF EXPERIENCE</p>
                 </div>
 
-                <div className='flex items-center'>
+                <div className='flex items-center max-xl:mb-3'>
                     <p id='numberTarget2' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>TRUSTED CLIENTS</p>
                 </div>
 
-                <div className='flex items-center'>
+                <div className='flex items-center max-xl:mb-3'>
                     <p id='numberTarget3' className='text-orange text-7xl font-Amiri mr-3'>0</p>
                     <p className='text-sm font-bold text-slightGrey w-1/2'>VISITED CONFERENCES</p>
                 </div>

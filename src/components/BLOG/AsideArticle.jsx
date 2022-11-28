@@ -25,7 +25,7 @@ import expertsLogo from '../../public/assets/BLOG/BlogSingle/Standard/aside_expe
 
 export default function AsideArticle() {
     return(
-        <section className='max-xl:max-w-[300px] max-xl:mt-32'>
+        <section className='max-xl:max-w-[300px] max-xl:m-auto'>
             <div className='relative'>
                 <Image src={faceBackground} alt='carré de décoration' className='rounded-xl' />
                 <Image src={face} alt='carré de décoration' className='absolute rounded-full w-[63%] left-[50%] translate-x-[-50%] top-10 z-10' />

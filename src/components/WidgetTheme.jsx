@@ -16,7 +16,7 @@ export default function WidgetTheme() {
 
     return(
         <div className='absolute top-0 right-10 max-xl:hidden'>
-            <div id='widgetThemeDarken' className='bg-black w-screen relative h-screen opacity-0 absolute top-0 ease-in-out duration-500'></div>
+            <div id='widgetThemeDarken' className='bg-black w-screen fixed h-screen opacity-0 left-0 top-0 ease-in-out duration-500'></div>
 
             <div id='widgetThemeTarget' className='fixed right-0 top-0 z-[1000] translate-x-[364px] duration-500'>
                 <button onClick={() => activeWidget()}>

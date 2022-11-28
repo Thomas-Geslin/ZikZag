@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,11 +13,24 @@ import { GoalSwiperData } from '../../datas/Home02/GoalSwiperData';
 
 
 export default function SwiperGoal() {
+  let [slideNumber, setSlideNumber] = useState(2)
+
+  useEffect(() => {
+    const windowSize = window.innerWidth;
+        if(windowSize < 650) {
+          setSlideNumber(1);
+        }
+        else  {
+            setSlideNumber(2);
+        }
+  }, [])
+
+
     return(
-        <section className='bg-greyBackground bg-squareBackground bg-cover bg-[center_bottom_-28rem] pt-20 pb-60 650:pt-0'>
+        <section className='bg-greyBackground bg-squareBackground bg-cover bg-[center_bottom_-28rem] pt-20 pb-60 650:pt-0 max-xl:pb-20'>
           <Swiper
             modules={[Pagination, Autoplay]}
-            slidesPerView={2}
+            slidesPerView={slideNumber}
             spaceBetween={30}
             centeredSlides={true}
             loop

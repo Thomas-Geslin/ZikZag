@@ -52,43 +52,43 @@ export default function About() {
                 <link rel="icon" href="../"/>
             </Head>
 
-            <main className='bg-comingTeamBackground bg-center bg-no-repeat text-center'>
-                <Image src={logo} alt="logo de l'entreprise" className='pt-14 pb-24 ml-auto mr-auto' />
-                <h1 className='font-Amiri text-white text-[80px]'>We`re Coming Soon</h1>
+            <main className='bg-comingTeamBackground bg-cover  bg-center bg-no-repeat text-center'>
+                <Image src={logo} alt="logo de l'entreprise" className='pt-14 pb-24 ml-auto mr-auto max-xl:pb-14 850-1050:pt-28 650-850:pt-28 430-650:pt-28' />
+                <h1 className='font-Amiri text-white text-[80px] 650:text-[50px] 430-850:pb-12 430:pb-0'>We`re Coming Soon</h1>
 
-                <div id='date' className='flex justify-center items-center text-white font-Amiri text-[120px] mt-4'>
+                <div id='date' className='flex justify-center items-center text-white font-Amiri text-[120px] mt-4 1050-xl:text-[100px] max-xl:mt-0 850-1050:text-[70px] 650-850:text-[40px] 650:text-[30px]'>
                     <div>
                         <p id='dayTarget'></p>
-                        <p className='font-NunitoSans text-lg font-bold relative -top-8'>DAYS</p>
+                        <p className='font-NunitoSans text-lg font-bold relative -top-8 650-850:text-base 850:top-0 650:text-sm'>DAYS</p>
                     </div>
                     
-                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
+                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6 850:text-3xl 850:mx-[3%]'>:</span>
 
                     <div>
                         <p id='hoursTarget'></p>
-                        <p className='font-NunitoSans text-lg font-bold relative -top-8'>HOURS</p>
+                        <p className='font-NunitoSans text-lg font-bold relative -top-8 650-850:text-base 850:top-0 650:text-sm'>HOURS</p>
                     </div>
                     
-                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
+                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6 850:text-3xl 850:mx-[3%]'>:</span>
 
                     <div>
                         <p id='minutesTarget'></p>
-                        <p className='font-NunitoSans text-lg font-bold relative -top-8'>MINUTES</p>
+                        <p className='font-NunitoSans text-lg font-bold relative -top-8 650-850:text-base 850:top-0 650:text-sm'>MINUTES</p>
                     </div>
                     
-                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6'>:</span>
+                    <span className='mx-20 text-orange font-NunitoSans text-8xl relative bottom-6 850:text-3xl 850:mx-[3%]'>:</span>
 
                     <div>
                         <p id='secondsTarget'></p>
-                        <p className='font-NunitoSans text-lg font-bold relative -top-8'>SECONDS</p>
+                        <p className='font-NunitoSans text-lg font-bold relative -top-8 650-850:text-base 850:top-0 650:text-sm'>SECONDS</p>
                     </div>
                 </div>
 
-                <p className='text-white text-lg leading-8 mt-8'>We are working very hard on the new version of our site.<br></br>It will bring a lot of new features. Stay tuned!</p>
+                <p className='text-white text-lg leading-8 mt-8 650:w-[90%] 650:m-auto 650:mt-10'>We are working very hard on the new version of our site.<br></br>It will bring a lot of new features. Stay tuned!</p>
             
-                <div className='mt-8 pb-28'>
-                    <input type='email' placeholder='Your Email *' className='bg-[#f5f5f533] placeholder:text-white p-3.5 rounded-sm w-96 mr-5'></input>
-                    <button className='text-white font-bold text-sm bg-orange px-8 py-4 rounded'>SUBSCRIBE</button>
+                <div className='mt-8 pb-28 430:pb-20'>
+                    <input type='email' placeholder='Your Email *' className='bg-[#f5f5f533] placeholder:text-white p-3.5 rounded-sm w-96 mr-5 650:w-[80%]'></input>
+                    <button className='text-white font-bold text-sm bg-orange px-8 py-4 rounded 650:mt-8'>SUBSCRIBE</button>
                 </div>
 
                 <div className='flex justify-center items-center pb-[63px]'>

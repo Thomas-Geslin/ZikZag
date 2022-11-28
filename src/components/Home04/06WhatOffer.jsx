@@ -11,12 +11,12 @@ import dot from '../../public/assets/Home04/about_dot.png'
 export default function WhatOfferHome04() {
     return(
         <section className='text-center'>
-            <h2 className='text-orange font-bold mb-4 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+            <h2 className='text-orange font-bold mb-4 relative w-40 m-auto'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
             <h3 className='font-Amiri text-slightGrey text-[56px]'>Meet Our Team</h3>
-            <p className='text-greyText text-lg w-[36%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+            <p className='text-greyText text-lg w-[36%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
             
-            <div className='flex justify-center relative '>
-                <Image src={dot} alt='point de décoration' className='absolute bottom-96 left-28' />
+            <div className='flex justify-center relative 1050:flex-col 1050:items-center'>
+                <Image src={dot} alt='point de décoration' className='absolute bottom-96 left-28 1050:hidden' />
 
                 <div className='relative group hover:cursor-pointer'>
                     <Image src={slide1} alt="photo d'employé" className="w-[440px] m-auto rounded-lg max-xl:w-[90%]" />

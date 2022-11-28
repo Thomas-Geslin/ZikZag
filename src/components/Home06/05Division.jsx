@@ -9,7 +9,7 @@ import slide4 from '../../public/assets/Home03/division_slide_4.jpg'
 export default function DivisionHome06() {
     return(
         <section>
-            <div className='flex justify-between mx-2 gap-3'>
+            <div className='flex justify-between relative z-10 mx-2 gap-3 850:grid 430-850:grid-cols-2 430:grid-cols-1'>
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide1} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>

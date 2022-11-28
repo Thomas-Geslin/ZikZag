@@ -19,7 +19,7 @@ export default function Philosophy() {
 
 
     return(
-        <section className='flex relative -top-10 max-2xl:flex-col 1050:-mb-20'>
+        <section className='flex relative z-10 -top-10 max-2xl:flex-col 1050:-mb-20'>
           <div className='w-1/2 max-h-[720px] overflow-hidden max-2xl:w-full'>
             <Image src={philosophyBackground} alt="Réunion d'entreprise" className='w-full rounded-xl max-2xl:rounded-none max-2xl:w-full' />
           </div>

@@ -22,27 +22,29 @@ export default function AboutHome01() {
 
 
     return(
-        <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 min-w-[1260px] m-auto z-20 -top-32 max-xl:min-w-[970px] max-xl:mb-28 max-xl:-top-60 850-1050:min-w-[750px] 650-850:min-w-[480px] 430-650:min-w-[400px]'>
+        <section className='relative shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] w-9/12 min-w-[1260px] overflow-hidden m-auto z-20 -top-32 max-xl:w-[90%] 1050-xl:min-w-[970px] max-xl:mb-28 max-xl:pb-14 max-xl:-top-60 850-1050:min-w-[750px] 650-850:min-w-[480px] 430-650:min-w-[400px] 430:min-w-[300px]'>
             <div className='flex font-Amiri text-white h-36 relative m-auto max-xl:flex-col'>
-                <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-t-lg`}>
-                    <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
-                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                    <div className='pr-24 850:right-0 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                    <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                </div>
+                <div className='flex font-Amiri text-white h-36 justify-center max-xl:flex-col max-xl:h-auto max-xl:mt-28 850-1050:mt-16 1050-xl:mt-10 max-xl:top-0 650:w-full'>
+                    <div className={`relative flex items-center bg-${color} rounded-tl-lg group max-xl:rounded-t-lg`}>
+                        <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>01</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                        <div className='pr-24 1050:left-[80%] max-xl:absolute 1050-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 1050-xl:right-52 1050:left-[77%] w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500'></span>
+                    </div>
 
-                <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-none`}>
-                    <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
-                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Private Equity</p>
-                    <div className='pr-24 650:px-16 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                    <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
-                </div>
+                    <div className={`relative flex items-center bg-${secondaryColor} group max-xl:rounded-[0]`}>
+                        <span className={`text-8xl text-${slightBlue} absolute left-10 bottom-4 tracking-tighter`}>02</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 430-650:text-2xl 430:text-[20px]'>Consulting for Private Equity</p>
+                        <div className='pr-24 1050:left-[80%] max-xl:absolute 1050-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 1050-xl:right-52 1050:left-[77%] w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500'></span>
+                    </div>
 
-                <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-b-lg`}>
-                    <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
-                    <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
-                    <div className='pr-24 850:right-0 650:px-16 max-xl:absolute max-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
-                    <span className='absolute right-32 w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500 max-xl:right-56'></span>
+                    <div className={`relative flex items-center bg-${color} rounded-tr-lg group max-xl:rounded-b-lg`}>
+                        <span className={`absolute left-10 bottom-4 tracking-tighter text-8xl text-${slightColor}`}>03</span>
+                        <p className='text-3xl z-10 pl-20 max-xl:py-14 650:pl-6 650:text-2xl'>Consulting for Corporates</p>
+                        <div className='pr-24 1050:left-[80%] max-xl:absolute 1050-xl:right-24'><Image src={arrow} alt='icone de fleche' className=' min-w-[50px]' /></div>
+                        <span className='absolute right-32 1050-xl:right-52 1050:left-[77%] w-12 h-12 rounded border-white border border-solid opacity-20 group-hover:opacity-40 group-hover:translate-x-14 ease-in-out duration-500'></span>
+                    </div>
                 </div>
             </div>
             
@@ -58,9 +60,9 @@ export default function AboutHome01() {
                     </div>
                 </div>
 
-                <div className='relative max-w-[90%]'>
+                <div className='relative max-w-[90%] 430:-left-10'>
                     <Image src={man} alt="dessin d'une personne les bras levé animation" className='relative top-10 left-32 850:left-20' />
-                    <Image src={line} alt="ligne de décoration" className='absolute top-6 left-24 lineOfferAnimation 850:left-12' />
+                    <Image src={line} alt="ligne de décoration" className='absolute top-6 left-24 lineOfferAnimation 430-850:left-12 430:left-16' />
                     <Image src={twitter} alt="icone de twitter" className='absolute top-6 left-24 twitterOfferAnimation 850:left-12' />
                     <Image src={facebook} alt="icone de facebook" className='absolute top-10 left-24 facebookOfferAnimation 850:left-12' />
                     <Image src={pinterest} alt="icone de pinterest" className='absolute top-14 left-24 pinterestOfferAnimation 850:left-12' />

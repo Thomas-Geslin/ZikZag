@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhoneVolume } from '@fortawesome/free-solid-svg-icons'
 
@@ -22,7 +25,11 @@ import honey from '../../public/assets/Home02/logo_honey_color.png'
 
 
 export default function Consultancy() {
+  const { color } = useContext(ColorContext);
+
+
   let [slideNumber, setSlideNumber] = useState(5)
+
   useEffect(() => {
     const windowSize = window.innerWidth;
         if(windowSize < 499) {
@@ -36,24 +43,24 @@ export default function Consultancy() {
   }, [])
 
     return(
-        <section className='-mb-20 relative -top-32'>
-          <div className='bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full'>
-            <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl'></div>
-            
-            <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0'>
-              <Image src={orangeSquare} alt='carré orange' className='w-80' />
-              <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
-                <div className='p-4 w-14 rounded-full bg-white'><FontAwesomeIcon icon={faPhoneVolume} className='relative left-px bottom-px w-6 -rotate-45 text-orange' /></div>
-                <p className='font-Amiri text-3xl my-4'>+1 800 123 456 789</p>
-                <p className='font-semibold'>OR CALL US 24/7</p>
-              </div>
+        <section className='-mb-20 relative -top-32 z-10'>
+          <div className='bg-transparent relative w-10/12 m-auto rounded-xl relative text-center max-xl:flex max-xl:flex-col-reverse max-xl:items-center max-xl:w-full max-xl:h-[800px] max-xl:mb-20'>
+            <div className='bg-darkBlueBackground parallaxConsultancy-Home02 rounded-xl max-xl:w-full max-xl:h-[800px]'></div>
+                    
+            <div className='absolute -right-20 -top-7 max-xl:relative max-xl:right-0 max-xl:top-[650px]'>
+                <Image src={orangeSquare} alt='carré orange' className='w-80' />
+                <div className='text-white absolute top-0 right-12 flex flex-col justify-center items-center'>
+                    <div className='p-4 w-14 rounded-full bg-white'><FontAwesomeIcon icon={faPhoneVolume} className={`relative left-px bottom-px w-6 -rotate-45 text-${color}`} /></div>
+                    <p className='font-Amiri text-3xl my-4'>+1 800 123 456 789</p>
+                    <p className='font-semibold'>OR CALL US 24/7</p>
+                </div>
             </div>
 
-            <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0'>
-              <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
-              <p className='font-Amiri text-white text-5xl mb-3'>Get a Free Counsultancy Right Now!</p>
-              <p className='text-[#dddfe1] text-[20px] px-7'>We help you see the world differently, discover opportunities you may never have imagined.</p>
-              <button className='text-white font-semibold bg-orange rounded px-8 py-4 border border-solid border-orange hover:bg-transparent ease-in duration-300 mt-12 mb-16'>GET IN TOUCH</button>
+            <div className='mb-20 absolute left-[50%] translate-x-[-50%] top-0 max-xl:top-60 max-xl:w-full'>
+                <Image src={logo} alt='logo de entreprise' className='m-auto pt-20 mb-10' />
+                <p className='font-Amiri text-white text-5xl mb-3 max-xl:w-full 850:text-3xl'>Get a Free Counsultancy Right Now!</p>
+                <p className='text-[#dddfe1] text-[20px] px-7 850:text-base'>We help you see the world differently, discover opportunities you may never have imagined.</p>
+                <button className={`text-white font-semibold bg-${color} rounded px-8 py-4 border border-solid border-${color} hover:bg-transparent ease-in duration-300 mt-12 mb-16 850:px-6 850:py-3 850:text-base 430:mt-4`}>GET IN TOUCH</button>
             </div>
           </div>
 

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -15,6 +15,19 @@ import line from '../../public/assets/Home05/benefits_line_2.png'
 
 
 export default function OfferHome05() {
+  let [slideNumber, setSlideNumber] = useState(2)
+
+  useEffect(() => {
+    const windowSize = window.innerWidth;
+        if(windowSize < 650) {
+          setSlideNumber(1);
+        }
+        else  {
+            setSlideNumber(2);
+        }
+  }, [])
+
+
   useEffect(() => {
     // Function for auto-increment counter on scroll
     function autoIncrement(limit, target, detail) {
@@ -56,43 +69,43 @@ export default function OfferHome05() {
 
     return(
         <section className='pt-20 650:pt-0 relative'>
-            <Image src={line} alt='ligne de décoration' className='absolute top-0 right-0 ' />
+            <Image src={line} alt='ligne de décoration' className='absolute top-0 right-0 850:hidden' />
 
-            <div id='numberViewport' className='flex text-center pt-16 relative w-[1150px] m-auto'>
-              <div className='relative ml-20'>
-                  <p id='numberTarget1' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
-                  <p className='text-slightGrey font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
-                  <span className='absolute text-3xl text-[#bfbfbf] font-light -top-5 right-5'>+</span>
-              </div>
+            <div id='numberViewport' className='flex w-[1150px] text-center py-16 relative m-auto min-w-[220px] my-10 max-xl:flex-col max-xl:mb-10 max-xl:w-[25%] max-xl:py-6 max-xl:my-0'>
+                <div className='relative ml-20 max-xl:ml-0 max-xl:mb-5'>
+                    <p id='numberTarget1' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
+                    <p className='font-bold text-sm w-2/3 m-auto'>YEARS OF EXPERIENCE</p>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                </div>
 
-              <div className='relative mx-36'>
-                  <p id='numberTarget2' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
-                  <p className='text-slightGrey font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
-                  <span className='absolute text-3xl text-[#bfbfbf] font-light -top-5 -right-3'>+</span>
-              </div>
+                <div className='relative mx-36 max-xl:mx-0 max-xl:mb-5'>
+                    <p id='numberTarget2' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
+                    <p className='font-bold text-sm w-2/3 m-auto'>TRUSTED CLIENTS</p>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 -right-3 max-xl:right-4'>+</span>
+                </div>
 
-              <div className='relative mr-36'>
-                  <p id='numberTarget3' className='font-Amiri text-7xl text-orange tracking-tighter'>30</p>
-                  <p className='text-slightGrey font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
-                  <span className='absolute text-3xl text-[#bfbfbf] font-light -top-5 right-5'>+</span>
-              </div>
+                <div className='relative mr-36 max-xl:mr-0 max-xl:mb-5'>
+                    <p id='numberTarget3' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
+                    <p className='font-bold text-sm w-2/3 m-auto'>VISITED CONFERENCES</p>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                </div>
 
-              <div className='relative mr-20'>
-                  <p id='numberTarget4' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
-                  <p className='text-slightGrey font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
-                  <span className='absolute text-3xl text-[#bfbfbf] font-light -top-5 right-5'>+</span>
-              </div>
+                <div className='relative mr-20 max-xl:mr-0'>
+                    <p id='numberTarget4' className='font-Amiri text-7xl text-orange tracking-tighter'>0</p>
+                    <p className='font-bold text-sm w-2/3 m-auto'>MASTER CERTIFICATION</p>
+                    <span className='absolute text-3xl text-greyText font-light -top-5 right-5'>+</span>
+                </div>
             </div>
 
             <div className='text-center'>
-              <h2 className='text-orange font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-36 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+              <h2 className='text-orange font-bold mb-4 pt-32 relative w-40 m-auto max-xl:pt-10 850:mt-12'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
               <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Our Latest Case Studies</h3>
-              <p className='text-greyText text-lg w-[40%] m-auto mb-10 1060:w-9/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
+              <p className='text-greyText text-lg w-[40%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
             </div>
 
           <Swiper
             modules={[Pagination, Autoplay]}
-            slidesPerView={2}
+            slidesPerView={slideNumber}
             spaceBetween={30}
             centeredSlides={true}
             loop

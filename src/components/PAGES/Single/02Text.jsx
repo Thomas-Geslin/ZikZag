@@ -45,7 +45,7 @@ export default function TextSingle() {
 
 
     return(
-        <section className='w-[61%] m-auto'>
+        <section className='w-[61%] m-auto 850:w-[90%]'>
             <div className='mb-10'>
                 <p className='font-Amiri text-slightGrey text-3xl mb-4'>Personal Experience</p>
                 <p className='text-greyText leading-7 mb-4'>Since joining Zikzag in 2009, Chriss More has helped turn the company from a group of bright technology minds working with startups into a global Digital Product Engineering Services leader helping Fortune 500 companies on their innovation agenda. In Chriss’s time as President and CEO of company, the company has experienced explosive growth in size and revenue – all while developing a culture that fosters engaged employees around innovation.</p>
@@ -53,8 +53,8 @@ export default function TextSingle() {
             </div>
 
 
-            <div className='flex mb-6 justify-between'>
-                <div className='w-[48.5%]'>
+            <div className='flex mb-6 justify-between 650:flex-col 650:items-center'>
+                <div className='w-[48.5%] 650:w-full'>
                     <p className='font-Amiri text-slightGrey text-3xl mb-4'>Professional Skills</p>
 
                     <div className="relative mb-12 max-xl:w-full" id='progressBarStrategy'>
@@ -88,7 +88,7 @@ export default function TextSingle() {
                     </div>
                 </div>
                 
-                <div className='w-[48.5%]'>
+                <div className='w-[48.5%] 650:w-full'>
                     <p className='font-Amiri text-slightGrey text-3xl mb-4'>Early Years</p>
                     <p className='text-greyText leading-7 mb-4'>He is a services industry veteran with a diversified wealth of expertise that includes worldwide operations, delivery, process improvements, mergers and acquisitions, and integration, as well as sales and business development.</p>
                     <p className='text-greyText leading-7 mb-4'>He is responsible for all delivery, operations, talent recruitment and management, and information technology. He is responsible for the alignment and prioritization of company investments – enabling growth.</p>

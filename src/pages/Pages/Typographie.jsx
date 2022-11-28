@@ -29,7 +29,7 @@ export default function About() {
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> TYPOGRAPHY</p>
                 </section>
 
-                <div className='mx-[20%] mb-40'>
+                <div className='w-[60%] max-xl:w-[90%] m-auto mb-40'>
                     <HeadingsTypography />
 
                     <TextTypography />

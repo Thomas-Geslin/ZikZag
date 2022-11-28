@@ -49,10 +49,10 @@ export default function ProgressElement() {
 
 
     return(
-        <section className='mt-20'>
+        <section className='mt-20 max-xl:px-[5%]'>
             <p className='text-slightGrey font-Amiri text-4xl mb-6'>Progress Bars</p>
 
-            <div className='flex justify-between'>
+            <div className='flex justify-between max-xl:flex-col'>
                 <div className="w-[48.5%] max-xl:w-full relative">
                     <div className="relative mb-12 max-xl:w-full" id='progressBarStrategy'>
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
@@ -74,7 +74,7 @@ export default function ProgressElement() {
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
-                    <div className="relative mb-10 max-xl:w-full max-xl:mb-44">
+                    <div className="relative mb-10 max-xl:w-full max-xl:mb-16">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>CONSALTING</p>
                             <p id='thirdBar'>0%</p>
@@ -107,7 +107,7 @@ export default function ProgressElement() {
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
-                    <div className="relative mb-10 max-xl:w-full max-xl:mb-44">
+                    <div className="relative mb-10 max-xl:w-full max-xl:mb-20">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>CONSALTING</p>
                             <p id='sixthBar'>0%</p>

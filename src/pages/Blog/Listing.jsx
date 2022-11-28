@@ -45,12 +45,12 @@ export default function Listing() {
                 </section>
 
 
-                <div className='mx-[18%] mt-12 mb-40 flex jsutify-between'>
-                    <div className='w-[74%]'>
+                <div className='w-[60%] m-auto min-w-[1200px] mt-12 mb-40 flex jsutify-between max-xl:flex max-xl:flex-col max-xl:items-center max-xl:min-w-fit'>
+                    <div className='w-[74%] 850:w-[90%]'>
                         {ArticleListingData.map((el) => {
                             return(
                                 <Link key={el.index} href={el.href}>
-                                <div className='mb-24 relative border-solid border border-[#e5e5e5] rounded-lg p-10 max-w-[870px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer'>
+                                <div className='mb-24 relative border-solid border border-[#e5e5e5] rounded-lg p-10 max-w-[870px] hover:shadow-[6px_5px_30px_0px_rgb(0,0,0,0.10)] hover:border-transparent ease-in-out duration-300 hover:cursor-pointer 850:p-4'>
                                     {el.background && <Image  src={el.background} alt='persone travaillant sur un ordinateur' className='rounded-lg' />}
                                     
                                     {el.quote && <div>
@@ -82,7 +82,7 @@ export default function Listing() {
                                     
                                     
                                     {el.background 
-                                    ?   <div className='absolute right-20 bottom-64 bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
+                                    ?   <div className='absolute right-20 top-[500px] bg-orange text-white flex flex-col items-center rounded px-4 py-1 shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
                                             <p className='font-Amiri text-2xl -mb-1'>24</p>
                                             <p className='text-xs font-semibold pb-1'>FEB</p>
                                         </div>

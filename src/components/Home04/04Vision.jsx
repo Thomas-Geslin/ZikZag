@@ -96,14 +96,14 @@ export default function VisionHome04() {
 
 
     return(
-        <section className='mb-10'>
-            <div className='flex justify-center'>
-                <div className="w-1/3 max-xl:w-full relative top-20 left-16 mb-20">
+        <section className='mb-10 overflow-hidden relative z-10'>
+            <div className='flex justify-center max-xl:flex-col max-xl:items-center'>
+                <div className="w-1/3 max-xl:w-full relative top-20 left-16 mb-20 850:left-[7%]">
                     <h2 className='text-orange font-bold mb-3 relative'>OUR VISION<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
-                    <h3 className="font-Amiri text-5xl leading-tight text-slightGrey mb-4 w-[81%] max-xl:w-full 650:text-4xl">Strategy is at the Heart of What We Do</h3>
-                    <p className="text-greyText text-lg w-3/4 leading-8 mb-8 max-xl:w-full">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
+                    <h3 className="font-Amiri text-5xl leading-tight text-slightGrey mb-4 w-[81%] max-xl:w-10/12 650:text-4xl">Strategy is at the Heart of What We Do</h3>
+                    <p className="text-greyText text-lg w-3/4 leading-8 mb-8 max-xl:w-10/12">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
 
-                    <div className="relative w-3/4 mb-12 max-xl:w-full" id='progressBarStrategy'>
+                    <div className="relative w-3/4 mb-12 max-xl:w-w-10/12" id='progressBarStrategy'>
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>DIGITAL STRATEGY</p>
                             <p id='firstBar'>0%</p>
@@ -113,7 +113,7 @@ export default function VisionHome04() {
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
-                    <div className="relative w-3/4 mb-12 max-xl:w-full">
+                    <div className="relative w-3/4 mb-12 max-xl:w-w-10/12">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>FINANCIAL SERVICE</p>
                             <p id='secondBar'>0%</p>
@@ -123,7 +123,7 @@ export default function VisionHome04() {
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
-                    <div className="relative w-3/4 mb-10 max-xl:w-full max-xl:mb-44">
+                    <div className="relative w-3/4 mb-10 max-xl:w-w-10/12 max-xl:mb-44">
                         <div className="flex justify-between text-slightGrey font-bold text-sm">
                             <p>CONSALTING</p>
                             <p id='thirdBar'>0%</p>

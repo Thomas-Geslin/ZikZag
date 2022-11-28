@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -16,18 +17,18 @@ import { AboutSwiperData } from "../../datas/About/AboutSwiperData";
 export default function SwiperHome01() {
     let [slideNumber, setSlideNumber] = useState(4);
     
-    /* useEffect(() => {
+    useEffect(() => {
         const windowSize = window.innerWidth;
         if(windowSize < 599) {
             setSlideNumber(1);
         }
-        else if(600 < windowSize < 1280) {
+        else if(600 < windowSize && windowSize < 1280) {
             setSlideNumber(2);
         }
         else if(1281 < windowSize && windowSize < 1650) {
             setSlideNumber(3);
         }
-    }, [slideNumber]) */
+    }, [slideNumber])
 
     return (
         <section className='bg-greyBackground bg-squareBackground bg-cover bg-[center_top_-12rem] bg-center bg-no-repeat pb-60 pt-10'>
@@ -42,6 +43,7 @@ export default function SwiperHome01() {
                 {AboutSwiperData.map((el) => {
                     return(
                         <SwiperSlide key={el.index} className='relative group hover:cursor-pointer'>
+                        <Link href='/Pages/SingleTeam'>
                             <Image src={el.background} alt="photo d'employé" className="m-auto rounded-lg w-[90%]" />
 
                             <div className='absolute top-10 right-12'>
@@ -59,6 +61,7 @@ export default function SwiperHome01() {
 
                                 <Image src={el.icon} alt='icon de décoration' />
                             </div>
+                        </Link>
                         </SwiperSlide>
                     )
                 })}

@@ -13,8 +13,8 @@ import slide4 from '../../public/assets/Home03/division_slide_4.jpg'
 
 export default function DivisionHome03() {
     return(
-        <section>
-            <div className='flex justify-between mx-2 gap-3'>
+        <section className='relative z-10'>
+            <div className='flex justify-between mx-2 gap-3 1050:grid 1050:grid-cols-2'>
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide1} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>
@@ -78,12 +78,12 @@ export default function DivisionHome03() {
                                 c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
                                 </svg>
 
-                                <p className='text-white text-[22px] font-light mb-10 leading-10'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
+                                <p className='text-white text-[22px] font-light mb-10 leading-10 430:text-lg'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Emmy Barton</p>
                                 <p className='text-orange font-bold text-sm pb-14'>CLIENT OF COMPAGNY</p>
 
-                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%]'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
-                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%]'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
+                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
                             </div>
                         </SwiperSlide>
 
@@ -103,12 +103,12 @@ export default function DivisionHome03() {
                                 c9.3-4.1,7.1-16.5-1.4-20.1c-8.5-3.5-20.1,4-14.3,13.4C7.2,37.8,8.5,37,8,36.2L8,36.2z"></path>
                                 </svg>
                                 
-                                <p className='text-white text-[22px] font-light mb-10'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
+                                <p className='text-white text-[22px] font-light mb-10 430:text-lg'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Tina Johanson</p>
                                 <p className='text-orange font-bold text-sm pb-14'>UI DESIGNER</p>
 
-                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%]'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
-                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%]'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
+                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
                             </div>
                         </SwiperSlide>
                     </Swiper>
