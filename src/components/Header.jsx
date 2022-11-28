@@ -301,7 +301,7 @@ export default function Header() {
                     </div>
 
                     <div className='pt-4 relative'>
-                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute top-5 right-1.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
+                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute top-[18px] right-1.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
                     </div>
                 </div>
             </div>

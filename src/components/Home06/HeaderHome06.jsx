@@ -51,7 +51,7 @@ export default function HeaderAbout() {
 
     return(
         <header className='z-50 flex bg-transparent justify-between font-NunitoSans text-sm font-bold items-center px-14 absolute top-0 left-0 right-0'>
-            <Image src={logoFixed} alt="logo de l'entreprise" className='w-36 my-7 z-50' />
+            <Image src={logoFixed} alt="logo de l'entreprise" className='w-36 my-7 z-50 max-xl:hidden' />
 
             <div id='stickyHeader'></div>
 
@@ -453,7 +453,7 @@ export default function HeaderAbout() {
                     </div>
 
                     <div className='pt-4 relative'>
-                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute top-5 right-1.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
+                        <p className='bg-white text-[#7e7e7e] rounded w-[320px] p-3 850:w-[180px]'>Search ...</p><div className='absolute top-[18px] right-1.5 bg-darkBlueBackground p-3 rounded'><FontAwesomeIcon icon={faMagnifyingGlass} className='w-4' /></div>
                     </div>
                 </div>
             </div>
