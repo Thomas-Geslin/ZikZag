@@ -22,7 +22,7 @@ export default function About() {
 
             <HeaderSecond />
 
-            <main>
+            <main className='relative z-10'>
                 <AboutNotice />
 
                 <AboutLanding />

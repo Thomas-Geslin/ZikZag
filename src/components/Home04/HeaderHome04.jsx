@@ -70,7 +70,7 @@ export default function Header() {
             <div id='fixedHeader' className='flex justify-between font-NunitoSans text-sm font-bold items-center px-14 bg-white max-xl:hidden'>
                 <Image src={logo} alt="logo de l'entreprise" className='w-36 my-7' />
 
-                <nav className='flex justify-between items-center w-[36%] ml-36 text-slightGrey z-50'>
+                <nav className='flex justify-between items-center min-w-[650px] ml-36 z-50 max-xl:hidden'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>

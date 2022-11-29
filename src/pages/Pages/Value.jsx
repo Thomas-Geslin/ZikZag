@@ -21,7 +21,7 @@ export default function SingleTeam() {
 
             <HeaderSecond />
 
-            <main>
+            <main className='relative z-10'>
                 <section className="bg-valueTeamBackground bg-no-repeat bg-cover text-center text-white">
                     <h1 className="font-Amiri text-6xl pt-60 mb-6">Value</h1>
                     <p className="font-semibold text-sm pb-48 z-10"><span className="opacity-50">HOME &gt;</span> VALUE</p>

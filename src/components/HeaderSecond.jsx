@@ -123,7 +123,7 @@ export default function HeaderAbout() {
                     <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1'></span>BLOG</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground invisible absolute flex flex-col right-0 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <p className='mb-4 hover-underline-animation w-5/12'>Blog Listing</p>
+                            <Link href='/Blog/Listing'><p className='mb-4 hover-underline-animation w-5/12'>Blog Listing</p></Link>
                             <div className='flex justify-between items-baseline w-52 group/subdiv'>
                                 <p className='mb-4 hover-underline-animation'>Blog Grid</p><FontAwesomeIcon icon={faAngleRight} className='w-2.5 relative top-1 group-hover/subdiv:rotate-180 ease-linear duration-200' />
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-12 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
@@ -175,8 +175,8 @@ export default function HeaderAbout() {
                                 <div className='bg-darkBlueBackground invisible absolute translate-y-4 opacity-0 right-[293px] top-1.5 rounded-md pl-10 pr-20 py-8 group-hover/subdiv:visible group-hover/subdiv:translate-y-0 group-hover/subdiv:opacity-100 ease-linear duration-300'>
                                     <Link href='/Portfolio/PortfolioGrid/2Columns'><p className='hover-underline-animation mb-4'>2 Columns</p></Link>
                                     <Link href='/Portfolio/PortfolioGrid/3Columns'><p className='hover-underline-animation mb-4'>3 Columns</p></Link>
-                                    <Link href='/Portfolio/PortfolioGrid/3Columns'><p className='hover-underline-animation mb-4 w-32'>4 Columns Wide</p></Link>
-                                    <Link href='/Portfolio/PortfolioGrid/4Columns'><p className='hover-underline-animation'>5 Colums Wide</p></Link>
+                                    <Link href='/Portfolio/PortfolioGrid/4Columns'><p className='hover-underline-animation mb-4 w-32'>4 Columns Wide</p></Link>
+                                    <Link href='/Portfolio/PortfolioGrid/5Columns'><p className='hover-underline-animation'>5 Colums Wide</p></Link>
                                 </div>
                             </div>
 
@@ -197,7 +197,7 @@ export default function HeaderAbout() {
                     <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10'><p><span className='hover-nav-animation right-1'></span>SHOP</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground invisible absolute right-0 translate-y-6 opacity-0 text-white font-normal text-base py-8 pl-10 pr-32 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>
-                            <Link href='/Shop/Shop'><p className='mb-4 hover-underline-animation'>Shop</p></Link>
+                            <Link href='/Shop/Shop/Page1'><p className='mb-4 hover-underline-animation'>Shop</p></Link>
                             <Link href='/Shop/Cart'><p className='mb-4 hover-underline-animation'>Cart</p></Link>
                             <Link href='/Shop/Checkout'><p className='w-18 hover-underline-animation'>Checkout</p></Link>
                         </div>
@@ -216,7 +216,7 @@ export default function HeaderAbout() {
             <div id='fixedHeader' className='flex justify-between invisible max-xl:hidden fixed left-0 right-0 font-NunitoSans text-sm font-bold items-center px-14 bg-white ease-linear duration-300 max-xl:hidden'>
                 <Image src={logoFixed} alt="logo de l'entreprise" className='w-36 my-7' />
 
-                <nav className='flex justify-between items-center min-w-[650px] ml-36 text-slightGrey z-50  max-xl:hidden'>
+                <nav className='flex justify-between items-center min-w-[650px] ml-36 z-50 max-xl:hidden'>
                 <div className='relative group hover:cursor-pointer hover-nav'>
                         <div className='flex items-start py-10 group'><p className='relative'><span className='hover-nav-active relative left-12 top-px'></span>HOME</p><FontAwesomeIcon icon={faAngleDown} className='w-3 text-[#979797] ml-1.5 mt-0.5 group-hover:rotate-180 ease-linear duration-200' /></div>
                         <div className='bg-darkBlueBackground absolute invisible -left-72 translate-y-6 opacity-0 text-white font-normal text-base py-8 px-10 rounded-md group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 ease-linear duration-300'>

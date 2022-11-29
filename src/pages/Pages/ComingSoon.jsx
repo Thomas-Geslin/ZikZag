@@ -52,7 +52,7 @@ export default function About() {
                 <link rel="icon" href="../"/>
             </Head>
 
-            <main className='bg-comingTeamBackground bg-cover  bg-center bg-no-repeat text-center'>
+            <main className='relative z-10 bg-comingTeamBackground bg-cover bg-center bg-no-repeat text-center'>
                 <Image src={logo} alt="logo de l'entreprise" className='pt-14 pb-24 ml-auto mr-auto max-xl:pb-14 850-1050:pt-28 650-850:pt-28 430-650:pt-28' />
                 <h1 className='font-Amiri text-white text-[80px] 650:text-[50px] 430-850:pb-12 430:pb-0'>We`re Coming Soon</h1>
 
