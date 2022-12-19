@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import slide1 from '../../public/assets/PAGES/About/slide_01.jpg'
 import slide2 from '../../public/assets/PAGES/About/slide_02.jpg'
 import slide3 from '../../public/assets/PAGES/About/slide_03.jpg'
@@ -9,9 +12,12 @@ import icon3 from '../../public/assets/PAGES/About/slide_03_icon.png'
 import dot from '../../public/assets/Home04/about_dot.png'
 
 export default function WhatOfferHome04() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <section className='text-center'>
-            <h2 className='text-orange font-bold mb-4 relative w-40 m-auto'><span className='absolute bottom-1 left-0 bg-orange h-0.5 w-2'></span>WHAT WE OFFER<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+            <h2 className={`text-${color} font-bold mb-4 relative w-40 m-auto`}><span className={`absolute bottom-1 left-0 bg-${color} h-0.5 w-2`}></span>WHAT WE OFFER<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
             <h3 className='font-Amiri text-slightGrey text-[56px]'>Meet Our Team</h3>
             <p className='text-greyText text-lg w-[36%] m-auto mb-10 1050:w-10/12'>We are specialists in both economics and information technologies and we apply our full range of talent to creating the perfect solution for each client’s needs.</p>
             

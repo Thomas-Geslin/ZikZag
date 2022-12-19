@@ -1,5 +1,8 @@
 import Image from 'next/image';
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
@@ -13,11 +16,14 @@ import background from '../../public/assets/Home05/testimonial_background.png'
 import line from '../../public/assets/Home05/testimonial_line.png' 
 
 export default function TestimonialHome05() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <section class='mb-40 relative mt-28 max-xl:w-[90%] max-xl:m-auto max-xl:mb-20 z-10'>
             <div className='ml-96 relative max-xl:ml-[10%]'>
                 <p className='absolute text-[300px] text-greyBackground font-Amiri bottom-60 left-28 650-1050:text-[200px] 650-1050:bottom-96 1050:left-0 650:text-[90px] 650:-top-8'>Result</p>
-                <h2 className='text-orange font-bold mb-4 pt-10 relative w-36 relative'>TESTIMONIALS<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                <h2 className={`text-${color} font-bold mb-4 pt-10 relative w-36 relative`}>TESTIMONIALS<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className='font-Amiri text-6xl relative'>What People Say</h3>
 
                 <Swiper
@@ -87,57 +93,57 @@ export default function TestimonialHome05() {
 
             <div className='grid grid-cols-3 gap-7 min-w-[1000px] w-[60%] m-auto mt-32 850-1050:grid-cols-2 1050:min-w-fit 850:grid-cols-1'>
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>01.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>01.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Organization</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
 
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>02.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>02.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Marketing</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
 
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>03.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>03.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Improvement</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
 
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>04.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>04.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Sustainability</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
 
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>05.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>05.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Customer Strategy</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
 
                 <div className='flex relative border rounded-lg border-[#d6d6d6] p-6 hover:border-transparent hover:shadow-[3px_3px_20px_3px_#eae9e9] hover:cursor-pointer ease-in-out duration-300 '>
-                    <p className='font-Amiri text-orange text-2xl'>06.</p>
+                    <p className={`font-Amiri text-${color} text-2xl`}>06.</p>
                     <div className='ml-4'>
                         <p className='font-Amiri text-2xl text-slightGrey mb-2'>Transformation</p>
                         <p className='text-greyText leading-7'>Startegy experience and analytical expertise combine to enable</p>
                     </div>
-                    <FontAwesomeIcon icon={faArrowRightLong} className='w-5 rotate-45 absolute right-3 bottom-3 text-orange group-hover:text-orange' />
+                    <FontAwesomeIcon icon={faArrowRightLong} className={`w-5 rotate-45 absolute right-3 bottom-3 text-${color} group-hover-text-${color}`} />
                 </div>
             </div>
 

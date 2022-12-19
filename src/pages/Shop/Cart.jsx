@@ -9,23 +9,33 @@ import Footer from "../../components/Footer"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXmark } from "@fortawesome/free-solid-svg-icons"
 
-import item from '../../public/assets/SHOP/item_1.jpg'
-
 
 export default function Cart() {
     const [item, setItem] = useState([]);
-    const [price, setPrice] = useState(0)
+    const [cost, setCost] = useState(0)
 
     useEffect(() => {
         const itemData = sessionStorage.getItem('itemData');
         const item = JSON.parse(itemData);
         setItem(item);
 
-        if(item) setPrice(item[0].price)
+        if(item) {
+            let totalPrice = 0;
+            item.forEach(item => {
+                const price = item.price.split('$');
+                const numberPrice = parseInt(price[1]);
+                setCost(totalPrice += numberPrice)
+            });
+        }
     }, [])
 
-    function clearCart() {
-        sessionStorage.clear();
+    function removeItem(index) {
+        let storageData = sessionStorage.getItem('itemData');
+        let data = JSON.parse(storageData);
+
+        data.splice(index, 1);
+
+        sessionStorage.setItem('itemData', JSON.stringify(data));
         location.reload();
     }
 
@@ -61,7 +71,7 @@ export default function Cart() {
                 </section>
 
 
-                {item
+                {item.length != 0
                 ?   <section className='mt-20 mb-40 w-[62%] m-auto min-w-[1180px] 1050-xl:min-w-[1000px] relative 850-1050:min-w-[820px] 850:min-w-fit 850:w-[90%]'>
                         <div className='850:flex 850:justify-between'>
                             <div className='flex font-bold text-white text-lg bg-darkBlueBackground py-5 rounded 650 850:flex-col 850:bg-white 850:text-slightGrey'>
@@ -87,7 +97,7 @@ export default function Cart() {
                                         </div>
 
                                         <p className='font-bold text-lg pl-[20%] 1050-xl:pl-[15%] 850-1050:pl-[10%] ml-2 850:ml-0 850:mb-7'>{el.price}</p>
-                                        <FontAwesomeIcon onClick={() => clearCart()} icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out duration-300 hover:cursor-pointer' />
+                                        <FontAwesomeIcon onClick={() => removeItem(index)} icon={faXmark} className='w-3 ml-20 text-[#c9c7c4] hover:text-orange ease-in-out duration-300 hover:cursor-pointer' />
                                     </div>
                                 )
                             })}
@@ -107,12 +117,12 @@ export default function Cart() {
                             <span className='h-px w-[15%] bg-[#e4e4e4] absolute'></span>
                             <div className='mt-12 flex justify-between mb-6'>
                                 <p className='font-Amiri text-lg'>Subtotal</p>
-                                <p className='text-lg font-semibold'>{price}</p>
+                                <p className='text-lg font-semibold'>${cost}.00</p>
                             </div>
                             <span className='h-px w-[15%] bg-[#e4e4e4] absolute'></span>
                             <div className='mt-12 flex justify-between mb-8'>
                                 <p className='font-Amiri text-lg'>Total</p>
-                                <p className='font-bold text-[20px]'>{price}</p>
+                                <p className='font-bold text-[20px]'>${cost}.00</p>
                             </div>
                             <button className='bg-orange w-full rounded py-3.5 text-white font-bold hover:bg-darkBlueBackground ease-in-out duration-300'>PROCEED TO CHECKOUT</button>
                         </div>
@@ -120,7 +130,7 @@ export default function Cart() {
             
                 :   <section className='pt-24 mb-80 flex ml-[15%] items-center 650:mx-[5%]'>
                         <p className='text-lg text-greyText mr-10 font-NunitoSans'>Your cart is currently empty.</p>
-                        <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button></Link>
+                        <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7 hover:bg-orange ease-in-out duration-300">RETURN TO SHOP</button></Link>
                     </section>
                 }
             </main>

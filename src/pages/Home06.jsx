@@ -4,6 +4,7 @@ import HeaderHome06 from '../components/Home06/HeaderHome06';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop'
 import WidgetTheme from '../components/WidgetTheme'
+import WidgetColor from '../components/WidgetColor';
 
 import LandingHome06 from '../components/Home06/01Landing';
 import OfferHome06 from '../components/Home06/02Offer';
@@ -45,6 +46,8 @@ export default function Home06() {
             </main>
 
             <WidgetTheme />
+
+            <WidgetColor/>
 
             <BackToTop />
 

@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import man from '../../public/assets/Home03/contact_man.png'
 import line from '../../public/assets/Home03/contact_line.png'
 import letter1 from '../../public/assets/Home03/contact_letter_1.png'
@@ -10,6 +13,9 @@ import placeholder from '../../public/assets/footer/icon_placeholder.png'
 import at from '../../public/assets/Home03/icon_at.png'
 
 export default function ContactHome03() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <section className='flex justify-center bg-Home03Contact bg-no-repeat bg-[top_5rem_left_51rem] pt-40 pb-12 mb-40 ml-32 min-3xl:bg-[top_5rem_left_70rem] max-xl:bg-none 1050:flex-col 1050:items-center 1050:ml-0'>
             <div className='mt-28 relative 650:w-[80%] 1050:mt-0'>
@@ -21,7 +27,7 @@ export default function ContactHome03() {
             </div>
             
             <div className='w-1/3 min-3xl:relative min-3xl:left-32 1050:w-10/12'>
-                <h2 className='text-orange font-bold mb-4 pt-32 relative w-40 850-xl:pt-36 850:mt-0 850:pt-20'>CONTACT US<span className='absolute bottom-1 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                <h2 className={`text-${color} font-bold mb-4 pt-32 relative w-40 850-xl:pt-36 850:mt-0 850:pt-20`}>CONTACT US<span className={`absolute bottom-1 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                 <h3 className='font-Amiri text-slightGrey text-5xl mb-5'>Get in Touch</h3>
                 <p className='text-greyText text-lg leading-9 w-10/12 mb-8'>Get in touch to discuss your employee wellbeing needs today. Please give us a call, drop us an email or fill out the contact form and we’ll get back to you.</p>
             

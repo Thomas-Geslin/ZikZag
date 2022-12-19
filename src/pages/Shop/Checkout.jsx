@@ -11,14 +11,21 @@ import Footer from "../../components/Footer"
 
 export default function Checkout() {
     const [item, setItem] = useState([]);
-    const [price, setPrice] = useState(0)
+    const [cost, setCost] = useState(0)
 
     useEffect(() => {
         const itemData = sessionStorage.getItem('itemData');
         const item = JSON.parse(itemData);
         setItem(item);
 
-        if(item) setPrice(item[0].price)
+        if(item) {
+            let totalPrice = 0;
+            item.forEach(item => {
+                const price = item.price.split('$');
+                const numberPrice = parseInt(price[1]);
+                setCost(totalPrice += numberPrice)
+            });
+        }
     }, [])
 
 
@@ -38,7 +45,7 @@ export default function Checkout() {
                     <p className="font-semibold pb-48 z-10"><span className="opacity-50">HOME &gt; </span> CHECKOUT</p>
                 </section>
 
-                {item
+                {item.length != 0
                 ?   <div className='mt-20 mb-40 w-[62%] m-auto min-w-[1050px] max-xl:min-w-fit'>
                         <div className='flex items-center bg-white p-2 shadow-[6px_5px_30px_0px_rgb(0,0,0,0.12)] rounded'>
                             <div className='p-2.5 rounded bg-[#179fff]'><FontAwesomeIcon icon={faCircleInfo} className='w-9 text-white' /></div>
@@ -135,14 +142,14 @@ export default function Checkout() {
 
                                 <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-6 430:pr-10'>
                                     <p className='font-extrabold'>Subtotal</p>
-                                    <p className='font-extrabold'>{price}</p>
+                                    <p className='font-extrabold'>${cost}.00</p>
                                 </div>
 
                                 <span className='h-px bg-[#e5e5e5] w-full absolute'></span>
 
                                 <div className='flex items-center justify-between pl-10 pr-24 py-4 text-lg mt-0 430:pr-10'>
                                     <p className='font-extrabold'>Total</p>
-                                    <p className='font-extrabold text-orange'>{price}</p>
+                                    <p className='font-extrabold text-orange'>${cost}.00</p>
                                 </div>
 
 
@@ -157,7 +164,7 @@ export default function Checkout() {
                 
                 :   <section className='pt-24 mb-80 flex ml-[15%] items-center 650:mx-[5%]'>
                         <p className='text-lg text-greyText mr-10 font-NunitoSans'>Your cart is currently empty.</p>
-                        <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7">RETURN TO SHOP</button></Link>
+                        <Link href='/Shop/Shop/Page1'><button className="bg-darkBlueBackground font-semibold text-sm text-white rounded py-3.5 px-7 hover:bg-orange ease-in-out duration-300">RETURN TO SHOP</button></Link>
                     </section>
                 }
                 

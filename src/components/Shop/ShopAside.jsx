@@ -19,8 +19,13 @@ export default function ShopAside() {
         setItem(item);
     }, [])
 
-    function clearCart() {
-        sessionStorage.clear();
+    function removeItem(index) {
+        let storageData = sessionStorage.getItem('itemData');
+        let data = JSON.parse(storageData);
+
+        data.splice(index, 1);
+
+        sessionStorage.setItem('itemData', JSON.stringify(data));
         location.reload();
     }
 
@@ -131,19 +136,19 @@ export default function ShopAside() {
                 <span className='w-[13%] h-[3px] bg-orange rounded absolute top-[15px] right-0'></span>
             </div>
 
-            {!item 
+            {item.length == 0
             ?   <p className='text-greyText text-center'>No products in the cart.</p>
         
             :   <div>
                     {item.map((el, index) => {
                         return(
-                        <div key={index} className='flex relative group'>
+                        <div key={index} className='flex relative group mb-4'>
                             <Image src={el.picture} alt='photo de article' className='w-[70px]' />
                             <div className='ml-4'>
                                 <p className='font-Amiri text-lg mb-1.5 group-hover:text-orange ease-in-out duration-300'>{el.name}</p>
                                 <p className='font-bold text-sm text-[#e5e5e5]'>1 x <span className='text-orange ml-1 font-extrabold'>{el.price}</span></p>
                             </div>
-                            <FontAwesomeIcon onClick={() => clearCart()} icon={faXmark} className='w-3 text-[#e5e5e5] absolute top-0 right-0 hover:text-orange ease-in-out duration-300 hover:cursor-pointer' />
+                            <FontAwesomeIcon onClick={() => removeItem(index)} icon={faXmark} className='w-3 text-[#e5e5e5] absolute top-0 right-0 hover:text-orange ease-in-out duration-300 hover:cursor-pointer' />
                         </div>
                         )
                         

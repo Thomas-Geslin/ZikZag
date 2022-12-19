@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
+import { useContext } from "react";
+import { ColorContext } from "../context/colorContext";
+
 import logo from '../public/assets/Home02/logo_consultancy.png'
 import line from '../public/assets/footer/footer_line.png'
 import phone from '../public/assets/footer/icon_phone.png'
@@ -11,12 +14,15 @@ import { faTwitter, faFacebookF, faPinterestP, faInstagram } from '@fortawesome/
 
 
 export default function Footer() {
+    const { color } = useContext(ColorContext);
+
+
     return(
         <footer className='bg-[#0d1820] text-white -mt-14 max-xl:px-10 relative'>
             <div className='flex justify-between py-10 px-[19%] relative max-xl:px-0 850:flex-col'>
                 <Image src={line} alt='ligne de décoration' className='absolute left-[40%] top-8' />
                 <p className='font-Amiri text-[36px] z-10'>Start Your Journey to Better Business</p> 
-                <button className='bg-orange py-4 px-7 rounded font-semibold text-[14px] hover:cursor-pointer hover:text-black hover:bg-white ease-in duration-300 850:w-[180px]'>GET IN TOUCH</button>
+                <button className={`bg-${color} py-4 px-7 rounded font-semibold text-[14px] hover:cursor-pointer hover:text-black hover:bg-white ease-in duration-300 850:w-[180px]`}>GET IN TOUCH</button>
             </div>
 
             <span className='absolute h-px w-[60%] left-[50%] translate-x-[-50%] bg-[#212b32] max-xl:w-[90%]'></span>

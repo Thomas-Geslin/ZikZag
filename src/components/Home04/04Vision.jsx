@@ -1,6 +1,9 @@
 import Image from "next/image"
 import { useEffect } from "react"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -52,6 +55,9 @@ const revealRight = keyframes`
 
 
 export default function VisionHome04() {
+  const { color } = useContext(ColorContext);
+
+
     useEffect(() => {
         // Intersection Obeserver for fixed progress-bar Strategy
         function autoIncrementBar(limit, target) {
@@ -99,7 +105,7 @@ export default function VisionHome04() {
         <section className='mb-10 overflow-hidden relative z-10'>
             <div className='flex justify-center max-xl:flex-col max-xl:items-center'>
                 <div className="w-1/3 max-xl:w-full relative top-20 left-16 mb-20 850:left-[7%]">
-                    <h2 className='text-orange font-bold mb-3 relative'>OUR VISION<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className={`text-${color} font-bold mb-3 relative`}>OUR VISION<span className={`absolute top-5 ml-1 bg-${color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl leading-tight text-slightGrey mb-4 w-[81%] max-xl:w-10/12 650:text-4xl">Strategy is at the Heart of What We Do</h3>
                     <p className="text-greyText text-lg w-3/4 leading-8 mb-8 max-xl:w-10/12">Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve clear, long-term objectives.</p>
 
@@ -109,7 +115,7 @@ export default function VisionHome04() {
                             <p id='firstBar'>0%</p>
                         </div>
 
-                        <span id='let' className="w-[55%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded ease-out duration-1000"></span>
+                        <span id='let' className={`w-[55%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded ease-out duration-1000`}></span>
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
@@ -119,7 +125,7 @@ export default function VisionHome04() {
                             <p id='secondBar'>0%</p>
                         </div>
 
-                        <span className="w-[75%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded"></span>
+                        <span className={`w-[75%] h-1 progressBarStrategyTarget scale-x-0 bg-orange absolute -bottom-3 rounded`}></span>
                         <span className="h-px w-full absolute -bottom-5 bg-[#dbdbdb]"></span>
                     </div>
 
@@ -139,7 +145,7 @@ export default function VisionHome04() {
                     <Reveal keyframes={revealRight} duration={800} delay={500} triggerOnce className='relative'><Image src={man} alt='discussion entre deux personnes' /></Reveal>
 
                     <Reveal keyframes={revealLeft} duration={800} triggerOnce>
-                    <div className="bg-[#f5f5f5] w-[467px] py-1 border-l-orange border-l-[3px] rounded-br-lg absolute right-5 bottom-0 z-20 max-xl:w-full">
+                    <div className={`bg-[#f5f5f5] w-[467px] py-1 border-l-${color} border-l-[3px] rounded-br-lg absolute right-5 bottom-0 z-20 max-xl:w-full`}>
                         <Image src={quote} alt='icone de guillemet' className="w-20 absolute -top-3 right-0" />
                         <p className="relative font-Amiri text-3xl text-slightGrey leading-tight py-7 pl-9">Custom Consulting Solutions since 2002.</p>
                     </div>

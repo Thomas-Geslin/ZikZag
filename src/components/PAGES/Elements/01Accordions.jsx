@@ -1,11 +1,16 @@
 import { useState } from 'react';
+import { useContext } from 'react';
+import { ColorContext } from "../../../context/colorContext";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRightLong } from '@fortawesome/free-solid-svg-icons'
 
 
 export default function AccordionsElement() {
+    const { secondaryColor } = useContext(ColorContext);
+
     const [faqResponse, setFaqResponse] = useState(null);
+    const [currentSlide, setCurrentSlide] = useState(0);
 
     function activeResponse(responseTarget) {
         let target = document.getElementById(responseTarget);
@@ -22,12 +27,59 @@ export default function AccordionsElement() {
         }
     }
 
+
     function activeRectangle(categorie) {
         let currentCategorie = categorie;
-        let remove = document.getElementsByClassName('home06-philosophy-active');
-        remove[0].classList.remove('home06-philosophy-active');
+        let remove = document.getElementsByClassName(`home06-philosophy-active-${secondaryColor}`);
+        remove[0].classList.remove(`home06-philosophy-active-${secondaryColor}`);
         let target = document.getElementById(currentCategorie);
-        target.classList.add('home06-philosophy-active');
+        target.classList.add(`home06-philosophy-active-${secondaryColor}`);
+    }
+
+    function slideAnimation(slide, slideNumber) {
+        if(slideNumber === currentSlide) {
+            return;
+        }
+        else if(slideNumber > currentSlide) {
+            let target = document.getElementById(slide);
+            if(target.classList.contains('Home06SlideAnimationRemove')) { target.classList.remove('Home06SlideAnimationRemove') } 
+            target.classList.add('Home06SlideAnimation');
+            setCurrentSlide(slideNumber);
+        }
+        else {
+            let slides = document.getElementsByClassName('slide');
+            let slidesArray = Array.from(slides).slice(slideNumber);
+                slidesArray.forEach(slide => {
+                    if(slide.classList.contains('Home06SlideAnimation')) {
+                        slide.classList.add('Home06SlideAnimationRemove');
+                        setTimeout(() => {
+                        slide.classList.remove('Home06SlideAnimation');
+                        slide.classList.add('Home06SlideAnimationRemove');
+                        }, 50)
+                    }
+                })
+            setCurrentSlide(slideNumber);
+        }
+    }
+
+    function slideSelection(categorie, slide, slideNumber) {
+        activeRectangle(categorie);
+        slideAnimation(slide, slideNumber);
+    }
+
+    function slideReset (number) {
+        let slides = document.getElementsByClassName('slide');
+        let slidesArray = Array.from(slides);
+            slidesArray.forEach(slide => {
+                if(slide.classList.contains('Home06SlideAnimation')) {
+                    slide.classList.add('Home06SlideAnimationRemove');
+                    setTimeout(() => {
+                    slide.classList.remove('Home06SlideAnimation');
+                    slide.classList.add('Home06SlideAnimationRemove');
+                    }, 50)
+                }
+            })
+        setCurrentSlide(number);
     }
 
 
@@ -75,13 +127,28 @@ export default function AccordionsElement() {
 
 
                 <div className='w-1/2 ml-8 850:w-full 850:ml-0'>
-                    <div className='mb-6 850:flex 850:flex-col 850:items-center'>
-                        <button id="quality" onClick={() => activeRectangle('quality')} className="home06-philosophy-active bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hover:cursor-pointer ease-in-out duration-300 850:mb-4">Quality</button>
-                        <button id="support" onClick={() => activeRectangle('support')} className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover:bg-darkBlueBackground hover:text-white hover:cursor-pointer ease-in-out duration-300 850:mb-4">Support</button>
-                        <button id="people" onClick={() => activeRectangle('people')} className="bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded hover:bg-darkBlueBackground hover:text-white hover:cursor-pointer ease-in-out duration-300 850:mb-4">People</button>
+                    <div className='mb-6'>
+                        <button id="quality" onClick={() => { activeRectangle('quality'); slideReset(0) }} className={`home06-philosophy-active-${secondaryColor} bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover-bg-${secondaryColor} hover:text-white hover:cursor-pointer ease-in-out duration-300`}>Quality</button>
+                        <button id="support" onClick={() => slideSelection('support', 'supportSlide', 1)} className={`bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded mr-2.5 hover-bg-${secondaryColor} hover:text-white hover:cursor-pointer ease-in-out duration-300`}>Support</button>
+                        <button id="people" onClick={() => slideSelection('people', 'peopleSlide', 2)} className={`bg-greyBackground text-slightGrey font-bold text-sm py-3.5 px-8 rounded hover-bg-${secondaryColor} hover:text-white hover:cursor-pointer ease-in-out duration-300`}>People</button>
                     </div>
-                    <p className='text-greyText mb-6 leading-7 850:w-11/12'>From implantables to wearables, embedded system software has become an integrated part of our lives. We help companies across all markets continue to push the boundaries of hardware and software design through our dedicated embedded system engineering practice</p>
-                    <p className='text-greyText leading-7 850:w-11/12'>Since 2007 we have been a visionary and a reliable software engineering partner for world-class brands. We are a boutique digital transformation consultancy and software development company.</p>
+
+                    <div className="overflow-hidden relative">
+                        <div>
+                            <p className='text-greyText mb-6 leading-7 w-[95%] bg-white'>From implantables to wearables, embedded system software has become an integrated part of our lives. We help companies across all markets continue to push the boundaries of hardware and software design through our dedicated embedded system engineering practice</p>
+                            <p className='text-greyText leading-7 w-11/12'>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve.</p>
+                        </div>
+
+                        <div id='supportSlide' className="absolute top-0 translate-y-[100%] bg-white slide">
+                            <p className='text-greyText mb-6 leading-7 w-[95%]'>From implantables to wearables, embedded system software has become an integrated part of our lives. We help companies across all markets continue to push the boundaries of hardware and software design through our dedicated embedded system engineering practice</p>
+                            <p className='text-greyText leading-7 w-11/12'>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve.</p>
+                        </div>
+
+                        <div id='peopleSlide' className="absolute top-0 translate-y-[100%] bg-white slide">
+                            <p className='text-greyText mb-6 leading-7 w-[95%]'>From implantables to wearables, embedded system software has become an integrated part of our lives. We help companies across all markets continue to push the boundaries of hardware and software design through our dedicated embedded system engineering practice</p>
+                            <p className='text-greyText leading-7 w-11/12'>Our team applies its wide-ranging experience to determining the strategies that will best enable our clients to achieve.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

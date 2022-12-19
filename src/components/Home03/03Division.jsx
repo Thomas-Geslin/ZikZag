@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper';
 import 'swiper/css';
@@ -12,38 +15,41 @@ import slide4 from '../../public/assets/Home03/division_slide_4.jpg'
 
 
 export default function DivisionHome03() {
+    const { color, secondaryColor } = useContext(ColorContext);
+
+
     return(
         <section className='relative z-10'>
             <div className='flex justify-between mx-2 gap-3 1050:grid 1050:grid-cols-2'>
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide1} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>
-                        <p className='font-Amiri text-3xl bg-orange  px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500'>Information Technology</p>
-                        <p className='absolute font-semibold top-14 bg-darkBlueBackground p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700'>_CORPORATE_FINANCE_</p>
+                        <p className={`font-Amiri text-3xl bg-${color} px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500`}>Information Technology</p>
+                        <p className={`absolute font-semibold top-14 bg-${secondaryColor} p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700`}>_CORPORATE_FINANCE_</p>
                     </div>
                 </div>
 
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide2} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>
-                        <p className='font-Amiri text-3xl bg-orange px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500'>Mobile App Startup</p>
-                        <p className='absolute font-semibold top-14 bg-darkBlueBackground p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700'>_STARTUP_</p>
+                        <p className={`font-Amiri text-3xl bg-${color} px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500`}>Mobile App Startup</p>
+                        <p className={`absolute font-semibold top-14 bg-${secondaryColor} p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700`}>_STARTUP_</p>
                     </div>
                 </div>
 
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide3} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>
-                        <p className='font-Amiri text-3xl bg-orange px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500'>People Professionalism</p>
-                        <p className='absolute font-semibold top-14 bg-darkBlueBackground p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700'>_MARKETING_STRATEGY_</p>
+                        <p className={`font-Amiri text-3xl bg-${color} px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500`}>People Professionalism</p>
+                        <p className={`absolute font-semibold top-14 bg-${secondaryColor} p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700`}>_MARKETING_STRATEGY_</p>
                     </div>
                 </div>
 
                 <div className='text-white rounded-xl overflow-hidden relative group'>
                     <Image src={slide4} alt='personne travaillant' />
                     <div className='absolute bottom-14 left-4'>
-                        <p className='font-Amiri text-3xl bg-orange px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500'>New Business Innovation</p>
-                        <p className='absolute font-semibold top-14 bg-darkBlueBackground p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700'>_CORPORATE_STRATEGY_</p>
+                        <p className={`font-Amiri text-3xl bg-${color} px-3 py-2 rounded-sm mb-1.5 translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-500`}>New Business Innovation</p>
+                        <p className={`absolute font-semibold top-14 bg-${secondaryColor} p-1.5 rounded-sm translate-y-10 opacity-0 group-hover:opacity-100 group-hover:translate-y-0 ease-in-out duration-700`}>_CORPORATE_STRATEGY_</p>
                     </div>
                 </div>
             </div>
@@ -80,10 +86,10 @@ export default function DivisionHome03() {
 
                                 <p className='text-white text-[22px] font-light mb-10 leading-10 430:text-lg'>“Working with ZikZag is always an absolute joy, both personally and<br></br>professionally. Tommy is an amazing speaker; her experience, expertise and<br></br>genuine passion for what she does is obvious in every word he says.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Emmy Barton</p>
-                                <p className='text-orange font-bold text-sm pb-14'>CLIENT OF COMPAGNY</p>
+                                <p className={`text-${color} font-bold text-sm pb-14`}>CLIENT OF COMPAGNY</p>
 
-                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
-                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                <button className={`prevHome03Divison group w-14 h-0.5 bg-${color} absolute left-24 top-[50%] max-xl:hidden`}><span className={`w-3 h-0.5 bg-${color} -rotate-45 absolute -left-0.5 bottom-1`}></span><span className={`w-3 h-0.5 bg-${color} rotate-45 absolute -left-0.5 top-1`}></span></button>
+                                <button className={`nextHome03Divison w-14 h-0.5 bg-${color} absolute right-24 top-[50%] max-xl:hidden`}><span className={`w-3 h-0.5 bg-${color} rotate-45 absolute -right-0.5 bottom-1`}></span><span className={`w-3 h-0.5 bg-${color} -rotate-45 absolute -right-0.5 top-1`}></span></button>
                             </div>
                         </SwiperSlide>
 
@@ -105,10 +111,10 @@ export default function DivisionHome03() {
                                 
                                 <p className='text-white text-[22px] font-light mb-10 430:text-lg'>“Choosing online studies was the best way to do it - the internet is fast, cheap &<br></br>popular and it&apos;s easy to communicate in social media with native speakers.”</p>
                                 <p className='text-white font-Amiri text-3xl mb-2'>Tina Johanson</p>
-                                <p className='text-orange font-bold text-sm pb-14'>UI DESIGNER</p>
+                                <p className={`text-${color} font-bold text-sm pb-14`}>UI DESIGNER</p>
 
-                                <button className='prevHome03Divison group w-14 h-0.5 bg-orange absolute left-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -left-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange rotate-45 absolute -left-0.5 top-1'></span></button>
-                                <button className='nextHome03Divison w-14 h-0.5 bg-orange absolute right-24 top-[50%] max-xl:hidden'><span className='w-3 h-0.5 bg-orange rotate-45 absolute -right-0.5 bottom-1'></span><span className='w-3 h-0.5 bg-orange -rotate-45 absolute -right-0.5 top-1'></span></button>
+                                <button className={`prevHome03Divison group w-14 h-0.5 bg-${color} absolute left-24 top-[50%] max-xl:hidden`}><span className={`w-3 h-0.5 bg-${color} -rotate-45 absolute -left-0.5 bottom-1`}></span><span className={`w-3 h-0.5 bg-${color} rotate-45 absolute -left-0.5 top-1`}></span></button>
+                                <button className={`nextHome03Divison w-14 h-0.5 bg-${color} absolute right-24 top-[50%] max-xl:hidden`}><span className={`w-3 h-0.5 bg-${color} rotate-45 absolute -right-0.5 bottom-1`}></span><span className={`w-3 h-0.5 bg-${color} -rotate-45 absolute -right-0.5 top-1`}></span></button>
                             </div>
                         </SwiperSlide>
                     </Swiper>

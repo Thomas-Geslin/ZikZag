@@ -4,6 +4,7 @@ import HeaderHome04 from '../components/Home04/HeaderHome04'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import WidgetTheme from '../components/WidgetTheme'
+import WidgetColor from '../components/WidgetColor'
 
 import LandingHome04 from '../components/Home04/01Landing'
 import AboutHome04 from '../components/Home04/02About'
@@ -44,6 +45,8 @@ export default function Home04() {
             </main>
 
             <WidgetTheme />
+
+            <WidgetColor />
 
             <BackToTop />
 

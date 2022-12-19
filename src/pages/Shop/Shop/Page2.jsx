@@ -13,10 +13,6 @@ import { ItemsData } from "../../../datas/Shop/ItemsData"
 
 
 export default function ShopPage2() {
-    function setLoader() {
-        
-    }
-
     function addToCart(name, picture, price) {
         const itemData = {
             name: name,
@@ -24,11 +20,20 @@ export default function ShopPage2() {
             picture: picture
         }
 
-        let itemArray = [];
-        itemArray.push(itemData)
+        let storageData = sessionStorage.getItem('itemData');
+        let data = JSON.parse(storageData);
+        if(!data) {
+            let itemArray = [];
+            itemArray.push(itemData);
 
-        sessionStorage.setItem('itemData', JSON.stringify(itemArray));
-        location.reload();
+            sessionStorage.setItem('itemData', JSON.stringify(itemArray));
+            location.reload();
+        } else {
+            data.push(itemData);
+
+            sessionStorage.setItem('itemData', JSON.stringify(data));
+            location.reload();
+        }
     }
 
 

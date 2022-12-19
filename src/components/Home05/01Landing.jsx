@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import background from '../../public/assets/Home05/landing_background.png'
 import square from '../../public/assets/Home05/landing_square.png'
 import line1 from '../../public/assets/Home05/landing_line_1.png'
@@ -15,6 +18,9 @@ import honey from '../../public/assets/Home05/landing_partner_6.png'
 
 
 export default function LandingHome05() {
+    const { color, secondaryColor } = useContext(ColorContext);
+
+
     return(
         <section className='pt-48 relative max-xl:-mt-40 z-10'>
             <Image src={line1} alt='ligne de décoration' className='absolute top-32 left-0 -top-24' />
@@ -24,13 +30,13 @@ export default function LandingHome05() {
                 <div className='relative w-[30%] mb-32 mr-20 min-3xl:ml-32 max-xl:w-[90%] max-xl:m-auto max-xl:mb-20'>
                     <p className='absolute -top-56 right-0 text-greyBackground text-[300px] font-Amiri 430-850:text-[200px] 850:relative 430-850:top-32 430:text-[130px] 430:top-24'>Start</p>
                     <p className='text-sm font-bold text-slightGrey relative'>PERFECT SOLUTION FOR YOUR COMPANY</p>
-                    <h1 className='font-Amiri text-[56px] leading-[60px] mt-6 relative 430:text-[40px] 430:leading-[45px]'>We Champion the Striking to Accomplish the <span className='text-orange'>Exceptional</span></h1>
+                    <h1 className='font-Amiri text-[56px] leading-[60px] mt-6 relative 430:text-[40px] 430:leading-[45px]'>We Champion the Striking to Accomplish the <span className={`text-${color}`}>Exceptional</span></h1>
                     <p className='text-greyText leading-7 mt-4'>This is the main factor that sets us apart from our competition and allows us to deliver a specialist business consultancy service.</p>
 
                     <span className='absolute h-px bg-[#e5e5e5] mt-12 w-full'></span>
 
                     <div className='flex items-center mt-24 650:flex-col 650:flex-start'>
-                        <button className="text-sm font-bold bg-orange py-5 px-10 rounded text-white hover:bg-darkBlueBackground ease-in-out duration-300 mr-6 650:mb-5">WORK TOGETHER</button>
+                        <button className={`text-sm font-bold bg-${color} py-5 px-10 rounded text-white hover-bg-${secondaryColor} ease-in-out duration-300 mr-6 650:mb-5`}>WORK TOGETHER</button>
                         <div className='p-5 bg-[#ffede7] rounded-full mr-6'><Image src={phone} alt='icone de téléphone' className='w-6' /></div>
                         <div className=' 650:mt-5'>
                             <p className='text-sm font-bold text-[#8a8a8a] mb-1.5'>CONTACT US DAILY</p>

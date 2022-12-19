@@ -4,6 +4,7 @@ import HeaderHome05 from '../components/Home05/HeaderHome05';
 import Footer from '../components/Footer';
 import BackToTop from '../components/BackToTop';
 import WidgetTheme from '../components/WidgetTheme'
+import WidgetColor from '../components/WidgetColor';
 
 import LandingHome05 from '../components/Home05/01Landing';
 import WhatOfferHome05 from '../components/Home05/02WhatOffer';
@@ -12,6 +13,7 @@ import OfferHome05 from '../components/Home05/04Offer';
 import TestimonialHome05 from '../components/Home05/05Testimonial';
 import DivisionHome05 from '../components/Home05/06Division';
 import PopularHome05 from '../components/Home05/07Popular';
+
 
 export default function Home05() {
     return(
@@ -41,6 +43,8 @@ export default function Home05() {
             </main>
 
             <WidgetTheme />
+
+            <WidgetColor/>
 
             <BackToTop />
 

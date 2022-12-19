@@ -4,6 +4,7 @@ import HeaderSecond from '../components/HeaderSecond'
 import Footer from '../components/Footer'
 import BackToTop from '../components/BackToTop'
 import WidgetTheme from '../components/WidgetTheme'
+import WidgetColor from '../components/WidgetColor'
 
 import LandingHome03 from '../components/Home03/01Landing'
 import BenefitsHome03 from '../components/Home03/02Benefits'
@@ -38,6 +39,8 @@ export default function Home03() {
             </main>
             
             <WidgetTheme />
+
+            <WidgetColor />
 
             <BackToTop />
 

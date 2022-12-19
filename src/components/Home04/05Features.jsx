@@ -1,5 +1,8 @@
 import Image from "next/image"
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 import hand from '../../public/assets/Home04/feature_hand.jpg'
 import line from '../../public/assets/Home04/feature_line.jpg'
 
@@ -11,11 +14,14 @@ import chart from '../../public/assets/Home01/icon_chart.png'
 import pyramid from '../../public/assets/Home01/icon_pyramid.png'
 
 export default function FeatureHome04() {
+    const { color, secondaryColor } = useContext(ColorContext);
+
+
     return(
         <section className='mx-6 relative mt-16 mb-28 relative z-10'>
             <Image src={line} alt='graphique de décoration' className='absolute left-[50%] translate-x-[-50%] bottom-0 rounded-3xl min-h-[620px] max-xl:hidden' />
 
-            <div className='bg-orange flex w-[63%] min-w-[810px] m-auto rounded-lg overflow-hidden relative -top-20 max-xl:top-0 mb-24 max-xl:mb-0 max-xl:z-10 850:min-w-fit 850:flex-col'>
+            <div className={`bg-${color} flex w-[63%] min-w-[810px] m-auto rounded-lg overflow-hidden relative -top-20 max-xl:top-0 mb-24 max-xl:mb-0 max-xl:z-10 850:min-w-fit 850:flex-col`}>
                 <Image src={hand} alt='poignée de main' className='w-96 850:w-full' />
                 <div className='text-white justify-center flex flex-col ml-16 1050:ml-6 850:py-8 850:px-6'>
                     <p className='font-Amiri text-[32px]'>Need Consultancy? Call Us +1 800 123 456 789</p>
@@ -25,10 +31,10 @@ export default function FeatureHome04() {
 
             <div className='flex w-[63%] m-auto relative pb-6 max-xl:flex-col max-xl:bg-greyBackground max-xl:rounded-xl max-xl:w-full 650-xl:px-10 max-xl:pt-32 max-xl:-top-16 650:px-[3%]'>
                 <div className='w-[45%] mr-8 max-xl:w-full max-xl:mb-10 max-xl:mr-0'>
-                    <h2 className='text-orange font-bold mb-3 relative'>FEATURES<span className='absolute top-5 ml-1 bg-orange h-0.5 w-2'></span></h2>
+                    <h2 className={`text-{color} font-bold mb-3 relative`}>FEATURES<span className={`absolute top-5 ml-1 bg-{color} h-0.5 w-2`}></span></h2>
                     <h3 className="font-Amiri text-5xl text-slightGrey mb-4 w-[81%] max-xl:w-full 650:text-4xl">Core Values</h3>
                     <p className="text-greyText text-lg leading-8 mb-8 max-xl:w-full">We seamlessly merge two key components – economics and information technology. This is the main factor that sets us apart from our competition and allows us.</p>
-                    <button className="bg-darkBlueBackground font-semibold text-sm text-white px-10 py-5 rounded hover:bg-orange ease-in-out duration-500">LEARN MORE</button>
+                    <button className={`bg-${secondaryColor} font-semibold text-sm text-white px-10 py-5 rounded hover-bg-{color} ease-in-out duration-500`}>LEARN MORE</button>
                 </div>
 
                 <div className='grid grid-cols-2 relative -top-8 850:grid-cols-1 850:mt-6'>

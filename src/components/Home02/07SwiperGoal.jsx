@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Swiper
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper';
@@ -13,6 +16,9 @@ import { GoalSwiperData } from '../../datas/Home02/GoalSwiperData';
 
 
 export default function SwiperGoal() {
+  const { color } = useContext(ColorContext);
+
+
   let [slideNumber, setSlideNumber] = useState(2)
 
   useEffect(() => {
@@ -48,7 +54,7 @@ export default function SwiperGoal() {
                   <Image src={el.background} alt="Photo de présentation d'entreprise" className='rounded-xl' />
                   <div className='text-center bg-white relative bottom-10 w-[45%] min-w-[270px] m-auto rounded-xl shadow-[6px_5px_16px_0px_rgb(0,0,0,0.15)]'>
                     <p className='font-Amiri text-3xl pt-5'>{el.title}</p>
-                    <p className='text-orange font-semibold mt-1 pb-5 mb-10'>{el.line}</p>
+                    <p className={`text-${color} font-semibold mt-1 pb-5 mb-10`}>{el.line}</p>
                   </div>
                 </SwiperSlide>
               )

@@ -1,5 +1,8 @@
 import Image from 'next/image'
 
+import { useContext } from "react";
+import { ColorContext } from "../../context/colorContext";
+
 // Awesome Reveal
 import Reveal from "react-awesome-reveal";
 import { keyframes } from "@emotion/react";
@@ -103,6 +106,9 @@ const revealLeft = keyframes`
 
 
 export default function LandingHome03() {
+  const { color, secondaryColor } = useContext(ColorContext);
+
+
   useEffect(() => {
     // Mouseover Parallax
     document.getElementById('parallaxViewport').addEventListener('mousemove', parallax);
@@ -121,7 +127,7 @@ export default function LandingHome03() {
 
 
     return(
-        <section id='parallaxViewport' className='z-10 bg-orange pt-64 relative overflow-hidden'>
+        <section id='parallaxViewport' className={`z-10 bg-${color} pt-64 relative overflow-hidden`}>
             <div>
                 <Reveal keyframes={revealBottomLittle} duration={600} triggerOnce  className='absolute min-3xl:top-40 min-3xl:left-60'><Image src={para1} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
                 <Reveal keyframes={revealTopLittle} duration={600} triggerOnce className='landingBackgroundAnimation absolute bottom-56 -left-80 min-3xl:-left-40'><Image src={para2} alt='carré de décoration' className='landingBackgroundAnimation' /></Reveal>
@@ -131,13 +137,13 @@ export default function LandingHome03() {
 
             <div className='text-white ml-[19%] relative z-10 430:ml-[5%] 650:mt-96'>
                 <div className='flex items-center'>
-                    <Reveal keyframes={reveal} duration={600} delay={600} triggerOnce><div className='shadow-[3px_3px_20px_3px_rgb(0,0,0,0.12)] group bg-white px-7 py-6 rounded-full hover:bg-darkBlueBackground hover:cursor-pointer ease-linear duration-300'><FontAwesomeIcon icon={faPlay} className='w-4 text-black group-hover:text-white' /></div></Reveal>
+                    <Reveal keyframes={reveal} duration={600} delay={600} triggerOnce><div className={`shadow-[3px_3px_20px_3px_rgb(0,0,0,0.12)] group bg-white px-7 py-6 rounded-full hover-bg-${secondaryColor} hover:cursor-pointer ease-linear duration-300`}><FontAwesomeIcon icon={faPlay} className='w-4 text-black group-hover:text-white' /></div></Reveal>
                     <Reveal keyframes={revealRight} duration={700} delay={900} triggerOnce><p className='font-bold text-sm ml-5'>HOW IT WORKS</p></Reveal>
                 </div>
                 <Reveal keyframes={revealLeft} duration={800} triggerOnce><h1 className='font-Amiri text-7xl w-5/12 leading-[80px] mt-9 max-xl:w-9/12 430:text-5xl'>We Champion the Bold to Achieve the Extraordinary</h1></Reveal>
                 <div className='font-semibold mt-10 pb-60 flex 430:flex-col'>
-                    <Reveal keyframes={reveal} duration={800} delay={1600} triggerOnce><button className="rounded bg-darkBlueBackground py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500 430:mb-4">LEARN MORE</button></Reveal>
-                    <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className="rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover:bg-darkBlueBackground hover:text-white hover:border-transparent ease-in-out duration-500">GET IN TOUCH</button></Reveal>
+                    <Reveal keyframes={reveal} duration={800} delay={1600} triggerOnce><button className={`rounded bg-${secondaryColor} py-5 px-11 mr-5 text-sm border-transparent border-solid border hover:bg-transparent hover:border-solid hover:border hover:border-[#c0c0c3] ease-in-out duration-500 430:mb-4`}>LEARN MORE</button></Reveal>
+                    <Reveal keyframes={reveal} duration={800} delay={2200} triggerOnce><button className={`rounded border border-[#c0c0c3] border-solid py-5 px-11 text-sm hover-bg-${secondaryColor} hover:text-white hover:border-transparent ease-in-out duration-500`}>GET IN TOUCH</button></Reveal>
                 </div>
             </div>
 
