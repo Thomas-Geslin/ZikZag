@@ -15,8 +15,10 @@ export default function ShopAside() {
 
     useEffect(() => {
         const itemData = sessionStorage.getItem('itemData');
-        const item = JSON.parse(itemData);
-        setItem(item);
+        if(itemData !== null) {
+            const item = JSON.parse(itemData);
+            setItem(item);
+        }
     }, [])
 
     function removeItem(index) {
@@ -136,7 +138,7 @@ export default function ShopAside() {
                 <span className='w-[13%] h-[3px] bg-orange rounded absolute top-[15px] right-0'></span>
             </div>
 
-            {item.length == 0
+            {item !== null
             ?   <p className='text-greyText text-center'>No products in the cart.</p>
         
             :   <div>
